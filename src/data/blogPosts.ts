@@ -262,4 +262,231 @@ One of the most common questions job seekers ask is: "How long should my resume 
 <p>Use our <a href="/">free resume builder</a> to create a perfectly formatted one-page resume. Our templates are designed to maximize content while fitting comfortably on one page.</p>
     `.trim()
   },
+  {
+    slug: "resume-skills-examples",
+    title: "Top Resume Skills Examples for 2025: What Employers Want",
+    description: "Discover the top resume skills employers look for in 2025. Hard skills, soft skills, and how to showcase them effectively with real examples.",
+    date: "2025-02-15",
+    readTime: "10 min read",
+    category: "Resume Tips",
+    relatedTools: ["/resume-examples", "/", "/ats-score"],
+    content: `
+Your resume skills section can make or break your job application. In 2025, recruiters use a mix of automated ATS systems and manual screening to evaluate your qualifications. Knowing which skills to list and how to present them is critical to landing interviews.
+
+<h2>Hard Skills vs Soft Skills: What's the Difference?</h2>
+<p><strong>Hard skills</strong> are teachable, measurable abilities specific to a job. Examples include programming languages (Python, Java), software proficiency (Excel, Salesforce), data analysis, foreign languages, and technical certifications. These are typically learned through education, training, or on-the-job experience.</p>
+<p><strong>Soft skills</strong> are interpersonal attributes that affect how you work. Examples include communication, leadership, problem-solving, teamwork, adaptability, and time management. While harder to quantify, soft skills are increasingly valued by employers — 92% of hiring managers say soft skills matter as much or more than hard skills.</p>
+
+<h2>How to Match Skills to Job Descriptions</h2>
+<p>Every job description contains a list of required and preferred skills. Your first step should be identifying these keywords and ensuring they appear on your resume. Use our <a href="/ats-score">ATS Score Checker</a> to analyze how well your resume matches a job description.</p>
+<p>Create a master list of skills from 5-10 job descriptions in your target role. The skills that appear most frequently are the ones you must include. For example, if every software engineering role asks for "React", "Node.js", and "AWS", those should be prominent on your resume.</p>
+
+<h2>How to List Skills on Your Resume</h2>
+<h3>Dedicated Skills Section</h3>
+<p>Include a bulleted list of 8-12 relevant skills near the top of your resume. Group them by category (Programming Languages, Tools, Soft Skills) for easy scanning. Use columns sparingly — some ATS systems struggle with multi-column layouts.</p>
+<h3>Weave Skills Into Experience Bullets</h3>
+<p>Rather than just listing "Python" in your skills section, show it in action: "Built a Python-based data pipeline that processed 500K+ records daily, reducing processing time by 40%." This proves proficiency rather than just claiming it.</p>
+
+<h2>Top In-Demand Skills by Industry</h2>
+<p><strong>Tech:</strong> React, TypeScript, Python, AWS, Docker, Kubernetes, Machine Learning, SQL, GraphQL, CI/CD pipelines</p>
+<p><strong>Healthcare:</strong> Patient care, EHR systems (Epic, Cerner), HIPAA compliance, Medical terminology, Clinical research, Telemedicine platforms</p>
+<p><strong>Finance:</strong> Financial modeling, Excel, Bloomberg Terminal, Risk management, SQL, GAAP, CPA, Data analysis</p>
+<p><strong>Marketing:</strong> SEO/SEM, Content strategy, Google Analytics, Social media management, CRM (HubSpot, Salesforce), Email marketing, Copywriting</p>
+<p><strong>Project Management:</strong> Agile/Scrum, Jira, Stakeholder management, Risk assessment, Budgeting, PMP, MS Project</p>
+
+<h2>How to Showcase Transferable Skills</h2>
+<p>If you're changing careers, focus on transferable skills that apply across industries. Leadership, communication, data analysis, project management, and problem-solving are valuable in almost every field. Frame your past experience in terms of these universal skills. See our <a href="/resume-examples">resume examples</a> for career change templates.</p>
+
+<h2>Common Resume Skills Mistakes to Avoid</h2>
+<p><strong>Listing too many skills:</strong> Quality over quantity. 10-15 relevant skills is plenty.</p>
+<p><strong>Including outdated skills:</strong> Remove skills you no longer use or that are no longer relevant (e.g., "Windows 98").</p>
+<p><strong>Lying about skills:</strong> Never list a skill you don't possess. Interviews and technical assessments will expose gaps.</p>
+<p><strong>Ignoring soft skills:</strong> Backend engineers still need communication skills. Managers still need empathy. Include soft skills that the job description emphasizes.</p>
+
+<p>Build an ATS-optimized resume that showcases your skills effectively with our <a href="/">free resume builder</a>.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-list-certifications-on-resume",
+    title: "How to List Certifications on a Resume: Examples & Best Practices",
+    description: "Learn how to list certifications on your resume correctly. Includes format examples for PMP, CPA, AWS, CompTIA, and more.",
+    date: "2025-02-20",
+    readTime: "7 min read",
+    category: "Resume Tips",
+    relatedTools: ["/resume-examples", "/", "/templates"],
+    content: `
+Certifications can give your resume a significant edge. They demonstrate specialized knowledge, commitment to professional development, and industry-recognized expertise. But listing certifications incorrectly can undermine their impact or even confuse ATS systems.
+
+<h2>Where to Place Certifications on Your Resume</h2>
+<p>There are two main approaches, depending on your situation:</p>
+<p><strong>Dedicated Certifications Section:</strong> If you have 3+ certifications relevant to the role, create a separate "Certifications" section near the bottom of your resume (above education). This is the most common approach and works well for professionals with industry credentials.</p>
+<p><strong>Within the Education Section:</strong> If you only have 1-2 certifications or they are closely tied to your degree (e.g., a teaching certification), you can list them under your education section.</p>
+<p>For career changers, consider placing certifications near the top of your resume alongside your summary to immediately establish credibility in your new field.</p>
+
+<h2>The Correct Format for Listing Certifications</h2>
+<p>Each certification entry should include: the full certification name, the issuing organization, and the date earned (month and year). If applicable, include the expiration date or renewal status.</p>
+<p><strong>Format example:</strong></p>
+<p>Project Management Professional (PMP) — Project Management Institute, June 2024</p>
+<p>AWS Certified Solutions Architect — Amazon Web Services, January 2025 (Expires: January 2028)</p>
+
+<h2>Examples for Popular Certifications</h2>
+<p><strong>PMP (Project Management Professional):</strong> "Project Management Professional (PMP) — Project Management Institute, March 2024"</p>
+<p><strong>CPA (Certified Public Accountant):</strong> "Certified Public Accountant (CPA) — American Institute of CPAs, January 2023"</p>
+<p><strong>AWS Certified Solutions Architect:</strong> "AWS Certified Solutions Architect — Associate — Amazon Web Services, June 2024"</p>
+<p><strong>CompTIA A+:</strong> "CompTIA A+ — CompTIA, October 2024"</p>
+<p><strong>CFA (Chartered Financial Analyst):</strong> "Chartered Financial Analyst (CFA) — CFA Institute, September 2022"</p>
+<p><strong>SHRM-CP:</strong> "SHRM Certified Professional (SHRM-CP) — Society for Human Resource Management, February 2024"</p>
+<p><strong>Six Sigma Green Belt:</strong> "Six Sigma Green Belt — IASSC, July 2024"</p>
+<p><strong>Google Data Analytics Certificate:</strong> "Google Data Analytics Professional Certificate — Coursera, November 2024"</p>
+
+<h2>How to List In-Progress Certifications</h2>
+<p>If you're actively pursuing a certification, you can still list it. Add the expected completion date: "AWS Certified Developer — Associate (In Progress, Expected July 2025)". This shows initiative and ongoing professional development.</p>
+
+<h2>Listing Certifications Without Expiration Dates</h2>
+<p>Some certifications don't expire. For these, simply list the year earned: "Certified ScrumMaster (CSM) — Scrum Alliance, 2023". For certifications that require continuing education credits (like PMP or SHRM), include the expiration or renewal date to show you're current.</p>
+
+<h2>Linking Certifications to Job Requirements</h2>
+<p>When a job description specifically requires a certification (e.g., "PMP preferred"), highlight it prominently. Consider adding a note in your professional summary: "PMP-certified project manager with 8+ years of experience." Use our <a href="/resume-examples">resume examples</a> to see how top candidates showcase their credentials.</p>
+
+<p>Create a professional resume that highlights your certifications with our <a href="/">resume builder</a>. Browse <a href="/templates">resume templates</a> designed for certified professionals.</p>
+    `.trim()
+  },
+  {
+    slug: "career-change-resume",
+    title: "How to Write a Career Change Resume: Complete Guide with Examples",
+    description: "Switching careers? Learn how to write a career change resume that highlights transferable skills and gets you hired in a new field.",
+    date: "2025-03-01",
+    readTime: "11 min read",
+    category: "Career Advice",
+    relatedTools: ["/resume-examples", "/cover-letter", "/"],
+    content: `
+Changing careers is both exciting and challenging. Your resume is the first hurdle — you need to convince recruiters that your past experience, while in a different field, has prepared you for this new role. The key is reframing your experience through the lens of transferable skills.
+
+<h2>Why a Career Change Resume Needs a Different Approach</h2>
+<p>A traditional reverse-chronological resume may not work for career changers because it emphasizes your job titles and industry, which are now less relevant. Instead, you need a format that highlights your capabilities and minimizes the focus on your previous industry.</p>
+
+<h2>The Best Resume Format for Career Changers: Combination</h2>
+<p>The <strong>combination format</strong> is ideal for career transitions. It starts with a strong professional summary and skills section, followed by a condensed work history. This layout showcases your relevant abilities before diving into your employment timeline.</p>
+<p>Alternatively, a <strong>functional format</strong> focuses almost entirely on skills with minimal work history. While this can be effective, be aware that some recruiters view functional resumes with skepticism and some ATS systems parse them poorly.</p>
+
+<h2>Writing a Professional Summary for Career Change</h2>
+<p>Your summary should immediately address the career transition and frame your past experience as an asset rather than a limitation:</p>
+<p>"Marketing professional transitioning into product management. 5+ years of experience driving user research, A/B testing, and data-informed decision making. Proven ability to lead cross-functional teams and launch products that increased customer engagement by 30%."</p>
+<p>Notice how this summary emphasizes transferable skills (user research, A/B testing, cross-functional leadership) rather than marketing-specific achievements.</p>
+
+<h2>Identifying and Showcasing Transferable Skills</h2>
+<p><strong>Leadership:</strong> Managing teams, mentoring, project oversight — relevant in any industry.</p>
+<p><strong>Communication:</strong> Writing, presenting, negotiating — essential across all roles.</p>
+<p><strong>Problem-Solving:</strong> Analyzing issues, proposing solutions, implementing changes — universally valued.</p>
+<p><strong>Data Analysis:</strong> Interpreting metrics, generating reports, making data-driven decisions.</p>
+<p>Map your past accomplishments to the language used in your target industry. For example, "Managed a team of sales representatives" becomes "Led cross-functional team to achieve quarterly targets."</p>
+
+<h2>How to Frame Past Experience for a New Field</h2>
+<p>Focus on the responsibilities and achievements that overlap with your target role, even if they weren't your primary duties. Use industry-specific keywords from the new field. A teacher transitioning to corporate training would emphasize curriculum development, presentation skills, and assessment design rather than classroom management.</p>
+
+<h2>Including Relevant Coursework, Projects, and Certifications</h2>
+<p>If you've taken courses, completed projects, or earned certifications related to your new field, highlight them prominently. A dedicated "Relevant Projects" or "Certifications" section can demonstrate commitment and foundational knowledge. See <a href="/resume-examples">resume examples</a> for career changers who successfully made the leap.</p>
+
+<h2>Education First for Career Changes Involving a New Degree</h2>
+<p>If your career change involves a new degree (e.g., returning to school for computer science), place your education section above your work experience. Include your GPA, relevant coursework, projects, and academic achievements.</p>
+
+<h2>Networking and Cover Letter Strategy</h2>
+<p>Your resume alone may not tell the full story. A well-crafted <a href="/cover-letter">cover letter</a> can explain your motivation for changing careers and connect the dots for recruiters. Additionally, networking can help you get referrals that bypass the initial resume screening. Use LinkedIn to connect with professionals in your target industry and learn the specific skills they value.</p>
+
+<p>Build a career change resume that gets results with our <a href="/">free resume builder</a>. Choose a combination format template designed specifically for career transitions.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-with-no-experience",
+    title: "How to Make a Resume with No Experience: Entry-Level Guide",
+    description: "No work experience? No problem. Learn how to write a resume as a student or first-time job seeker with examples and templates.",
+    date: "2025-03-10",
+    readTime: "9 min read",
+    category: "Entry Level",
+    relatedTools: ["/resume-examples/software-engineer-intern", "/resume-examples/fresher", "/"],
+    content: `
+Writing your first resume with no formal work experience can feel impossible. But everyone starts somewhere, and employers don't expect entry-level candidates to have years of experience. What they look for is potential: your education, skills, motivation, and ability to learn.
+
+<h2>Lead with Education</h2>
+<p>Without work experience, your education section takes center stage. Place it at the top of your resume, right after your header and professional summary. Include your school name, degree program, expected graduation date, GPA (if 3.0 or higher), and relevant coursework.</p>
+<p><strong>Example:</strong></p>
+<p>Bachelor of Science in Computer Science<br/>
+University of California, Berkeley | Expected May 2026<br/>
+GPA: 3.7 | Dean's List<br/>
+Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development</p>
+
+<h2>Highlight Relevant Coursework and Projects</h2>
+<p>Class projects, personal projects, and hackathon entries are valuable substitutes for work experience. Describe each project with the same format you'd use for a job: project name, your role, technologies used, and measurable outcomes.</p>
+<p>Include a link to your GitHub portfolio or project demo if available. For students applying to tech roles, our <a href="/resume-examples/software-engineer-intern">software engineer intern resume example</a> shows how to structure project-based experience effectively.</p>
+
+<h2>Include Internships and Volunteer Work</h2>
+<p>Paid internships, unpaid internships, co-op programs, and volunteer positions all count as experience. Even if the role wasn't strictly professional, any structured work demonstrates responsibility, reliability, and basic workplace skills. Frame volunteer experience with the same action verbs and achievement bullet points you'd use for paid roles.</p>
+
+<h2>List Extracurricular Activities and Leadership Roles</h2>
+<p>Being president of a student club, captain of a sports team, or editor of the school newspaper demonstrates leadership, teamwork, and initiative. These experiences are highly valued by employers, especially for entry-level roles where cultural fit and soft skills matter greatly.</p>
+
+<h2>Emphasize Soft Skills and Willingness to Learn</h2>
+<p>For entry-level candidates, attitude matters as much as aptitude. Emphasize your enthusiasm, work ethic, adaptability, and eagerness to learn. Your professional summary should convey that you're a quick learner ready to contribute. For example: "Motivated computer science graduate with strong problem-solving skills and a passion for building user-friendly applications. Quick learner seeking an opportunity to contribute to innovative engineering teams."</p>
+
+<h2>Resume Format Tips for No-Experience Candidates</h2>
+<p><strong>One page maximum:</strong> You don't have enough content for more than one page. Keep it concise.</p>
+<p><strong>Clean, simple layout:</strong> Use a single-column format with clear section headings. Avoid clutter.</p>
+<p><strong>Use a functional or combination format:</strong> These formats emphasize skills and education over work history. See our <a href="/resume-examples/fresher">fresher resume example</a> for a proven template.</p>
+<p><strong>Tailor for each application:</strong> Adjust your relevant coursework, projects, and skills to match the job description. Use keywords from the posting throughout your resume.</p>
+
+<h2>What to Leave Off a No-Experience Resume</h2>
+<p>Don't include your high school (unless you're still in college), unrelated hobbies, references (available upon request is assumed), or outdated contact information. Every line should serve a purpose.</p>
+
+<p>Create your first resume with confidence using our <a href="/">free resume builder</a>. Our entry-level templates are designed to highlight your potential, not just your experience.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-action-verbs",
+    title: "200+ Powerful Resume Action Verbs to Make Your Resume Stand Out",
+    description: "Use these powerful resume action verbs to describe your achievements and impress recruiters. Organized by category with examples.",
+    date: "2025-03-15",
+    readTime: "8 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/resume-examples", "/ats-score"],
+    content: `
+The words you choose on your resume matter. Powerful action verbs can transform a平淡 description into a compelling achievement that grabs a recruiter's attention. Studies show that resumes with strong action verbs receive more callbacks than those using passive or weak language.
+
+<h2>Why Action Verbs Matter</h2>
+<p>Recruiters scan resumes in seconds. Strong action verbs immediately communicate impact and authority. According to resume screening studies, resumes that use specific, powerful verbs are significantly more likely to be selected for interviews. Compare these two bullet points for the same achievement:</p>
+<p><strong>Weak:</strong> "Was responsible for the team that increased sales"</p>
+<p><strong>Strong:</strong> "Led a team of 12 to exceed quarterly sales targets by 25%"</p>
+<p>The second version uses "Led" — a strong action verb — and pairs it with a measurable result. This is the formula for every bullet point on your resume.</p>
+
+<h2>Leadership Action Verbs</h2>
+<p>Use these when describing management, supervision, or team leadership: Led, Directed, Managed, Supervised, Orchestrated, Spearheaded, Chaired, Coordinated, Delegated, Mentored, Guided, Steered, Administered, Presided Over, Oversaw</p>
+
+<h2>Communication Action Verbs</h2>
+<p>For roles involving writing, presenting, or negotiating: Communicated, Presented, Negotiated, Authored, Drafted, Publicized, Advocated, Articulated, Conveyed, Persuaded, Promoted, Facilitated, Mediated, Liaised, Documented</p>
+
+<h2>Technical Action Verbs</h2>
+<p>Ideal for engineering, IT, and technical roles: Built, Developed, Programmed, Engineered, Architected, Implemented, Configured, Deployed, Integrated, Migrated, Automated, Optimized, Refactored, Debugged, Maintained</p>
+
+<h2>Creative Action Verbs</h2>
+<p>For design, content creation, and marketing roles: Designed, Created, Launched, Conceptualized, Crafted, Produced, Illustrated, Visualized, Composed, Formulated, Invented, Initiated, Established, Forged, Shaped</p>
+
+<h2>Analysis Action Verbs</h2>
+<p>For roles involving data, research, and strategy: Analyzed, Evaluated, Assessed, Investigated, Researched, Audited, Diagnosed, Examined, Modeled, Forecasted, Quantified, Interpreted, Surveyed, Mapped, Tracked</p>
+
+<h2>Achievement Action Verbs</h2>
+<p>To highlight results and accomplishments: Achieved, Exceeded, Drove, Delivered, Generated, Produced, Secured, Won, Attained, Earned, Outperformed, Surpassed, Yielded, Captured, Realized</p>
+
+<h2>Improvement Action Verbs</h2>
+<p>For demonstrating how you made things better: Improved, Reduced, Transformed, Streamlined, Enhanced, Revamped, Restructured, Reorganized, Revitalized, Simplified, Upgraded, Refined, Overhauled, Accelerated, Expanded</p>
+
+<h2>Weak vs Strong: Before and After Examples</h2>
+<p><strong>Before:</strong> "Worked on the company website"<br/><strong>After:</strong> "Engineered a responsive company website using React and Node.js, increasing traffic by 60%"</p>
+<p><strong>Before:</strong> "Helped with marketing campaigns"<br/><strong>After:</strong> "Orchestrated multi-channel marketing campaigns that generated $2M in pipeline revenue"</p>
+<p><strong>Before:</strong> "Was in charge of customer service"<br/><strong>After:</strong> "Resolved 95% of escalated customer issues within 24 hours, achieving a 4.8/5 satisfaction rating"</p>
+
+<h2>How to Vary Action Verbs Across Your Resume</h2>
+<p>Avoid repeating the same verb. If you use "Led" in one bullet, use "Managed", "Directed", or "Orchestrated" in the next. Varying your language keeps the reader engaged and demonstrates a richer vocabulary. Use our <a href="/resume-examples">resume examples</a> to see how professionals vary their verbs effectively.</p>
+
+<p>Build a resume with powerful, accomplishment-driven bullet points using our <a href="/">free resume builder</a>. Check your resume's language with <a href="/ats-score">ATS Score Checker</a> to ensure your verbs are working for you.</p>
+    `.trim()
+  },
 ]
