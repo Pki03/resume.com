@@ -1,15 +1,6 @@
-export interface ResumeExample {
-  slug: string
-  title: string
-  industry: string
-  level: string
-  summary: string
-  skills: string[]
-  sampleResume: string
-  tips: string[]
-}
+import type { ResumeExample } from './types'
 
-export const resumeExamples: ResumeExample[] = [
+const manualEntries: ResumeExample[] = [
   {
     slug: "software-engineer",
     title: "Software Engineer",
@@ -984,3 +975,7 @@ Tools: JIRA, Confluence, Visio, Lucidchart, SQL`,
     ]
   },
 ]
+
+import { generatedExamples } from './generatedExamples'
+
+export const resumeExamples = [...manualEntries, ...generatedExamples]
