@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Resume Builder - Create Professional Resumes Online</title>
+    <meta name="description" content="Build professional, ATS-friendly resumes online for free. Choose from multiple templates, customize colors, and export as PDF. No sign-up required." />
+    <link rel="canonical" href="https://resumebuilder.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Free Resume Builder - Create Professional Resumes Online" />
+    <meta property="og:description" content="Build professional, ATS-friendly resumes online for free. Choose from multiple templates, customize colors, and export as PDF. No sign-up required." />
+    <meta property="og:url" content="https://resumebuilder.com" />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Resume Builder - Create Professional Resumes Online" />
+    <meta name="twitter:description" content="Build professional, ATS-friendly resumes online for free. Choose from multiple templates, customize colors, and export as PDF. No sign-up required." />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+    <style is:global>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+        --primary: #2563eb; --primary-dark: #1d4ed8; --primary-light: #eff6ff;
+        --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+        --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b;
+        --gray-600: #475569; --gray-700: #334155; --gray-900: #0f172a;
+        --success: #10b981; --warning: #f59e0b; --error: #ef4444;
+        --radius: 10px; --radius-sm: 6px; --radius-lg: 14px;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+        --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+        --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+        --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
+      }
+      body { font-family: 'Inter', -apple-system, sans-serif; background: var(--gray-50); color: var(--gray-900); min-height: 100vh; -webkit-font-smoothing: antialiased; }
+      input, select, textarea, button { font-family: inherit; }
+      input:focus, select:focus, textarea:focus { outline: none; }
+      ::selection { background: #bfdbfe; color: #1d4ed8; }
+
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; border-radius: 8px; padding: 0.5rem 0.875rem; font-size: 0.8125rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.15s; white-space: nowrap; line-height: 1.4; }
+      .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+      .btn-primary { background: var(--primary); color: white; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+      .btn-primary:hover:not(:disabled) { background: var(--primary-dark); box-shadow: 0 2px 4px rgba(37,99,235,0.25); transform: translateY(-0.5px); }
+      .btn-outline { background: white; color: var(--gray-700); border: 1px solid var(--gray-200); }
+      .btn-outline:hover:not(:disabled) { background: var(--gray-50); border-color: var(--gray-300); }
+      .btn-ghost { background: transparent; color: var(--gray-500); }
+      .btn-ghost:hover:not(:disabled) { background: var(--gray-100); color: var(--gray-700); }
+      .btn-danger { background: var(--error); color: white; }
+      .btn-sm { padding: 0.3125rem 0.75rem; font-size: 0.75rem; border-radius: 6px; }
+      .btn-icon { width: 32px; height: 32px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; }
+
+      .input { width: 100%; border-radius: 8px; border: 1px solid var(--gray-200); padding: 0.5rem 0.75rem; font-size: 0.8125rem; background: white; color: var(--gray-900); transition: border-color 0.15s, box-shadow 0.15s; }
+      .input:hover { border-color: var(--gray-300); }
+      .input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+      .input::placeholder { color: var(--gray-400); }
+      textarea.input { resize: vertical; min-height: 72px; line-height: 1.5; }
+      select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.625rem center; padding-right: 2rem; cursor: pointer; }
+      .label { display: block; font-size: 0.6875rem; font-weight: 600; color: var(--gray-600); margin-bottom: 0.25rem; letter-spacing: 0.03em; text-transform: uppercase; }
+      .card { background: white; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); }
+      .card-header { padding: 0.875rem 1rem; border-bottom: 1px solid var(--gray-100); font-size: 0.8125rem; font-weight: 600; color: var(--gray-700); display: flex; align-items: center; justify-content: space-between; }
+      .card-body { padding: 1rem; }
+
+      .tab { padding: 0.4375rem 0.75rem; font-size: 0.75rem; font-weight: 500; border: none; background: none; cursor: pointer; border-radius: 6px; color: var(--gray-500); transition: all 0.15s; white-space: nowrap; }
+      .tab:hover { background: var(--gray-100); color: var(--gray-700); }
+      .tab.active { background: var(--primary-light); color: var(--primary); font-weight: 600; }
+
+      .section-title { font-size: 1rem; font-weight: 700; color: var(--gray-900); letter-spacing: -0.01em; }
+      .section-desc { font-size: 0.8125rem; color: var(--gray-500); margin-top: 0.125rem; }
+      .form-group { margin-bottom: 0.75rem; }
+      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .badge { display: inline-flex; align-items: center; padding: 0.1875rem 0.5rem; border-radius: 999px; font-size: 0.6875rem; font-weight: 500; }
+      .badge-blue { background: var(--primary-light); color: var(--primary); }
+      .chip { display: inline-flex; align-items: center; gap: 0.25rem; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 6px; padding: 0.25rem 0.5rem; font-size: 0.75rem; color: var(--gray-700); }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--gray-300); }
+
+      @media (max-width: 900px) {
+        .builder-layout { flex-direction: column !important; }
+        .builder-sidebar { width: 100% !important; max-height: none !important; }
+        .builder-preview { max-height: none !important; }
+        .builder-tabs { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+        .form-row { grid-template-columns: 1fr !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header style="border-bottom:1px solid var(--gray-200);background:rgba(255,255,255,0.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);position:sticky;top:0;z-index:50">
+      <div style="max-width:1440px;margin:0 auto;padding:0 1.25rem;height:60px;display:flex;align-items:center;justify-content:space-between">
+        <a href="/" style="display:flex;align-items:center;gap:0.5rem;font-weight:800;font-size:1.0625rem;color:var(--gray-900);text-decoration:none;letter-spacing:-0.03em">
+          <span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:linear-gradient(135deg,#2563eb,#1d4ed8);border-radius:7px;box-shadow:0 2px 4px rgba(37,99,235,0.25)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </span>
+          ResumeBuilder
+        </a>
+        <div style="display:flex;align-items:center;gap:0.375rem">
+          <button class="btn btn-ghost btn-sm" onclick="loadSampleData()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Sample
+          </button>
+          <button class="btn btn-ghost btn-sm" onclick="clearAll()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+            Clear
+          </button>
+          <div style="width:1px;height:20px;background:var(--gray-200);margin:0 0.25rem"></div>
+          <button class="btn btn-primary btn-sm" onclick="exportPDF()" style="display:flex;align-items:center;gap:0.375rem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export PDF
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="app" class="builder-layout" style="display:flex;max-width:1440px;margin:0 auto;padding:0.75rem;gap:0.75rem;min-height:calc(100vh - 60px)">
+      <div id="sidebar" class="builder-sidebar" style="width:384px;flex-shrink:0;display:flex;flex-direction:column;gap:0.75rem;overflow-y:auto;max-height:calc(100vh - 72px)">
+        <div class="card">
+          <div class="card-body builder-tabs" style="padding:0.625rem 0.75rem;display:flex;gap:0.375rem;flex-wrap:wrap">
+            <button class="tab active" data-tab="personal" onclick="switchTab('personal')">Personal</button>
+            <button class="tab" data-tab="summary" onclick="switchTab('summary')">Summary</button>
+            <button class="tab" data-tab="experience" onclick="switchTab('experience')">Experience</button>
+            <button class="tab" data-tab="education" onclick="switchTab('education')">Education</button>
+            <button class="tab" data-tab="skills" onclick="switchTab('skills')">Skills</button>
+            <button class="tab" data-tab="projects" onclick="switchTab('projects')">Projects</button>
+            <button class="tab" data-tab="certifications" onclick="switchTab('certifications')">Certs</button>
+            <button class="tab" data-tab="languages" onclick="switchTab('languages')">Languages</button>
+            <button class="tab" data-tab="settings" onclick="switchTab('settings')">Style</button>
+          </div>
+        </div>
+        <div id="editor-panel" class="card" style="flex:1;overflow-y:auto;border-radius:var(--radius-lg)">
+          <div id="editor-inner" class="card-body"></div>
+        </div>
+      </div>
+
+      <div id="preview-area" class="builder-preview" style="flex:1;display:flex;flex-direction:column;gap:0.75rem;overflow-y:auto;max-height:calc(100vh - 72px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-shrink:0;padding:0 0.25rem">
+          <div style="display:flex;align-items:center;gap:0.5rem">
+            <span style="width:8px;height:8px;border-radius:50%;background:var(--success)"></span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Live Preview</span>
+          </div>
+          <div style="display:flex;gap:0.5rem">
+            <div style="display:flex;align-items:center;gap:0.375rem">
+              <label style="font-size:0.6875rem;font-weight:500;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.03em">Template</label>
+              <select id="template-select" onchange="updateConfig()" class="input" style="width:110px;padding:0.3125rem 1.5rem 0.3125rem 0.5rem;font-size:0.75rem">
+                <option value="classic">Classic</option>
+                <option value="modern">Modern</option>
+                <option value="professional">Professional</option>
+                <option value="creative">Creative</option>
+              </select>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.375rem">
+              <label style="font-size:0.6875rem;font-weight:500;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.03em">Theme</label>
+              <select id="theme-select" onchange="updateConfig()" class="input" style="width:100px;padding:0.3125rem 1.5rem 0.3125rem 0.5rem;font-size:0.75rem">
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="red">Red</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+                <option value="teal">Teal</option>
+                <option value="slate">Slate</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="preview-container" style="flex:1;display:flex;justify-content:center;padding:1.5rem;background:var(--gray-100);border-radius:var(--radius-lg);border:1px solid var(--gray-200);overflow-y:auto;position:relative">
+          <div id="resume-preview" style="width:210mm;min-height:297mm;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.06),0 16px 48px rgba(0,0,0,0.08);padding:0;font-size:12px;line-height:1.5;position:relative;overflow:hidden;border-radius:4px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:960px;margin:0 auto;padding:5rem 1.5rem">
+      <article style="color:var(--gray-600);font-size:0.9375rem;line-height:1.8">
+        <h2 style="font-size:2rem;font-weight:800;color:var(--gray-900);margin-bottom:1.25rem;letter-spacing:-0.02em;line-height:1.3">Free Online Resume Builder — Create Professional Resumes in Minutes</h2>
+        <p style="font-size:1.0625rem;color:var(--gray-500);margin-bottom:2rem;line-height:1.7">Looking for a free resume builder that creates professional, ATS-friendly resumes without any hassle? You've found it. Our online resume builder lets you create a polished, job-winning resume in minutes — completely free, with no sign-up required. Whether you're a seasoned executive, a recent graduate, or switching careers, our tool gives you everything you need to land your next interview.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:2.5rem 0">
+          <div class="card" style="padding:1.25rem">
+            <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">ATS-Friendly Templates</h3>
+            <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">All templates are designed to pass Applicant Tracking Systems with clean layouts and proper semantic structure.</p>
+          </div>
+          <div class="card" style="padding:1.25rem">
+            <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">Instant PDF Export</h3>
+            <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">Export your resume as a clean, print-ready PDF with one click. Your formatting is preserved perfectly.</p>
+          </div>
+          <div class="card" style="padding:1.25rem">
+            <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">100% Free, No Sign-Up</h3>
+            <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">No accounts, no credit cards, no limits. Everything runs in your browser — your data stays private.</p>
+          </div>
+          <div class="card" style="padding:1.25rem">
+            <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">Multiple Templates</h3>
+            <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">Classic, Modern, Professional, and Creative designs. Each with customizable color themes.</p>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin:2.5rem 0 1rem;letter-spacing:-0.01em">How to Use This Resume Builder</h3>
+        <p>Using our resume generator is simple. Start by filling in your personal information and professional summary. Add your work experience with bullet points highlighting key achievements. Include your education details, skills organized by category, notable projects, certifications, and languages. You can arrange sections in any order, toggle visibility, and see changes instantly in the live preview. When you're satisfied, export your resume as a PDF with one click.</p>
+
+        <h3 style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin:2.5rem 0 1rem;letter-spacing:-0.01em">Tips for Creating an Effective Resume</h3>
+        <p>When using our resume builder online, follow these tips for best results: Tailor your resume to each job application by adjusting keywords from the job description. Use action verbs and quantify achievements (e.g., "Increased sales by 30%"). Keep your resume to one page if you have less than 10 years of experience. Use a professional email address. Proofread carefully — a single typo can cost you an interview. Our resume CV builder helps you create a document that hiring managers will notice for all the right reasons.</p>
+
+        <p style="margin-top:2rem">Check your resume's <a href="/ats-score" style="color:var(--primary);text-decoration:none;font-weight:500">ATS compatibility score</a>, generate a matching <a href="/cover-letter" style="color:var(--primary);text-decoration:none;font-weight:500">cover letter</a>, or browse <a href="/resume-examples" style="color:var(--primary);text-decoration:none;font-weight:500">resume examples by industry</a>.</p>
+      </article>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#2563eb,#1d4ed8);padding:3rem 1.5rem;text-align:center">
+      <div style="max-width:480px;margin:0 auto">
+        <h3 style="font-size:1.375rem;font-weight:800;color:white;margin:0 0 0.5rem;letter-spacing:-0.02em">Get Weekly Resume Tips</h3>
+        <p style="font-size:0.9375rem;color:rgba(255,255,255,0.8);margin:0 0 1.25rem">Join 10,000+ job seekers getting expert advice straight to their inbox.</p>
+        <form id="email-form" style="display:flex;gap:0.5rem;max-width:400px;margin:0 auto">
+          <input type="email" id="email-input" placeholder="your@email.com" style="flex:1;border-radius:8px;border:none;padding:0.625rem 0.875rem;font-size:0.875rem;font-family:inherit;box-shadow:0 1px 2px rgba(0,0,0,0.05)" required />
+          <button type="submit" style="border-radius:8px;border:none;background:#0f172a;color:white;padding:0.625rem 1.25rem;font-size:0.875rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.15s;box-shadow:0 1px 2px rgba(0,0,0,0.1)" onmouseover="this.style.opacity='0.9';this.style.transform='translateY(-0.5px)'" onmouseout="this.style.opacity='1';this.style.transform='translateY(0)'">Subscribe</button>
+        </form>
+        <p style="font-size:0.6875rem;color:rgba(255,255,255,0.4);margin:0.625rem 0 0">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+    <script is:inline>
+      document.getElementById("email-form")?.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const email = document.getElementById("email-input").value;
+        if (email) {
+          alert("Thanks for subscribing! You'll receive weekly resume tips.");
+          document.getElementById("email-input").value = "";
+        }
+      });
+    </script>
+
+    <div style="background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:3rem 1.5rem">
+      <div style="max-width:960px;margin:0 auto">
+        <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:1.25rem;text-align:center">Free Career Tools</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0.75rem">
+          <a href="/" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Resume Builder</span>
+          </a>
+          <a href="/ats-score" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">ATS Score</span>
+          </a>
+          <a href="/cover-letter" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Cover Letter</span>
+          </a>
+          <a href="/resume-examples" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Examples</span>
+          </a>
+          <a href="/templates" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Templates</span>
+          </a>
+        </div>
+        <div style="text-align:center;margin-top:1.25rem">
+          <a href="/blog" style="font-size:0.8125rem;color:var(--primary);text-decoration:none;font-weight:500">Read our resume writing guides →</a>
+        </div>
+      </div>
+    </div>
+
+    <footer style="border-top:1px solid var(--gray-200);background:white;padding:3rem 1.5rem">
+      <div style="max-width:1280px;margin:0 auto">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.5rem;font-weight:800;font-size:1.0625rem;color:var(--gray-900);margin-bottom:0.75rem;letter-spacing:-0.03em">
+              <span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;background:linear-gradient(135deg,#2563eb,#1d4ed8);border-radius:6px">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </span>
+              ResumeBuilder
+            </div>
+            <p style="font-size:0.8125rem;color:var(--gray-500);max-width:240px;line-height:1.6">Create professional resumes in minutes. Free, fast, and ATS-friendly.</p>
+          </div>
+          <div><h4 style="font-weight:600;font-size:0.8125rem;color:var(--gray-900);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.02em">Tools</h4>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.375rem">
+              <li><a href="/" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Resume Builder</a></li>
+              <li><a href="/cover-letter" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Cover Letter</a></li>
+              <li><a href="/ats-score" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">ATS Score Checker</a></li>
+              <li><a href="/resume-examples" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Resume Examples</a></li>
+              <li><a href="/templates" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Templates</a></li>
+            </ul>
+          </div>
+          <div><h4 style="font-weight:600;font-size:0.8125rem;color:var(--gray-900);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.02em">Company</h4>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.375rem">
+              <li><a href="/about" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">About Us</a></li>
+              <li><a href="/contact" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Contact</a></li>
+              <li><a href="/privacy" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Privacy Policy</a></li>
+              <li><a href="/terms" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Terms</a></li>
+            </ul>
+          </div>
+          <div><h4 style="font-weight:600;font-size:0.8125rem;color:var(--gray-900);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.02em">Resources</h4>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.375rem">
+              <li><a href="/faq" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">FAQ</a></li>
+              <li><a href="/blog" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">Blog</a></li>
+              <li><a href="/ats-score" style="font-size:0.8125rem;color:var(--gray-500);text-decoration:none;transition:color 0.15s">ATS Checker</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--gray-100);margin-top:2rem;padding-top:2rem;text-align:center;font-size:0.78125rem;color:var(--gray-400)">&copy; 2026 ResumeBuilder. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Free Resume Builder",
+      "description": "Build professional, ATS-friendly resumes online for free with multiple templates and PDF export.",
+      "url": "https://resumebuilder.com",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script is:inline>
+      const THEMES = { blue: "#2563eb", green: "#16a34a", red: "#dc2626", purple: "#9333ea", orange: "#ea580c", teal: "#0d9488", slate: "#475569" }
+      const THEME_LIGHTS = { blue: "#eff6ff", green: "#f0fdf4", red: "#fef2f2", purple: "#faf5ff", orange: "#fff7ed", teal: "#f0fdfa", slate: "#f8fafc" }
+
+      function defaultData() {
+        return { personalInfo: { fullName: "", email: "", phone: "", location: "", website: "", linkedin: "", title: "" }, summary: "", experience: [], education: [], skillCategories: [], projects: [], certifications: [], languages: [] }
+      }
+      function defaultConfig() { return { template: "classic", theme: "blue", fontSize: "medium", showSummary: true, showExperience: true, showEducation: true, showSkills: true, showProjects: true, showCertifications: true, showLanguages: true } }
+
+      let data = defaultData()
+      let config = defaultConfig()
+      let currentTab = "personal"
+
+      function saveState() { try { localStorage.setItem("resumeData", JSON.stringify(data)); localStorage.setItem("resumeConfig", JSON.stringify(config)) } catch(e) {} }
+      function loadState() { try { const d = localStorage.getItem("resumeData"); if (d) data = JSON.parse(d); const c = localStorage.getItem("resumeConfig"); if (c) config = JSON.parse(c) } catch(e) {} }
+
+      function loadSampleData() {
+        data = {
+          personalInfo: { fullName: "Sarah Johnson", email: "sarah.johnson@email.com", phone: "+1 (555) 987-6543", location: "New York, NY", website: "sarahjohnson.dev", linkedin: "linkedin.com/in/sarahjohnson", title: "Product Designer" },
+          summary: "Creative product designer with 6+ years of experience crafting user-centered digital experiences. Proficient in design thinking, prototyping, and design systems.",
+          experience: [{ id:"e1", company:"DesignStudio Co", position:"Senior Product Designer", startDate:"2021-03", endDate:"", current:true, description:["Led redesign of core product, improving user engagement by 35%","Established design system used by 12 product teams","Conducted 50+ user research sessions to inform product decisions"], location:"New York, NY" }, { id:"e2", company:"WebAgency", position:"UI/UX Designer", startDate:"2018-06", endDate:"2021-02", current:false, description:["Designed and shipped 20+ client websites and mobile apps","Reduced design-to-dev handoff time by 40%","Mentored 3 junior designers"], location:"Boston, MA" }],
+          education: [{ id:"ed1", school:"Rhode Island School of Design", degree:"Bachelor of Fine Arts", field:"Graphic Design", startDate:"2014-09", endDate:"2018-06", gpa:"3.7", achievements:["Honors Program Graduate","Senior Design Exhibition Award"] }],
+          skillCategories: [{ id:"sc1", name:"Design", skills:[{ id:"sk1", name:"Figma", level:5 },{ id:"sk2", name:"Sketch", level:4 },{ id:"sk3", name:"Adobe XD", level:4 },{ id:"sk4", name:"Prototyping", level:5 }] }, { id:"sc2", name:"Research", skills:[{ id:"sk5", name:"User Research", level:5 },{ id:"sk6", name:"Usability Testing", level:4 },{ id:"sk7", name:"Data Analysis", level:3 }] }, { id:"sc3", name:"Code", skills:[{ id:"sk8", name:"HTML/CSS", level:4 },{ id:"sk9", name:"JavaScript", level:3 },{ id:"sk10", name:"React", level:2 }] }],
+          projects: [{ id:"p1", name:"Design System Library", description:"Comprehensive design system with 200+ components and Figma plugin.", technologies:["Figma","Storybook","React","TypeScript"], url:"github.com/sarahj/design-system", startDate:"2023-01", endDate:"2023-08" }],
+          certifications: [{ id:"c1", name:"Google UX Design Certificate", issuer:"Google", date:"2022-06", url:"" }],
+          languages: [{ id:"l1", name:"English", proficiency:"Native" },{ id:"l2", name:"French", proficiency:"Advanced" }],
+        }
+        config = defaultConfig()
+        saveState(); renderEditor(); renderPreview()
+      }
+
+      function clearAll() { if (!confirm("Clear all resume data?")) return; data = defaultData(); config = defaultConfig(); saveState(); renderEditor(); renderPreview() }
+
+      function switchTab(tab) {
+        currentTab = tab
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"))
+        document.querySelector(`[data-tab="${tab}"]`)?.classList.add("active")
+        renderEditor()
+      }
+
+      function escHtml(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;") }
+
+      function renderField(label, key, placeholder, opts) {
+        const val = getDeep(data, key)
+        if (opts?.type === 'textarea') return `<div class="form-group"><label class="label">${label}</label><textarea class="input" data-bind="${key}" style="min-height:${opts?.height||'80px'}" placeholder="${escHtml(placeholder)}">${escHtml(val)}</textarea></div>`
+        if (opts?.type === 'tel') return `<div class="form-group"><label class="label">${label}</label><input class="input" type="tel" data-bind="${key}" value="${escHtml(val)}" placeholder="${escHtml(placeholder)}" /></div>`
+        if (opts?.type === 'email') return `<div class="form-group"><label class="label">${label}</label><input class="input" type="email" data-bind="${key}" value="${escHtml(val)}" placeholder="${escHtml(placeholder)}" /></div>`
+        return `<div class="form-group"><label class="label">${label}</label><input class="input" type="${opts?.type||'text'}" data-bind="${key}" value="${escHtml(val)}" placeholder="${escHtml(placeholder)}" /></div>`
+      }
+
+      function getDeep(obj, path, fallback = "") {
+        let cur = obj; for (const k of path.split(".")) { if (cur == null || cur[k] === undefined) return fallback; cur = cur[k] }; return cur ?? fallback
+      }
+
+      function renderEditor() {
+        const panel = document.getElementById("editor-inner")
+        switch (currentTab) {
+          case "personal": panel.innerHTML = renderPersonal(); break
+          case "summary": panel.innerHTML = renderSummary(); break
+          case "experience": panel.innerHTML = renderExperience(); break
+          case "education": panel.innerHTML = renderEducation(); break
+          case "skills": panel.innerHTML = renderSkills(); break
+          case "projects": panel.innerHTML = renderProjects(); break
+          case "certifications": panel.innerHTML = renderCertifications(); break
+          case "languages": panel.innerHTML = renderLanguages(); break
+          case "settings": panel.innerHTML = renderSettings(); break
+        }
+        document.querySelectorAll("[data-bind]").forEach(el => {
+          el.addEventListener("input", () => { setDeep(data, el.dataset.bind, el.value); saveState(); renderPreview() })
+        })
+      }
+
+      function setDeep(obj, path, value) {
+        const keys = path.split("."); let cur = obj
+        for (let i = 0; i < keys.length - 1; i++) { if (!cur[keys[i]]) cur[keys[i]] = {}; cur = cur[keys[i]] }
+        cur[keys[keys.length-1]] = value
+      }
+
+      function renderPersonal() {
+        return `<div style="margin-bottom:1.25rem"><h3 class="section-title">Personal Information</h3><p class="section-desc">Your basic contact details.</p></div>
+          ${renderField("Full Name", "personalInfo.fullName", "John Doe")}
+          ${renderField("Professional Title", "personalInfo.title", "Software Engineer")}
+          <div class="form-row">${renderField("Email", "personalInfo.email", "john@email.com", {type:"email"})}${renderField("Phone", "personalInfo.phone", "+1 (555) 123-4567", {type:"tel"})}</div>
+          ${renderField("Location", "personalInfo.location", "San Francisco, CA")}
+          <div class="form-row">${renderField("Website", "personalInfo.website", "johndoe.com")}${renderField("LinkedIn", "personalInfo.linkedin", "linkedin.com/in/johndoe")}</div>`
+      }
+
+      function renderSummary() {
+        return `<div style="margin-bottom:1.25rem"><h3 class="section-title">Professional Summary</h3><p class="section-desc">A brief overview of your experience and career goals.</p></div>
+          <div class="form-group"><label class="label">Summary</label><textarea class="input" data-bind="summary" style="min-height:120px;resize:vertical;line-height:1.6" placeholder="Experienced software engineer with 5+ years of expertise in full-stack development...">${escHtml(data.summary)}</textarea></div>
+          <p style="font-size:0.6875rem;color:var(--gray-400);margin-top:0.375rem">Tip: Keep it to 3-5 sentences. Focus on key achievements.</p>`
+      }
+
+      function renderExperience() {
+        let html = `<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem"><div><h3 class="section-title">Work Experience</h3><p class="section-desc">Your professional history.</p></div><button class="btn btn-primary btn-sm" onclick="addExperience()">+ Add Experience</button></div>`
+        if (!data.experience.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>No experience added yet.</div>`
+        data.experience.forEach((e, i) => {
+          html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
+            <button onclick="removeItem('experience',${i})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px;transition:all 0.15s" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <div class="form-row">${input('experience',i,'company','Company','Acme Corp')}${input('experience',i,'position','Position','Software Engineer')}</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.625rem;margin-bottom:0.5rem">
+              <div>${inputMonth('experience',i,'startDate','Start Date')}</div>
+              <div style="display:flex;flex-direction:column">${!e.current ? inputMonth('experience',i,'endDate','End Date') : `<label class="label" style="opacity:0">&nbsp;</label>`}<label style="display:flex;align-items:center;gap:0.375rem;font-size:0.75rem;color:var(--gray-500);cursor:pointer;margin-top:0.125rem"><input type="checkbox" ${e.current?'checked':''} onchange="updateNested('experience',${i},'current',this.checked);renderEditor();renderPreview()" style="accent-color:var(--primary)" /> Currently working</label></div>
+            </div>
+            <div class="form-group" style="margin-bottom:0"><label class="label">Description (one per line)</label><textarea class="input" style="min-height:52px;font-size:0.78125rem" oninput="updateNestedArray('experience',${i},'description',this.value.split('\\n').filter(Boolean));renderPreview()" placeholder="Led a team of 5 engineers&#10;Reduced API response times by 40%">${e.description.join("\n")}</textarea></div>
+          </div>`
+        })
+        return html
+      }
+
+      function renderEducation() {
+        let html = `<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem"><div><h3 class="section-title">Education</h3><p class="section-desc">Your academic background.</p></div><button class="btn btn-primary btn-sm" onclick="addEducation()">+ Add Education</button></div>`
+        if (!data.education.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>No education added yet.</div>`
+        data.education.forEach((e, i) => {
+          html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
+            <button onclick="removeItem('education',${i})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <div class="form-row">${input('education',i,'school','School','University')}${input('education',i,'degree','Degree','B.Sc.')}</div>
+            <div class="form-row">${input('education',i,'field','Field','Computer Science')}${input('education',i,'gpa','GPA','3.8')}</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.625rem;margin-bottom:0.5rem">${inputMonth('education',i,'startDate','Start')}${inputMonth('education',i,'endDate','End')}</div>
+            <div class="form-group" style="margin-bottom:0"><label class="label">Achievements (one per line)</label><textarea class="input" style="min-height:44px;font-size:0.78125rem" oninput="updateNestedArray('education',${i},'achievements',this.value.split('\\n').filter(Boolean));renderPreview()" placeholder="Dean's List 2017&#10;Honors Program">${e.achievements.join("\n")}</textarea></div>
+          </div>`
+        })
+        return html
+      }
+
+      function renderSkills() {
+        let html = `<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem"><div><h3 class="section-title">Skills</h3><p class="section-desc">Group your skills by category.</p></div><button class="btn btn-primary btn-sm" onclick="addSkillCategory()">+ Add Category</button></div>`
+        if (!data.skillCategories.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><path d="M14.7 6.3a1 1 0 00 0 1.4l1.6 1.6a1 1 0 00 1.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>No skills added yet.</div>`
+        data.skillCategories.forEach((cat, ci) => {
+          html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
+            <button onclick="removeItem('skillCategories',${ci})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.625rem">
+              <input class="input" style="flex:1;font-size:0.78125rem" value="${escHtml(cat.name)}" placeholder="Category name" oninput="updateNested('skillCategories',${ci},'name',this.value);saveState();renderPreview()" />
+              <button class="btn btn-outline btn-sm" onclick="addSkill(${ci})">+ Skill</button>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.375rem">`
+          cat.skills.forEach((s, si) => {
+            html += `<div class="chip" style="display:flex;align-items:center;gap:0.375rem;padding:0.25rem 0.5rem">
+              <input class="input" style="width:88px;padding:0.1875rem 0.375rem;font-size:0.75rem;border:none;background:transparent" value="${escHtml(s.name)}" placeholder="Skill" oninput="updateSkill(${ci},${si},'name',this.value);saveState();renderPreview()" />
+              <span style="color:var(--gray-300)">|</span>
+              <select style="border:none;background:none;font-size:0.6875rem;color:var(--gray-500);cursor:pointer" onchange="updateSkill(${ci},${si},'level',Number(this.value));saveState();renderPreview()">
+                ${[1,2,3,4,5].map(n => `<option value="${n}" ${s.level===n?"selected":""}>${"●".repeat(n)}${"○".repeat(5-n)}</option>`).join("")}
+              </select>
+              <button onclick="removeSkill(${ci},${si})" style="background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:0.875rem;padding:0;line-height:1">&times;</button>
+            </div>`
+          })
+          html += `</div></div>`
+        })
+        return html
+      }
+
+      function renderProjects() {
+        let html = `<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem"><div><h3 class="section-title">Projects</h3><p class="section-desc">Notable projects you've worked on.</p></div><button class="btn btn-primary btn-sm" onclick="addProject()">+ Add Project</button></div>`
+        if (!data.projects.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>No projects added yet.</div>`
+        data.projects.forEach((p, i) => {
+          html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
+            <button onclick="removeItem('projects',${i})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <div class="form-row">${input('projects',i,'name','Name','Project name')}${input('projects',i,'url','URL','github.com/...')}</div>
+            <div class="form-group"><label class="label">Description</label><textarea class="input" style="min-height:52px" oninput="updateNested('projects',${i},'description',this.value);saveState();renderPreview()">${escHtml(p.description)}</textarea></div>
+            <div class="form-group" style="margin-bottom:0"><label class="label">Technologies (comma-separated)</label><input class="input" value="${escHtml(p.technologies.join(", "))}" placeholder="React, Node.js, PostgreSQL" oninput="updateNested('projects',${i},'technologies',this.value.split(',').map(t=>t.trim()).filter(Boolean));saveState();renderPreview()" /></div>
+          </div>`
+        })
+        return html
+      }
+
+      function renderCertifications() {
+        let html = `<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem"><div><h3 class="section-title">Certifications</h3><p class="section-desc">Professional certifications.</p></div><button class="btn btn-primary btn-sm" onclick="addCertification()">+ Add</button></div>`
+        if (!data.certifications.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem">No certifications added yet.</div>`
+        data.certifications.forEach((c, i) => {
+          html += `<div style="display:flex;align-items:center;gap:0.5rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.625rem 0.75rem;margin-bottom:0.5rem">
+            <button onclick="removeItem('certifications',${i})" style="background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0;line-height:1;flex-shrink:0">&times;</button>
+            <input class="input" style="flex:2;font-size:0.78125rem;padding:0.3125rem 0.5rem" value="${escHtml(c.name)}" placeholder="Certification" oninput="updateNested('certifications',${i},'name',this.value);saveState();renderPreview()" />
+            <input class="input" style="flex:1;font-size:0.78125rem;padding:0.3125rem 0.5rem" value="${escHtml(c.issuer)}" placeholder="Issuer" oninput="updateNested('certifications',${i},'issuer',this.value);saveState();renderPreview()" />
+            <input class="input" style="width:120px;font-size:0.78125rem;padding:0.3125rem 0.5rem" type="month" value="${escHtml(c.date)}" oninput="updateNested('certifications',${i},'date',this.value);saveState();renderPreview()" />
+          </div>`
+        })
+        return html
+      }
+
+      function renderLanguages() {
+        let html = `<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem"><div><h3 class="section-title">Languages</h3><p class="section-desc">Languages you speak.</p></div><button class="btn btn-primary btn-sm" onclick="addLanguage()">+ Add</button></div>`
+        if (!data.languages.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem">No languages added.</div>`
+        data.languages.forEach((l, i) => {
+          html += `<div style="display:flex;align-items:center;gap:0.5rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.5rem 0.75rem;margin-bottom:0.5rem">
+            <button onclick="removeItem('languages',${i})" style="background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0;line-height:1">&times;</button>
+            <input class="input" style="flex:1;font-size:0.78125rem;padding:0.3125rem 0.5rem" value="${escHtml(l.name)}" placeholder="Language" oninput="updateNested('languages',${i},'name',this.value);saveState();renderPreview()" />
+            <select class="input" style="width:auto;font-size:0.78125rem;padding:0.3125rem 1.5rem 0.3125rem 0.5rem" onchange="updateNested('languages',${i},'proficiency',this.value);saveState();renderPreview()">${["Native","Fluent","Advanced","Intermediate","Basic"].map(p => `<option value="${p}" ${l.proficiency===p?"selected":""}>${p}</option>`).join("")}</select>
+          </div>`
+        })
+        return html
+      }
+
+      function renderSettings() {
+        const c = config
+        const tems = ["classic","modern","professional","creative"]
+        const tnames = ["Classic","Modern","Professional","Creative"]
+        return `<div style="margin-bottom:1.25rem"><h3 class="section-title">Style Settings</h3><p class="section-desc">Customize the look of your resume.</p></div>
+          <div class="form-group"><label class="label">Color Theme</label><div style="display:flex;gap:0.5rem;flex-wrap:wrap">${Object.entries(THEMES).map(([k,v]) => `<button onclick="config.theme='${k}';updateConfig();renderSettings()" style="width:36px;height:36px;border-radius:999px;background:${v};border:${config.theme===k?'2.5px solid var(--gray-900)':'2.5px solid transparent'};cursor:pointer;transition:transform 0.15s;box-shadow:${config.theme===k?'0 0 0 3px white, 0 0 0 5px '+v:'none'}" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"></button>`).join("")}</div></div>
+          <div class="form-group"><label class="label">Template</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:0.375rem">${tems.map((t,i) => `<button onclick="config.template='${t}';updateConfig();renderSettings()" style="padding:0.625rem;border-radius:8px;border:${config.template===t?'2px solid var(--primary)':'1px solid var(--gray-200)'};background:${config.template===t?'var(--primary-light)':'white'};cursor:pointer;text-align:center;font-size:0.75rem;font-weight:500;color:${config.template===t?'var(--primary)':'var(--gray-700)'};transition:all 0.15s">${tnames[i]}</button>`).join("")}</div></div>
+          <div class="form-group"><label class="label">Font Size</label><select class="input" onchange="config.fontSize=this.value;updateConfig()"><option value="small" ${c.fontSize==='small'?'selected':''}>Small</option><option value="medium" ${c.fontSize==='medium'?'selected':''}>Medium</option><option value="large" ${c.fontSize==='large'?'selected':''}>Large</option></select></div>
+          <div class="form-group" style="margin-bottom:0"><label class="label">Visible Sections</label>${[["showSummary","Summary"],["showExperience","Experience"],["showEducation","Education"],["showSkills","Skills"],["showProjects","Projects"],["showCertifications","Certifications"],["showLanguages","Languages"]].map(([k,v]) => `<label style="display:flex;align-items:center;gap:0.5rem;padding:0.3125rem 0;font-size:0.8125rem;color:var(--gray-600);cursor:pointer"><input type="checkbox" ${c[k]?'checked':''} onchange="config.${k}=this.checked;updateConfig()" style="accent-color:var(--primary);width:16px;height:16px" /> ${v}</label>`).join("")}</div>`
+      }
+
+      function input(arr, idx, key, label, pl) { return `<div class="form-group" style="margin-bottom:0"><label class="label">${label}</label><input class="input" style="font-size:0.78125rem;padding:0.4375rem 0.625rem" value="${escHtml(data[arr][idx][key])}" placeholder="${pl}" oninput="updateNested('${arr}',${idx},'${key}',this.value);renderPreview()" /></div>` }
+      function inputMonth(arr, idx, key, label) { return `<div class="form-group" style="margin-bottom:0"><label class="label">${label}</label><input class="input" style="font-size:0.78125rem;padding:0.4375rem 0.625rem" type="month" value="${escHtml(data[arr][idx][key])}" oninput="updateNested('${arr}',${idx},'${key}',this.value);renderPreview()" /></div>` }
+      function updateNested(arr, idx, key, val) { data[arr][idx][key] = val; saveState() }
+      function updateNestedArray(arr, idx, key, val) { data[arr][idx][key] = val; saveState() }
+      function updateSkill(ci, si, key, val) { data.skillCategories[ci].skills[si][key] = val; saveState() }
+      function removeSkill(ci, si) { data.skillCategories[ci].skills.splice(si, 1); saveState(); renderEditor(); renderPreview() }
+      function addExperience() { data.experience.push({ id:"e"+Date.now(), company:"", position:"", startDate:"", endDate:"", current:false, description:[], location:"" }); saveState(); renderEditor(); renderPreview() }
+      function addEducation() { data.education.push({ id:"ed"+Date.now(), school:"", degree:"", field:"", startDate:"", endDate:"", gpa:"", achievements:[] }); saveState(); renderEditor(); renderPreview() }
+      function addSkillCategory() { data.skillCategories.push({ id:"sc"+Date.now(), name:"", skills:[] }); saveState(); renderEditor(); renderPreview() }
+      function addSkill(ci) { data.skillCategories[ci].skills.push({ id:"sk"+Date.now(), name:"", level:3 }); saveState(); renderEditor(); renderPreview() }
+      function addProject() { data.projects.push({ id:"p"+Date.now(), name:"", description:"", technologies:[], url:"", startDate:"", endDate:"" }); saveState(); renderEditor(); renderPreview() }
+      function addCertification() { data.certifications.push({ id:"c"+Date.now(), name:"", issuer:"", date:"", url:"" }); saveState(); renderEditor(); renderPreview() }
+      function addLanguage() { data.languages.push({ id:"l"+Date.now(), name:"", proficiency:"Intermediate" }); saveState(); renderEditor(); renderPreview() }
+      function removeItem(arr, idx) { data[arr].splice(idx, 1); saveState(); renderEditor(); renderPreview() }
+      function updateConfig() { config.template = document.getElementById("template-select").value; config.theme = document.getElementById("theme-select").value; saveState(); renderPreview() }
+
+      function fmtDate(d) { if (!d) return ""; const [y,m]=d.split("-"); return new Date(Number(y),Number(m)-1).toLocaleDateString("en-US",{year:"numeric",month:"short"}) }
+
+      function renderPreview() {
+        const el = document.getElementById("resume-preview"); const c = config; const d = data; const p = d.personalInfo
+        const theme = THEMES[c.theme]||"#2563eb"; const themeLight = THEME_LIGHTS[c.theme]||"#eff6ff"
+        const fs = c.fontSize==="small"?"10px":c.fontSize==="large"?"14px":"12px"
+        const isModern = c.template==="modern"; const isCreative = c.template==="creative"; const isProfessional = c.template==="professional"
+        el.style.fontSize = fs
+
+        function section(title, content) {
+          if (!content) return ""
+          const bStyle = isProfessional ? "border-bottom:1px solid var(--gray-200);padding-bottom:0.25em;margin-bottom:0.5em" : isModern ? `border-bottom:2.5px solid ${theme};padding-bottom:0.2em;margin-bottom:0.5em` : isCreative ? `border-left:3px solid ${theme};padding-left:0.5em;margin-bottom:0.5em` : "border-bottom:1px solid var(--gray-200);padding-bottom:0.25em;margin-bottom:0.5em"
+          return `<div style="margin-bottom:0.75em"><h2 style="font-size:1em;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:${isModern||isCreative?theme:'var(--gray-900)'};${bStyle}">${title}</h2><div>${content}</div></div>`
+        }
+
+        let main = ""
+        if (c.showSummary && d.summary) main += section("Summary", `<p style="font-size:0.9em;color:var(--gray-700);line-height:1.6">${escHtml(d.summary)}</p>`)
+        if (c.showExperience && d.experience.length) main += section("Experience", d.experience.map(e => `<div style="margin-bottom:0.5em"><div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap"><strong style="font-size:0.95em">${escHtml(e.position)}</strong><span style="font-size:0.8em;color:var(--gray-500)">${fmtDate(e.startDate)} – ${e.current?'Present':fmtDate(e.endDate)}</span></div><div style="font-size:0.85em;color:var(--gray-600);margin-bottom:0.25em">${escHtml(e.company)}${e.location?` — ${escHtml(e.location)}`:''}</div>${e.description.length?`<ul style="margin:0.25em 0 0;padding-left:1.25em">${e.description.map(d=>`<li style="margin-bottom:0.1em;font-size:0.875em;color:var(--gray-700)">${escHtml(d)}</li>`).join("")}</ul>`:''}</div>`).join(""))
+        if (c.showEducation && d.education.length) main += section("Education", d.education.map(e => `<div style="margin-bottom:0.5em"><div style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:0.95em">${escHtml(e.school)}</strong><span style="font-size:0.8em;color:var(--gray-500)">${fmtDate(e.startDate)} – ${fmtDate(e.endDate)}</span></div><div style="font-size:0.85em;color:var(--gray-600)">${escHtml(e.degree)}${e.field?` in ${escHtml(e.field)}`:''}${e.gpa?` — GPA: ${escHtml(e.gpa)}`:''}</div>${e.achievements.length?`<ul style="margin:0.25em 0 0;padding-left:1.25em">${e.achievements.map(a=>`<li style="font-size:0.8125em;color:var(--gray-600)">${escHtml(a)}</li>`).join("")}</ul>`:''}</div>`).join(""))
+        if (c.showSkills && d.skillCategories.length) main += section("Skills", isModern ? d.skillCategories.map(cat => `<div style="margin-bottom:0.5em"><strong style="font-size:0.85em">${escHtml(cat.name)}</strong><div style="display:flex;flex-wrap:wrap;gap:0.3em;margin-top:0.25em">${cat.skills.map(s=>`<span style="background:${themeLight};color:${theme};padding:0.15em 0.5em;border-radius:0.25em;font-size:0.8em;font-weight:500">${escHtml(s.name)}</span>`).join("")}</div></div>`).join("") : d.skillCategories.map(cat => `<div style="margin-bottom:0.35em"><strong style="font-size:0.85em">${escHtml(cat.name)}: </strong><span style="font-size:0.85em;color:var(--gray-600)">${cat.skills.map(s=>escHtml(s.name)).join(", ")}</span></div>`).join(""))
+        if (c.showProjects && d.projects.length) main += section("Projects", d.projects.map(pj => `<div style="margin-bottom:0.5em"><div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap"><strong style="font-size:0.95em">${escHtml(pj.name)}</strong>${pj.url?`<a href="${escHtml(pj.url)}" style="font-size:0.8em;color:${theme};text-decoration:none" target="_blank">${escHtml(pj.url)}</a>`:''}</div><p style="font-size:0.85em;color:var(--gray-600);margin:0.15em 0">${escHtml(pj.description)}</p>${pj.technologies.length?`<div style="font-size:0.8em;color:var(--gray-500)">Technologies: ${pj.technologies.map(t=>escHtml(t)).join(", ")}</div>`:''}</div>`).join(""))
+        if (c.showCertifications && d.certifications.length) main += section("Certifications", d.certifications.map(cert => `<div style="font-size:0.85em;margin-bottom:0.3em"><strong>${escHtml(cert.name)}</strong> — ${escHtml(cert.issuer)}${cert.date?` (${fmtDate(cert.date)})`:''}</div>`).join(""))
+        if (c.showLanguages && d.languages.length) main += section("Languages", d.languages.map(l => `<span style="font-size:0.85em;margin-right:1em">${escHtml(l.name)} (${l.proficiency})</span>`).join(""))
+
+        const contacts = [p.email,p.phone,p.location,p.website,p.linkedin].filter(Boolean)
+        const contactHtml = contacts.length ? contacts.map(x => `<span>${escHtml(x)}</span>`).join("") : ""
+
+        if (isModern) {
+          el.innerHTML = `<div style="font-family:'Inter',sans-serif;color:var(--gray-900);line-height:1.5"><div style="background:${theme};color:white;padding:1.5rem;text-align:center"><h1 style="font-size:1.75em;font-weight:800;margin:0 0 0.1em;letter-spacing:-0.02em">${escHtml(p.fullName)}</h1>${p.title?`<div style="font-size:1em;font-weight:500;opacity:0.9;margin-bottom:0.4em">${escHtml(p.title)}</div>`:''}<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5em 1em;font-size:0.8em;opacity:0.85">${contactHtml}</div></div><div style="padding:1.25rem 1.5rem">${main}</div></div>`
+        } else if (isCreative) {
+          el.innerHTML = `<div style="font-family:'Inter',sans-serif;color:var(--gray-900);line-height:1.5"><div style="background:linear-gradient(135deg,${theme},${theme}dd);color:white;padding:1.5rem"><h1 style="font-size:1.75em;font-weight:800;margin:0 0 0.1em;letter-spacing:-0.02em">${escHtml(p.fullName)}</h1>${p.title?`<div style="font-size:1em;font-weight:500;opacity:0.9;margin-bottom:0.4em">${escHtml(p.title)}</div>`:''}<div style="display:flex;flex-wrap:wrap;gap:0.5em 1em;font-size:0.8em;opacity:0.85">${contactHtml}</div></div><div style="padding:1.25rem 1.5rem">${main}</div></div>`
+        } else if (isProfessional) {
+          el.innerHTML = `<div style="font-family:'Inter',sans-serif;color:var(--gray-900);line-height:1.5"><div style="padding:1.25rem;border-bottom:3px solid ${theme};text-align:center"><h1 style="font-size:1.5em;font-weight:800;margin:0 0 0.1em;letter-spacing:-0.02em">${escHtml(p.fullName)}</h1>${p.title?`<div style="font-size:0.9em;color:var(--gray-500);margin-bottom:0.4em">${escHtml(p.title)}</div>`:''}<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5em 1em;font-size:0.78em;color:var(--gray-500)">${contactHtml}</div></div><div style="padding:1.25rem">${main}</div></div>`
+        } else {
+          el.innerHTML = `<div style="font-family:'Inter',sans-serif;color:var(--gray-900);line-height:1.5"><div style="padding:1.25rem;text-align:center"><h1 style="font-size:1.5em;font-weight:800;margin:0 0 0.1em">${escHtml(p.fullName)}</h1>${p.title?`<div style="font-size:0.9em;color:var(--gray-500);margin-bottom:0.4em">${escHtml(p.title)}</div>`:''}<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5em 1em;font-size:0.78em;color:var(--gray-500)">${contactHtml}</div></div><div style="padding:0 1.25rem 1.25rem">${main}</div></div>`
+        }
+      }
+
+      function exportPDF() {
+        const el = document.getElementById("resume-preview")
+        if (typeof html2pdf !== "undefined") {
+          html2pdf().set({ margin:0, filename:`${data.personalInfo.fullName||"resume"}.pdf`, image:{type:"jpeg",quality:0.98}, html2canvas:{scale:2,useCORS:true}, jsPDF:{unit:"mm",format:"a4",orientation:"portrait"} }).from(el).save()
+        } else {
+          window.print()
+        }
+      }
+
+      loadState()
+      if (!data.personalInfo.fullName && !data.experience.length) loadSampleData()
+      document.getElementById("template-select").value = config.template
+      document.getElementById("theme-select").value = config.theme
+      renderEditor()
+      renderPreview()
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { blogPosts } from "../../data/blogPosts"
+---
+
+<Layout title="Resume Writing Blog | Free Resume Builder" description="Expert tips, guides, and advice on resume writing, ATS optimization, cover letters, and career development.">
+  <div style="max-width:960px;margin:0 auto;padding:3rem 1.25rem">
+    <div style="text-align:center;margin-bottom:2.5rem">
+      <h1 style="font-size:2.25rem;font-weight:800;color:var(--gray-900);margin-bottom:0.75rem;letter-spacing:-0.02em">Resume Writing Blog</h1>
+      <p style="font-size:1.0625rem;color:var(--gray-500);max-width:560px;margin:0 auto">Expert tips, guides, and advice to help you create a resume that lands interviews.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1rem">
+      {blogPosts.map(post => (
+        <a href={`/blog/${post.slug}`} style="text-decoration:none;display:block">
+          <article class="card card-hover" style="padding:1.5rem;cursor:pointer">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap">
+              <div style="flex:1">
+                <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.5rem">
+                  <span style="font-size:0.6875rem;font-weight:500;padding:0.125rem 0.5rem;border-radius:999px;background:var(--primary-light);color:var(--primary)">{post.category}</span>
+                  <span style="font-size:0.75rem;color:var(--gray-400)">{post.date}</span>
+                  <span style="font-size:0.75rem;color:var(--gray-400)">·</span>
+                  <span style="font-size:0.75rem;color:var(--gray-400)">{post.readTime}</span>
+                </div>
+                <h2 style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin:0 0 0.5rem;line-height:1.4">{post.title}</h2>
+                <p style="font-size:0.875rem;color:var(--gray-500);margin:0;line-height:1.6">{post.description}</p>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gray-300)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:0.25rem"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </article>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div style="max-width:960px;margin:0 auto;padding:0 1.25rem 4rem">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem">
+      <div class="card" style="padding:1.25rem">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+        </div>
+        <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">Expert Guides</h3>
+        <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">In-depth articles written by career experts covering every aspect of resume writing.</p>
+      </div>
+      <div class="card" style="padding:1.25rem">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">ATS Strategies</h3>
+        <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">Learn how to optimize your resume for Applicant Tracking Systems and pass automated screening.</p>
+      </div>
+      <div class="card" style="padding:1.25rem">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">Cover Letter Help</h3>
+        <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">Step-by-step guides for writing compelling cover letters that complement your resume.</p>
+      </div>
+      <div class="card" style="padding:1.25rem">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin-bottom:0.375rem">Career Advice</h3>
+        <p style="font-size:0.8125rem;color:var(--gray-500);line-height:1.5">Practical tips for job searching, interviewing, and advancing your career.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:3rem 1.5rem">
+    <div style="max-width:960px;margin:0 auto">
+      <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:1.25rem;text-align:center">Free Career Tools</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0.75rem">
+        <a href="/" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center">
+          <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Resume Builder</span>
+        </a>
+        <a href="/ats-score" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center">
+          <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </span>
+          <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">ATS Score</span>
+        </a>
+        <a href="/cover-letter" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center">
+          <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Cover Letter</span>
+        </a>
+        <a href="/resume-examples" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center">
+          <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Examples</span>
+        </a>
+        <a href="/templates" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center">
+          <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          </span>
+          <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Templates</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#2563eb,#1d4ed8);padding:3rem 1.5rem;text-align:center">
+    <div style="max-width:480px;margin:0 auto">
+      <h3 style="font-size:1.375rem;font-weight:800;color:white;margin:0 0 0.5rem;letter-spacing:-0.02em">Get Weekly Resume Tips</h3>
+      <p style="font-size:0.9375rem;color:rgba(255,255,255,0.8);margin:0 0 1.25rem">Join 10,000+ job seekers getting expert advice straight to their inbox.</p>
+      <form style="display:flex;gap:0.5rem;max-width:400px;margin:0 auto" onsubmit="event.preventDefault();var e=this.querySelector('input');if(e.value){alert('Thanks for subscribing!');e.value=''}">
+        <input type="email" placeholder="your@email.com" style="flex:1;border-radius:8px;border:none;padding:0.625rem 0.875rem;font-size:0.875rem;font-family:inherit;box-shadow:0 1px 2px rgba(0,0,0,0.05)" required />
+        <button type="submit" style="border-radius:8px;border:none;background:#0f172a;color:white;padding:0.625rem 1.25rem;font-size:0.875rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.15s;box-shadow:0 1px 2px rgba(0,0,0,0.1)">Subscribe</button>
+      </form>
+      <p style="font-size:0.6875rem;color:rgba(255,255,255,0.4);margin:0.625rem 0 0">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</Layout>
