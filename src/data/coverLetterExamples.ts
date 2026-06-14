@@ -332,4 +332,292 @@ linkedin.com/in/karthiknair`,
       "Quantify academic and internship achievements"
     ]
   }),
+  r({
+    slug: "meta-cover-letter",
+    title: "Meta Cover Letter",
+    company: "Meta",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for Meta Software Engineer roles emphasizing product impact, scale, and full-stack engineering.",
+    sampleLetter: `Dear Meta Hiring Manager,
+
+I am writing to express my strong interest in the Software Engineer position at Meta. With 6+ years of experience building consumer-facing products at scale and a deep passion for connecting people through technology, I am excited about the opportunity to contribute to Meta's mission.
+
+In my current role at SocialFlow, I built a real-time feed ranking system serving 50M+ users and designed an A/B experimentation platform enabling 200+ concurrent product experiments. My experience building GraphQL APIs at massive scale and optimizing React rendering pipelines aligns directly with the engineering challenges Meta tackles every day.
+
+What draws me to Meta is the opportunity to build products that connect billions of people. I have always been motivated by the impact of social platforms on communication and community building. I thrive in fast-paced, product-driven environments where data informs every decision.
+
+I am particularly excited about the chance to work on Meta's core products and infrastructure, where my experience with real-time systems, full-stack optimization, and experimentation platforms can make an immediate impact.
+
+Thank you for considering my application. I look forward to discussing how I can contribute to Meta's engineering teams.
+
+Best regards,
+Alex Chen
+alex.chen@email.com
+linkedin.com/in/alexchen`,
+    tips: [
+      "Emphasize product engineering and user-facing impact",
+      "Quantify scale with user numbers and system performance metrics",
+      "Highlight A/B testing and data-driven decision experience",
+      "Mention React, GraphQL, and real-time systems expertise",
+      "Align with Meta's mission of connecting people",
+      "Showcase rapid prototyping and iterative development approach"
+    ]
+  }),
+  r({
+    slug: "netflix-cover-letter",
+    title: "Netflix Cover Letter",
+    company: "Netflix",
+    role: "Software Engineer",
+    level: "Senior",
+    summary: "A cover letter for Netflix Software Engineer roles emphasizing high performance, freedom and responsibility culture.",
+    sampleLetter: `Dear Netflix Hiring Team,
+
+I am writing to apply for the Software Engineer position at Netflix. With over 8 years of experience building high-performance distributed systems and a strong alignment with Netflix's culture of freedom and responsibility, I am confident I can make a significant impact on your engineering organization.
+
+In my current role at StreamScale, I designed a content delivery optimization system that reduced video buffering by 60% across 100M+ devices. I built a real-time streaming analytics pipeline processing 1TB+ of data daily and led a team of 5 engineers to redesign the core recommendation engine, improving viewer engagement by 22%.
+
+Netflix's engineering culture is what draws me most. The emphasis on context over control, the expectation of high performance, and the focus on candor and direct communication are principles I have always practiced. I bring not just technical excellence but the judgment to know what to build and the discipline to say no to what doesn't matter.
+
+I am excited about the opportunity to work on Netflix's streaming infrastructure and contribute to delivering the best entertainment experience to millions of viewers worldwide.
+
+Thank you for your consideration. I look forward to the conversation.
+
+Sincerely,
+David Kim
+david.kim@email.com
+linkedin.com/in/davidkim`,
+    tips: [
+      "Demonstrate alignment with Netflix's culture of freedom and responsibility",
+      "Quantify impact on streaming quality, latency, and viewer engagement",
+      "Highlight high-performance systems and distributed architecture experience",
+      "Show strategic thinking — what you chose NOT to build is as important",
+      "Be direct and candid in tone, matching Netflix's communication style",
+      "Emphasize autonomy and ownership of large-scale projects"
+    ]
+  }),
+  r({
+    slug: "apple-cover-letter",
+    title: "Apple Cover Letter",
+    company: "Apple",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for Apple Software Engineer roles emphasizing craftsmanship, privacy, and user experience.",
+    sampleLetter: `Dear Apple Hiring Team,
+
+I am writing to express my profound interest in the Software Engineer position at Apple. I have long admired Apple's unwavering commitment to craftsmanship, privacy, and user experience, and I am eager to contribute to products that enrich people's lives.
+
+During my 5+ years as a software engineer at MobileInnovate, I developed a deep appreciation for pixel-perfect interfaces and seamless user experiences. I led the development of a photo-editing application that was featured as App of the Day, achieving a 4.8-star rating with 2M+ downloads. I implemented on-device machine learning features that enhanced privacy by processing all data locally rather than in the cloud.
+
+Apple's dedication to privacy as a fundamental human right resonates deeply with me. I have consistently advocated for privacy-first engineering approaches and have experience building features that work entirely on-device. My expertise in Swift, SwiftUI, and UIKit, combined with my passion for creating intuitive user experiences, makes me a strong fit for Apple's engineering teams.
+
+I would be honored to bring my skills and values to Apple and contribute to products that set the standard for quality and innovation.
+
+Thank you for your time and consideration.
+
+Warm regards,
+Sarah Williams
+sarah.williams@email.com
+linkedin.com/in/sarahwilliams`,
+    tips: [
+      "Emphasize craftsmanship and attention to detail in every aspect",
+      "Highlight privacy-first engineering and on-device processing experience",
+      "Showcase passion for user experience and design excellence",
+      "Mention Swift/SwiftUI/UIKit expertise (Apple's core technologies)",
+      "Demonstrate product-level thinking, not just feature implementation",
+      "Reference specific Apple products or features you admire"
+    ]
+  }),
+  r({
+    slug: "tesla-cover-letter",
+    title: "Tesla Cover Letter",
+    company: "Tesla",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for Tesla Software Engineer roles emphasizing mission-driven engineering and technical ownership.",
+    sampleLetter: `Dear Tesla Hiring Team,
+
+I am writing to apply for the Software Engineer position at Tesla. Tesla's mission to accelerate the world's transition to sustainable energy is not just a corporate statement — it is the reason I became an engineer. I want to use my technical skills to solve the most important problem of our generation.
+
+In my current role at GreenEnergy Systems, I built real-time monitoring software for solar energy installations serving 100K+ homes. I designed embedded Linux systems for energy management and developed over-the-air update infrastructure that reduced field maintenance costs by 70%. I thrive in fast-paced, high-ownership environments where engineering decisions have direct real-world impact.
+
+Tesla's approach to engineering — moving fast, iterating constantly, and taking technical ownership across the full stack — matches my work style perfectly. I am not afraid to get my hands dirty with hardware, firmware, or cloud infrastructure. I have experience with C++, Python, embedded systems, and the kind of cross-disciplinary engineering that Tesla is known for.
+
+I am ready to bring my relentless work ethic and problem-solving skills to Tesla's mission. I would be honored to contribute to building the sustainable energy future.
+
+Thank you for your consideration.
+
+Best regards,
+Ethan Park
+ethan.park@email.com
+linkedin.com/in/ethanpark`,
+    tips: [
+      "Connect personal mission to Tesla's mission of sustainable energy",
+      "Highlight cross-disciplinary engineering (software + hardware)",
+      "Show ownership mentality and bias for action",
+      "Quantify impact on energy, efficiency, or cost reduction",
+      "Emphasize comfort with fast-paced, high-ownership environments",
+      "Mention experience with embedded systems if applicable"
+    ]
+  }),
+  r({
+    slug: "salesforce-cover-letter",
+    title: "Salesforce Cover Letter",
+    company: "Salesforce",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for Salesforce Software Engineer roles emphasizing enterprise cloud and customer success.",
+    sampleLetter: `Dear Salesforce Hiring Team,
+
+I am writing to express my enthusiasm for the Software Engineer position at Salesforce. With 5+ years of experience in enterprise cloud computing and a deep commitment to customer success, I am eager to contribute to Salesforce's ecosystem of business transformation.
+
+At CloudEnterprise, I built multi-tenant SaaS applications serving 10K+ enterprise customers on the Salesforce platform. I developed Apex triggers and Lightning components that automated key business processes, reducing manual work by 40% for client operations teams. I also earned my Salesforce Platform Developer II certification and contributed to internal knowledge-sharing sessions on best practices.
+
+Salesforce's 1-1-1 model of philanthropy and its focus on Ohana culture deeply resonate with me. I believe that successful enterprise software must be built with empathy for the users who depend on it every day. My experience building reliable, scalable enterprise cloud solutions, combined with my passion for customer success, makes me an ideal fit for this role.
+
+I look forward to the opportunity to contribute to Salesforce's mission of connecting companies and customers in new and meaningful ways.
+
+Thank you for your time.
+
+Best regards,
+Lisa Chen
+lisa.chen@email.com
+linkedin.com/in/lisachen`,
+    tips: [
+      "Highlight Salesforce platform experience (Apex, Lightning, LWC)",
+      "Mention Salesforce certifications (Platform Developer, Admin)",
+      "Quantify enterprise customer impact and process improvements",
+      "Demonstrate alignment with Salesforce's Ohana culture",
+      "Showcase multi-tenant SaaS architecture understanding",
+      "Emphasize customer success mindset and empathy"
+    ]
+  }),
+  r({
+    slug: "oracle-cover-letter",
+    title: "Oracle Cover Letter",
+    company: "Oracle",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for Oracle Software Engineer roles emphasizing enterprise databases and cloud infrastructure.",
+    sampleLetter: `Dear Oracle Hiring Team,
+
+I am writing to apply for the Software Engineer position at Oracle. With deep expertise in database technologies, cloud infrastructure, and enterprise software, I am excited about the opportunity to contribute to Oracle's leadership in data management and cloud solutions.
+
+In my 5+ years at DataPlatforms Inc, I designed and built distributed database solutions handling 10 TB+ of enterprise data. I optimized SQL query performance achieving 5x improvement in report generation times and built migration tools that moved 50+ enterprise clients from on-premise to Oracle Cloud Infrastructure. My experience with Oracle Database, PL/SQL, and OCI services makes me immediately productive in Oracle's technology stack.
+
+Oracle's commitment to innovation in autonomous databases and cloud infrastructure is inspiring. I am particularly interested in contributing to Oracle's next-generation database technologies and helping enterprises unlock the value of their data through modern cloud solutions.
+
+I bring deep technical expertise, strong problem-solving skills, and a collaborative approach to engineering. I am ready to contribute to Oracle's mission of helping people see data in new ways.
+
+Thank you for your consideration.
+
+Best regards,
+Michael Torres
+michael.torres@email.com
+linkedin.com/in/michaeltorres`,
+    tips: [
+      "Showcase deep database expertise (SQL, PL/SQL, Oracle DB)",
+      "Highlight cloud migration and OCI experience",
+      "Quantify data volume and performance optimization metrics",
+      "Mention enterprise-scale solution experience",
+      "Demonstrate knowledge of Oracle's product portfolio",
+      "Emphasize reliability and data integrity mindset"
+    ]
+  }),
+  r({
+    slug: "uber-cover-letter",
+    title: "Uber Cover Letter",
+    company: "Uber",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for Uber Software Engineer roles emphasizing real-time systems and marketplace optimization.",
+    sampleLetter: `Dear Uber Hiring Team,
+
+I am writing to express my interest in the Software Engineer position at Uber. With 5+ years of experience building real-time distributed systems and marketplace platforms, I am excited about the opportunity to solve the complex engineering challenges that power Uber's global mobility platform.
+
+At RideTech, I built a real-time dispatch optimization system that reduced rider wait times by 25% while improving driver utilization by 18%. I designed surge pricing algorithms that balanced supply and demand across 50+ geographic zones and built a fraud detection pipeline processing 10M+ transactions daily with 99.5% accuracy.
+
+Uber's engineering challenges are uniquely complex — real-time matching, dynamic pricing, route optimization, and marketplace dynamics at global scale. These are the problems I have dedicated my career to solving. I am particularly drawn to Uber's data-driven approach to product decisions and its culture of informed risk-taking.
+
+My experience with distributed systems, machine learning for marketplace optimization, and real-time data processing makes me well-suited to contribute to Uber's engineering team from day one.
+
+Thank you for your consideration. I look forward to the opportunity to discuss how I can contribute.
+
+Best regards,
+James Liu
+james.liu@email.com
+linkedin.com/in/jamesliu`,
+    tips: [
+      "Emphasize real-time systems and marketplace experience",
+      "Quantify optimization impact on wait times, utilization, and efficiency",
+      "Highlight experience with surge pricing or dynamic pricing algorithms",
+      "Showcase distributed systems and high-throughput pipeline design",
+      "Demonstrate comfort with data-driven decision making",
+      "Align with Uber's culture of informed risk-taking and speed"
+    ]
+  }),
+  r({
+    slug: "adobe-cover-letter",
+    title: "Adobe Cover Letter",
+    company: "Adobe",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for Adobe Software Engineer roles emphasizing creativity tools and cross-platform engineering.",
+    sampleLetter: `Dear Adobe Hiring Team,
+
+I am writing to apply for the Software Engineer position at Adobe. As someone who has used Adobe products since childhood to bring creative ideas to life, the opportunity to build the next generation of creative tools is a dream come true.
+
+In my current role at CreativeSoft, I led the development of a cross-platform design tool used by 500K+ creative professionals. I built real-time collaboration features using WebRTC and CRDTs, enabling multiple users to edit designs simultaneously. I optimized rendering performance using WebGL and WebAssembly, achieving 60fps even on low-end devices.
+
+Adobe's mission to enable creativity for all resonates deeply with my personal and professional values. I am particularly inspired by Adobe's work in AI-powered creativity through Adobe Sensei and its commitment to accessibility across platforms. My experience with cross-platform engineering (web, desktop, and mobile) and performance optimization makes me well-suited for Adobe's engineering challenges.
+
+I would be honored to contribute to products that empower millions of creators worldwide and help shape the future of digital creativity.
+
+Thank you for your time and consideration.
+
+Warm regards,
+Emily Zhang
+emily.zhang@email.com
+linkedin.com/in/emilyzhang`,
+    tips: [
+      "Show genuine passion for creativity tools and Adobe products",
+      "Highlight cross-platform engineering experience (web, desktop, mobile)",
+      "Emphasize performance optimization and rendering expertise",
+      "Mention real-time collaboration technology experience (WebRTC, CRDTs)",
+      "Showcase AI/ML integration in creative tools",
+      "Demonstrate user-centric design thinking"
+    ]
+  }),
+  r({
+    slug: "linkedin-cover-letter",
+    title: "LinkedIn Cover Letter",
+    company: "LinkedIn",
+    role: "Software Engineer",
+    level: "Mid",
+    summary: "A cover letter for LinkedIn Software Engineer roles emphasizing professional networking and data-driven products.",
+    sampleLetter: `Dear LinkedIn Hiring Team,
+
+I am writing to express my strong interest in the Software Engineer position at LinkedIn. As someone who believes deeply in the power of professional connections to transform careers, I am excited about the opportunity to build products that empower millions of professionals worldwide.
+
+In my current role at ProNet, I built a professional networking platform serving 10M+ users. I designed the feed ranking algorithm that increased user engagement by 35% through personalized content delivery. I also developed a skills recommendation engine that helped 500K+ users discover relevant learning opportunities.
+
+LinkedIn's mission of creating economic opportunity for every member of the global workforce is uniquely impactful. I am particularly drawn to LinkedIn's data-driven product development approach and its focus on professional identity and career development. My experience building social features, recommendation systems, and professional tools at scale aligns perfectly with LinkedIn's product roadmap.
+
+I bring strong full-stack engineering skills, experience with large-scale social platforms, and a genuine passion for helping professionals succeed. I am eager to contribute to LinkedIn's mission and build products that create economic opportunity.
+
+Thank you for your consideration.
+
+Best regards,
+Rachel Park
+rachel.park@email.com
+linkedin.com/in/rachelpark`,
+    tips: [
+      "Connect personal passion to LinkedIn's mission of economic opportunity",
+      "Highlight social platform and feed ranking experience",
+      "Quantify engagement and user impact metrics",
+      "Showcase recommendation system and personalization expertise",
+      "Emphasize professional/career product domain knowledge",
+      "Demonstrate data-driven product development approach"
+    ]
+  }),
 ]
