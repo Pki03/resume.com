@@ -6,6 +6,10 @@ export default {
       return handleSubscribe(request, env)
     }
 
+    if (request.method === "GET" && url.pathname === "/api/subscribers") {
+      return handleSubscribers(env)
+    }
+
     return env.ASSETS.fetch(request)
   }
 }
@@ -15,14 +19,16 @@ async function handleSubscribe(request, env) {
     const { email } = await request.json()
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return new Response(JSON.stringify({ error: "Invalid email" }), {
-        status: 400, headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
+        status: 400,
+        headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
       })
     }
 
     const existing = await env.EMAILS.get(email)
     if (existing) {
       return new Response(JSON.stringify({ message: "Already subscribed" }), {
-        status: 200, headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
+        status: 200,
+        headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
       })
     }
 
@@ -35,11 +41,22 @@ async function handleSubscribe(request, env) {
     await env.EMAILS.put("subscriber_list", JSON.stringify(list))
 
     return new Response(JSON.stringify({ message: "Subscribed successfully" }), {
-      status: 200, headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
+      status: 200,
+      headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
     })
   } catch (e) {
     return new Response(JSON.stringify({ error: "Internal error" }), {
-      status: 500, headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
+      status: 500,
+      headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
     })
   }
+}
+
+async function handleSubscribers(env) {
+  const list = await env.EMAILS.get("subscriber_list", "json") || []
+  const count = list.length
+  return new Response(JSON.stringify({ count, emails: list }), {
+    status: 200,
+    headers: { "content-type": "application/json", "access-control-allow-origin": "*" }
+  })
 }
