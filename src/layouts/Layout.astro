@@ -31,8 +31,10 @@ const year = new Date().getFullYear()
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1725796580876796" crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-1725796580876796">
     <style>
-      .nav-link { position: relative; padding: 0.5rem 0.875rem; font-size: 0.875rem; font-weight: 500; color: #64748b; text-decoration: none; border-radius: 8px; transition: all 0.15s; }
-      .nav-link:hover { background: #f1f5f9; color: #0f172a; text-decoration: none; }
+      .nav-link { position: relative; padding: 0.5rem 0.875rem; font-size: 0.875rem; font-weight: 500; color: var(--gray-500); text-decoration: none; border-radius: 8px; transition: all 0.15s; }
+      .nav-link:hover { background: var(--gray-100); color: var(--gray-900); text-decoration: none; }
+      .theme-toggle { display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:none;border:1px solid var(--gray-200);border-radius:8px;cursor:pointer;color:var(--gray-500);transition:all 0.15s; }
+      .theme-toggle:hover { background:var(--gray-100);color:var(--gray-700); }
 
       @media (max-width: 768px) {
         .nav-desktop { display: none !important; }
@@ -53,7 +55,7 @@ const year = new Date().getFullYear()
     </style>
   </head>
   <body>
-    <header style="border-bottom:1px solid var(--gray-100);background:rgba(255,255,255,0.92);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);position:sticky;top:0;z-index:50">
+    <header style="border-bottom:1px solid var(--gray-100);background:rgba(255,255,255,0.92);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);position:sticky;top:0;z-index:50" id="site-header">
       <nav style="max-width:1280px;margin:0 auto;padding:0 2rem;height:var(--nav-height);display:flex;align-items:center;justify-content:space-between">
         <a href="/" style="display:flex;align-items:center;gap:0.5rem;font-weight:800;font-size:1.125rem;color:var(--gray-900);text-decoration:none;letter-spacing:-0.03em">
           <span style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;background:linear-gradient(135deg,var(--primary),var(--primary-500));border-radius:8px;box-shadow:0 2px 6px rgba(79,70,229,0.3)">
@@ -69,6 +71,9 @@ const year = new Date().getFullYear()
           <a href="/cover-letter" class="nav-link">Cover Letter</a>
           <a href="/resume-examples" class="nav-link">Examples</a>
           <a href="/blog" class="nav-link">Blog</a>
+          <button id="theme-btn-desktop" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
           <div style="width:1px;height:20px;background:var(--gray-200);margin:0 0.25rem"></div>
           <a href="/" class="btn btn-primary btn-sm" style="text-decoration:none">Build My Resume</a>
         </div>
@@ -86,6 +91,7 @@ const year = new Date().getFullYear()
           <a href="/resume-examples" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Resume Examples</a>
           <a href="/templates" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Templates</a>
           <a href="/blog" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Blog</a>
+          <button id="theme-btn-mobile" onclick="toggleTheme()" style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;border:none;background:none;font-size:0.875rem;font-weight:500;color:var(--gray-500);cursor:pointer;border-radius:8px" class="nav-link">Toggle Theme</button>
           <a href="/" class="btn btn-primary" style="text-decoration:none;margin-top:0.5rem;justify-content:center">Build My Resume</a>
         </div>
       </div>
@@ -194,6 +200,45 @@ const year = new Date().getFullYear()
         if (btn) btn.disabled = false;
       });
     });
+  </script>
+  <script>
+    (function() {
+      var theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.getElementById("site-header").style.background = "rgba(18,18,42,0.92)";
+      }
+    })();
+
+    function toggleTheme() {
+      var html = document.documentElement;
+      var isDark = html.getAttribute("data-theme") === "dark";
+      html.classList.add("transitioning");
+      if (isDark) {
+        html.removeAttribute("data-theme");
+        localStorage.setItem("theme", "light");
+        document.getElementById("site-header").style.background = "rgba(255,255,255,0.92)";
+      } else {
+        html.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+        document.getElementById("site-header").style.background = "rgba(18,18,42,0.92)";
+      }
+      setTimeout(function() { html.classList.remove("transitioning") }, 300);
+    }
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".reveal").forEach(function(el) { observer.observe(el); });
+      });
+    }
   </script>
   </body>
 </html>
