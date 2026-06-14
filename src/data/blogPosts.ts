@@ -489,4 +489,238 @@ The words you choose on your resume matter. Powerful action verbs can transform 
 <p>Build a resume with powerful, accomplishment-driven bullet points using our <a href="/">free resume builder</a>. Check your resume's language with <a href="/ats-score">ATS Score Checker</a> to ensure your verbs are working for you.</p>
     `.trim()
   },
+  {
+    slug: "how-to-tailor-resume-for-job",
+    title: "How to Tailor Your Resume for Each Job Application: A Step-by-Step Guide",
+    description: "Learn how to customize your resume for every job application. Step-by-step strategy to increase your interview rate by matching keywords and highlighting relevant experience.",
+    date: "2025-04-01",
+    readTime: "9 min read",
+    category: "Resume Tips",
+    relatedTools: ["/ats-score", "/", "/resume-examples"],
+    content: `
+Sending the same resume to every job application is one of the biggest mistakes job seekers make. Tailoring your resume for each position can dramatically increase your interview rate — studies show customized resumes are 40% more likely to get callbacks.
+
+<h2>Why Tailoring Your Resume Matters</h2>
+<p>Applicant Tracking Systems rank candidates based on how well their resume matches the job description. A generic resume might include only 30-40% of the keywords in a specific posting, while a tailored resume can achieve 80-90% keyword match. This difference can move you from the bottom of the candidate pool to the top. Use our <a href="/ats-score">ATS Score Checker</a> to measure your match rate before and after tailoring.</p>
+
+<h2>Step 1: Analyze the Job Description</h2>
+<p>Start by thoroughly reading the job description. Identify the top 10-15 skills, qualifications, and requirements. Create a list of keywords including: required technologies and tools, specific certifications or degrees, soft skills mentioned multiple times, industry-specific terminology, and action verbs used in the description.</p>
+
+<h2>Step 2: Map Keywords to Your Experience</h2>
+<p>For each keyword in the job description, find a corresponding achievement in your experience. If the role requires "project management", ensure that exact phrase appears in your resume. If they ask for "React" and you have React experience, make sure it's prominent. Don't just list keywords — weave them into your bullet points naturally.</p>
+
+<h2>Step 3: Restructure Your Professional Summary</h2>
+<p>Your professional summary should be rewritten for each application to reflect the specific role and company. Reference the job title and mention the key qualifications they're seeking. Example: "Results-driven product manager with 6+ years of experience in SaaS and a proven track record of driving user growth through data-informed product decisions."</p>
+
+<h2>Step 4: Reorder and Reprioritize Experience</h2>
+<p>Rearrange your bullet points to put the most relevant experience first. If the job emphasizes team leadership, lead with your management achievements. If it prioritizes technical skills, showcase your most impressive technical accomplishments at the top of each role. You can even move a less-relevant job lower and expand on the roles most aligned with the target position.</p>
+
+<h2>Step 5: Insert Keywords Throughout</h2>
+<p>Include target keywords in your skills section, experience bullet points, education section, and professional summary. However, avoid keyword stuffing — your resume should still read naturally. A good rule of thumb: if a keyword appears in the job description 3+ times, it should appear on your resume at least once. Browse our <a href="/resume-examples">resume examples</a> to see how top candidates naturally incorporate keywords.</p>
+
+<h2>Step 6: Customize Your Skills Section</h2>
+<p>Reorder your skills to match the job description's priority. Move the most sought-after skills to the top. Remove skills that aren't relevant to the role (no one cares about your proficiency in outdated software). Add any missing skills that you genuinely possess and the job requires.</p>
+
+<h2>Common Tailoring Mistakes</h2>
+<p><strong>Over-tailoring:</strong> Don't fabricate experience. If you don't have a required skill, don't claim it.</p>
+<p><strong>Forgetting to proofread:</strong> After making changes, re-read the entire resume to catch errors.</p>
+<p><strong>Neglecting formatting:</strong> Major restructuring can break formatting. Use our <a href="/">resume builder</a> to maintain consistent formatting while customizing content.</p>
+<p><strong>Not saving versions:</strong> Save each tailored version with the job title in the filename for easy tracking.</p>
+
+<p>Create a tailored, ATS-optimized resume for every application using our <a href="/">free resume builder</a>. Check your keyword match rate with the <a href="/ats-score">ATS Score Checker</a>.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-keywords-ats-2025",
+    title: "Resume Keywords: How to Beat ATS in 2025",
+    description: "Master resume keywords for ATS optimization. Learn how to find the right keywords, where to place them, and avoid keyword stuffing with real examples.",
+    date: "2025-04-10",
+    readTime: "10 min read",
+    category: "ATS",
+    relatedTools: ["/ats-score", "/", "/resume-examples"],
+    content: `
+The right keywords can make the difference between your resume being seen or rejected. In 2025, ATS systems are more sophisticated than ever, but they still rely primarily on keyword matching to rank candidates. Understanding how to use keywords strategically is essential for getting past automated screening.
+
+<h2>What Are Resume Keywords?</h2>
+<p>Resume keywords are specific words and phrases that describe the skills, qualifications, experience, and attributes required for a job. When you apply through an ATS, the system scans your resume and calculates a match score based on how many of these keywords appear. Higher match scores mean your resume moves up the rankings.</p>
+
+<h2>How to Find the Right Keywords</h2>
+<p><strong>1. Analyze the job description:</strong> The job posting itself is your best source of keywords. Identify all the skills, technologies, and qualifications mentioned. Pay attention to those listed multiple times or in the "Required Qualifications" section.</p>
+<p><strong>2. Research similar job postings:</strong> Look at 5-10 job descriptions for the same role at different companies. Keywords that appear across multiple postings are industry-standard terms you must include.</p>
+<p><strong>3. Use LinkedIn job postings:</strong> LinkedIn profiles often include skill endorsements and keyword-rich job descriptions. Search for your target role and note recurring terms.</p>
+<p><strong>4. Use our <a href="/ats-score">ATS Score Checker</a>:</strong> Paste a job description and your resume to see exactly which keywords you're missing and get a match score.</p>
+
+<h2>Types of Keywords</h2>
+<p><strong>Hard Skills:</strong> Specific, teachable abilities like "Python", "AWS", "Financial Modeling", "SEO", "Project Management". These are the most important keywords for ATS matching.</p>
+<p><strong>Soft Skills:</strong> Interpersonal attributes like "Leadership", "Communication", "Problem Solving". Include these in your summary and experience bullets, not just in a skills list.</p>
+<p><strong>Industry Terminology:</strong> Phrases specific to your field like "Agile Methodology", "Supply Chain Optimization", "Clinical Trials". These signal domain expertise.</p>
+<p><strong>Certifications and Degrees:</strong> "PMP", "CPA", "MBA", "B.S. Computer Science" — exact names of credentials.</p>
+<p><strong>Tools and Technologies:</strong> "Salesforce", "Jira", "Tableau", "Excel", "SAP" — specific software and platforms.</p>
+
+<h2>Where to Place Keywords on Your Resume</h2>
+<p><strong>Professional Summary:</strong> Include 3-4 of the most important keywords. This is prime real estate for ATS scanning.</p>
+<p><strong>Experience Section:</strong> Weave keywords naturally into your bullet points. Instead of saying "Used Python", say "Built data pipelines using Python and AWS Lambda, processing 1M+ records daily."</p>
+<p><strong>Skills Section:</strong> Include a focused list of 10-15 relevant skills. Use the exact terminology from the job description.</p>
+<p><strong>Education and Certifications:</strong> List degrees and certifications exactly as they appear in the job posting.</p>
+
+<h2>How Many Keywords Should You Use?</h2>
+<p>There's no magic number, but aim for 70-80% keyword match with the job description. Include the required skills that appear most frequently. Use our <a href="/ats-score">ATS Score Checker</a> to optimize your keyword density without over-stuffing. Quality matters more than quantity — every keyword should be supported by evidence in your experience section.</p>
+
+<h2>Avoid Keyword Stuffing</h2>
+<p>Keyword stuffing — cramming as many keywords as possible into your resume regardless of context — is easy for modern ATS systems to detect. It also makes your resume unreadable for human recruiters. Instead, ensure every keyword appears naturally within a meaningful achievement or description.</p>
+
+<p><strong>Bad keyword stuffing:</strong> "Python, Java, SQL, AWS, React, Node.js, Machine Learning, Agile, Scrum, Kubernetes, Docker, Jenkins" — just a list with no context.</p>
+<p><strong>Natural keyword integration:</strong> "Developed a Python-based microservice deployed on AWS ECS using Docker and Kubernetes, integrated with a React frontend via REST APIs." — same keywords, but within a real achievement.</p>
+
+<h2>Update Keywords for Each Application</h2>
+<p>Every job description has a unique keyword set. Don't rely on the same resume for every application. Tailor your keywords for each role, prioritizing the terms that appear in the "Required Qualifications" section. See our <a href="/resume-examples">resume examples</a> for different roles to understand how keywords vary by position and industry.</p>
+
+<p>Optimize your resume for ATS with our <a href="/">free resume builder</a> and <a href="/ats-score">ATS Score Checker</a>. Get detailed keyword analysis and improvement suggestions.</p>
+    `.trim()
+  },
+  {
+    slug: "best-resume-fonts-and-formatting",
+    title: "Best Resume Fonts & Formatting: What Recruiters Actually Prefer",
+    description: "The definitive guide to resume fonts and formatting in 2025. Find out which fonts recruiters prefer, ideal font sizes, and formatting tips for every industry.",
+    date: "2025-04-20",
+    readTime: "7 min read",
+    category: "Resume Tips",
+    relatedTools: ["/templates", "/", "/resume-examples"],
+    content: `
+Typography might seem like a minor detail, but the font you choose for your resume can influence a recruiter's first impression. Studies show that fonts perceived as "professional" or "modern" can positively affect hiring decisions, while unconventional fonts can create negative bias.
+
+<h2>Best Resume Fonts for 2025</h2>
+<p><strong>Arial:</strong> A clean, widely-available sans-serif font. It's the safest choice — readable on any screen and universally supported by ATS systems. Best for: any industry, especially corporate environments.</p>
+<p><strong>Calibri:</strong> The default font for many Microsoft applications. Modern, clean, and professional. Best for: business and corporate roles.</p>
+<p><strong>Helvetica:</strong> A classic, professional sans-serif font. Slightly more refined than Arial. Best for: design-conscious professionals and startup roles.</p>
+<p><strong>Inter:</strong> A modern sans-serif font designed for screen readability. It's the font we use in our <a href="/templates">resume templates</a>. Best for: tech, startups, and modern industries.</p>
+<p><strong>Times New Roman:</strong> A traditional serif font. While old-fashioned, it's still standard in conservative industries like law and finance. Best for: law, finance, and academia.</p>
+<p><strong>Georgia:</strong> A more modern serif font that's more readable on screens than Times New Roman. Best for: conservative industries where you want a slightly more contemporary feel.</p>
+<p><strong>Lato:</strong> A warm, approachable sans-serif font. Best for: creative industries and non-profits.</p>
+<p><strong>Roboto:</strong> A versatile sans-serif with a friendly feel. Best for: tech roles and startups.</p>
+
+<h2>Fonts to Avoid</h2>
+<p>Comic Sans (unprofessional), Papyrus (overused and cliché), Curlz MT (too casual), Brush Script (hard to read), Monotype Corsiva (dated), and any decorative or script fonts. These fonts can make your resume look amateurish and may not render correctly in ATS systems.</p>
+
+<h2>Ideal Font Sizes</h2>
+<p><strong>Your Name:</strong> 18-22pt (bold)</p>
+<p><strong>Section Headers:</strong> 13-14pt (bold)</p>
+<p><strong>Job Titles/Company Names:</strong> 11-12pt (bold)</p>
+<p><strong>Body Text:</strong> 10.5-12pt</p>
+<p><strong>Contact Info:</strong> 9-10pt</p>
+<p>Never go below 10pt for body text — it becomes difficult to read, especially when printed. Use our <a href="/">resume builder</a> to automatically apply the correct font sizes for every section.</p>
+
+<h2>Resume Formatting Best Practices</h2>
+<p><strong>Margins:</strong> 0.5 to 1 inch on all sides. This provides enough white space without wasting valuable content area.</p>
+<p><strong>Line spacing:</strong> 1.0 to 1.15 for body text. Slightly more spacing improves readability.</p>
+<p><strong>Section spacing:</strong> Add extra space between sections (10-14pt after each section header) for visual clarity.</p>
+<p><strong>File format:</strong> PDF is universally preferred. It preserves your formatting and is readable by most ATS systems.</p>
+<p><strong>Color:</strong> Black text on white background is standard. A subtle accent color (like our indigo #4f46e5) for headers is acceptable in creative industries but avoid multiple colors.</p>
+
+<h2>Industry-Specific Formatting Guidelines</h2>
+<p><strong>Tech & Startups:</strong> Modern sans-serif fonts (Inter, Roboto). Clean, minimal design with good use of white space.</p>
+<p><strong>Finance, Law & Consulting:</strong> Conservative fonts (Arial, Times New Roman). Traditional layout with clear section headers. Minimal to no color.</p>
+<p><strong>Creative & Marketing:</strong> More flexibility with fonts and layout. Can incorporate color and visual elements, but ensure ATS compatibility.</p>
+<p><strong>Healthcare & Education:</strong> Clear, organized formatting. Easy-to-read fonts (Arial, Calibri). Detailed descriptions and certifications.</p>
+
+<p>Create a perfectly formatted resume with our <a href="/">free resume builder</a>. Choose from <a href="/templates">professionally designed templates</a> with the right fonts and formatting for your industry.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-explain-employment-gaps",
+    title: "How to Explain Employment Gaps on Your Resume in 2025",
+    description: "Learn how to handle employment gaps on your resume with confidence. Tips, examples, and strategies for career breaks, layoffs, and personal time off.",
+    date: "2025-05-01",
+    readTime: "8 min read",
+    category: "Career Advice",
+    relatedTools: ["/resume-examples", "/cover-letter", "/"],
+    content: `
+Employment gaps are increasingly common and no longer carry the stigma they once did. Career breaks for family care, education, health issues, travel, or simply taking time to find the right role are all valid reasons for a gap. What matters is how you present the gap on your resume and address it during interviews.
+
+<h2>How Common Are Employment Gaps?</h2>
+<p>According to recent labor statistics, over 60% of workers have an employment gap at some point in their careers. Post-pandemic, career breaks have become even more normalized. Many employers now recognize that a gap doesn't reflect a candidate's abilities or work ethic. The key is transparency and framing your time off as a period of growth or purposeful decision-making.</p>
+
+<h2>Should You Include Employment Gaps on Your Resume?</h2>
+<p>In most cases, you should not explicitly call out a gap on your resume. Simply list the years (not months) for your employment dates to minimize the visual impact of short gaps. For example, "2021 - 2023" rather than "March 2021 - June 2023." However, if the gap is longer than 12 months, you may need a proactive strategy.</p>
+
+<h2>Formatting Strategies for Different Gap Lengths</h2>
+<p><strong>Gaps under 6 months:</strong> Don't mention the gap at all. Use years-only dating for your positions. Most recruiters won't notice or ask about short gaps.</p>
+<p><strong>Gaps of 6-12 months:</strong> Use years-only dating. If asked in an interview, be honest but brief about the reason.</p>
+<p><strong>Gaps of 1-2 years:</strong> Consider using a combination resume format that highlights skills rather than chronology. Add a brief explanation in your cover letter. Use our <a href="/cover-letter">cover letter generator</a> to craft a professional explanation.</p>
+<p><strong>Gaps of 2+ years:</strong> Be proactive. A functional or combination resume format can help deemphasize the timeline. Address the gap positively in your professional summary or include a "Career Break" entry that frames the time productively.</p>
+
+<h2>How to Address Employment Gaps in Your Cover Letter</h2>
+<p>Your cover letter is the ideal place to briefly and positively address an employment gap. Keep it brief, focus on what you did during the gap, and pivot quickly to your qualifications. Example: "After taking a year to care for a family member, I am now fully focused on returning to my career as a project manager. During my career break, I completed my PMP certification and volunteered as a project coordinator for a non-profit." See our <a href="/resume-examples">resume examples</a> for professionals who successfully returned after career breaks.</p>
+
+<h2>Turning Employment Gaps Into Positives</h2>
+<p>Frame your gap as a period of growth. Mention any skills you developed, certifications you earned, volunteer work you did, or freelance projects you completed. Even personal development activities like travel, language learning, or volunteering demonstrate initiative and character.</p>
+<p>Examples of productive gap activities: freelance or contract work, online courses and certifications, volunteering, personal projects, travel and cultural exposure, health and wellness improvement, family care responsibilities.</p>
+
+<h2>What NOT to Do</h2>
+<p><strong>Never lie or fabricate experience.</strong> Background checks will reveal the truth, and getting caught lying eliminates you from consideration immediately.</p>
+<p><strong>Avoid vague explanations.</strong> "I took some time off" is less effective than "I took time to complete a professional certification and care for a family member."</p>
+<p><strong>Don't apologize.</strong> Employment gaps are normal. State the facts confidently without excessive justification.</p>
+<p><strong>Don't include negative details.</strong> Avoid mentioning being fired, layoffs with negative context, or health details that could lead to discrimination.</p>
+
+<h2>Interview Tips for Employment Gaps</h2>
+<p>When asked about a gap in an interview: be honest, keep it brief (1-2 sentences), pivot to your readiness to return, focus on what you learned or accomplished during the gap, and redirect to your qualifications for the role. Practice your response so it sounds natural and confident rather than defensive.</p>
+
+<p>Build a resume that presents your career story professionally with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> for professionals who navigated employment gaps successfully.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-email-resume",
+    title: "How to Email a Resume: Best Practices & Email Template",
+    description: "Learn how to email your resume professionally. Includes email templates, subject line examples, attachment tips, and common mistakes to avoid.",
+    date: "2025-05-15",
+    readTime: "6 min read",
+    category: "Career Advice",
+    relatedTools: ["/", "/cover-letter", "/resume-examples"],
+    content: `
+Emailing your resume might seem straightforward, but small mistakes can cost you an interview opportunity. From subject lines to file names, how you send your resume creates a first impression before the content is even read. This guide covers everything you need to know about emailing your resume professionally.
+
+<h2>The Perfect Resume Email Structure</h2>
+<p>A professional resume email includes: a clear subject line, a professional salutation, a brief introduction (1-2 sentences), a mention of the attached resume and cover letter, a professional closing, and your contact signature.</p>
+
+<h2>Subject Line Examples</h2>
+<p><strong>With a referral:</strong> "Referred by [Name] — Application for [Job Title] — [Your Name]"</p>
+<p><strong>With a job ID:</strong> "Application for [Job Title] — [Job ID] — [Your Name]"</p>
+<p><strong>Simple:</strong> "Application for [Job Title] — [Your Name]"</p>
+<p><strong>Proactive (no job posted):</strong> "Experienced [Job Title] Interested in Opportunities at [Company]"</p>
+
+<h2>Email Body Template</h2>
+<p><strong>Subject:</strong> Application for Product Manager — Jane Doe</p>
+<p>Dear [Hiring Manager Name],</p>
+<p>I am writing to apply for the Product Manager position at [Company Name], as advertised on [where you saw the posting]. With 5+ years of experience in product management and a proven track record of launching features that drive user growth, I am confident I can contribute to your team.</p>
+<p>Please find my resume and cover letter attached. My resume details my experience at [Current/Past Company], where I led the development of [key achievement]. I have also included links to my LinkedIn profile and portfolio below.</p>
+<p>Thank you for your time and consideration. I look forward to the opportunity to discuss how my experience aligns with [Company Name]'s goals.</p>
+<p>Best regards,</p>
+<p>Jane Doe<br/>
+jane.doe@email.com<br/>
+linkedin.com/in/janedoe<br/>
+[Portfolio URL]</p>
+
+<h2>Resume File Naming Best Practices</h2>
+<p>Your resume file name should include your name and the word "Resume" so it's easy to find. Never leave it as "resume.pdf" or "myresume.pdf". Correct examples: "Jane_Doe_Resume.pdf", "JaneDoe_ProductManager_Resume.pdf", "Resume_Jane_Doe_2025.pdf".</p>
+
+<h2>File Format: PDF vs Word</h2>
+<p>PDF is almost always the best choice. It preserves your formatting exactly and is readable by most ATS systems. Only use Word (.docx) if the job posting specifically requests it. Never send a Pages file, Google Docs link, or image file as your primary resume.</p>
+
+<h2>What to Include in Your Attachment</h2>
+<p>Attach your resume as a PDF. If you have a cover letter, attach it as a separate PDF (not in the email body). Keep the file size under 1MB. Include your LinkedIn URL in both your email signature and resume. See our <a href="/resume-examples">resume examples</a> for formatting inspiration.</p>
+
+<h2>Common Mistakes to Avoid</h2>
+<p><strong>Forgetting the attachment:</strong> Double-check before hitting send. This is the most common and most damaging mistake.</p>
+<p><strong>Wrong file name:</strong> "resume.pdf" gets lost in the recruiter's downloads folder. Use your name.</p>
+<p><strong>No subject line:</strong> Emails without subject lines look unprofessional and may be marked as spam.</p>
+<p><strong>Too long:</strong> Keep your email body brief — 3-4 sentences maximum. Save details for the resume.</p>
+<p><strong>Typos:</strong> Proofread your email as carefully as your resume. A typo in the email suggests carelessness.</p>
+<p><strong>Generic greeting:</strong> Research the hiring manager's name on LinkedIn. "Dear Sarah" is far better than "To Whom It May Concern."</p>
+
+<h2>After Sending: Follow-Up Etiquette</h2>
+<p>Wait 5-7 business days before following up. Keep the follow-up email brief and polite. Reference your original application and reiterate your interest. Don't follow up more than twice. If you haven't heard back after two follow-ups, move on to other opportunities.</p>
+
+<p>Create a professional resume ready to email using our <a href="/">free resume builder</a>. Generate a matching <a href="/cover-letter">cover letter</a> to include with your application. Browse <a href="/resume-examples">resume examples</a> to see professionally formatted resumes.</p>
+    `.trim()
+  },
 ]
