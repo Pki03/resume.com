@@ -101,7 +101,25 @@ const moreExamples = coverLetterExamples.filter(r => r.slug !== slug).slice(0, 6
     "@type": "Article",
     "headline": "{company} Cover Letter Example for {role}",
     "description": "{summary}",
-    "about": { "@type": "Thing", "name": "{company} Cover Letter" }
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://getapplykit.com/cover-letter/{slug}"
+    },
+    "about": { "@type": "Thing", "name": "{company} Cover Letter" },
+    "author": { "@type": "Organization", "name": "ResumeBuilder" },
+    "publisher": { "@type": "Organization", "name": "ResumeBuilder", "logo": { "@type": "ImageObject", "url": "https://getapplykit.com/favicon.svg" } },
+    "image": "https://getapplykit.com/og-image.svg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getapplykit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Cover Letter Builder", "item": "https://getapplykit.com/cover-letter" },
+      { "@type": "ListItem", "position": 3, "name": "{title}", "item": "https://getapplykit.com/cover-letter/{slug}" }
+    ]
   }
   </script>
 </Layout>

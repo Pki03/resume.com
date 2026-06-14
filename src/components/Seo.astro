@@ -34,3 +34,31 @@ const fullTitle = title.includes("Resume Builder") ? title : `${title} | Free Re
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 <meta name="google-site-verification" content="m62LSvkFZjnrvs-sKKSA_yCq-Iydla2U-ZsNzVBkLeQ" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ResumeBuilder",
+  "url": "https://getapplykit.com",
+  "logo": "https://getapplykit.com/favicon.svg",
+  "description": "Build professional, ATS-friendly resumes online for free.",
+  "foundingDate": "2025"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Free Resume Builder",
+  "url": "https://getapplykit.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://getapplykit.com/resume-examples?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

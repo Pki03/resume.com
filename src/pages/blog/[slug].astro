@@ -99,7 +99,25 @@ const morePosts = blogPosts.filter(p => p.slug !== slug).slice(0, 3)
     "headline": "{title}",
     "description": "{description}",
     "datePublished": "{date}",
-    "author": { "@type": "Organization", "name": "ResumeBuilder" }
+    "dateModified": "{date}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://getapplykit.com/blog/{slug}"
+    },
+    "author": { "@type": "Organization", "name": "ResumeBuilder" },
+    "publisher": { "@type": "Organization", "name": "ResumeBuilder", "logo": { "@type": "ImageObject", "url": "https://getapplykit.com/favicon.svg" } },
+    "image": "https://getapplykit.com/og-image.svg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getapplykit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://getapplykit.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "{title}", "item": "https://getapplykit.com/blog/{slug}" }
+    ]
   }
   </script>
 </Layout>

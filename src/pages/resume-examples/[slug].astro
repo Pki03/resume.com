@@ -94,7 +94,25 @@ const moreExamples = resumeExamples.filter(r => r.slug !== slug).slice(0, 6)
     "@type": "Article",
     "headline": "{title} Resume Example",
     "description": "{summary}",
-    "about": { "@type": "Thing", "name": "{title} Resume" }
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://getapplykit.com/resume-examples/{slug}"
+    },
+    "about": { "@type": "Thing", "name": "{title} Resume" },
+    "author": { "@type": "Organization", "name": "ResumeBuilder" },
+    "publisher": { "@type": "Organization", "name": "ResumeBuilder", "logo": { "@type": "ImageObject", "url": "https://getapplykit.com/favicon.svg" } },
+    "image": "https://getapplykit.com/og-image.svg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getapplykit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Examples", "item": "https://getapplykit.com/resume-examples" },
+      { "@type": "ListItem", "position": 3, "name": "{title}", "item": "https://getapplykit.com/resume-examples/{slug}" }
+    ]
   }
   </script>
 </Layout>
