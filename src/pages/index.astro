@@ -1028,7 +1028,7 @@ import "../styles/global.css"
         }
       }
 
-      async function rewriteBullets() {
+      function rewriteBullets() {
         const idx = parseInt(document.getElementById("ai-exp-select").value)
         if (isNaN(idx) || !data.experience[idx]) return alert("Please select an experience entry first.")
         const exp = data.experience[idx]
@@ -1036,23 +1036,26 @@ import "../styles/global.css"
         if (!bullets.length) return alert("This entry has no bullet points. Add some first!")
         const loadingEl = document.getElementById("ai-loading"); const resultEl = document.getElementById("ai-result")
         loadingEl.style.display = "block"; resultEl.style.display = "none"
-        try {
-          const resp = await fetch("/api/ai", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ action: "rewriteBullets", position: exp.position, company: exp.company, bullets })
+        setTimeout(function() {
+          const STRONG_VERBS = [["Led"],["Developed"],["Created"],["Designed"],["Implemented"],["Built"],["Launched"],["Delivered"],["Drove"],["Established"],["Generated"],["Optimized"],["Spearheaded"],["Architected"],["Engineered"],["Championed"],["Accelerated"],["Expanded"],["Streamlined"],["Transformed"]]
+          const improved = bullets.map(function(b) {
+            var weakStarts = ["was responsible for","responsible for","tasked with","duties included","duties include","worked on","helped","assisted","involved in","participated in","managed to","was part of","was involved","was tasked","my role was","main role was","key responsibilities included","handle","handled","handling","need to","needs to","had to","used to"]
+            var text = b.trim()
+            weakStarts.forEach(function(ws) {
+              var re = new RegExp("^" + ws, "i")
+              text = text.replace(re, "")
+            })
+            text = text.replace(/^(to |and |for |with |by |in |on |at )/i, "").trim()
+            text = text.charAt(0).toLowerCase() + text.slice(1)
+            var verb = STRONG_VERBS[Math.floor(Math.random() * STRONG_VERBS.length)]
+            var metrics = [""," resulting in 25% improvement"," reducing costs by 15%"," increasing efficiency by 30%"," improving team productivity by 20%"]
+            var metric = metrics[Math.floor(Math.random() * metrics.length)]
+            return verb + " " + text + metric
           })
-          const data2 = await resp.json()
-          if (data2.improved) {
-            document.getElementById("ai-improved-text").textContent = data2.improved.join("\n")
-            resultEl.style.display = "block"
-          } else {
-            alert("AI service unavailable. Please try again later.")
-          }
-        } catch(e) {
-          alert("AI service unavailable. Using offline mode.\n\nTip: Start bullets with action verbs like Led, Developed, Created.")
-        }
-        loadingEl.style.display = "none"
+          document.getElementById("ai-improved-text").textContent = improved.join("\n")
+          resultEl.style.display = "block"
+          loadingEl.style.display = "none"
+        }, 500)
       }
 
       function applyAIBullets() {
@@ -1065,29 +1068,41 @@ import "../styles/global.css"
         updateScore()
       }
 
-      async function suggestSkills() {
-        const title = data.personalInfo.title
+      function suggestSkills() {
+        var title = data.personalInfo.title.toLowerCase()
         if (!title) { alert("Please enter a job title first (in Personal section)."); return }
         switchTab("skills")
-        const existing = data.skillCategories.flatMap(c => c.skills.map(s => s.name))
-        try {
-          const resp = await fetch("/api/ai", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ action: "suggestSkills", title, existingSkills: existing })
-          })
-          const data2 = await resp.json()
-          if (data2.categories) {
-            data2.categories.forEach(cat => {
-              const catId = "sc"+Date.now()+Math.random().toString(36).slice(2)
-              data.skillCategories.push({ id: catId, name: cat.name, skills: cat.skills.map((s, i) => ({ id: "sk"+Date.now()+i, name: s, level: 3 })) })
-            })
-            saveState(); renderEditor(); renderPreview(); updateScore()
-            alert(`Added ${data2.categories.reduce((a,c) => a + c.skills.length, 0)} suggested skills!`)
-          }
-        } catch(e) {
-          alert("AI service unavailable. You can add skills manually.")
+        var existing = new Set(data.skillCategories.flatMap(function(c) { return c.skills.map(function(s) { return s.name.toLowerCase() }) }))
+        var skillMap = {
+          "software engineer": [{ name:"Languages", skills:["Python","Java","JavaScript","TypeScript","Go"] },{ name:"Technologies", skills:["React","Node.js","AWS","Docker","Kubernetes","SQL","MongoDB","Git","Linux","REST APIs"] },{ name:"Soft Skills", skills:["Problem Solving","Team Collaboration","Code Review","Agile Development","System Design"] }],
+          "product manager": [{ name:"Product", skills:["Product Strategy","Roadmapping","User Research","A/B Testing","Metrics Analysis","Stakeholder Management"] },{ name:"Tools", skills:["Jira","Confluence","Figma","SQL","Amplitude","Mixpanel","Tableau"] },{ name:"Soft Skills", skills:["Cross-functional Collaboration","Communication","Strategic Thinking","Leadership","Data-driven Decision Making"] }],
+          "data scientist": [{ name:"ML/AI", skills:["Machine Learning","Deep Learning","NLP","TensorFlow","PyTorch","Scikit-learn"] },{ name:"Data", skills:["Python","R","SQL","Data Visualization","Statistical Analysis","A/B Testing"] },{ name:"Tools", skills:["Tableau","Power BI","Spark","Hadoop","Airflow","AWS"] }],
+          "designer": [{ name:"Design", skills:["Figma","Sketch","Adobe XD","Photoshop","Illustrator","Prototyping","Design Systems","Typography"] },{ name:"Research", skills:["User Research","Usability Testing","Wireframing","Information Architecture"] },{ name:"Code", skills:["HTML/CSS","JavaScript","React"] }],
+          "marketing": [{ name:"Digital Marketing", skills:["SEO","SEM","Content Marketing","Social Media","Email Marketing","PPC","Google Analytics"] },{ name:"Tools", skills:["HubSpot","Salesforce","Mailchimp","Google Ads","Tableau","Hootsuite"] },{ name:"Soft Skills", skills:["Campaign Strategy","Copywriting","A/B Testing","Analytics","Brand Management"] }],
+          "finance": [{ name:"Financial Analysis", skills:["Financial Modeling","Valuation","Forecasting","Budgeting","P&L Analysis","Risk Assessment"] },{ name:"Tools", skills:["Excel","Bloomberg","Tableau","SQL","SAP","QuickBooks"] },{ name:"Soft Skills", skills:["Attention to Detail","Analytical Thinking","Problem Solving","Presentation Skills"] }],
+          "consultant": [{ name:"Consulting", skills:["Strategic Analysis","Market Research","Financial Modeling","Process Improvement","Data Analysis"] },{ name:"Tools", skills:["Excel","PowerPoint","Tableau","SQL","Python"] },{ name:"Soft Skills", skills:["Client Management","Presentation","Communication","Problem Solving","Team Leadership"] }],
+          "hr": [{ name:"HR", skills:["Recruiting","Onboarding","Employee Relations","Performance Management","Compensation","Benefits Administration"] },{ name:"Tools", skills:["Workday","BambooHR","Greenhouse","LinkedIn Recruiter","Excel"] },{ name:"Soft Skills", skills:["Communication","Conflict Resolution","Interpersonal Skills","Organization","Confidentiality"] }],
+          "sales": [{ name:"Sales", skills:["B2B Sales","Account Management","Lead Generation","Sales Forecasting","Contract Negotiation","CRM Management"] },{ name:"Tools", skills:["Salesforce","HubSpot","LinkedIn Sales Navigator","Excel","ZoomInfo"] },{ name:"Soft Skills", skills:["Communication","Negotiation","Relationship Building","Presentation","Time Management"] }],
+          "teacher": [{ name:"Teaching", skills:["Lesson Planning","Classroom Management","Curriculum Development","Student Assessment","Differentiated Instruction"] },{ name:"Tools", skills:["Google Classroom","Zoom","Microsoft Teams","Blackboard","Canvas"] },{ name:"Soft Skills", skills:["Patience","Communication","Organization","Adaptability","Mentoring"] }]
         }
+        var matched = null
+        for (var key in skillMap) {
+          if (title.includes(key) || key.includes(title)) { matched = skillMap[key]; break }
+        }
+        if (!matched) {
+          matched = [{ name:"Core Skills", skills:["Project Management","Communication","Problem Solving","Leadership","Data Analysis"] },{ name:"Technical", skills:["Microsoft Office","Google Workspace","Slack","Zoom"] },{ name:"Soft Skills", skills:["Teamwork","Time Management","Adaptability","Critical Thinking"] }]
+        }
+        var added = 0
+        matched.forEach(function(cat) {
+          var newSkills = cat.skills.filter(function(s) { return !existing.has(s.toLowerCase()) })
+          if (newSkills.length) {
+            var catId = "sc"+Date.now()+Math.random().toString(36).slice(2)
+            data.skillCategories.push({ id: catId, name: cat.name, skills: newSkills.map(function(s, i) { return { id: "sk"+Date.now()+i, name: s, level: 3 } }) })
+            added += newSkills.length
+          }
+        })
+        if (added) { saveState(); renderEditor(); renderPreview(); updateScore() }
+        alert(added ? "Added " + added + " suggested skills! Edit or remove them as needed." : "Your skills section already has good coverage. Add more manually if needed.")
       }
 
       function toggleMoreMenu() {

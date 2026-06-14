@@ -471,12 +471,15 @@ import Layout from "../layouts/Layout.astro"
           }
         }
         const btn = event.target.closest("button"); btn.disabled = true; btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg> Generating...'
-        const resp = await fetch("/api/ai", {
-          method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ action: "generateCoverLetter", name, position, company, summary, experience, personalNote: `Key achievement: ${getVal("cl-achievement")}` })
-        })
-        const data2 = await resp.json()
-        if (data2.letter) {
+        const achievement = getVal("cl-achievement")
+        const skills = getVal("cl-skills")
+        const intro = "I am writing to express my strong interest in the " + position + " position at " + company + ". "
+        const match1 = "With " + (summary ? summary : "my background in " + position) + ", I am confident that my skills and experience align perfectly with the requirements of this role."
+        const match2 = achievement ? ("In my current role, I " + achievement + ", demonstrating my ability to deliver results and contribute meaningfully to organizational goals.") : "Throughout my career, I have consistently delivered results and contributed to organizational success through dedication and strategic thinking."
+        const match3 = skills ? "My expertise spans " + skills + ", enabling me to bring a well-rounded skill set to the " + position + " role at " + company + "." : "I am eager to bring my experience and enthusiasm to the " + position + " role at " + company + "."
+        const closing = "I would welcome the opportunity to discuss how my background and skills would be an asset to your team. Thank you for your time and consideration."
+        const data2 = { letter: [intro, match1, match2, match3, closing].join("\n\n") }
+        
           const el = document.getElementById("cover-preview")
           const template = getVal("cl-template")
           const manager = getVal("cl-manager")
