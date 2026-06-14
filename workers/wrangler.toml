@@ -1,0 +1,7 @@
+name = "getapplykit-api"
+main = "api.js"
+compatibility_date = "2025-06-01"
+
+[[kv_namespaces]]
+binding = "EMAILS"
+id = ""  # You'll fill this after creating the KV namespace

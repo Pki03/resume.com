@@ -1171,6 +1171,34 @@ import "../styles/global.css"
       style.textContent = `@keyframes spin { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }`
       document.head.appendChild(style)
       updateScore()
+
+      document.querySelector(".capture-form")?.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var input = this.querySelector("input[type=email]");
+        if (!input || !input.value) return;
+        var btn = this.querySelector("button[type=submit]");
+        var msg = this.parentNode.querySelector(".capture-success");
+        if (!msg) {
+          msg = document.createElement("p");
+          msg.className = "capture-success";
+          msg.style.cssText = "font-size:0.8125rem;color:#059669;margin-top:0.75rem;font-weight:500";
+          this.parentNode.insertBefore(msg, this.nextSibling);
+        }
+        msg.textContent = "Submitting...";
+        if (btn) btn.disabled = true;
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: input.value })
+        }).then(function(r) { return r.json() }).then(function(d) {
+          msg.textContent = d.message === "Already subscribed" ? "You're already subscribed!" : "Thanks! You're subscribed to weekly tips.";
+          input.value = "";
+          if (btn) btn.disabled = false;
+        }).catch(function() {
+          msg.textContent = "Something went wrong. Try again.";
+          if (btn) btn.disabled = false;
+        });
+      });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>

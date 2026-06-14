@@ -160,6 +160,7 @@ const year = new Date().getFullYear()
       e.preventDefault();
       var input = form.querySelector("input[type=email]");
       if (!input || !input.value) return;
+      var btn = form.querySelector("button[type=submit]");
       var msg = form.parentNode.querySelector(".capture-success");
       if (!msg) {
         msg = document.createElement("p");
@@ -167,8 +168,20 @@ const year = new Date().getFullYear()
         msg.style.cssText = "font-size:0.8125rem;color:#059669;margin-top:0.75rem;font-weight:500";
         form.parentNode.insertBefore(msg, form.nextSibling);
       }
-      msg.textContent = "Thanks! You're subscribed to weekly tips.";
-      input.value = "";
+      msg.textContent = "Submitting...";
+      if (btn) btn.disabled = true;
+      fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: input.value })
+      }).then(function(r) { return r.json() }).then(function(d) {
+        msg.textContent = d.message === "Already subscribed" ? "You're already subscribed!" : "Thanks! You're subscribed to weekly tips.";
+        input.value = "";
+        if (btn) btn.disabled = false;
+      }).catch(function() {
+        msg.textContent = "Something went wrong. Try again.";
+        if (btn) btn.disabled = false;
+      });
     });
   </script>
   </body>
