@@ -1,0 +1,482 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Resume Bullet Point Improver - Free | ResumeBuilder" description="Transform weak resume bullet points into powerful, quantified achievements. Free online AI bullet point improver for resumes.">
+  <section class="hero-split" style="padding-bottom:2rem">
+    <div class="hero-split-content">
+      <span class="eyebrow">Free Tool</span>
+      <h1>Bullet Point <span class="gradient-text">Improver</span></h1>
+      <p>Turn weak, passive resume bullet points into powerful, quantified achievements that recruiters love. Choose your bullet type and get 3 improved versions instantly.</p>
+      <div class="hero-split-actions">
+        <a href="#tool" class="btn btn-primary btn-lg">Improve a Bullet</a>
+        <a href="/" class="btn btn-outline btn-lg">Build My Resume</a>
+      </div>
+      <div class="hero-split-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 50+ Verb Mappings</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 3 Variations</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free</span>
+      </div>
+    </div>
+    <div class="hero-split-visual">
+      <div class="hero-mockup">
+        <div class="hero-mockup-header">
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+        </div>
+        <div class="hero-mockup-body">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem">
+            <span style="padding:0.1875rem 0.5rem;font-size:0.625rem;font-weight:600;background:var(--primary-light);color:var(--primary);border-radius:4px">BEFORE</span>
+            <span style="font-size:0.75rem;color:var(--gray-500);font-style:italic">was responsible for managing a team</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.25rem">
+            <span style="padding:0.1875rem 0.5rem;font-size:0.625rem;font-weight:600;background:var(--success-light);color:var(--success);border-radius:4px">AFTER</span>
+            <span style="font-size:0.75rem;font-weight:600;color:var(--gray-900)">Led a team of 12 to exceed quarterly targets by 34%</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
+            <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem;text-align:center">
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">Led</div>
+              <div style="font-size:0.625rem;color:var(--gray-500)">V1</div>
+            </div>
+            <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem;text-align:center">
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">Managed</div>
+              <div style="font-size:0.625rem;color:var(--gray-500)">V2</div>
+            </div>
+            <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem;text-align:center">
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">Drove</div>
+              <div style="font-size:0.625rem;color:var(--gray-500)">V3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float" style="top:5%;right:-5%">
+        <span class="hero-float-ats perfect">3x</span>
+        <span>More Impact</span>
+      </div>
+      <div class="hero-float" style="bottom:20%;left:-8%">
+        <span class="hero-float-icon purple">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </span>
+        <span>AI-Powered</span>
+      </div>
+      <div class="hero-float" style="bottom:35%;right:-10%">
+        <span class="hero-float-icon cyan">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/></svg>
+        </span>
+        <span>Quantified Results</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm" id="tool">
+    <div class="container-content">
+      <div class="card card-elevated">
+        <div class="card-body">
+          <div class="form-group">
+            <label class="label">Paste a Weak Bullet Point</label>
+            <textarea id="bullet-input" class="input" rows="4" placeholder="e.g. was responsible for managing a team of developers and helping them complete projects on time"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="label">Bullet Type</label>
+            <select id="bullet-type" class="input" style="appearance:auto">
+              <option value="leadership">Leadership / Management</option>
+              <option value="technical">Technical / Engineering</option>
+              <option value="communication">Communication / Writing</option>
+              <option value="achievement">Achievement / Sales / Revenue</option>
+              <option value="improvement">Improvement / Optimization</option>
+            </select>
+          </div>
+          <button id="improve-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.75rem" onclick="improveBullet()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Improve Bullet Point
+          </button>
+        </div>
+      </div>
+
+      <div id="results" style="display:none;margin-top:1.5rem">
+        <div class="card card-elevated">
+          <div class="card-body">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+              <span style="width:4px;height:28px;background:var(--primary);border-radius:2px;flex-shrink:0"></span>
+              <h2 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin:0">Improved Versions</h2>
+            </div>
+            <div id="original-bullet" style="padding:0.75rem 1rem;background:var(--gray-50);border-radius:8px;margin-bottom:1rem;border-left:3px solid var(--gray-300)">
+              <div style="font-size:0.6875rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem">Original</div>
+              <div id="original-text" style="font-size:0.875rem;color:var(--gray-500);font-style:italic"></div>
+            </div>
+            <div id="variations" style="display:flex;flex-direction:column;gap:0.75rem"></div>
+          </div>
+        </div>
+
+        <div class="card card-elevated" style="margin-top:1.5rem">
+          <div class="card-body">
+            <h2 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem">Tips for Stronger Bullets</h2>
+            <ul style="display:flex;flex-direction:column;gap:0.5rem;padding:0;margin:0;list-style:none">
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Start every bullet with a strong action verb — never "Responsible for" or "Duties included"</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Include a specific number: revenue, team size, percentage improvement, time saved</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Show impact, not just activities — what changed because of your work?</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Keep bullets to 1-2 lines; recruiters scan in seconds</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Use the Challenge → Action → Result format for maximum impact</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Learn advanced resume writing on <a href="https://www.linkedin.com/learning/search?keywords=resume+writing" rel="sponsored" style="color:var(--primary);font-weight:500;text-decoration:underline">LinkedIn Learning</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container-content">
+      <div class="section-header">
+        <h2>Before &amp; After Examples</h2>
+        <p>See how weak bullet points transform into powerful, quantified achievements.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem;font-weight:600;color:var(--gray-400);margin-bottom:0.5rem">BEFORE</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);font-style:italic;margin-bottom:0.75rem">was responsible for customer support tickets</div>
+          <div style="font-size:0.75rem;font-weight:600;color:var(--success);margin-bottom:0.25rem">AFTER</div>
+          <div style="font-size:0.8125rem;color:var(--gray-900);font-weight:500">Resolved 1,200+ customer support tickets with 98% satisfaction rating, reducing avg response time by 40%</div>
+        </div>
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem;font-weight:600;color:var(--gray-400);margin-bottom:0.5rem">BEFORE</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);font-style:italic;margin-bottom:0.75rem">helped with team projects</div>
+          <div style="font-size:0.75rem;font-weight:600;color:var(--success);margin-bottom:0.25rem">AFTER</div>
+          <div style="font-size:0.8125rem;color:var(--gray-900);font-weight:500">Collaborated on 15+ cross-functional projects, delivering all milestones ahead of schedule by an avg of 2 weeks</div>
+        </div>
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem;font-weight:600;color:var(--gray-400);margin-bottom:0.5rem">BEFORE</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);font-style:italic;margin-bottom:0.75rem">made reports for the team</div>
+          <div style="font-size:0.75rem;font-weight:600;color:var(--success);margin-bottom:0.25rem">AFTER</div>
+          <div style="font-size:0.8125rem;color:var(--gray-900);font-weight:500">Automated 8 recurring reports saving 120 hours annually, adopted by 3 departments for weekly decision-making</div>
+        </div>
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem;font-weight:600;color:var(--gray-400);margin-bottom:0.5rem">BEFORE</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);font-style:italic;margin-bottom:0.75rem">worked on the company website</div>
+          <div style="font-size:0.75rem;font-weight:600;color:var(--success);margin-bottom:0.25rem">AFTER</div>
+          <div style="font-size:0.8125rem;color:var(--gray-900);font-weight:500">Redesigned company website improving page load speed by 55% and increasing organic traffic by 80% in 6 months</div>
+        </div>
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem;font-weight:600;color:var(--gray-400);margin-bottom:0.5rem">BEFORE</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);font-style:italic;margin-bottom:0.75rem">was in charge of social media</div>
+          <div style="font-size:0.75rem;font-weight:600;color:var(--success);margin-bottom:0.25rem">AFTER</div>
+          <div style="font-size:0.8125rem;color:var(--gray-900);font-weight:500">Grew social media following by 340% in 12 months, generating $50K+ in attributed revenue through organic campaigns</div>
+        </div>
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem;font-weight:600;color:var(--gray-400);margin-bottom:0.5rem">BEFORE</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);font-style:italic;margin-bottom:0.75rem">did data entry tasks</div>
+          <div style="font-size:0.75rem;font-weight:600;color:var(--success);margin-bottom:0.25rem">AFTER</div>
+          <div style="font-size:0.8125rem;color:var(--gray-900);font-weight:500">Processed 5,000+ data records with 99.8% accuracy, building automated validation that cut error rate by 75%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-content">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Transform weak bullet points into interview-winning achievements in seconds.</p>
+      </div>
+      <div class="features-grid">
+        <div class="card feature-card-left">
+          <div class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div>
+            <h3>Paste Your Bullet</h3>
+            <p>Copy the weak bullet point from your resume and paste it into the text area. No formatting needed.</p>
+          </div>
+        </div>
+        <div class="card feature-card-left">
+          <div class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div>
+            <h3>Choose Type &amp; Improve</h3>
+            <p>Select the category that best fits your bullet and click improve. Our engine rewrites it in 3 impactful variations.</p>
+          </div>
+        </div>
+        <div class="card feature-card-left">
+          <div class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </div>
+          <div>
+            <h3>Copy &amp; Use</h3>
+            <p>Click copy on the version you like best and paste it directly into your resume. Repeat for each bullet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm section-tools">
+    <div class="container-content">
+      <div class="section-header">
+        <h2>Try Our Other Tools</h2>
+        <p>Everything you need to land your next job.</p>
+      </div>
+      <div class="tools-grid">
+        <a href="/" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span>Resume Builder</span>
+        </a>
+        <a href="/ats-score" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </span>
+          <span>ATS Score</span>
+        </a>
+        <a href="/cover-letter" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span>Cover Letter</span>
+        </a>
+        <a href="/resume-examples" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <span>Examples</span>
+        </a>
+        <a href="/templates" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          </span>
+          <span>Templates</span>
+        </a>
+        <a href="/bullet-point-improver" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span>Bullet Improver</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="capture">
+    <div class="capture-inner">
+      <h3>Get Weekly Resume Tips</h3>
+      <p>Join 10,000+ job seekers getting expert advice straight to their inbox.</p>
+      <form class="capture-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="capture-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <script>
+    const WORD_MAP = {
+      leadership: {
+        weak: ["was responsible for","responsible for","tasked with","in charge of","duties included","handled","oversaw","supervised","managed","lead","led a team","was the leader of","acted as","served as","worked as a","role included","primary focus","main task","job was to","tasked to","charged with","assigned to","put in charge","given responsibility for","took care of","was accountable for","accountable for","delegated to","reported on","coordinated with","liaised between","acted as liaison","point of contact"],
+        strong: ["Led","Managed","Directed","Spearheaded","Orchestrated","Commanded","Guided","Steered","Championed","Governed","Headed","Presided over","Supervised","Administered","Executed","Drove","Mobilized","Captained","Oversaw","Conducted"],
+        templates: [
+          "Led {team_size} in {action} resulting in {result}",
+          "Directed cross-functional {action} that {result} across {team_size} departments",
+          "Championed {action} initiative, achieving {result} within {timeframe}"
+        ]
+      },
+      technical: {
+        weak: ["worked on","helped build","was part of","contributed to","assisted with","did some","wrote code for","coded","programmed in","used","worked with","played a role in","was involved in","participated in","took part in","helped develop","contributed code","maintained","fixed bugs in","debugged","tested","ran tests for","set up","configured","installed","deployed","supported","troubleshot","resolved issues in","worked in","built with"],
+        strong: ["Built","Developed","Engineered","Architected","Implemented","Designed","Constructed","Programmed","Coded","Delivered","Deployed","Launched","Integrated","Optimized","Rebuilt","Refactored","Automated","Authored","Generated","Produced"],
+        templates: [
+          "Built {system} using {tech} that {result} serving {scale} users",
+          "Engineered {solution} reducing {metric} by {percent}% and improving {metric2}",
+          "Implemented {feature} in {tech} achieving {result} with {percent}% efficiency gain"
+        ]
+      },
+      communication: {
+        weak: ["wrote","wrote about","created content for","made documents","sent emails","answered calls","responded to","talked to","communicated with","presented to","gave presentations","did presentations","reported to","updated","informed","notified","corresponded with","wrote reports","drafted","authored documents","wrote articles","blogged","posted on","wrote for","prepared materials","created presentations","developed training","led meetings","ran meetings","facilitated","moderated"],
+        strong: ["Authored","Drafted","Produced","Delivered","Presented","Published","Composed","Developed","Facilitated","Moderated","Articulated","Crafted","Pitched","Negotiated","Persuaded","Documented","Scripted","Compiled","Synthesized","Distilled"],
+        templates: [
+          "Authored {count}+ {documents} adopted by {audience}, driving {result}",
+          "Delivered {count} presentations to {audience} resulting in {result}",
+          "Facilitated {action} across {teams} teams, improving {metric} by {percent}%"
+        ]
+      },
+      achievement: {
+        weak: ["helped achieve","worked towards","contributed to sales","helped with","assisted in","supported","was part of the team that","helped the company","helped the team","did my part","did what was asked","met goals","met targets","achieved goals","hit numbers","reached quota","made sales","sold","closed deals","brought in","generated","was a team member on","helped deliver","helped grow","helped increase"],
+        strong: ["Achieved","Delivered","Generated","Drove","Secured","Exceeded","Closed","Produced","Attained","Procured","Realized","Earned","Captured","Won","Accelerated","Expanded","Cultivated","Maximized","Commanded","Tripled"],
+        templates: [
+          "Generated ${amount} in {metric} exceeding target by {percent}% in {timeframe}",
+          "Drove {percent}% growth in {metric} within {timeframe} through {action}",
+          "Exceeded {goal} by {percent}%, delivering ${amount} in {result} over {timeframe}"
+        ]
+      },
+      improvement: {
+        weak: ["improved","made better","tried to improve","helped improve","worked on improving","made changes to","changed","updated","upgraded","enhanced","refined","made more efficient","streamlined somewhat","reduced a little","cut down on","lowered","decreased","saved some","was part of an improvement","helped optimize","contributed to","suggested improvements","proposed changes","recommended","identified issues","found problems","noticed","pointed out"],
+        strong: ["Optimized","Streamlined","Transformed","Overhauled","Revamped","Redesigned","Reengineered","Consolidated","Standardized","Simplified","Accelerated","Modernized","Restructured","Reorganized","Rebuilt","Elevated","Upgraded","Enhanced","Refined","Reinvented"],
+        templates: [
+          "Optimized {process} reducing {metric} by {percent}% and saving ${amount} annually",
+          "Streamlined {workflow} across {teams} teams cutting {timeframe} by {percent}%",
+          "Transformed {system} achieving {percent}% improvement in {metric} within {timeframe}"
+        ]
+      }
+    }
+
+    function pickRandom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)]
+    }
+
+    function capitalize(s) {
+      return s.charAt(0).toUpperCase() + s.slice(1)
+    }
+
+    function replaceWeakPhrases(text, typeData) {
+      let result = text.trim()
+      const lower = result.toLowerCase()
+      const sorted = [...typeData.weak].sort((a, b) => b.length - a.length)
+      for (const phrase of sorted) {
+        const idx = lower.indexOf(phrase.toLowerCase())
+        if (idx !== -1) {
+          const before = result.slice(0, idx)
+          const after = result.slice(idx + phrase.length)
+          const strongVerb = pickRandom(typeData.strong)
+          result = before + strongVerb + " " + after.replace(/^to\s+/i, "").replace(/^in\s+/i, "").replace(/^with\s+/i, "").replace(/^on\s+/i, "").replace(/^for\s+/i, "").replace(/^the\s+/i, "").replace(/^a\s+/i, "").replace(/^an\s+/i, "")
+          break
+        }
+      }
+      return result.trim()
+    }
+
+    function addQuantification(text, typeData) {
+      const lower = text.toLowerCase()
+      const template = pickRandom(typeData.templates)
+      let filled = template
+      const placeholders = {
+        "{team_size}": String(Math.floor(Math.random() * 20) + 5),
+        "{action}": lower.replace(/^(led|managed|directed|built|developed|engineered|authored|delivered|generated|optimized|streamlined|transformed)\s+/i, "").split(/\s+/).slice(0, 5).join(" ") || "key initiatives",
+        "{result}": ["increased revenue by " + (Math.floor(Math.random() * 50) + 15) + "%", "reduced costs by " + (Math.floor(Math.random() * 30) + 10) + "%", "improved efficiency by " + (Math.floor(Math.random() * 40) + 20) + "%", "boosted productivity by " + (Math.floor(Math.random() * 35) + 25) + "%"][Math.floor(Math.random() * 4)],
+        "{timeframe}": pickRandom(["6 months", "12 months", "Q1", "the fiscal year", "2 quarters", "the first half"]),
+        "{team_size}": String(Math.floor(Math.random() * 15) + 8),
+        "{system}": lower.split(/\s+/).slice(0, 3).join(" ") || "systems",
+        "{tech}": pickRandom(["React", "Python", "AWS", "Node.js", "TypeScript", "Go", "Kubernetes", "Docker"]),
+        "{scale}": String(Math.floor(Math.random() * 900000) + 100000),
+        "{solution}": lower.replace(/^(built|developed|engineered|implemented)\s+/i, "").split(/\s+/).slice(0, 4).join(" ") || "solutions",
+        "{metric}": pickRandom(["revenue", "cost", "productivity", "performance", "accuracy", "speed", "uptime", "conversion"]),
+        "{metric2}": pickRandom(["scalability", "maintainability", "user satisfaction", "response time", "coverage"]),
+        "{percent}": String(Math.floor(Math.random() * 45) + 15),
+        "{feature}": lower.replace(/^(implemented|developed|built|created)\s+/i, "").split(/\s+/).slice(0, 3).join(" ") || "features",
+        "{count}": String(Math.floor(Math.random() * 15) + 8),
+        "{documents}": pickRandom(["reports", "articles", "proposals", "documentation sets", "white papers", "case studies"]),
+        "{audience}": pickRandom(["stakeholders", "executive leadership", "cross-functional teams", "clients", "200+ attendees", "the C-suite"]),
+        "{teams}": String(Math.floor(Math.random() * 6) + 3),
+        "{amount}": pickRandom(["50K", "120K", "250K", "500K", "1.2M", "2.5M"]),
+        "{goal}": pickRandom(["sales targets", "revenue goals", "KPI benchmarks", "project milestones"]),
+        "{process}": lower.replace(/^(optimized|streamlined|transformed|overhauled)\s+/i, "").split(/\s+/).slice(0, 4).join(" ") || "processes",
+        "{workflow}": lower.replace(/^(streamlined|optimized|simplified)\s+/i, "").split(/\s+/).slice(0, 4).join(" ") || "workflows"
+      }
+      for (const [key, val] of Object.entries(placeholders)) {
+        filled = filled.replace(key, val)
+      }
+      return capitalize(filled)
+    }
+
+    function generateVariation(text, typeData, verbs) {
+      let result = text.trim().toLowerCase()
+      const sorted = [...typeData.weak].sort((a, b) => b.length - a.length)
+      let replaced = false
+      for (const phrase of sorted) {
+        const idx = result.indexOf(phrase.toLowerCase())
+        if (idx !== -1) {
+          const before = result.slice(0, idx)
+          const after = result.slice(idx + phrase.length)
+          const verb = pickRandom(verbs)
+          result = before + verb + " " + after.replace(/^to\s+/i, "").replace(/^in\s+/i, "").replace(/^with\s+/i, "").replace(/^on\s+/i, "").replace(/^for\s+/i, "").replace(/^the\s+/i, "").replace(/^a\s+/i, "").replace(/^an\s+/i, "")
+          replaced = true
+          break
+        }
+      }
+      if (!replaced) {
+        const words = result.split(/\s+/)
+        if (words.length > 1) {
+          words[0] = pickRandom(verbs).toLowerCase()
+          result = words.join(" ")
+        }
+      }
+      result = capitalize(result.trim())
+      if (Math.random() > 0.3) {
+        const tpl = pickRandom(typeData.templates)
+        result = capitalize(tpl.replace(/\{team_size\}/g, String(Math.floor(Math.random() * 20) + 5))
+          .replace(/\{action\}/g, result.toLowerCase().split(/\s+/).slice(1).join(" ") || "initiatives")
+          .replace(/\{result\}/g, pickRandom(["increased revenue by " + (Math.floor(Math.random() * 50) + 15) + "%", "reduced costs by " + (Math.floor(Math.random() * 30) + 10) + "%", "improved efficiency by " + (Math.floor(Math.random() * 40) + 20) + "%"]))
+          .replace(/\{timeframe\}/g, pickRandom(["6 months", "12 months", "the fiscal year"]))
+          .replace(/\{system\}/g, result.toLowerCase().split(/\s+/).slice(1).join(" ") || "systems")
+          .replace(/\{tech\}/g, pickRandom(["React", "Python", "AWS", "Node.js"]))
+          .replace(/\{scale\}/g, String(Math.floor(Math.random() * 900000) + 100000))
+          .replace(/\{solution\}/g, result.toLowerCase().split(/\s+/).slice(1).join(" ") || "solutions")
+          .replace(/\{metric\}/g, pickRandom(["revenue", "cost", "productivity", "performance"]))
+          .replace(/\{metric2\}/g, pickRandom(["scalability", "user satisfaction"]))
+          .replace(/\{percent\}/g, String(Math.floor(Math.random() * 45) + 15))
+          .replace(/\{feature\}/g, result.toLowerCase().split(/\s+/).slice(1).join(" ") || "features")
+          .replace(/\{count\}/g, String(Math.floor(Math.random() * 15) + 8))
+          .replace(/\{documents\}/g, pickRandom(["reports", "articles", "proposals"]))
+          .replace(/\{audience\}/g, pickRandom(["stakeholders", "executive leadership", "cross-functional teams"]))
+          .replace(/\{teams\}/g, String(Math.floor(Math.random() * 6) + 3))
+          .replace(/\{amount\}/g, pickRandom(["50K", "120K", "250K", "500K"]))
+          .replace(/\{goal\}/g, pickRandom(["sales targets", "revenue goals"]))
+          .replace(/\{process\}/g, result.toLowerCase().split(/\s+/).slice(1).join(" ") || "processes")
+          .replace(/\{workflow\}/g, result.toLowerCase().split(/\s+/).slice(1).join(" ") || "workflows"))
+      }
+      return result
+    }
+
+    function improveBullet() {
+      const input = document.getElementById("bullet-input").value.trim()
+      if (!input) { alert("Please paste a weak bullet point first."); return }
+
+      const type = document.getElementById("bullet-type").value
+      const typeData = WORD_MAP[type]
+      if (!typeData) return
+
+      const btn = document.getElementById("improve-btn")
+      btn.disabled = true; btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg> Improving...'
+
+      setTimeout(function() {
+        const verbs = [...typeData.strong]
+        const shuffled = verbs.sort(function() { return 0.5 - Math.random() }).slice(0, 6)
+        const v1 = generateVariation(input, typeData, shuffled.slice(0, 2))
+        const v2 = generateVariation(input, typeData, shuffled.slice(2, 4))
+        const v3 = generateVariation(input, typeData, shuffled.slice(4, 6))
+
+        document.getElementById("results").style.display = "block"
+        document.getElementById("original-text").textContent = input
+
+        const container = document.getElementById("variations")
+        const variations = [v1, v2, v3]
+        container.innerHTML = variations.map(function(v, i) {
+          return '<div style="padding:0.75rem 1rem;background:var(--gray-50);border-radius:8px;border-left:3px solid var(--primary)">' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">' +
+            '<span style="font-size:0.6875rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em">Variation ' + (i + 1) + '</span>' +
+            '<button class="btn btn-outline btn-sm" style="padding:0.25rem 0.625rem;font-size:0.75rem" onclick="copyResult(this, \'' + v.replace(/'/g, "\\'").replace(/"/g, "&quot;") + '\')">' +
+            '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>' +
+            ' Copy</button></div>' +
+            '<div style="font-size:0.875rem;color:var(--gray-900);font-weight:500">' + v + '</div></div>'
+        }).join("")
+
+        document.getElementById("results").scrollIntoView({ behavior: "smooth", block: "start" })
+        btn.disabled = false; btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Improve Bullet Point'
+      }, 400)
+    }
+
+    function copyResult(btn, text) {
+      navigator.clipboard.writeText(text).then(function() {
+        btn.innerHTML = "Copied!"
+        setTimeout(function() { btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy' }, 1500)
+      })
+    }
+  </script>
+
+  <style>
+    @media (max-width: 768px) {
+      [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</Layout>

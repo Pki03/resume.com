@@ -1,0 +1,354 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Resume Summary Generator - Free | ResumeBuilder" description="Generate professional resume summaries for any role. Free online resume summary generator with examples for every career level.">
+  <section class="hero-split" style="padding-bottom:2rem">
+    <div class="hero-split-content">
+      <span class="eyebrow">Free Tool</span>
+      <h1>Resume <span class="gradient-text">Summary Generator</span></h1>
+      <p>Generate a professional resume summary in seconds. Enter your details and get 3 tailored options with different tones — no sign-up needed.</p>
+      <div class="hero-split-actions">
+        <a href="#generator" class="btn btn-primary btn-lg">Generate Your Summary</a>
+        <a href="/" class="btn btn-outline btn-lg">Build My Resume</a>
+      </div>
+      <div class="hero-split-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 3 Tones Per Search</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 6 Professional Templates</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free</span>
+      </div>
+    </div>
+    <div class="hero-split-visual">
+      <div class="hero-mockup">
+        <div class="hero-mockup-header">
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+        </div>
+        <div class="hero-mockup-body">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">Professional Summary</div>
+              <div style="font-size:0.6875rem;color:var(--gray-500)">Senior Software Engineer</div>
+            </div>
+          </div>
+          <div style="font-size:0.75rem;color:var(--gray-600);line-height:1.6;padding:0.75rem;background:var(--gray-50);border-radius:8px;margin-bottom:0.75rem">
+            Results-oriented Senior Software Engineer with 8+ years of experience architecting scalable distributed systems. Proven expertise in React, Node.js, and AWS, with a track record of leading cross-functional teams to deliver products serving 2M+ users.
+          </div>
+          <div style="display:flex;gap:0.375rem;flex-wrap:wrap">
+            <span class="badge badge-primary">Professional</span>
+            <span class="badge badge-green">Achievement-Focused</span>
+            <span class="badge badge-gray">Skills-Focused</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float" style="top:5%;right:-5%">
+        <span class="hero-float-ats perfect">3</span>
+        <span>Summary Options</span>
+      </div>
+      <div class="hero-float" style="bottom:15%;left:-8%">
+        <span class="hero-float-icon purple">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </span>
+        <span>Smart Templates</span>
+      </div>
+      <div class="hero-float" style="bottom:30%;right:-10%">
+        <span class="hero-float-icon cyan">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/></svg>
+        </span>
+        <span>Copy &amp; Paste</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm" id="generator">
+    <div class="container-content">
+      <div class="card card-elevated">
+        <div class="card-body">
+          <div class="form-group">
+            <label class="label" for="sg-title">Job Title</label>
+            <input id="sg-title" class="input" type="text" placeholder="e.g. Senior Software Engineer, Marketing Manager" value="Senior Software Engineer" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="label" for="sg-years">Years of Experience</label>
+              <select id="sg-years" class="input">
+                <option value="1">1 year</option>
+                <option value="2">2 years</option>
+                <option value="3">3 years</option>
+                <option value="5" selected>5 years</option>
+                <option value="7">7 years</option>
+                <option value="10">10+ years</option>
+                <option value="15">15+ years</option>
+                <option value="20">20+ years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="label" for="sg-skill3">Top Skill 3</label>
+              <input id="sg-skill3" class="input" type="text" placeholder="e.g. Python" value="Python" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="label" for="sg-skill1">Top Skill 1</label>
+              <input id="sg-skill1" class="input" type="text" placeholder="e.g. React, JavaScript" value="React" />
+            </div>
+            <div class="form-group">
+              <label class="label" for="sg-skill2">Top Skill 2</label>
+              <input id="sg-skill2" class="input" type="text" placeholder="e.g. Node.js" value="Node.js" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="sg-achievement">Key Achievement</label>
+            <input id="sg-achievement" class="input" type="text" placeholder="e.g. Led a team that delivered a product serving 2M+ users" value="Led a team that delivered a product serving 2M+ users" />
+          </div>
+          <button id="sg-generate-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.75rem" onclick="generateSummaries()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Generate Summaries
+          </button>
+        </div>
+      </div>
+
+      <div id="sg-results" style="display:none;margin-top:1.5rem">
+        <div class="section-header" style="margin-bottom:1.5rem">
+          <h2 style="font-size:1.5rem;margin-bottom:0.25rem">Your Summaries</h2>
+          <p style="font-size:0.875rem">Choose the one that fits best and copy it into your resume.</p>
+        </div>
+        <div id="sg-summaries" style="display:flex;flex-direction:column;gap:1rem"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container-content">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Get a polished resume summary in three simple steps.</p>
+      </div>
+      <div class="features-grid">
+        <div class="card feature-card-left">
+          <div class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h3>Enter Your Details</h3>
+            <p>Fill in your job title, years of experience, top skills, and a key achievement. Everything stays in your browser.</p>
+          </div>
+        </div>
+        <div class="card feature-card-left">
+          <div class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div>
+            <h3>Get 3 Options</h3>
+            <p>We generate 3 unique summaries in professional, achievement-focused, and skills-focused tones from 6 rotating templates.</p>
+          </div>
+        </div>
+        <div class="card feature-card-left">
+          <div class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </div>
+          <div>
+            <h3>Copy &amp; Use</h3>
+            <p>Copy your favorite summary with one click and paste it directly into your resume. No formatting needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-content">
+      <article style="color:var(--gray-600);font-size:0.9375rem;line-height:1.8">
+        <h2 style="font-size:1.75rem;font-weight:800;color:var(--gray-900);margin:0 0 1rem;letter-spacing:-0.02em;line-height:1.3">How to Write a Professional Resume Summary</h2>
+        <p style="font-size:1.0625rem;color:var(--gray-500);margin-bottom:2rem;line-height:1.7">Your resume summary is the first thing recruiters read. A strong summary hooks them in 2-3 sentences and sets the tone for the rest of your application.</p>
+
+        <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin:2rem 0 0.75rem;letter-spacing:-0.01em">What Makes a Great Summary?</h3>
+        <p>Lead with your title and years of experience. Include 2-3 core skills that match the job description. Close with a measurable achievement that demonstrates impact. Keep it concise — recruiters spend an average of 6 seconds scanning your summary. Avoid clichés like "hard worker" or "team player" and instead show proof through results.</p>
+
+        <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin:2rem 0 0.75rem;letter-spacing:-0.01em">Summary Examples by Role</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0">
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Software Engineer</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Backend-focused engineer with 5+ years building scalable microservices in Go and Python. Designed a payment system processing $50M annually with 99.99% uptime.</div>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Product Manager</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Data-driven Product Manager with 7+ years shipping B2B SaaS products. Led roadmap that grew ARR from $2M to $8M over 3 years.</div>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Marketing Manager</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Marketing leader with 6+ years driving demand generation and brand strategy. Launched campaigns that increased MQLs by 140% year-over-year.</div>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Data Analyst</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Analytics professional with 4+ years transforming raw data into strategic insights using SQL, Python, and Tableau. Built dashboards adopted by 200+ stakeholders.</div>
+          </div>
+        </div>
+
+        <p>Pair your summary with a strong <a href="/">resume from our builder</a> and check your <a href="/ats-score">ATS compatibility score</a> before applying. For additional visibility, consider upgrading your <a href="https://www.linkedin.com/premium/" rel="sponsored">LinkedIn Premium</a> account to message recruiters directly.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-sm section-tools">
+    <div class="container-content">
+      <div class="section-header">
+        <h2>Try Our Other Tools</h2>
+        <p>Everything you need to land your next job.</p>
+      </div>
+      <div class="tools-grid">
+        <a href="/" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span>Resume Builder</span>
+        </a>
+        <a href="/ats-score" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </span>
+          <span>ATS Score</span>
+        </a>
+        <a href="/cover-letter" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span>Cover Letter</span>
+        </a>
+        <a href="/resume-examples" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <span>Examples</span>
+        </a>
+        <a href="/templates" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          </span>
+          <span>Templates</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="capture">
+    <div class="capture-inner">
+      <h3>Get Weekly Resume Tips</h3>
+      <p>Join 10,000+ job seekers getting expert advice straight to their inbox.</p>
+      <form class="capture-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="capture-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <script>
+    var TEMPLATES = [
+      function(title, years, s1, s2, s3, achievement) {
+        return "Results-oriented " + title + " with " + years + "+ years of experience delivering impactful solutions. Proven expertise in " + s1 + ", " + s2 + ", and " + s3 + ", with a track record of " + achievement + "."
+      },
+      function(title, years, s1, s2, s3, achievement) {
+        return achievement.charAt(0).toUpperCase() + achievement.slice(1) + " as a " + title + " with " + years + "+ years of experience. Skilled in " + s1 + ", " + s2 + ", and " + s3 + ", driving measurable outcomes for organizations."
+      },
+      function(title, years, s1, s2, s3, achievement) {
+        return "Proficient in " + s1 + ", " + s2 + ", and " + s3 + " with " + years + "+ years as a " + title + ". Demonstrated ability to " + achievement + " while delivering consistent results and exceeding expectations."
+      },
+      function(title, years, s1, s2, s3, achievement) {
+        return "Accomplished " + title + " bringing " + years + "+ years of expertise in " + s1 + ", " + s2 + ", and " + s3 + ". Known for " + achievement + ", with a strong commitment to driving organizational success through innovation."
+      },
+      function(title, years, s1, s2, s3, achievement) {
+        return "Dynamic " + title + " with " + years + "+ years leveraging " + s1 + ", " + s2 + ", and " + s3 + " to solve complex challenges. " + achievement.charAt(0).toUpperCase() + achievement.slice(1) + ", exemplifying the ability to deliver high-impact results."
+      },
+      function(title, years, s1, s2, s3, achievement) {
+        return "Strategic " + title + " with " + years + "+ years of experience specializing in " + s1 + ", " + s2 + ", and " + s3 + ". " + achievement.charAt(0).toUpperCase() + achievement.slice(1) + ", demonstrating capacity to exceed expectations and drive lasting value."
+      }
+    ]
+
+    var TONE_LABELS = ["Professional", "Achievement-Focused", "Skills-Focused"]
+    var TONE_CLASSES = ["badge-primary", "badge-green", "badge-gray"]
+
+    function shuffleArray(arr) {
+      for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+      }
+      return arr
+    }
+
+    function generateSummaries() {
+      var title = document.getElementById("sg-title").value.trim()
+      var years = document.getElementById("sg-years").value
+      var s1 = document.getElementById("sg-skill1").value.trim()
+      var s2 = document.getElementById("sg-skill2").value.trim()
+      var s3 = document.getElementById("sg-skill3").value.trim()
+      var achievement = document.getElementById("sg-achievement").value.trim()
+
+      if (!title || !s1 || !s2 || !s3 || !achievement) {
+        alert("Please fill in all fields before generating.")
+        return
+      }
+
+      var btn = document.getElementById("sg-generate-btn")
+      btn.disabled = true; btn.textContent = "Generating..."
+
+      var indices = [0, 1, 2, 3, 4, 5]
+      shuffleArray(indices)
+      var selected = indices.slice(0, 3)
+
+      var resultsEl = document.getElementById("sg-results")
+      var summariesEl = document.getElementById("sg-summaries")
+      summariesEl.innerHTML = ""
+
+      for (var i = 0; i < 3; i++) {
+        var idx = selected[i]
+        var template = TEMPLATES[idx]
+        var summary = template(title, years, s1, s2, s3, achievement)
+        var tone = i < 3 ? TONE_LABELS[i] : "Professional"
+        var toneClass = i < 3 ? TONE_CLASSES[i] : "badge-primary"
+
+        var card = document.createElement("div")
+        card.className = "card"
+        card.style.cssText = "padding:1.25rem;transition:all 0.2s;border-color:var(--gray-200)"
+        card.innerHTML =
+          '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.75rem">' +
+            '<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap">' +
+              '<span class="badge ' + toneClass + '">' + tone + '</span>' +
+              '<span style="font-size:0.6875rem;color:var(--gray-400)">Template ' + (idx + 1) + '</span>' +
+            '</div>' +
+            '<button onclick="copySummary(this)" style="display:inline-flex;align-items:center;gap:0.375rem;background:none;border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.375rem 0.75rem;font-size:0.75rem;font-weight:500;color:var(--gray-600);cursor:pointer;transition:all 0.15s;white-space:nowrap;flex-shrink:0" onmouseover="this.style.borderColor=\'var(--primary)\';this.style.color=\'var(--primary)\'" onmouseout="this.style.borderColor=\'var(--gray-200)\';this.style.color=\'var(--gray-600)\'">' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>' +
+              'Copy' +
+            '</button>' +
+          '</div>' +
+          '<p style="font-size:0.875rem;color:var(--gray-700);line-height:1.7;margin:0">' + escHtml(summary) + '</p>'
+
+        summariesEl.appendChild(card)
+      }
+
+      resultsEl.style.display = "block"
+      btn.disabled = false; btn.textContent = "Generate Summaries"
+    }
+
+    function escHtml(s) {
+      return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")
+    }
+
+    function copySummary(btn) {
+      var card = btn.closest(".card")
+      var text = card.querySelector("p").textContent
+      navigator.clipboard.writeText(text).then(function() {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!'
+        setTimeout(function() {
+          btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy'
+        }, 1500)
+      }).catch(function() {
+        alert("Could not copy. Select the text manually.")
+      })
+    }
+  </script>
+</Layout>
