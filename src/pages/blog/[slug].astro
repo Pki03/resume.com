@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import { blogPosts } from "../../data/blogPosts"
+import { resumeExamples } from "../../data/resumeExamples"
 
 export function getStaticPaths() {
   return blogPosts.map(p => ({
@@ -12,6 +13,10 @@ export function getStaticPaths() {
 const { slug, title, description, date, readTime, category, content, relatedTools } = Astro.props
 const canonical = `https://getapplykit.com/blog/${slug}`
 const morePosts = blogPosts.filter(p => p.slug !== slug).slice(0, 3)
+const keywords = title.toLowerCase().split(" ").filter(w => w.length > 3)
+const relatedExamples = resumeExamples.filter(r =>
+  keywords.some(k => r.title.toLowerCase().includes(k) || (r.industry && r.industry.toLowerCase().includes(k)))
+).slice(0, 4)
 ---
 
 <Layout title={title} description={description}>
@@ -38,6 +43,26 @@ const morePosts = blogPosts.filter(p => p.slug !== slug).slice(0, 3)
       <div class="blog-content" set:html={content} />
     </div>
   </article>
+
+  {relatedExamples.length > 0 && (
+    <section class="section">
+      <div class="container-content">
+        <div class="section-header">
+          <h2>Related Resume Examples</h2>
+        </div>
+        <div class="features-grid">
+          {relatedExamples.map(r => (
+            <a href={`/resume-examples/${r.slug}`} class="card card-hover more-card" style="text-decoration:none;color:inherit">
+              <div class="card-body">
+                <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin:0 0 0.25rem">{r.title}</h3>
+                <span style="font-size:0.6875rem;color:var(--gray-400)">{r.industry} · {r.level}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {relatedTools && relatedTools.length > 0 && (
     <div class="section">

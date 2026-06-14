@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import { coverLetterExamples } from "../../data/coverLetterExamples"
+import { blogPosts } from "../../data/blogPosts"
 
 export function getStaticPaths() {
   return coverLetterExamples.map(r => ({
@@ -14,6 +15,9 @@ const pageTitle = `${title} for ${role} — 2025 Sample & Tips`
 const pageDesc = `Free ${company.toLowerCase()} cover letter example for ${role.toLowerCase()} positions. See a professional sample, key tips, and get hired.`
 const canonical = `https://getapplykit.com/cover-letter/${slug}`
 const moreExamples = coverLetterExamples.filter(r => r.slug !== slug).slice(0, 6)
+const relatedGuides = blogPosts.filter(p =>
+  p.category === "Cover Letter" || p.slug.includes("cover-letter") || p.slug.includes("resume")
+).slice(0, 3)
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
@@ -69,6 +73,22 @@ const moreExamples = coverLetterExamples.filter(r => r.slug !== slug).slice(0, 6
         </div>
       </div>
     </div>
+
+    {relatedGuides.length > 0 && (
+      <section style="margin:2rem 0">
+        <h2 class="more-heading">Related Guides</h2>
+        <div class="features-grid" style="margin-bottom:2rem">
+          {relatedGuides.map(p => (
+            <a href={`/blog/${p.slug}`} class="card card-hover more-card" style="text-decoration:none;color:inherit">
+              <div class="card-body">
+                <h3 class="more-card-title">{p.title}</h3>
+                <span class="more-card-meta">{p.category} · {p.readTime}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <h2 class="more-heading">More Cover Letter Examples</h2>
     <div class="features-grid">

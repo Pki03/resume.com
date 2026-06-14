@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import { resumeExamples } from "../../data/resumeExamples"
+import { blogPosts } from "../../data/blogPosts"
 
 export function getStaticPaths() {
   return resumeExamples.map(r => ({
@@ -14,6 +15,10 @@ const pageTitle = `${title} Resume Example — 2025 Guide & Template`
 const pageDesc = `Free ${title.toLowerCase()} resume example for ${level.toLowerCase()} professionals. See a real resume sample, key skills, and ATS optimization tips to get hired.`
 const canonical = `https://getapplykit.com/resume-examples/${slug}`
 const moreExamples = resumeExamples.filter(r => r.slug !== slug).slice(0, 6)
+const keywords = title.toLowerCase().split(" ").filter(w => w.length > 3)
+const relatedGuides = blogPosts.filter(p =>
+  keywords.some(k => p.title.toLowerCase().includes(k) || p.category.toLowerCase().includes(k))
+).slice(0, 3)
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
@@ -62,6 +67,22 @@ const moreExamples = resumeExamples.filter(r => r.slug !== slug).slice(0, 6)
         </div>
       </div>
     </div>
+
+    {relatedGuides.length > 0 && (
+      <section style="margin:2rem 0">
+        <h2 class="more-heading">Related Career Guides</h2>
+        <div class="features-grid" style="margin-bottom:2rem">
+          {relatedGuides.map(p => (
+            <a href={`/blog/${p.slug}`} class="card card-hover more-card" style="text-decoration:none;color:inherit">
+              <div class="card-body">
+                <h3 class="more-card-title">{p.title}</h3>
+                <span class="more-card-meta">{p.category} · {p.readTime}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <h2 class="more-heading">More Resume Examples</h2>
     <div class="features-grid">
