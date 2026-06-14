@@ -1186,13 +1186,15 @@ import "../styles/global.css"
         }
         msg.textContent = "Submitting...";
         if (btn) btn.disabled = true;
-        fetch("/api/subscribe", {
+        var formData = new FormData();
+        formData.append("email", input.value);
+        fetch("https://formspree.io/f/mbdeqyap", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email: input.value })
+          body: formData,
+          headers: { "Accept": "application/json" }
         }).then(function(r) { return r.json() }).then(function(d) {
-          msg.textContent = d.message === "Already subscribed" ? "You're already subscribed!" : "Thanks! You're subscribed to weekly tips.";
-          input.value = "";
+          msg.textContent = d.ok ? "Thanks! You're subscribed to weekly tips." : "Something went wrong. Try again.";
+          if (d.ok) input.value = "";
           if (btn) btn.disabled = false;
         }).catch(function() {
           msg.textContent = "Something went wrong. Try again.";
