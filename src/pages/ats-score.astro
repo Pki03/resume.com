@@ -120,26 +120,26 @@ import Layout from "../layouts/Layout.astro"
               </div>
             </div>
 
-            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0.5rem;margin-bottom:1.5rem">
-              <div style="background:var(--gray-50);border-radius:8px;padding:0.75rem;text-align:center">
-                <div style="font-size:1.125rem;font-weight:700;color:var(--gray-900)" id="breakdown-keywords">0</div>
-                <div style="font-size:0.6875rem;color:var(--gray-500)">Keywords</div>
+            <div class="breakdown-bars reveal">
+              <div class="breakdown-bar">
+                <div class="breakdown-bar-label"><span>Keywords</span><span id="breakdown-keywords">0</span></div>
+                <div class="breakdown-bar-track"><div class="breakdown-bar-fill" id="bar-keywords" style="width:0%"></div></div>
               </div>
-              <div style="background:var(--gray-50);border-radius:8px;padding:0.75rem;text-align:center">
-                <div style="font-size:1.125rem;font-weight:700;color:var(--gray-900)" id="breakdown-format">0</div>
-                <div style="font-size:0.6875rem;color:var(--gray-500)">Format</div>
+              <div class="breakdown-bar">
+                <div class="breakdown-bar-label"><span>Format</span><span id="breakdown-format">0</span></div>
+                <div class="breakdown-bar-track"><div class="breakdown-bar-fill" id="bar-format" style="width:0%"></div></div>
               </div>
-              <div style="background:var(--gray-50);border-radius:8px;padding:0.75rem;text-align:center">
-                <div style="font-size:1.125rem;font-weight:700;color:var(--gray-900)" id="breakdown-contact">0</div>
-                <div style="font-size:0.6875rem;color:var(--gray-500)">Contact</div>
+              <div class="breakdown-bar">
+                <div class="breakdown-bar-label"><span>Contact Info</span><span id="breakdown-contact">0</span></div>
+                <div class="breakdown-bar-track"><div class="breakdown-bar-fill" id="bar-contact" style="width:0%"></div></div>
               </div>
-              <div style="background:var(--gray-50);border-radius:8px;padding:0.75rem;text-align:center">
-                <div style="font-size:1.125rem;font-weight:700;color:var(--gray-900)" id="breakdown-sections">0</div>
-                <div style="font-size:0.6875rem;color:var(--gray-500)">Sections</div>
+              <div class="breakdown-bar">
+                <div class="breakdown-bar-label"><span>Sections</span><span id="breakdown-sections">0</span></div>
+                <div class="breakdown-bar-track"><div class="breakdown-bar-fill" id="bar-sections" style="width:0%"></div></div>
               </div>
-              <div style="background:var(--gray-50);border-radius:8px;padding:0.75rem;text-align:center">
-                <div style="font-size:1.125rem;font-weight:700;color:var(--gray-900)" id="breakdown-verbs">0</div>
-                <div style="font-size:0.6875rem;color:var(--gray-500)">Action Verbs</div>
+              <div class="breakdown-bar">
+                <div class="breakdown-bar-label"><span>Action Verbs</span><span id="breakdown-verbs">0</span></div>
+                <div class="breakdown-bar-track"><div class="breakdown-bar-fill" id="bar-verbs" style="width:0%"></div></div>
               </div>
             </div>
 
@@ -444,11 +444,16 @@ import Layout from "../layouts/Layout.astro"
       document.getElementById("result-label").textContent = result.label
       document.getElementById("result-summary").textContent = result.summary
 
-      document.getElementById("breakdown-keywords").textContent = result.breakdown.keywords
-      document.getElementById("breakdown-format").textContent = result.breakdown.format
-      document.getElementById("breakdown-contact").textContent = result.breakdown.contactInfo
-      document.getElementById("breakdown-sections").textContent = result.breakdown.sections
-      document.getElementById("breakdown-verbs").textContent = result.breakdown.actionVerbs
+      const setBreakdown = (id, barId, value) => {
+        document.getElementById(id).textContent = value
+        const bar = document.getElementById(barId)
+        requestAnimationFrame(() => { bar.style.width = value + "%" })
+      }
+      setBreakdown("breakdown-keywords", "bar-keywords", result.breakdown.keywords)
+      setBreakdown("breakdown-format", "bar-format", result.breakdown.format)
+      setBreakdown("breakdown-contact", "bar-contact", result.breakdown.contactInfo)
+      setBreakdown("breakdown-sections", "bar-sections", result.breakdown.sections)
+      setBreakdown("breakdown-verbs", "bar-verbs", result.breakdown.actionVerbs)
 
       const kwSection = document.getElementById("keywords-section")
       if (result.keywordsMissing.length > 0) {
