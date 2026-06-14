@@ -1136,7 +1136,7 @@ export const generatedExamples: ResumeExample[] = [
   }),
   r({
     slug: "security-guard", title: "Security Guard", industry: "Security", level: "Entry",
-    summary: "A vigilant security guard ensuring premises safety through patrol, access control, and incident response.",
+    summary: "A vigilant security guard dedicated to maintaining safety and protecting property.",
     skills: ["Surveillance", "Access Control", "Patrol", "Incident Report", "Observation", "Communication", "First Aid", "Conflict Resolution", "CCTV", "Customer Service"],
     n: "David Thompson", e: "david.thompson@email.com", ct: "Atlanta", st: "GA", li: "linkedin.com/in/davidthompson",
     stxt: "Security guard with 2+ years of experience in commercial and residential settings. Skilled in access control, surveillance monitoring, and incident response. Licensed and vigilant with a strong commitment to safety and professionalism.",
@@ -1147,5 +1147,140 @@ export const generatedExamples: ResumeExample[] = [
     ed: { d: "Security Guard License", s: "Georgia Board of Private Detectives and Security", p: "2022" },
     sl: ["Operations: Patrol, Access Control, CCTV Monitoring, Incident Response", "Equipment: Radio, CCTV, Metal Detector, Flashlight", "Reports: Incident Reports, Daily Logs, Shift Reports", "Certifications: Security License, CPR/First Aid"],
     t: ["Include security guard license and state", "Quantify patrol scope and incident volume", "Highlight surveillance and access control experience", "Showcase report writing and communication skills", "Mention de-escalation and conflict resolution training"]
+  }),
+  r({
+    slug: "tcs-fresher-resume", title: "TCS Fresher Resume", industry: "IT Services", level: "Entry",
+    summary: "A motivated B.Tech graduate seeking a Software Engineer role at TCS with strong fundamentals in Java, SQL, and web development.",
+    skills: ["Java", "SQL", "HTML/CSS", "JavaScript", "Python", "Data Structures", "Algorithms", "MySQL", "Git", "Communication"],
+    n: "Arun Kumar", e: "arun.kumar@email.com", ct: "Chennai", st: "TN", li: "linkedin.com/in/arunkumar",
+    stxt: "Recent B.Tech Computer Science graduate with strong academic record and internship experience. Completed TCS-specific training in Java, SQL, and web technologies. Eager to contribute to TCS's global delivery teams with strong problem-solving skills and a passion for software development.",
+    j: [
+      { r: "Software Development Intern", co: "TechSolutions India", p: "Jan 2024 - Jun 2024", b: ["Developed REST APIs using Java Spring Boot, handling 500+ requests per minute", "Built responsive web dashboards with React.js for internal team monitoring", "Wrote unit tests achieving 85% code coverage using JUnit and Mockito"] }
+    ],
+    ed: { d: "B.Tech Computer Science", s: "SRM Institute of Technology", p: "2020 - 2024", x: "12th CBSE | 92% | 2018 - 2020" },
+    sl: ["Languages: Java, Python, JavaScript, SQL", "Web: HTML/CSS, React.js, Node.js", "Database: MySQL, MongoDB", "Tools: Git, Eclipse, Postman, Linux"],
+    t: ["Quantify internship projects with specific metrics", "Include academic projects and final year project", "Mention TCS-specific training or certifications", "Highlight soft skills: teamwork, communication, adaptability", "List relevant coursework: DSA, DBMS, OS, Networking"]
+  }),
+  r({
+    slug: "infosys-fresher-resume", title: "Infosys Fresher Resume", industry: "IT Services", level: "Entry",
+    summary: "A detail-oriented engineering graduate with Infosys-specific training in full-stack development and strong analytical skills.",
+    skills: ["Java", "Spring Boot", "React", "SQL", "Python", "AWS Basics", "Docker", "Kubernetes", "Agile", "Problem Solving"],
+    n: "Priya Sharma", e: "priya.sharma@email.com", ct: "Bangalore", st: "KA", li: "linkedin.com/in/priyasharma-in",
+    stxt: "B.E. Computer Science graduate with Infosys campus recruitment training. Completed Infosys Mysore training program in full-stack development. Strong foundation in Java, Spring Boot, and cloud technologies with excellent communication and team collaboration skills.",
+    j: [
+      { r: "Full Stack Intern", co: "WebWorks India", p: "Feb 2024 - Jul 2024", b: ["Built e-commerce product catalog with Java Spring Boot and React.js", "Designed MySQL database schema supporting 10+ product categories", "Implemented JWT-based authentication and role-based access control"] }
+    ],
+    ed: { d: "B.E. Computer Science", s: "R.V. College of Engineering", p: "2020 - 2024", x: "12th ISC | 95% | 2018 - 2020" },
+    sl: ["Languages: Java, JavaScript, Python, SQL", "Frameworks: Spring Boot, React, Hibernate", "Cloud: AWS (EC2, S3 basics), Docker", "Tools: Git, Jenkins, JIRA, Postman"],
+    t: ["Highlight Infosys Mysore training program completion", "Quantify internship deliverables with metrics", "Showcase full-stack project portfolio", "Mention Infosys-specific technologies (Spring, React)", "Include extracurricular achievements and leadership roles"]
+  }),
+  r({
+    slug: "wipro-fresher-resume", title: "Wipro Fresher Resume", industry: "IT Services", level: "Entry",
+    summary: "An aspiring IT professional with Wipro Turbo hiring program selection and strong programming fundamentals.",
+    skills: ["C++", "Java", "Python", "SQL", "HTML/CSS", "JavaScript", "Data Structures", "Networking", "Linux", "Teamwork"],
+    n: "Rahul Verma", e: "rahul.verma@email.com", ct: "Pune", st: "MH", li: "linkedin.com/in/rahulverma",
+    stxt: "B.Tech graduate selected through Wipro Turbo hiring program. Strong programming skills in C++, Java, and Python. Completed Wipro's internal training modules in software engineering, database management, and professional communication.",
+    j: [
+      { r: "Engineering Intern", co: "SoftTech Solutions", p: "Mar 2024 - Aug 2024", b: ["Developed Python scripts automating data processing tasks, reducing manual effort by 60%", "Created interactive dashboards using HTML/CSS/JavaScript for data visualization", "Assisted in migrating legacy applications to cloud infrastructure"] }
+    ],
+    ed: { d: "B.Tech Information Technology", s: "MIT World Peace University", p: "2020 - 2024", x: "12th Maharashtra Board | 88% | 2018 - 2020" },
+    sl: ["Languages: C++, Java, Python, SQL", "Web: HTML/CSS, JavaScript, Bootstrap", "Database: MySQL, Oracle Basics", "Tools: Linux, Git, VS Code, Eclipse"],
+    t: ["Mention Wipro Turbo hiring program selection", "Quantify internship automation impact", "Include academic projects with tech stack details", "Highlight certifications (NPTEL, Coursera)", "Showcase communication and presentation skills"]
+  }),
+  r({
+    slug: "google-swe-resume", title: "Google Software Engineer Resume", industry: "Tech", level: "Mid",
+    summary: "A software engineer with strong DSA skills and system design knowledge targeting Google SDE roles.",
+    skills: ["Data Structures", "Algorithms", "System Design", "Java", "Python", "Go", "Distributed Systems", "Kubernetes", "TensorFlow", "LeetCode"],
+    n: "Vikram Patel", e: "vikram.patel@email.com", ct: "Bangalore", st: "KA", li: "linkedin.com/in/vikrampatel", gh: "github.com/vikrampatel",
+    stxt: "Software engineer with 4+ years of experience building scalable distributed systems. Proficient in Java, Go, and Python with strong computer science fundamentals. Consistently solved 300+ LeetCode problems and participated in Google Kick Start and Code Jam.",
+    j: [
+      { r: "Senior Software Engineer", co: "Flipkart", p: "Jan 2022 - Present", b: ["Designed and built low-latency recommendation service handling 50K+ QPS using Java and Redis", "Reduced service latency by 40% through query optimization and caching strategies", "Led migration of monolith to microservices, improving deployment frequency by 5x"] },
+      { r: "Software Engineer", co: "Paytm", p: "Jun 2020 - Dec 2021", b: ["Built payment processing pipeline handling ₹100Cr+ monthly transaction volume", "Designed idempotent API contracts ensuring exactly-once processing semantics", "Reduced P0 incidents by 60% through comprehensive monitoring and alerting"] }
+    ],
+    ed: { d: "B.Tech Computer Science", s: "IIT Bombay", p: "2016 - 2020" },
+    sl: ["Languages: Java, Go, Python, C++", "System Design: Microservices, Distributed Systems, Kafka, Redis", "Cloud: GCP, Kubernetes, Docker, Pub/Sub", "DSA: Arrays, Graphs, DP, Trees, LeetCode 300+"],
+    t: ["Include competitive programming achievements (Code Jam, Kick Start)", "Quantify system scale (QPS, latency, transaction volume)", "Highlight system design and distributed systems experience", "Showcase open source contributions on GitHub", "Mention Google-specific preparation (DSA, system design rounds)"]
+  }),
+  r({
+    slug: "amazon-sde-resume", title: "Amazon SDE Resume", industry: "Tech", level: "Mid",
+    summary: "A results-driven software engineer with experience building large-scale systems aligned with Amazon's leadership principles.",
+    skills: ["Java", "AWS", "Distributed Systems", "Microservices", "DynamoDB", "Kafka", "System Design", "Algorithms", "CI/CD", "Leadership"],
+    n: "Ananya Singh", e: "ananya.singh@email.com", ct: "Hyderabad", st: "TS", li: "linkedin.com/in/ananyasingh",
+    stxt: "Software engineer with 5+ years building and operating large-scale distributed systems. Deep experience with AWS services and microservices architecture. Strong ownership mindset and bias for action aligned with Amazon's leadership principles.",
+    j: [
+      { r: "Software Development Engineer II", co: "Uber", p: "Mar 2021 - Present", b: ["Built real-time pricing engine processing 10K+ events/sec using Java and Apache Kafka", "Reduced service P99 latency from 200ms to 45ms through performance optimization", "Designed multi-region deployment strategy achieving 99.99% availability SLA"] },
+      { r: "Software Development Engineer", co: "MakeMyTrip", p: "Jul 2019 - Feb 2021", b: ["Developed inventory management system serving 5M+ daily API requests", "Implemented caching layer with Redis reducing database load by 70%", "Led code reviews and mentored 3 junior engineers"] }
+    ],
+    ed: { d: "B.Tech Computer Science", s: "NIT Trichy", p: "2015 - 2019" },
+    sl: ["Languages: Java, Python, SQL", "Cloud: AWS (EC2, SQS, DynamoDB, Lambda, S3)", "System Design: Microservices, Event-Driven, CQRS, Saga Pattern", "Leadership: Code Reviews, Mentoring, On-Call, Incident Management"],
+    t: ["Align experience with Amazon leadership principles (Ownership, Deliver Results)", "Quantify system scale and business impact", "Highlight on-call and incident response experience", "Showcase bar-raising system design examples", "Include AWS certification if applicable"]
+  }),
+  r({
+    slug: "microsoft-swe-resume", title: "Microsoft Software Engineer Resume", industry: "Tech", level: "Mid",
+    summary: "A software engineer with expertise in C#, Azure, and enterprise-scale application development targeting Microsoft roles.",
+    skills: ["C#", ".NET", "Azure", "TypeScript", "React", "SQL Server", "System Design", "Design Patterns", "Git", "Agile"],
+    n: "Siddharth Rao", e: "siddharth.rao@email.com", ct: "Hyderabad", st: "TS", li: "linkedin.com/in/siddharthrao", gh: "github.com/siddharthrao",
+    stxt: "Software engineer with 5+ years of experience building enterprise applications using the Microsoft stack. Expertise in C#, .NET Core, and Azure cloud services. Strong foundation in object-oriented design, design patterns, and clean architecture principles.",
+    j: [
+      { r: "Software Engineer II", co: "Zoho", p: "Feb 2021 - Present", b: ["Architected multi-tenant SaaS platform serving 10K+ business customers using .NET Core", "Migrated on-premise applications to Azure, reducing infrastructure costs by 35%", "Built real-time collaboration features using SignalR and WebSockets"] },
+      { r: "Software Engineer", co: "Freshworks", p: "Aug 2019 - Jan 2021", b: ["Developed RESTful APIs in .NET Framework handling 1M+ daily requests", "Implemented SQL Server indexing strategy improving query performance by 50%", "Wrote comprehensive unit and integration tests with 90% code coverage"] }
+    ],
+    ed: { d: "B.E. Computer Science", s: "BITS Pilani", p: "2015 - 2019" },
+    sl: ["Languages: C#, TypeScript, SQL, Python", "Frameworks: .NET Core, ASP.NET, Entity Framework, React", "Cloud: Azure (App Services, Functions, SQL DB, DevOps)", "Practices: Clean Architecture, DDD, TDD, CI/CD"],
+    t: ["Highlight Microsoft technology stack proficiency", "Quantify system scale and migration impact", "Showcase Azure cloud experience with specific services", "Include design pattern and architecture knowledge", "Mention cross-team collaboration and documentation skills"]
+  }),
+  r({
+    slug: "accenture-entry-level-resume", title: "Accenture Entry Level Resume", industry: "IT Services", level: "Entry",
+    summary: "A motivated graduate with Accenture-specific training in cloud, DevOps, and application development.",
+    skills: ["Java", "Python", "SQL", "AWS", "DevOps", "Docker", "Agile", "Communication", "Problem Solving", "Teamwork"],
+    n: "Neha Gupta", e: "neha.gupta@email.com", ct: "Gurgaon", st: "HR", li: "linkedin.com/in/nehagupta",
+    stxt: "Recent B.Tech graduate with Accenture campus placement. Completed Accenture's onboarding training in cloud computing, DevOps practices, and application development. Strong analytical and problem-solving skills with excellent communication abilities.",
+    j: [
+      { r: "Software Development Intern", co: "DigitalIndia Tech", p: "Jan 2024 - Jun 2024", b: ["Built RESTful web services using Java Spring Boot for internal tooling", "Created CI/CD pipelines using Jenkins and Docker reducing deployment time by 70%", "Developed automated test suites reducing regression testing effort by 40%"] }
+    ],
+    ed: { d: "B.Tech Computer Science", s: "VIT Vellore", p: "2020 - 2024", x: "12th CBSE | 90% | 2018 - 2020" },
+    sl: ["Languages: Java, Python, SQL, JavaScript", "Web: Spring Boot, HTML/CSS, Bootstrap", "Cloud: AWS (EC2, S3, Lambda basics), Docker", "Tools: Git, Jenkins, JIRA, Postman, VS Code"],
+    t: ["Highlight Accenture training program completion", "Quantify internship achievements with metrics", "Showcase cloud and DevOps foundational skills", "Mention communication and client-facing skills", "Include relevant certifications (AWS Cloud Practitioner)"]
+  }),
+  r({
+    slug: "flipkart-sde-resume", title: "Flipkart SDE Resume", industry: "Tech", level: "Mid",
+    summary: "A software engineer with deep experience in e-commerce systems, high-scale services, and problem-solving.",
+    skills: ["Java", "Spring Boot", "Kafka", "Redis", "MySQL", "Elasticsearch", "System Design", "DSA", "Microservices", "Kubernetes"],
+    n: "Amit Joshi", e: "amit.joshi@email.com", ct: "Bangalore", st: "KA", li: "linkedin.com/in/amitjoshi", gh: "github.com/amitjoshi",
+    stxt: "Software engineer with 4+ years of experience building large-scale e-commerce systems. Deep expertise in Java, Spring Boot, and distributed data stores. Solved 400+ LeetCode problems with expertise in system design for high-traffic applications.",
+    j: [
+      { r: "SDE II", co: "Nykaa", p: "Jan 2022 - Present", b: ["Designed inventory management system handling 10M+ SKUs with sub-100ms query latency", "Built real-time pricing engine using Kafka streams processing 50K+ events per second", "Reduced cart abandonment by 15% through checkout flow optimization"] },
+      { r: "Software Engineer", co: "Urban Company", p: "Jun 2020 - Dec 2021", b: ["Developed recommendation engine improving conversion rate by 22%", "Implemented Elasticsearch-based search with typo tolerance and faceted filters", "Migrated MySQL database to sharded architecture handling 5M+ daily transactions"] }
+    ],
+    ed: { d: "B.Tech Computer Science", s: "DTU Delhi", p: "2016 - 2020" },
+    sl: ["Languages: Java, Python, SQL", "Storage: MySQL, Redis, Elasticsearch, MongoDB", "Messaging: Kafka, RabbitMQ, SQS", "Infra: Kubernetes, Docker, AWS, Terraform"],
+    t: ["Quantify e-commerce domain metrics (transactions, latency, conversion)", "Highlight system design for high-traffic scenarios", "Showcase data store expertise with specific technologies", "Include competitive programming profile (CodeChef, LeetCode)", "Mention on-call and production incident experience"]
+  }),
+  r({
+    slug: "deloitte-consultant-resume", title: "Deloitte Consultant Resume", industry: "Consulting", level: "Entry",
+    summary: "An MBA graduate with strong analytical and consulting skills targeting Deloitte consultant roles.",
+    skills: ["Business Analysis", "Market Research", "Data Analysis", "Excel", "PowerPoint", "SQL", "Python", "Client Management", "Presentation", "Strategy"],
+    n: "Shreya Iyer", e: "shreya.iyer@email.com", ct: "Mumbai", st: "MH", li: "linkedin.com/in/shreyaiyer",
+    stxt: "MBA graduate with internship experience in management consulting. Skilled in data analysis, market research, and client presentations. Strong analytical mindset with the ability to synthesize complex data into actionable business recommendations.",
+    j: [
+      { r: "Consulting Intern", co: "KPMG India", p: "Apr 2024 - Jul 2024", b: ["Conducted market sizing and competitive analysis for a Fortune 500 client in retail sector", "Built financial models in Excel to evaluate 3 potential acquisition targets", "Presented findings to senior partners, contributing to final recommendation"] },
+      { r: "Business Analyst", co: "StartupIndia", p: "Jun 2022 - May 2023", b: ["Analyzed customer data to identify growth opportunities, increasing revenue by 18%", "Created dashboards in Python and Tableau for real-time business monitoring", "Collaborated with cross-functional teams to implement process improvements"] }
+    ],
+    ed: { d: "MBA Strategy", s: "IIM Ahmedabad", p: "2023 - 2025", x: "B.Com | Shri Ram College of Commerce | 2019 - 2022" },
+    sl: ["Consulting: Market Research, Financial Analysis, Strategy Formulation", "Analytics: Excel, SQL, Python (Pandas, NumPy), Tableau", "Communication: Client Presentations, Report Writing, Stakeholder Management", "Industries: Retail, Tech, Financial Services"],
+    t: ["Quantify consulting project impact with metrics", "Highlight analytical and financial modeling skills", "Showcase client-facing and presentation experience", "Include industry-specific knowledge and case study preparation", "Mention Deloitte-specific case interview preparation"]
+  }),
+  r({
+    slug: "ibm-entry-level-resume", title: "IBM Entry Level Resume", industry: "Tech", level: "Entry",
+    summary: "A technology graduate with skills in cloud, AI, and enterprise solutions targeting IBM's associate program.",
+    skills: ["Python", "Java", "SQL", "Cloud Computing", "AI/ML Basics", "Linux", "Docker", "Agile", "Communication", "Problem Solving"],
+    n: "Karthik Nair", e: "karthik.nair@email.com", ct: "Kochi", st: "KL", li: "linkedin.com/in/karthiknair",
+    stxt: "B.Tech graduate with strong foundation in cloud computing, AI/ML, and enterprise software. Completed IBM SkillsBuild training program. Eager to join IBM's associate system engineer program and contribute to enterprise client solutions.",
+    j: [
+      { r: "Technology Intern", co: "InfoTech Solutions", p: "Feb 2024 - Jul 2024", b: ["Developed Python-based data processing pipelines handling 100K+ records daily", "Assisted in migrating client workloads to IBM Cloud infrastructure", "Created technical documentation and runbooks for operations team"] }
+    ],
+    ed: { d: "B.Tech Computer Science", s: "Amrita Vishwa Vidyapeetham", p: "2020 - 2024", x: "12th CBSE | 91% | 2018 - 2020" },
+    sl: ["Languages: Python, Java, SQL, Shell Scripting", "Cloud: IBM Cloud, AWS basics, Docker", "AI/ML: Regression, Classification, Numpy, Pandas", "Tools: Linux, Git, Jenkins, VS Code"],
+    t: ["Highlight IBM SkillsBuild training and certifications", "Quantify internship contributions with specific metrics", "Showcase cloud platform experience (IBM Cloud preferred)", "Mention open source contributions or hackathon participation", "Include IBM-specific certifications (IBM Cloud Essentials)"]
   }),
 ]
