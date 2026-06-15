@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import HowItWorks from "../components/HowItWorks.astro"
 ---
 
 <Layout title="Resume Summary Generator - Free | ResumeBuilder" description="Generate professional resume summaries for any role. Free online resume summary generator with examples for every career level.">
@@ -142,43 +143,30 @@ import Layout from "../layouts/Layout.astro"
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container-content">
-      <div class="section-header reveal">
-        <h2>How It Works</h2>
-        <p>Get a polished resume summary in seconds — enter your details and pick from 3 tailored tones, all free.</p>
-      </div>
-      <div class="features-grid">
-        <div class="card feature-card-left reveal reveal-delay-1">
-          <div class="card-icon" style="background:var(--primary-light)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <h3>Enter Your Details</h3>
-            <p>Fill in your job title, years of experience, top skills, and a key achievement. Everything stays in your browser.</p>
-          </div>
-        </div>
-        <div class="card feature-card-left reveal reveal-delay-2">
-          <div class="card-icon" style="background:var(--primary-light)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-          </div>
-          <div>
-            <h3>Get 3 Options</h3>
-            <p>We generate 3 unique summaries in professional, achievement-focused, and skills-focused tones from 6 rotating templates.</p>
-          </div>
-        </div>
-        <div class="card feature-card-left reveal reveal-delay-3">
-          <div class="card-icon" style="background:var(--primary-light)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          </div>
-          <div>
-            <h3>Copy &amp; Use</h3>
-            <p>Copy your favorite summary with one click and paste it directly into your resume. No formatting needed.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <HowItWorks
+    title="How It Works"
+    description="Get a polished resume summary in seconds — enter your details and pick from 3 tailored tones, all free."
+    steps={[
+      {
+        number: 1,
+        icon: '<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+        title: "Enter Your Details",
+        description: "Fill in your job title, years of experience, top skills, and a key achievement. Everything stays in your browser.",
+      },
+      {
+        number: 2,
+        icon: '<svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>',
+        title: "Get 3 Options",
+        description: "We generate 3 unique summaries in professional, achievement-focused, and skills-focused tones from 6 rotating templates.",
+      },
+      {
+        number: 3,
+        icon: '<svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>',
+        title: "Copy & Use",
+        description: "Copy your favorite summary with one click and paste it directly into your resume. No formatting needed.",
+      },
+    ]}
+  />
 
   <section class="section">
     <div class="container-content">

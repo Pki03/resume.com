@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css"
+import HowItWorks from "../components/HowItWorks.astro"
 ---
 
 <!DOCTYPE html>
@@ -523,40 +524,37 @@ import "../styles/global.css"
       </div>
     </section>
 
-    <section class="section section-alt reveal">
-      <div class="container-content">
-        <div class="section-header reveal">
-          <span class="eyebrow">Four Simple Steps</span>
-          <h2>How It Works</h2>
-          <p>Create a professional, ATS-optimized resume in minutes — no experience needed.</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;counter-reset:step">
-          <div class="card feature-card reveal reveal-delay-1" style="text-align:center;padding:2rem 1.5rem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">1</div>
-            <h3>Enter Your Details</h3>
-            <p style="font-size:0.875rem">Fill in your personal info, experience, education, and skills. Everything stays in your browser.</p>
-          </div>
-          <div class="card feature-card reveal reveal-delay-2" style="text-align:center;padding:2rem 1.5rem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">2</div>
-            <h3>Optimize with AI</h3>
-            <p style="font-size:0.875rem">Use AI-powered suggestions to improve bullet points, generate summaries, and fill keyword gaps.</p>
-          </div>
-          <div class="card feature-card reveal reveal-delay-3" style="text-align:center;padding:2rem 1.5rem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">3</div>
-            <h3>Choose a Template</h3>
-            <p style="font-size:0.875rem">Pick from 8 professional templates and 7 color themes. Preview changes instantly as you customize.</p>
-          </div>
-          <div class="card feature-card reveal reveal-delay-4" style="text-align:center;padding:2rem 1.5rem">
-            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">4</div>
-            <h3>Export as PDF</h3>
-            <p style="font-size:0.875rem">Download a print-ready PDF with one click. Your formatting stays perfect, ready to submit anywhere.</p>
-          </div>
-        </div>
-        <div style="text-align:center;margin-top:2rem">
-          <a href="#app" class="btn btn-gradient btn-lg pulse-glow">Start Building Free</a>
-        </div>
-      </div>
-    </section>
+    <HowItWorks
+      eyebrow="Four Simple Steps"
+      title="How It Works"
+      description="Create a professional, ATS-optimized resume in minutes — no experience needed."
+      steps={[
+        {
+          number: 1,
+          icon: '<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+          title: "Enter Your Details",
+          description: "Fill in your personal info, experience, education, and skills. Everything stays in your browser.",
+        },
+        {
+          number: 2,
+          icon: '<svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>',
+          title: "Optimize with AI",
+          description: "Use AI-powered suggestions to improve bullet points, generate summaries, and fill keyword gaps.",
+        },
+        {
+          number: 3,
+          icon: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>',
+          title: "Choose a Template",
+          description: "Pick from 8 professional templates and 7 color themes. Preview changes instantly as you customize.",
+        },
+        {
+          number: 4,
+          icon: '<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>',
+          title: "Export as PDF",
+          description: "Download a print-ready PDF with one click. Your formatting stays perfect, ready to submit anywhere.",
+        },
+      ]}
+    />
 
     <div id="app" class="builder-layout" style="display:flex;max-width:1440px;margin:0 auto;padding:0.75rem;gap:0.75rem;min-height:calc(100vh - 60px)">
       <div id="sidebar" class="builder-sidebar" style="width:384px;flex-shrink:0;display:flex;flex-direction:column;gap:0.75rem;overflow-y:auto;max-height:calc(100vh - 72px)">

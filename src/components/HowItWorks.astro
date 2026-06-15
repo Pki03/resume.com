@@ -1,0 +1,178 @@
+---
+interface Step {
+  number: number
+  icon: string
+  title: string
+  description: string
+}
+
+interface Props {
+  eyebrow?: string
+  title?: string
+  description?: string
+  steps: Step[]
+  altBg?: boolean
+}
+
+const {
+  eyebrow,
+  title = "How It Works",
+  description = "",
+  steps,
+  altBg = true,
+} = Astro.props
+---
+
+<section class={`section${altBg ? " section-alt" : ""}`}>
+  <div class="container-content">
+    <div class="section-header reveal">
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
+    </div>
+    <div class="hiw-grid">
+      {
+        steps.map((step) => (
+          <div class="hiw-card card card-glow" style={`--d: ${step.number * 0.15}s`}>
+            <div class="hiw-step">{step.number}</div>
+            <div class="hiw-icon-wrap" set:html={step.icon} />
+            <h3 class="hiw-title">{step.title}</h3>
+            <p class="hiw-desc">{step.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .hiw-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    position: relative;
+  }
+  .hiw-card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: hiwIn 0.5s ease-out forwards;
+    animation-delay: var(--d, 0s);
+  }
+  .hiw-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-100);
+  }
+  @keyframes hiwIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hiw-step {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-500));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1.25rem;
+  }
+  .hiw-card:hover .hiw-step {
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+    transform: scale(1.08);
+  }
+  .hiw-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius);
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+  }
+  .hiw-card:hover .hiw-icon-wrap {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.08);
+  }
+  .hiw-icon-wrap :global(svg) {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .hiw-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .hiw-desc {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .hiw-grid:has(.hiw-card:nth-child(3):last-child) {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    .hiw-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      max-width: 100% !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hiw-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem;
+    }
+    .hiw-card {
+      flex-direction: row;
+      text-align: left;
+      padding: 1.25rem;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .hiw-step {
+      width: 40px;
+      height: 40px;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    .hiw-icon-wrap {
+      display: none;
+    }
+    .hiw-title {
+      font-size: 0.9375rem;
+      margin-bottom: 0.25rem;
+    }
+    .hiw-desc {
+      font-size: 0.8125rem;
+    }
+  }
+</style>
