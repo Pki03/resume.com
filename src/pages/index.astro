@@ -62,7 +62,12 @@ import "../styles/global.css"
         .ai-panel .card:last-child { display: none; }
       }
       @media (max-width: 768px) {
+        .nav-desktop { display: none !important; }
+        .nav-mobile-toggle { display: flex !important; }
         .footer-grid { grid-template-columns: 1fr 1fr !important; }
+      }
+      @media (min-width: 769px) {
+        .nav-mobile-toggle { display: none !important; }
       }
       @media (max-width: 640px) {
         .desktop-header-actions { display: none !important; }
@@ -115,6 +120,15 @@ import "../styles/global.css"
       .fade-slide-up { animation: fade-slide-up 0.3s ease-out; }
       @keyframes scale-in { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
       .scale-in { animation: scale-in 0.2s ease-out; }
+      .nav-link { position: relative; padding: 0.5rem 0.75rem; font-size: 0.875rem; font-weight: 500; color: var(--gray-500); text-decoration: none; border-radius: 8px; transition: all 0.15s; }
+      .nav-link::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%) scaleX(0); width: calc(100% - 1.5rem); height: 2px; background: var(--primary); border-radius: 1px; transition: transform 0.2s ease; }
+      .nav-link:hover { background: var(--gray-100); color: var(--gray-900); text-decoration: none; }
+      .nav-link:hover::after { transform: translateX(-50%) scaleX(1); }
+      .nav-link[aria-current="page"] { color: var(--gray-900); font-weight: 600; }
+      .nav-link[aria-current="page"]::after { transform: translateX(-50%) scaleX(1); }
+      .theme-toggle { display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:none;border:1px solid var(--gray-200);border-radius:8px;cursor:pointer;color:var(--gray-500);transition:all 0.15s; }
+      .theme-toggle:hover { background:var(--gray-100);color:var(--gray-700); }
+      .theme-toggle:active { transform: scale(0.92); }
       .score-update { transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
       .dropdown-btn { display:flex;align-items:center;gap:0.5rem;width:100%;padding:0.5rem 0.75rem;border:none;background:none;font-size:0.8125rem;color:var(--gray-700);cursor:pointer;text-align:left;transition:background 0.1s; }
       .dropdown-btn:hover { background: var(--gray-50); }
@@ -139,34 +153,21 @@ import "../styles/global.css"
           </span>
           ResumeBuilder
         </a>
-        <div class="nav-desktop" style="display:flex;align-items:center;gap:0.5rem">
+        <div class="nav-desktop" style="display:flex;align-items:center;gap:0.25rem">
           <a href="/" class="nav-link">Builder</a>
           <a href="/ats-score" class="nav-link">ATS Score</a>
+          <a href="/resume-summary-generator" class="nav-link">Summary</a>
+          <a href="/bullet-point-improver" class="nav-link">Bullets</a>
           <a href="/cover-letter" class="nav-link">Cover Letter</a>
           <a href="/resume-examples" class="nav-link">Examples</a>
-          <a href="/blog" class="nav-link">Blog</a>
-          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <div style="width:1px;height:20px;background:var(--gray-200);margin:0 0.25rem"></div>
+          <a href="/templates" class="nav-link" style="font-size:0.8125rem;color:var(--gray-400)">Templates</a>
+          <a href="/blog" class="nav-link" style="font-size:0.8125rem;color:var(--gray-400)">Blog</a>
+          <button id="theme-btn-builder" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
           </button>
-          <div style="width:1px;height:20px;background:var(--gray-200);margin:0 0.25rem"></div>
-          <div style="position:relative" id="header-more">
-            <button class="btn btn-ghost btn-sm" onclick="toggleMoreMenu()" style="font-size:1rem;padding:0.375rem 0.5rem" aria-label="More options">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
-            </button>
-            <div id="header-more-dropdown" style="position:absolute;top:100%;right:0;margin-top:0.25rem;background:white;border:1px solid var(--gray-200);border-radius:var(--radius);box-shadow:var(--shadow-lg);z-index:100;min-width:140px;display:none;overflow:hidden">
-              <button onclick="loadSampleData();closeMoreMenu()" class="dropdown-btn">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                Load Sample
-              </button>
-              <button onclick="clearAll();closeMoreMenu()" class="dropdown-btn" style="color:var(--error)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
-                Clear All
-              </button>
-            </div>
-          </div>
-          <div style="width:1px;height:20px;background:var(--gray-200);margin:0 0.25rem"></div>
           <button class="btn btn-primary btn-sm" onclick="exportPDF()" id="export-btn" style="display:flex;align-items:center;gap:0.375rem;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Export PDF
           </button>
         </div>
@@ -178,11 +179,13 @@ import "../styles/global.css"
         <div style="display:flex;flex-direction:column;gap:0.25rem;padding:0.75rem 1rem">
           <a href="/" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Resume Builder</a>
           <a href="/ats-score" class="nav-link" style="display:block;padding:0.5rem 0.75rem">ATS Score Checker</a>
+          <a href="/resume-summary-generator" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Summary Generator</a>
+          <a href="/bullet-point-improver" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Bullet Point Improver</a>
           <a href="/cover-letter" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Cover Letter Generator</a>
           <a href="/resume-examples" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Resume Examples</a>
           <a href="/templates" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Templates</a>
           <a href="/blog" class="nav-link" style="display:block;padding:0.5rem 0.75rem">Blog</a>
-          <button onclick="toggleTheme()" style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;border:none;background:none;font-size:0.875rem;font-weight:500;color:var(--gray-500);cursor:pointer;border-radius:8px;width:100%" class="nav-link">Toggle Theme</button>
+          <button id="theme-btn-mobile-builder" onclick="toggleTheme()" style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;border:none;background:none;font-size:0.875rem;font-weight:500;color:var(--gray-500);cursor:pointer;border-radius:8px;width:100%;justify-content:flex-start" class="nav-link">Toggle Theme</button>
           <div style="border-top:1px solid var(--gray-100);margin:0.375rem 0;padding-top:0.5rem">
             <button onclick="loadSampleData()" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;margin-bottom:0.375rem">Load Sample Data</button>
             <button onclick="clearAll()" class="btn btn-danger btn-sm" style="width:100%;justify-content:center;margin-bottom:0.375rem">Clear All</button>
@@ -1241,21 +1244,6 @@ import "../styles/global.css"
         if (added) { saveState(); renderEditor(); renderPreview(); updateScore() }
         Toast(added ? "Added " + added + " suggested skills! Edit or remove them as needed." : "Your skills section already has good coverage. Add more manually if needed.", added ? "success" : "info")
       }
-
-      function toggleMoreMenu() {
-        const d = document.getElementById("header-more-dropdown")
-        d.classList.toggle("show")
-        if (d.classList.contains("show")) d.style.display = "block"
-        else d.style.display = "none"
-      }
-      function closeMoreMenu() {
-        const d = document.getElementById("header-more-dropdown")
-        d.classList.remove("show"); d.style.display = "none"
-      }
-      document.addEventListener("click", function(e) {
-        const m = document.getElementById("header-more")
-        if (m && !m.contains(e.target)) closeMoreMenu()
-      })
 
       function exportPDF() {
         const progress = document.getElementById("export-progress")
