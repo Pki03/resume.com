@@ -3,11 +3,11 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Resume Templates | Free Resume Builder" description="Browse 8 free, professional resume templates including Classic, Modern, Professional, Creative, Minimal, Executive, Two-Column, and Tech. All ATS-friendly.">
-  <section class="hero-split" style="padding-bottom:2rem">
+  <section class="hero-split hero-split-gradient" style="padding-bottom:2rem">
     <div class="hero-split-content">
       <span class="eyebrow">Free Templates</span>
       <h1><span class="gradient-text">8 Resume Templates</span> for Every Career</h1>
-      <p>Choose from professionally designed templates optimized for ATS compatibility. Each template comes with 7 customizable color themes.</p>
+      <p>Choose from 8 professionally designed templates, each optimized for ATS compatibility. Classic, Modern, Professional, Creative, Minimal, Executive, Two-Column, and Tech — all with 7 customizable color themes.</p>
       <div class="hero-split-actions">
         <a href="#templates" class="btn btn-primary btn-lg">Browse Templates</a>
         <a href="/resume-examples" class="btn btn-outline btn-lg">View Examples</a>
@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro"
       <div class="hero-split-trust">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 8 Templates</span>
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ATS-Safe Designs</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 7 Color Themes</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 7 Color Themes Each</span>
       </div>
     </div>
     <div class="hero-split-visual">
@@ -81,9 +81,9 @@ import Layout from "../layouts/Layout.astro"
         <button class="tab" onclick="filterTemplates('tech',this)">Tech</button>
       </div>
 
-      <div class="features-grid features-grid-4" id="template-grid">
-        <div class="card template-card" data-category="ats-safe">
-          <div class="template-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+      <div class="bento-template-grid" id="template-grid">
+        <div class="card template-card template-card-featured" data-category="ats-safe" style="--bento-col:span 2">
+          <button class="template-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-classic').showModal()">
             <div style="width:100%;background:white;border-radius:4px;padding:1.25rem;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
               <div style="width:60%;height:6px;background:#0f172a;border-radius:3px;margin:0 auto 0.75rem"></div>
               <div style="width:40%;height:4px;background:#94a3b8;border-radius:2px;margin:0 auto 0.5rem"></div>
@@ -92,19 +92,22 @@ import Layout from "../layouts/Layout.astro"
               <div style="width:85%;height:4px;background:#f1f5f9;border-radius:2px;margin-bottom:0.375rem"></div>
               <div style="width:70%;height:4px;background:#f1f5f9;border-radius:2px"></div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Classic</h3>
               <span class="badge badge-blue">ATS-Safe</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Traditional clean layout with centered header. Ideal for finance, law, and government roles.</p>
-            <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'classic'}))">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'classic'}))">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-classic').showModal()">Preview</button>
+            </div>
           </div>
         </div>
 
         <div class="card template-card" data-category="tech ats-safe">
-          <div class="template-preview" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+          <button class="template-preview" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-modern').showModal()">
             <div style="width:100%;background:white;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
               <div style="background:#2563eb;padding:0.75rem;text-align:center">
                 <div style="width:50%;height:5px;background:rgba(255,255,255,0.9);border-radius:3px;margin:0 auto 0.25rem"></div>
@@ -115,19 +118,22 @@ import Layout from "../layouts/Layout.astro"
                 <div style="width:80%;height:4px;background:#f1f5f9;border-radius:2px"></div>
               </div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Modern</h3>
               <span class="badge badge-blue">ATS-Safe</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Colorful header with clean content area. Perfect for tech and startups.</p>
-            <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'modern'}))">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'modern'}))">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-modern').showModal()">Preview</button>
+            </div>
           </div>
         </div>
 
         <div class="card template-card" data-category="ats-safe executive">
-          <div class="template-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+          <button class="template-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-professional').showModal()">
             <div style="width:100%;background:white;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
               <div style="padding:0.75rem;text-align:center;border-bottom:3px solid #475569">
                 <div style="width:55%;height:5px;background:#0f172a;border-radius:3px;margin:0 auto 0.25rem"></div>
@@ -138,19 +144,22 @@ import Layout from "../layouts/Layout.astro"
                 <div style="width:75%;height:4px;background:#f1f5f9;border-radius:2px"></div>
               </div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Professional</h3>
               <span class="badge badge-blue">ATS-Safe</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Elegant design with accent lines. Ideal for consulting and corporate roles.</p>
-            <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'professional'}))">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'professional'}))">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-professional').showModal()">Preview</button>
+            </div>
           </div>
         </div>
 
         <div class="card template-card" data-category="creative">
-          <div class="template-preview" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+          <button class="template-preview" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-creative').showModal()">
             <div style="width:100%;background:white;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
               <div style="background:linear-gradient(135deg,#ea580c,#c2410c);padding:0.75rem;text-align:center">
                 <div style="width:50%;height:5px;background:rgba(255,255,255,0.9);border-radius:3px;margin:0 auto 0.25rem"></div>
@@ -161,19 +170,22 @@ import Layout from "../layouts/Layout.astro"
                 <div style="width:80%;height:4px;background:#f1f5f9;border-radius:2px"></div>
               </div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Creative</h3>
               <span class="badge" style="background:#fff7ed;color:#c2410c">Creative</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Bold gradient header with modern typography. Great for design and marketing roles.</p>
-            <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'creative'}))">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'creative'}))">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-creative').showModal()">Preview</button>
+            </div>
           </div>
         </div>
 
         <div class="card template-card" data-category="ats-safe minimal">
-          <div class="template-preview" style="background:linear-gradient(135deg,#f0fdf4,#bbf7d0);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+          <button class="template-preview" style="background:linear-gradient(135deg,#f0fdf4,#bbf7d0);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-minimal').showModal()">
             <div style="width:100%;background:white;border-radius:4px;padding:1.25rem;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
               <div style="display:flex;gap:0.75rem;margin-bottom:0.75rem">
                 <div style="width:40px;height:40px;border-radius:50%;background:#e2e8f0;flex-shrink:0"></div>
@@ -186,19 +198,22 @@ import Layout from "../layouts/Layout.astro"
               <div style="width:100%;height:4px;background:#f1f5f9;border-radius:2px;margin-bottom:0.375rem"></div>
               <div style="width:75%;height:4px;background:#f1f5f9;border-radius:2px"></div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Minimal</h3>
               <span class="badge badge-blue">ATS-Safe</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Clean, sparse design with plenty of white space. Modern and sophisticated.</p>
-            <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-minimal').showModal()">Preview</button>
+            </div>
           </div>
         </div>
 
-        <div class="card template-card" data-category="executive">
-          <div class="template-preview" style="background:linear-gradient(135deg,#f5f3ff,#ddd6fe);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+        <div class="card template-card template-card-featured" data-category="executive" style="--bento-col:span 2">
+          <button class="template-preview" style="background:linear-gradient(135deg,#f5f3ff,#ddd6fe);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-executive').showModal()">
             <div style="width:100%;background:white;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
               <div style="padding:0.75rem;text-align:center;background:linear-gradient(135deg,#9333ea,#7e22ce);padding:0.5rem">
                 <div style="width:45%;height:4px;background:rgba(255,255,255,0.9);border-radius:2px;margin:0 auto"></div>
@@ -212,19 +227,22 @@ import Layout from "../layouts/Layout.astro"
                 <div style="width:70%;height:4px;background:#f1f5f9;border-radius:2px"></div>
               </div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Executive</h3>
               <span class="badge" style="background:#f5f3ff;color:#7e22ce">Executive</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Premium design for senior leadership roles with bold accent elements.</p>
-            <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-executive').showModal()">Preview</button>
+            </div>
           </div>
         </div>
 
         <div class="card template-card" data-category="tech ats-safe">
-          <div class="template-preview" style="background:linear-gradient(135deg,#ecfdf5,#6ee7b7);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+          <button class="template-preview" style="background:linear-gradient(135deg,#ecfdf5,#6ee7b7);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-twocolumn').showModal()">
             <div style="width:100%;background:white;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
               <div style="display:flex;gap:0">
                 <div style="background:#0d9488;width:40%;padding:0.75rem">
@@ -238,19 +256,22 @@ import Layout from "../layouts/Layout.astro"
                 </div>
               </div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Two-Column</h3>
               <span class="badge badge-blue">ATS-Safe</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Sidebar layout with skills on left, experience on right. Great for showcasing diverse skills.</p>
-            <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-twocolumn').showModal()">Preview</button>
+            </div>
           </div>
         </div>
 
         <div class="card template-card" data-category="tech">
-          <div class="template-preview" style="background:linear-gradient(135deg,#f0f9ff,#bae6fd);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center">
+          <button class="template-preview" style="background:linear-gradient(135deg,#f0f9ff,#bae6fd);padding:2rem;border-radius:10px 10px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;width:100%;border:none;cursor:pointer" onclick="document.getElementById('dlg-tech').showModal()">
             <div style="width:100%;background:#0f172a;border-radius:4px;padding:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.2)">
               <div style="width:50%;height:5px;background:#38bdf8;border-radius:3px;margin-bottom:0.5rem"></div>
               <div style="width:30%;height:3px;background:#64748b;border-radius:2px;margin-bottom:0.75rem"></div>
@@ -258,19 +279,193 @@ import Layout from "../layouts/Layout.astro"
               <div style="width:85%;height:4px;background:#1e293b;border-radius:2px;margin-bottom:0.375rem"></div>
               <div style="width:70%;height:4px;background:#1e293b;border-radius:2px"></div>
             </div>
-          </div>
+          </button>
           <div class="card-body">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
               <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900)">Tech</h3>
               <span class="badge" style="background:#f0f9ff;color:#0284c7">Tech</span>
             </div>
             <p style="font-size:0.8125rem;color:var(--gray-500);margin-bottom:0.75rem;line-height:1.5">Dark mode design with accent colors. Stand out for tech and engineering roles.</p>
-            <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+            <div style="display:flex;gap:0.5rem">
+              <a href="/" class="btn btn-primary btn-sm">Use Template</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('dlg-tech').showModal()">Preview</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <dialog id="dlg-classic" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:white;border-radius:6px;padding:1.5rem;box-shadow:0 4px 16px rgba(0,0,0,0.1)">
+          <div style="width:65%;height:8px;background:#0f172a;border-radius:4px;margin:0 auto 0.75rem"></div>
+          <div style="width:45%;height:5px;background:#94a3b8;border-radius:3px;margin:0 auto 0.5rem"></div>
+          <div style="height:2px;background:#e2e8f0;margin:0.75rem 0"></div>
+          <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+          <div style="width:85%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+          <div style="width:70%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'classic'}));this.closest('dialog').close()">Use Classic Template</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-modern" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:white;border-radius:6px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.1)">
+          <div style="background:#2563eb;padding:1rem;text-align:center">
+            <div style="width:55%;height:6px;background:rgba(255,255,255,0.9);border-radius:3px;margin:0 auto 0.375rem"></div>
+            <div style="width:35%;height:4px;background:rgba(255,255,255,0.6);border-radius:2px;margin:0 auto"></div>
+          </div>
+          <div style="padding:1rem">
+            <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+            <div style="width:80%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'modern'}));this.closest('dialog').close()">Use Modern Template</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-professional" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:white;border-radius:6px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.1)">
+          <div style="padding:1rem;text-align:center;border-bottom:3px solid #475569">
+            <div style="width:55%;height:6px;background:#0f172a;border-radius:3px;margin:0 auto 0.375rem"></div>
+            <div style="width:35%;height:4px;background:#94a3b8;border-radius:2px;margin:0 auto"></div>
+          </div>
+          <div style="padding:1rem">
+            <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+            <div style="width:75%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'professional'}));this.closest('dialog').close()">Use Professional Template</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-creative" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:white;border-radius:6px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.1)">
+          <div style="background:linear-gradient(135deg,#ea580c,#c2410c);padding:1rem;text-align:center">
+            <div style="width:55%;height:6px;background:rgba(255,255,255,0.9);border-radius:3px;margin:0 auto 0.375rem"></div>
+            <div style="width:35%;height:4px;background:rgba(255,255,255,0.6);border-radius:2px;margin:0 auto"></div>
+          </div>
+          <div style="padding:1rem">
+            <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+            <div style="width:80%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="localStorage.setItem('resumeConfig',JSON.stringify({...JSON.parse(localStorage.getItem('resumeConfig')||'{}'),template:'creative'}));this.closest('dialog').close()">Use Creative Template</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-minimal" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#f0fdf4,#bbf7d0);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:white;border-radius:6px;padding:1.5rem;box-shadow:0 4px 16px rgba(0,0,0,0.1)">
+          <div style="display:flex;gap:0.75rem;margin-bottom:0.75rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:#e2e8f0;flex-shrink:0"></div>
+            <div style="flex:1">
+              <div style="width:65%;height:6px;background:#0f172a;border-radius:3px;margin-bottom:0.375rem"></div>
+              <div style="width:45%;height:4px;background:#94a3b8;border-radius:2px"></div>
+            </div>
+          </div>
+          <div style="height:2px;background:#e2e8f0;margin:0.75rem 0"></div>
+          <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+          <div style="width:75%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="this.closest('dialog').close()">Use Minimal Template</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-executive" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#f5f3ff,#ddd6fe);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:white;border-radius:6px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.1)">
+          <div style="padding:0.75rem;text-align:center;background:linear-gradient(135deg,#9333ea,#7e22ce);padding:0.625rem">
+            <div style="width:50%;height:5px;background:rgba(255,255,255,0.9);border-radius:3px;margin:0 auto"></div>
+          </div>
+          <div style="border-left:3px solid #9333ea;margin:0.75rem;padding-left:0.75rem">
+            <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+            <div style="width:80%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+          </div>
+          <div style="padding:0 0.75rem 0.75rem">
+            <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+            <div style="width:70%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="this.closest('dialog').close()">Use Executive Template</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-twocolumn" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#ecfdf5,#6ee7b7);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:white;border-radius:6px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.1)">
+          <div style="display:flex;gap:0">
+            <div style="background:#0d9488;width:40%;padding:1rem">
+              <div style="width:80%;height:5px;background:rgba(255,255,255,0.8);border-radius:3px;margin-bottom:0.5rem"></div>
+              <div style="width:60%;height:4px;background:rgba(255,255,255,0.5);border-radius:2px;margin-bottom:0.5rem"></div>
+              <div style="width:50%;height:4px;background:rgba(255,255,255,0.3);border-radius:2px"></div>
+            </div>
+            <div style="padding:1rem;width:60%">
+              <div style="width:100%;height:5px;background:#f1f5f9;border-radius:3px;margin-bottom:0.5rem"></div>
+              <div style="width:80%;height:5px;background:#f1f5f9;border-radius:3px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="this.closest('dialog').close()">Use Two-Column Template</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-tech" class="template-dialog" onclick="if(event.target===this)this.close()">
+    <div class="template-dialog-inner">
+      <button class="template-dialog-close" onclick="this.closest('dialog').close()">&times;</button>
+      <div class="template-dialog-preview" style="background:linear-gradient(135deg,#f0f9ff,#bae6fd);padding:2rem;border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center">
+        <div style="width:80%;max-width:400px;background:#0f172a;border-radius:6px;padding:1.25rem;box-shadow:0 4px 16px rgba(0,0,0,0.2)">
+          <div style="width:55%;height:6px;background:#38bdf8;border-radius:3px;margin-bottom:0.625rem"></div>
+          <div style="width:35%;height:4px;background:#64748b;border-radius:2px;margin-bottom:0.75rem"></div>
+          <div style="width:100%;height:5px;background:#1e293b;border-radius:3px;margin-bottom:0.5rem"></div>
+          <div style="width:85%;height:5px;background:#1e293b;border-radius:3px;margin-bottom:0.5rem"></div>
+          <div style="width:70%;height:5px;background:#1e293b;border-radius:3px"></div>
+        </div>
+      </div>
+      <div style="padding:1rem 0 0;text-align:center">
+        <a href="/" class="btn btn-primary" onclick="this.closest('dialog').close()">Use Tech Template</a>
+      </div>
+    </div>
+  </dialog>
 
   <section class="section section-alt">
     <div class="container-content">
@@ -279,7 +474,7 @@ import Layout from "../layouts/Layout.astro"
         <p>Your resume template sets the tone for your entire job application.</p>
       </div>
       <div class="features-grid">
-        <div class="card feature-card-left">
+        <div class="card feature-card-left reveal reveal-delay-1">
           <div class="card-icon" style="background:var(--primary-light)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
@@ -288,7 +483,7 @@ import Layout from "../layouts/Layout.astro"
             <p>Traditional clean layout. Ideal for finance, law, accounting, and government roles.</p>
           </div>
         </div>
-        <div class="card feature-card-left">
+        <div class="card feature-card-left reveal reveal-delay-2">
           <div class="card-icon" style="background:var(--primary-light)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
           </div>
@@ -297,7 +492,7 @@ import Layout from "../layouts/Layout.astro"
             <p>Colorful headers with clean content areas. Best for tech, startups, and engineering.</p>
           </div>
         </div>
-        <div class="card feature-card-left">
+        <div class="card feature-card-left reveal reveal-delay-3">
           <div class="card-icon" style="background:var(--primary-light)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
@@ -313,8 +508,8 @@ import Layout from "../layouts/Layout.astro"
   <section class="section section-sm section-tools">
     <div class="container-content">
       <div class="section-header reveal">
-        <h2>Try Our Other Tools</h2>
-        <p>Everything you need to land your next job.</p>
+        <h2>More Free Career Tools</h2>
+        <p>Everything you need to build a complete, optimized job application.</p>
       </div>
       <div class="tools-grid">
         <a href="/" class="card tool-card card-hover">
@@ -345,10 +540,10 @@ import Layout from "../layouts/Layout.astro"
     </div>
   </section>
 
-  <section class="capture">
+  <section class="capture reveal">
     <div class="capture-inner">
-      <h3>Get Weekly Resume Tips</h3>
-      <p>Join 10,000+ job seekers getting expert advice straight to their inbox.</p>
+      <h3>Weekly Resume Tips, Straight to Your Inbox</h3>
+      <p>Join 12,000+ job seekers getting expert ATS advice, keyword strategies, and career insights.</p>
       <form class="capture-form" onsubmit="event.preventDefault()">
         <input type="email" placeholder="your@email.com" required />
         <button type="submit">Subscribe</button>
@@ -371,4 +566,72 @@ import Layout from "../layouts/Layout.astro"
       })
     }
   </script>
+
+  <style>
+    .bento-template-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .template-card-featured {
+      grid-column: var(--bento-col, span 1);
+    }
+    .template-preview {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .template-card:hover .template-preview {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .template-dialog {
+      padding: 0;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+      max-width: 520px;
+      width: 90vw;
+      background: var(--card-bg, white);
+      overflow: visible;
+    }
+    .template-dialog::backdrop {
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+    }
+    .template-dialog-inner {
+      padding: 1.5rem;
+      position: relative;
+    }
+    .template-dialog-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.75rem;
+      background: var(--gray-100);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: var(--gray-500);
+      cursor: pointer;
+      line-height: 1;
+      transition: background 0.15s ease;
+    }
+    .template-dialog-close:hover {
+      background: var(--gray-200);
+    }
+    .template-dialog-preview {
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .bento-template-grid {
+        grid-template-columns: 1fr;
+      }
+      .template-card-featured {
+        grid-column: span 1;
+      }
+    }
+  </style>
 </Layout>

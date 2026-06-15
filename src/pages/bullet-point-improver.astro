@@ -3,19 +3,19 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Resume Bullet Point Improver - Free | ResumeBuilder" description="Transform weak resume bullet points into powerful, quantified achievements. Free online AI bullet point improver for resumes.">
-  <section class="hero-split" style="padding-bottom:2rem">
+  <section class="hero-split hero-split-gradient" style="padding-bottom:2rem">
     <div class="hero-split-content">
       <span class="eyebrow">Free Tool</span>
       <h1>Bullet Point <span class="gradient-text">Improver</span></h1>
-      <p>Turn weak, passive resume bullet points into powerful, quantified achievements that recruiters love. Choose your bullet type and get 3 improved versions instantly.</p>
+      <p>Turn weak, passive bullet points into powerful, quantified achievements that recruiters notice. Pick your category and get 3 improved versions in seconds — no sign-up needed.</p>
       <div class="hero-split-actions">
         <a href="#tool" class="btn btn-primary btn-lg">Improve a Bullet</a>
         <a href="/" class="btn btn-outline btn-lg">Build My Resume</a>
       </div>
       <div class="hero-split-trust">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 50+ Verb Mappings</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 3 Variations</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 3 Variations Per Bullet</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free, No Sign-Up</span>
       </div>
     </div>
     <div class="hero-split-visual">
@@ -71,26 +71,51 @@ import Layout from "../layouts/Layout.astro"
 
   <section class="section section-sm" id="tool">
     <div class="container-content">
-      <div class="card card-elevated">
-        <div class="card-body">
-          <div class="form-group">
-            <label class="label">Paste a Weak Bullet Point</label>
-            <textarea id="bullet-input" class="input" rows="4" placeholder="e.g. was responsible for managing a team of developers and helping them complete projects on time"></textarea>
+      <div class="bento-grid">
+        <div class="bento-main">
+          <div class="card card-elevated">
+            <div class="card-body">
+              <div class="form-group">
+                <label class="label">Paste a Weak Bullet Point</label>
+                <textarea id="bullet-input" class="input" rows="4" placeholder="e.g. was responsible for managing a team of developers and helping them complete projects on time"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="label">Bullet Type</label>
+                <select id="bullet-type" class="input" style="appearance:auto">
+                  <option value="leadership">Leadership / Management</option>
+                  <option value="technical">Technical / Engineering</option>
+                  <option value="communication">Communication / Writing</option>
+                  <option value="achievement">Achievement / Sales / Revenue</option>
+                  <option value="improvement">Improvement / Optimization</option>
+                </select>
+              </div>
+              <button id="improve-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.75rem" onclick="improveBullet()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                Improve Bullet Point
+              </button>
+            </div>
           </div>
-          <div class="form-group">
-            <label class="label">Bullet Type</label>
-            <select id="bullet-type" class="input" style="appearance:auto">
-              <option value="leadership">Leadership / Management</option>
-              <option value="technical">Technical / Engineering</option>
-              <option value="communication">Communication / Writing</option>
-              <option value="achievement">Achievement / Sales / Revenue</option>
-              <option value="improvement">Improvement / Optimization</option>
-            </select>
+        </div>
+        <div class="bento-side">
+          <div class="card">
+            <div class="card-body">
+              <div style="font-size:0.8125rem;font-weight:600;color:var(--gray-900);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Quick Reference
+              </div>
+              <div style="display:flex;flex-direction:column;gap:0.5rem">
+                <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem 0.625rem;border-left:3px solid var(--success)">
+                  <div style="font-size:0.6875rem;font-weight:600;color:var(--success);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:0.125rem">Before</div>
+                  <div style="font-size:0.75rem;color:var(--gray-500);font-style:italic">was responsible for a team</div>
+                </div>
+                <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem 0.625rem;border-left:3px solid var(--primary)">
+                  <div style="font-size:0.6875rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:0.125rem">After</div>
+                  <div style="font-size:0.75rem;color:var(--gray-900);font-weight:500">Led a team of 12 to exceed quarterly targets by 34%</div>
+                </div>
+              </div>
+              <p style="font-size:0.75rem;color:var(--gray-400);margin:0.75rem 0 0;line-height:1.5">Always lead with a strong action verb and include a measurable result.</p>
+            </div>
           </div>
-          <button id="improve-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.75rem" onclick="improveBullet()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            Improve Bullet Point
-          </button>
         </div>
       </div>
 
@@ -177,10 +202,10 @@ import Layout from "../layouts/Layout.astro"
     <div class="container-content">
       <div class="section-header reveal">
         <h2>How It Works</h2>
-        <p>Transform weak bullet points into interview-winning achievements in seconds.</p>
+        <p>Transform weak bullet points into interview-winning achievements in seconds — 3 variations per bullet, no sign-up needed.</p>
       </div>
       <div class="features-grid">
-        <div class="card feature-card-left">
+        <div class="card feature-card-left reveal reveal-delay-1">
           <div class="card-icon" style="background:var(--primary-light)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </div>
@@ -189,7 +214,7 @@ import Layout from "../layouts/Layout.astro"
             <p>Copy the weak bullet point from your resume and paste it into the text area. No formatting needed.</p>
           </div>
         </div>
-        <div class="card feature-card-left">
+        <div class="card feature-card-left reveal reveal-delay-2">
           <div class="card-icon" style="background:var(--primary-light)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
           </div>
@@ -198,7 +223,7 @@ import Layout from "../layouts/Layout.astro"
             <p>Select the category that best fits your bullet and click improve. Our engine rewrites it in 3 impactful variations.</p>
           </div>
         </div>
-        <div class="card feature-card-left">
+        <div class="card feature-card-left reveal reveal-delay-3">
           <div class="card-icon" style="background:var(--primary-light)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
           </div>
@@ -214,8 +239,8 @@ import Layout from "../layouts/Layout.astro"
   <section class="section section-sm section-tools">
     <div class="container-content">
       <div class="section-header reveal">
-        <h2>Try Our Other Tools</h2>
-        <p>Everything you need to land your next job.</p>
+        <h2>More Free Career Tools</h2>
+        <p>Everything you need to build a complete, optimized job application.</p>
       </div>
       <div class="tools-grid">
         <a href="/" class="card tool-card card-hover">
@@ -260,8 +285,8 @@ import Layout from "../layouts/Layout.astro"
 
   <section class="capture reveal">
     <div class="capture-inner">
-      <h3>Get Weekly Resume Tips</h3>
-      <p>Join 10,000+ job seekers getting expert advice straight to their inbox.</p>
+      <h3>Weekly Resume Tips, Straight to Your Inbox</h3>
+      <p>Join 12,000+ job seekers getting expert ATS advice, keyword strategies, and career insights.</p>
       <form class="capture-form" onsubmit="event.preventDefault()">
         <input type="email" placeholder="your@email.com" required />
         <button type="submit">Subscribe</button>

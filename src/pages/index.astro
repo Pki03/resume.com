@@ -50,12 +50,16 @@ import "../styles/global.css"
     }
     </script>
     <style is:global>
-      @media (max-width: 900px) {
+      @media (max-width: 1024px) {
         .builder-layout { flex-direction: column !important; }
         .builder-sidebar { width: 100% !important; max-height: none !important; }
         .builder-preview { max-height: none !important; }
         .builder-tabs { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
-        .ai-panel { display: none !important; }
+        .ai-panel { width: 100% !important; max-height: none !important; }
+        .ai-panel .card:first-child { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+        .ai-panel .card:first-child .card-header { display: none; }
+        .ai-panel .card:first-child .card-body { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+        .ai-panel .card:last-child { display: none; }
       }
       @media (max-width: 768px) {
         .footer-grid { grid-template-columns: 1fr 1fr !important; }
@@ -64,10 +68,20 @@ import "../styles/global.css"
         .desktop-header-actions { display: none !important; }
         .builder-layout { padding: 0.5rem !important; gap: 0.5rem !important; }
         .builder-sidebar { border-radius: var(--radius-lg); }
+        .builder-sidebar .card { border-radius: var(--radius); }
         #preview-container { padding: 0.75rem !important; }
-        #resume-preview { width: 100% !important; min-height: auto !important; transform: scale(0.95); transform-origin: top center; }
+        #resume-preview { width: 100% !important; min-height: auto !important; transform: scale(1); transform-origin: top center; }
+        #resume-preview { box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.08) !important; }
         .score-gauge-card { display: none !important; }
         .mobile-score-badge { display: flex !important; }
+        #section-tabs .tab { padding: 0.5rem 0.5rem; font-size: 0.6875rem; }
+        #section-tabs .tab .section-status { width: 6px; height: 6px; }
+        .ai-panel-btn { font-size: 0.75rem; padding: 0.5rem 0.625rem; }
+        .mobile-ai-toggle { display: flex !important; }
+        #ai-panel-close { display: flex !important; }
+        .ai-panel { position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important; top: auto !important; max-height: 55vh !important; z-index: 55 !important; border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important; box-shadow: 0 -8px 32px rgba(0,0,0,0.12) !important; padding: 0.75rem !important; transform: translateY(100%); transition: transform 0.3s ease !important; background: white !important; }
+        .ai-panel.mobile-open { transform: translateY(0) !important; display: flex !important; }
+        .ai-panel .card:last-child { display: none; }
       }
       @media (min-width: 641px) {
         .mobile-nav { display: none !important; }
@@ -79,12 +93,29 @@ import "../styles/global.css"
       .ai-panel { width: 260px; flex-shrink: 0; display: flex; flex-direction: column; gap: 0.75rem; overflow-y: auto; max-height: calc(100vh - 72px); }
       .ai-panel-btn { width: 100%; justify-content: flex-start; padding: 0.625rem 0.75rem; border-radius: 8px; border: 1px solid var(--gray-200); background: white; cursor: pointer; text-align: left; transition: all 0.15s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.78125rem; color: var(--gray-700); }
       .ai-panel-btn:hover { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
-      .section-status { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 0.375rem; flex-shrink: 0; }
-      .section-status-done { background: var(--success); }
-      .section-status-partial { background: var(--warning); }
+      .ai-panel-btn:active { transform: scale(0.97); }
+      .section-status { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 0.375rem; flex-shrink: 0; transition: background 0.3s ease, transform 0.3s ease; }
+      .section-status-done { background: var(--success); box-shadow: 0 0 0 2px var(--success-light); }
+      .section-status-partial { background: var(--warning); box-shadow: 0 0 0 2px var(--warning-light); }
       .section-status-empty { background: var(--gray-200); }
+      .tab { position: relative; padding: 0.375rem 0.625rem; font-size: 0.75rem; font-weight: 500; border: none; border-radius: 6px; background: transparent; color: var(--gray-500); cursor: pointer; transition: all 0.2s ease; white-space: nowrap; display: flex; align-items: center; gap: 0.25rem; }
+      .tab:hover { background: var(--gray-75); color: var(--gray-700); }
+      .tab:active { transform: scale(0.96); }
+      .tab.active { background: var(--primary-light); color: var(--primary); font-weight: 600; }
+      .tab.active::after { content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%); width: 60%; height: 2px; background: var(--primary); border-radius: 1px; }
+      .btn:active { transform: scale(0.97); }
+      .btn-primary, .btn-gradient { transition: all 0.15s ease; }
+      .btn-primary:hover, .btn-gradient:hover { box-shadow: 0 4px 14px rgba(79,70,229,0.35); transform: translateY(-1px); }
+      .btn-primary:active, .btn-gradient:active { transform: scale(0.97) translateY(0); box-shadow: 0 2px 8px rgba(79,70,229,0.2); }
       .export-progress { position: fixed; bottom: 1.5rem; right: 1.5rem; background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 1rem; box-shadow: var(--shadow-lg); z-index: 100; max-width: 300px; display: none; }
       .export-progress.show { display: block; }
+      @keyframes highlight-flash { 0% { background: var(--primary-light); } 100% { background: transparent; } }
+      .highlight-on-edit { animation: highlight-flash 0.6s ease-out; }
+      @keyframes fade-slide-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+      .fade-slide-up { animation: fade-slide-up 0.3s ease-out; }
+      @keyframes scale-in { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+      .scale-in { animation: scale-in 0.2s ease-out; }
+      .score-update { transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
     </style>
   </head>
   <body>
@@ -149,19 +180,19 @@ import "../styles/global.css"
       </div>
     </header>
 
-    <section class="hero-split">
+    <section class="hero-split hero-split-gradient">
       <div class="hero-split-content">
         <span class="eyebrow">Free Resume Builder</span>
-        <h1>Build an <span class="gradient-text">ATS-Ready Resume</span> in 10 Minutes</h1>
-        <p>Create a professional, ATS-friendly resume with AI-powered suggestions. Choose from 8 templates, customize colors, and export as PDF — no sign-up required.</p>
+        <h1>Your Resume, <span class="gradient-text">Optimized for Every ATS</span></h1>
+        <p>Build ATS-friendly resumes that get past screening systems and into hiring managers' hands. AI-powered suggestions, 8 professional templates, and instant PDF export — completely free, no sign-up.</p>
         <div class="hero-split-actions">
-          <a href="#app" class="btn btn-primary btn-lg pulse-glow">Build My Resume</a>
-          <a href="/resume-examples" class="btn btn-outline btn-lg">View Examples</a>
+          <a href="#app" class="btn btn-primary btn-lg pulse-glow">Start Building Free</a>
+          <a href="/resume-examples" class="btn btn-outline btn-lg">See Examples</a>
         </div>
         <div class="hero-split-trust">
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ATS-Friendly Templates</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 8 Professional Templates</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No Sign-Up Required</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 95% ATS Pass Rate</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 8 Pro Templates</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free, No Sign-Up</span>
         </div>
       </div>
       <div class="hero-split-visual">
@@ -257,60 +288,102 @@ import "../styles/global.css"
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             </div>
             <h3>AI-Powered Writing</h3>
-            <p>Improve bullet points, generate summaries, and get skill suggestions with AI assistance.</p>
+            <p>Instantly improve bullet points, generate professional summaries, and get smart skill suggestions — all with AI assistance.</p>
           </div>
           <div class="card feature-card reveal reveal-delay-2">
             <div class="card-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
             </div>
             <h3>ATS Optimization</h3>
-            <p>All templates are designed to pass Applicant Tracking Systems with clean, semantic layouts.</p>
+            <p>All templates are engineered to pass Applicant Tracking Systems with clean, semantic layouts that algorithms love.</p>
           </div>
           <div class="card feature-card reveal reveal-delay-3">
             <div class="card-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 00 0 1.4l1.6 1.6a1 1 0 00 1.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
             </div>
-            <h3>Keyword Matching</h3>
-            <p>Match your resume keywords to job descriptions and improve your chances of getting interviewed.</p>
+            <h3>Keyword Gap Analysis</h3>
+            <p>Match your resume against any job description and instantly see which keywords you're missing to boost your score.</p>
           </div>
           <div class="card feature-card reveal reveal-delay-4">
             <div class="card-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             </div>
-            <h3>Resume Scoring</h3>
-            <p>Get a real-time ATS score as you build. Know exactly where your resume stands before you apply.</p>
+            <h3>Real-Time Scoring</h3>
+            <p>Watch your ATS score update live as you build your resume. Know exactly where you stand before you hit submit.</p>
           </div>
           <div class="card feature-card reveal reveal-delay-5">
             <div class="card-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <h3>Cover Letter Generator</h3>
-            <p>Generate a matching cover letter with one click. Syncs with your resume data automatically.</p>
+            <p>Generate a matching cover letter in one click that syncs with your resume data automatically. No retyping needed.</p>
           </div>
           <div class="card feature-card reveal reveal-delay-6">
             <div class="card-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
             </div>
             <h3>8 Premium Templates</h3>
-            <p>Classic, Modern, Professional, Creative, Minimal, Executive, Two-Column, and Tech designs.</p>
+            <p>Classic, Modern, Professional, Creative, Minimal, Executive, Two-Column, and Tech — each with 7 customizable color themes.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="social-proof reveal">
-      <div class="social-proof-grid">
-        <div class="social-proof-item">
-          <div class="stat">100,000+</div>
-          <div class="label">Resumes Created</div>
+      <div class="container-content" style="text-align:center">
+        <span class="eyebrow" style="margin-bottom:2rem">Trusted by Job Seekers Worldwide</span>
+        <div class="social-proof-grid">
+          <div class="social-proof-item">
+            <div class="stat">100,000+</div>
+            <div class="label">Resumes Created</div>
+          </div>
+          <div class="social-proof-item">
+            <div class="stat">95%</div>
+            <div class="label">ATS Pass Rate</div>
+          </div>
+          <div class="social-proof-item">
+            <div class="stat">4.9★</div>
+            <div class="label">User Rating</div>
+          </div>
+          <div class="social-proof-item">
+            <div class="stat">100%</div>
+            <div class="label">Free, No Sign-Up</div>
+          </div>
         </div>
-        <div class="social-proof-item">
-          <div class="stat">95%</div>
-          <div class="label">ATS Compatibility</div>
+      </div>
+    </section>
+
+    <section class="section section-alt reveal">
+      <div class="container-content">
+        <div class="section-header reveal">
+          <span class="eyebrow">Four Simple Steps</span>
+          <h2>How It Works</h2>
+          <p>Create a professional, ATS-optimized resume in minutes — no experience needed.</p>
         </div>
-        <div class="social-proof-item">
-          <div class="stat">100%</div>
-          <div class="label">Free, No Sign-Up</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;counter-reset:step">
+          <div class="card feature-card reveal reveal-delay-1" style="text-align:center;padding:2rem 1.5rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">1</div>
+            <h3>Enter Your Details</h3>
+            <p style="font-size:0.875rem">Fill in your personal info, experience, education, and skills. Everything stays in your browser.</p>
+          </div>
+          <div class="card feature-card reveal reveal-delay-2" style="text-align:center;padding:2rem 1.5rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">2</div>
+            <h3>Optimize with AI</h3>
+            <p style="font-size:0.875rem">Use AI-powered suggestions to improve bullet points, generate summaries, and fill keyword gaps.</p>
+          </div>
+          <div class="card feature-card reveal reveal-delay-3" style="text-align:center;padding:2rem 1.5rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">3</div>
+            <h3>Choose a Template</h3>
+            <p style="font-size:0.875rem">Pick from 8 professional templates and 7 color themes. Preview changes instantly as you customize.</p>
+          </div>
+          <div class="card feature-card reveal reveal-delay-4" style="text-align:center;padding:2rem 1.5rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem">4</div>
+            <h3>Export as PDF</h3>
+            <p style="font-size:0.875rem">Download a print-ready PDF with one click. Your formatting stays perfect, ready to submit anywhere.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem">
+          <a href="#app" class="btn btn-gradient btn-lg pulse-glow">Start Building Free</a>
         </div>
       </div>
     </section>
@@ -383,11 +456,12 @@ import "../styles/global.css"
           </div>
         </div>
         <div id="preview-container" style="flex:1;display:flex;justify-content:center;padding:1.5rem;background:var(--gray-100);border-radius:var(--radius-lg);border:1px solid var(--gray-200);overflow-y:auto;position:relative">
-          <div id="resume-preview" style="width:210mm;min-height:297mm;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.06),0 16px 48px rgba(0,0,0,0.08);padding:0;font-size:12px;line-height:1.5;position:relative;overflow:hidden;border-radius:4px"></div>
+          <div id="resume-preview" style="width:210mm;min-height:297mm;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.06),0 16px 48px rgba(0,0,0,0.1);padding:0;font-size:12px;line-height:1.5;position:relative;overflow:hidden;border-radius:6px;transition:box-shadow 0.3s ease, border-radius 0.3s ease"></div>
         </div>
       </div>
 
       <div id="ai-panel" class="ai-panel">
+        <button id="ai-panel-close" onclick="document.getElementById('ai-panel').classList.remove('mobile-open')" style="position:absolute;top:0.5rem;right:0.75rem;background:var(--gray-100);border:none;border-radius:50%;width:28px;height:28px;display:none;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;color:var(--gray-500);line-height:1;z-index:1" aria-label="Close AI panel">&times;</button>
         <div class="card" style="flex-shrink:0">
           <div class="card-header"><span>AI Assistant ✦</span></div>
           <div class="card-body" style="padding:0.75rem;display:flex;flex-direction:column;gap:0.5rem">
@@ -418,7 +492,10 @@ import "../styles/global.css"
       </div>
     </div>
 
-    <div id="mobile-nav" class="mobile-nav" style="position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid var(--gray-200);z-index:50;padding:0.375rem 0.5rem;display:flex;justify-content:space-around;gap:0.25rem">
+    <button id="mobile-ai-toggle" class="mobile-ai-toggle" onclick="document.getElementById('ai-panel').classList.toggle('mobile-open')" aria-label="Toggle AI panel" style="position:fixed;bottom:5rem;right:1rem;width:48px;height:48px;border-radius:50%;background:var(--primary);color:white;border:none;box-shadow:0 4px 16px rgba(79,70,229,0.35);cursor:pointer;display:none;align-items:center;justify-content:center;z-index:60;font-size:1.125rem">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    </button>
+    <div id="mobile-nav" class="mobile-nav" style="position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid var(--gray-200);z-index:50;padding:0 0.25rem;display:flex;justify-content:space-around;gap:0.125rem">
       <button style="flex:1;display:flex;flex-direction:column;align-items:center;gap:0.125rem;padding:0.375rem;border:none;background:none;cursor:pointer;font-size:0.625rem;color:var(--gray-500);border-radius:6px" onclick="switchTab('personal')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         Profile
@@ -517,20 +594,22 @@ import "../styles/global.css"
           </div>
         </div>
 
-        <h3 style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin:2.5rem 0 1rem;letter-spacing:-0.01em">How to Use This Resume Builder</h3>
-        <p>Using our resume generator is simple. Start by filling in your personal information and professional summary. Add your work experience with bullet points highlighting key achievements. Include your education details, skills organized by category, notable projects, certifications, and languages. You can arrange sections in any order, toggle visibility, and see changes instantly in the live preview. When you're satisfied, export your resume as a PDF with one click.</p>
+        <div class="card card-bordered" style="padding:1.5rem">
+          <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem;letter-spacing:-0.01em">How to Use This Resume Builder</h3>
+          <p style="font-size:0.875rem;color:var(--gray-600);line-height:1.7;margin:0">Using our resume generator is simple. Start by filling in your personal information and professional summary in the sidebar. Add your work experience with bullet points highlighting achievements — our AI assistant can help strengthen your phrasing. Include education, skills, projects, certifications, and languages. Arrange sections in any order, toggle visibility on or off, and see every change reflected instantly in the live preview. When you're satisfied, export a clean, print-ready PDF with one click — no sign-up required.</p>
+        </div>
 
-        <h3 style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin:2.5rem 0 1rem;letter-spacing:-0.01em">Tips for Creating an Effective Resume</h3>
-        <p>When using our resume builder online, follow these tips for best results: Tailor your resume to each job application by adjusting keywords from the job description. Use action verbs and quantify achievements (e.g., "Increased sales by 30%"). Keep your resume to one page if you have less than 10 years of experience. Use a professional email address. Proofread carefully — a single typo can cost you an interview. Our resume CV builder helps you create a document that hiring managers will notice for all the right reasons.</p>
-
-        <p style="margin-top:2rem">Check your resume's <a href="/ats-score" style="color:var(--primary);text-decoration:none;font-weight:500">ATS compatibility score</a>, generate a matching <a href="/cover-letter" style="color:var(--primary);text-decoration:none;font-weight:500">cover letter</a>, or browse <a href="/resume-examples" style="color:var(--primary);text-decoration:none;font-weight:500">resume examples by industry</a>.</p>
+        <div class="card card-bordered" style="padding:1.5rem;margin-top:1rem">
+          <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem;letter-spacing:-0.01em">Tips for Creating an Effective Resume</h3>
+          <p style="font-size:0.875rem;color:var(--gray-600);line-height:1.7;margin:0">Tailor your resume to each job application by weaving in keywords from the job description. Use strong action verbs and quantify achievements — "Increased sales by 30%" beats "Responsible for sales." Keep to one page if you have under 10 years of experience. Use a professional email address, and proofread carefully — a single typo can cost you an interview. After building your resume, <a href="/ats-score" style="color:var(--primary);text-decoration:none;font-weight:500">check your ATS compatibility score</a>, <a href="/cover-letter" style="color:var(--primary);text-decoration:none;font-weight:500">generate a matching cover letter</a>, or <a href="/resume-examples" style="color:var(--primary);text-decoration:none;font-weight:500">browse resume examples by industry</a>.</p>
+        </div>
       </article>
     </div>
 
     <section class="capture reveal">
       <div class="capture-inner">
-        <h3>Get Weekly Resume Tips</h3>
-        <p>Join 10,000+ job seekers getting expert advice straight to their inbox.</p>
+        <h3>Weekly Resume Tips, Straight to Your Inbox</h3>
+        <p>Join 12,000+ job seekers getting expert ATS advice, keyword strategies, and career insights.</p>
         <form class="capture-form" onsubmit="event.preventDefault()">
           <input type="email" placeholder="your@email.com" required />
           <button type="submit">Subscribe</button>
@@ -539,10 +618,10 @@ import "../styles/global.css"
       </div>
     </section>
 
-    <div class="reveal" style="background:var(--primary-light);padding:3rem 1.5rem">
+    <div class="reveal" style="background:linear-gradient(180deg, var(--primary-light) 0%, transparent 100%);padding:3rem 1.5rem">
       <div style="max-width:960px;margin:0 auto">
-        <span class="eyebrow" style="text-align:center">Next Steps</span>
-        <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:1.25rem;text-align:center">Free Career Tools</h3>
+        <span class="eyebrow" style="text-align:center">Go Further</span>
+        <h3 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:1.25rem;text-align:center">More Free Career Tools</h3>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0.75rem">
           <a href="/" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
             <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
