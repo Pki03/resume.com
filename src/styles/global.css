@@ -87,6 +87,7 @@
   --gray-900: #f5f5ff;
 
   --primary-light: #2e2a5e;
+  --primary-50: #1e1a3e;
   --success-light: #1a3a2e;
   --warning-light: #3a2e1a;
   --error-light: #3a1a1a;
@@ -146,6 +147,7 @@
 
 [data-theme="dark"] .capture { background: var(--bg-alt) !important; }
 [data-theme="dark"] .capture-form input[type="email"] { background: var(--gray-75) !important; color: var(--gray-700) !important; }
+[data-theme="dark"] .section-tools { background: var(--bg-alt) !important; }
 
 html { scroll-behavior: smooth; }
 html.transitioning *, html.transitioning *::before, html.transitioning *::after { transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease !important; }
