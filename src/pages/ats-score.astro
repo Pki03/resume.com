@@ -325,7 +325,7 @@ import Layout from "../layouts/Layout.astro"
 
     function analyzeATS() {
       const resumeText = document.getElementById("resume-text").value.trim()
-      if (!resumeText) { alert("Please paste your resume content first."); return }
+      if (!resumeText) { Toast("Please paste your resume content first.", "warning"); return }
 
       const jobDesc = document.getElementById("job-description").value.trim()
       const btn = document.getElementById("analyze-btn")

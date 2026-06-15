@@ -20,7 +20,7 @@ import Layout from "../layouts/Layout.astro"
       <div class="card card-elevated" style="max-width:600px;margin:0 auto">
         <div class="card-body">
           <h2 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:1.25rem">Send Us a Message</h2>
-          <form onsubmit="event.preventDefault();alert('Thanks for reaching out! We\\'ll get back to you within 24-48 hours.');this.reset()">
+          <form onsubmit="event.preventDefault();Toast('Thanks for reaching out! We\'ll get back to you within 24-48 hours.','success');this.reset()">
             <div class="form-group">
               <label class="label">Your Name</label>
               <input type="text" class="input" required placeholder="John Doe" />

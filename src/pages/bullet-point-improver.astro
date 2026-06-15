@@ -374,7 +374,6 @@ import Layout from "../layouts/Layout.astro"
       const template = pickRandom(typeData.templates)
       let filled = template
       const placeholders = {
-        "{team_size}": String(Math.floor(Math.random() * 20) + 5),
         "{action}": lower.replace(/^(led|managed|directed|built|developed|engineered|authored|delivered|generated|optimized|streamlined|transformed)\s+/i, "").split(/\s+/).slice(0, 5).join(" ") || "key initiatives",
         "{result}": ["increased revenue by " + (Math.floor(Math.random() * 50) + 15) + "%", "reduced costs by " + (Math.floor(Math.random() * 30) + 10) + "%", "improved efficiency by " + (Math.floor(Math.random() * 40) + 20) + "%", "boosted productivity by " + (Math.floor(Math.random() * 35) + 25) + "%"][Math.floor(Math.random() * 4)],
         "{timeframe}": pickRandom(["6 months", "12 months", "Q1", "the fiscal year", "2 quarters", "the first half"]),
@@ -453,7 +452,7 @@ import Layout from "../layouts/Layout.astro"
 
     function improveBullet() {
       const input = document.getElementById("bullet-input").value.trim()
-      if (!input) { alert("Please paste a weak bullet point first."); return }
+      if (!input) { Toast("Please paste a weak bullet point first.", "warning"); return }
 
       const type = document.getElementById("bullet-type").value
       const typeData = WORD_MAP[type]

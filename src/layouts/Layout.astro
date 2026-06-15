@@ -63,6 +63,8 @@ const year = new Date().getFullYear()
     </style>
   </head>
   <body>
+    <a href="#main-content" class="skip-to-content" id="skip-link">Skip to content</a>
+    <div id="toast-container" class="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
     <header style="border-bottom:1px solid var(--gray-100);background:rgba(255,255,255,0.92);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);position:sticky;top:0;z-index:50" id="site-header">
       <nav style="max-width:1280px;margin:0 auto;padding:0 2rem;height:var(--nav-height);display:flex;align-items:center;justify-content:space-between">
         <a href="/" style="display:flex;align-items:center;gap:0.5rem;font-weight:800;font-size:1.125rem;color:var(--gray-900);text-decoration:none;letter-spacing:-0.03em">
@@ -109,7 +111,7 @@ const year = new Date().getFullYear()
       </div>
     </header>
 
-    <main style="flex:1">
+    <main style="flex:1" id="main-content" tabindex="-1">
       <slot />
     </main>
 
@@ -229,6 +231,51 @@ const year = new Date().getFullYear()
       }
       setTimeout(function() { html.classList.remove("transitioning") }, 300);
     }
+
+    window.Toast = function(message, type) {
+      type = type || "info";
+      var container = document.getElementById("toast-container");
+      if (!container) return;
+      var icons = { success: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>', error: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>', warning: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>', info: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' };
+      var el = document.createElement("div");
+      el.className = "toast toast-" + type;
+      el.innerHTML = (icons[type] || icons.info) + "<span>" + message + "</span>";
+      container.appendChild(el);
+      setTimeout(function() {
+        el.classList.add("toast-leave");
+        setTimeout(function() { if (el.parentNode) el.parentNode.removeChild(el); }, 250);
+      }, 3500);
+    };
+
+    window.openModal = function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.add("show");
+      el.setAttribute("aria-hidden", "false");
+      var firstFocusable = el.querySelector("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+      if (firstFocusable) setTimeout(function() { firstFocusable.focus(); }, 100);
+      document.addEventListener("keydown", window.__modalKeyHandler);
+    };
+
+    window.closeModal = function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove("show");
+      el.setAttribute("aria-hidden", "true");
+      document.removeEventListener("keydown", window.__modalKeyHandler);
+    };
+
+    window.__modalKeyHandler = function(e) {
+      if (e.key === "Escape") {
+        var openModal = document.querySelector(".modal-overlay.show");
+        if (openModal) window.closeModal(openModal.id);
+      }
+    };
+
+    document.addEventListener("click", function(e) {
+      var modal = e.target.closest(".modal-overlay");
+      if (modal && e.target === modal) window.closeModal(modal.id);
+    });
 
     if ("IntersectionObserver" in window) {
       var observer = new IntersectionObserver(function(entries) {

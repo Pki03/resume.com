@@ -453,13 +453,13 @@ import Layout from "../layouts/Layout.astro"
             if (topExp.description?.length) document.getElementById("cl-achievement").value = topExp.description[0]
           }
           updatePreview()
-        } else { alert("No resume data found. Create a resume first!") }
-      } catch(e) { alert("Could not import resume data.") }
+        } else { Toast("No resume data found. Create a resume first!", "warning") }
+      } catch(e) { Toast("Could not import resume data.", "warning") }
     }
 
     async function generateAICover() {
       const name = getVal("cl-name"), company = getVal("cl-company"), position = getVal("cl-position")
-      if (!name || !company || !position) { alert("Please fill in your name, company, and position first."); return }
+      if (!name || !company || !position) { Toast("Please fill in your name, company, and position first.", "warning"); return }
       try {
         let summary = "", experience = ""
         const d = localStorage.getItem("resumeData")
@@ -493,10 +493,10 @@ import Layout from "../layouts/Layout.astro"
           } else {
             el.innerHTML = '<div style="font-family:\'Inter\',sans-serif;color:#0f172a;line-height:1.6;padding:2rem"><div style="text-align:right;margin-bottom:1.5rem"><div style="font-size:1.2em;font-weight:700;color:#2563eb">' + escHtml(name) + '</div><div style="font-size:0.85em;color:#64748b">' + escHtml(getVal("cl-email")) + (getVal("cl-phone") ? " | " + escHtml(getVal("cl-phone")) : "") + '</div></div><div style="margin-bottom:1.5rem;font-size:0.85em;color:#64748b">' + fmtDate() + '</div><div style="margin-bottom:1rem;font-size:0.85em;color:#64748b">' + escHtml(company) + '</div><div style="margin-bottom:1.5rem;font-size:0.9em">' + salutation + '</div>' + body + '<div style="margin-top:2rem;font-size:0.9em">Sincerely,</div><div style="font-size:1em;font-weight:600;color:#2563eb;margin-top:0.25rem">' + escHtml(name) + '</div></div>'
           }
-        } else { alert("AI generation unavailable.") }
+        } else { Toast("AI generation unavailable.", "warning") }
         btn.disabled = false; btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> AI Generate'
       } catch(e) {
-        alert("AI service unavailable. Fill in the fields manually to generate a cover letter.")
+        Toast("AI service unavailable. Fill in the fields manually to generate a cover letter.", "warning")
         const btn = event?.target?.closest?.("button"); if(btn) { btn.disabled = false; btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> AI Generate' }
       }
     }

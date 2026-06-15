@@ -116,6 +116,18 @@ import "../styles/global.css"
       @keyframes scale-in { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
       .scale-in { animation: scale-in 0.2s ease-out; }
       .score-update { transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+      .dropdown-btn { display:flex;align-items:center;gap:0.5rem;width:100%;padding:0.5rem 0.75rem;border:none;background:none;font-size:0.8125rem;color:var(--gray-700);cursor:pointer;text-align:left;transition:background 0.1s; }
+      .dropdown-btn:hover { background: var(--gray-50); }
+      .remove-btn { position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px;transition:all 0.15s; }
+      .remove-btn:hover { color:var(--error);background:var(--gray-100); }
+      .theme-swatch { width:36px;height:36px;border-radius:999px;cursor:pointer;transition:transform 0.15s; }
+      .theme-swatch:hover { transform: scale(1.15); }
+      .toast { position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(1rem);background:var(--gray-900);color:#fff;padding:0.75rem 1.25rem;border-radius:var(--radius);font-size:0.8125rem;display:flex;align-items:center;gap:0.625rem;z-index:9999;opacity:0;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);pointer-events:none;box-shadow:0 4px 24px rgba(0,0,0,0.2);max-width:90vw; }
+      .toast.show { opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto; }
+      .toast-success { background:#16a34a; }
+      .toast-warning { background:#ea580c; }
+      .toast-info { background:var(--gray-900); }
+      .toast-icon { flex-shrink:0; }
     </style>
   </head>
   <body>
@@ -142,11 +154,11 @@ import "../styles/global.css"
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
             </button>
             <div id="header-more-dropdown" style="position:absolute;top:100%;right:0;margin-top:0.25rem;background:white;border:1px solid var(--gray-200);border-radius:var(--radius);box-shadow:var(--shadow-lg);z-index:100;min-width:140px;display:none;overflow:hidden">
-              <button onclick="loadSampleData();closeMoreMenu()" style="display:flex;align-items:center;gap:0.5rem;width:100%;padding:0.5rem 0.75rem;border:none;background:none;font-size:0.8125rem;color:var(--gray-700);cursor:pointer;text-align:left;transition:background 0.1s" onmouseover="this.style.background='var(--gray-50)'" onmouseout="this.style.background='none'">
+              <button onclick="loadSampleData();closeMoreMenu()" class="dropdown-btn">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                 Load Sample
               </button>
-              <button onclick="clearAll();closeMoreMenu()" style="display:flex;align-items:center;gap:0.5rem;width:100%;padding:0.5rem 0.75rem;border:none;background:none;font-size:0.8125rem;color:var(--error);cursor:pointer;text-align:left;transition:background 0.1s" onmouseover="this.style.background='var(--gray-50)'" onmouseout="this.style.background='none'">
+              <button onclick="clearAll();closeMoreMenu()" class="dropdown-btn" style="color:var(--error)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
                 Clear All
               </button>
@@ -469,7 +481,7 @@ import "../styles/global.css"
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
               Check ATS Score
             </button>
-            <button class="ai-panel-btn" onclick="document.getElementById('ai-optimize-modal')?.classList.add('show')">
+            <button class="ai-panel-btn" onclick="openModal('ai-optimize-modal')">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
               Improve Bullet Points
             </button>
@@ -518,13 +530,13 @@ import "../styles/global.css"
       </button>
     </div>
 
-    <div id="ai-optimize-modal" style="position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:200;display:none;align-items:center;justify-content:center;padding:1rem" onclick="if(event.target===this)this.classList.remove('show')">
-      <div style="background:white;border-radius:var(--radius-lg);max-width:480px;width:100%;max-height:80vh;overflow-y:auto;box-shadow:var(--shadow-lg)">
-        <div style="padding:1rem 1.25rem;border-bottom:1px solid var(--gray-100);display:flex;justify-content:space-between;align-items:center">
-          <h3 style="font-size:0.9375rem;font-weight:700;color:var(--gray-900)">AI Bullet Point Improver</h3>
-          <button onclick="document.getElementById('ai-optimize-modal').classList.remove('show')" style="background:none;border:none;font-size:1.25rem;color:var(--gray-400);cursor:pointer">&times;</button>
+    <div id="ai-optimize-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="ai-modal-title">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="ai-modal-title">AI Bullet Point Improver</h3>
+          <button onclick="closeModal('ai-optimize-modal')" class="modal-close" aria-label="Close">&times;</button>
         </div>
-        <div style="padding:1rem 1.25rem">
+        <div class="modal-body">
           <div class="form-group"><label class="label">Select Experience Entry</label>
             <select id="ai-exp-select" class="input" style="font-size:0.8125rem">
               <option value="">Choose an entry...</option>
@@ -732,6 +744,13 @@ import "../styles/global.css"
       const THEMES = { blue: "#4f46e5", green: "#16a34a", red: "#dc2626", purple: "#9333ea", orange: "#ea580c", teal: "#0d9488", slate: "#475569" }
       const THEME_LIGHTS = { blue: "#eef2ff", green: "#f0fdf4", red: "#fef2f2", purple: "#faf5ff", orange: "#fff7ed", teal: "#f0fdfa", slate: "#f8fafc" }
 
+      function Toast(message, type) {
+        var t = document.createElement("div"); t.className = "toast toast-" + (type||"info")
+        t.innerHTML = '<svg class="toast-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (type==="success"?'<path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>':type==="warning"?'<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>':'<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>') + '</svg><span>' + message + '</span>'
+        document.body.appendChild(t); requestAnimationFrame(function(){t.classList.add("show")})
+        setTimeout(function(){t.classList.remove("show");setTimeout(function(){t.remove()},300)},3500)
+      }
+
       function defaultData() {
         return { personalInfo: { fullName: "", email: "", phone: "", location: "", website: "", linkedin: "", title: "" }, summary: "", experience: [], education: [], skillCategories: [], projects: [], certifications: [], languages: [] }
       }
@@ -845,7 +864,7 @@ import "../styles/global.css"
         if (!data.experience.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>No experience added yet.</div>`
         data.experience.forEach((e, i) => {
           html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
-            <button onclick="removeItem('experience',${i})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px;transition:all 0.15s" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <button onclick="removeItem('experience',${i})" class="remove-btn">&times;</button>
             <div class="form-row">${input('experience',i,'company','Company','Acme Corp')}${input('experience',i,'position','Position','Software Engineer')}</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.625rem;margin-bottom:0.5rem">
               <div>${inputMonth('experience',i,'startDate','Start Date')}</div>
@@ -862,7 +881,7 @@ import "../styles/global.css"
         if (!data.education.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>No education added yet.</div>`
         data.education.forEach((e, i) => {
           html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
-            <button onclick="removeItem('education',${i})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <button onclick="removeItem('education',${i})" class="remove-btn">&times;</button>
             <div class="form-row">${input('education',i,'school','School','University')}${input('education',i,'degree','Degree','B.Sc.')}</div>
             <div class="form-row">${input('education',i,'field','Field','Computer Science')}${input('education',i,'gpa','GPA','3.8')}</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.625rem;margin-bottom:0.5rem">${inputMonth('education',i,'startDate','Start')}${inputMonth('education',i,'endDate','End')}</div>
@@ -877,7 +896,7 @@ import "../styles/global.css"
         if (!data.skillCategories.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><path d="M14.7 6.3a1 1 0 00 0 1.4l1.6 1.6a1 1 0 00 1.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>No skills added yet.</div>`
         data.skillCategories.forEach((cat, ci) => {
           html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
-            <button onclick="removeItem('skillCategories',${ci})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <button onclick="removeItem('skillCategories',${ci})" class="remove-btn">&times;</button>
             <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.625rem">
               <input class="input" style="flex:1;font-size:0.78125rem" value="${escHtml(cat.name)}" placeholder="Category name" oninput="updateNested('skillCategories',${ci},'name',this.value);saveState();renderPreview()" />
               <button class="btn btn-outline btn-sm" onclick="addSkill(${ci})">+ Skill</button>
@@ -903,7 +922,7 @@ import "../styles/global.css"
         if (!data.projects.length) html += `<div style="text-align:center;padding:2.5rem 0;color:var(--gray-400);font-size:0.8125rem"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block;opacity:0.4"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>No projects added yet.</div>`
         data.projects.forEach((p, i) => {
           html += `<div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.875rem;margin-bottom:0.625rem;position:relative">
-            <button onclick="removeItem('projects',${i})" style="position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:1rem;padding:0.125rem;line-height:1;border-radius:4px" onmouseover="this.style.color='var(--error)';this.style.background='var(--gray-100)'" onmouseout="this.style.color='var(--gray-400)';this.style.background='none'">&times;</button>
+            <button onclick="removeItem('projects',${i})" class="remove-btn">&times;</button>
             <div class="form-row">${input('projects',i,'name','Name','Project name')}${input('projects',i,'url','URL','github.com/...')}</div>
             <div class="form-group"><label class="label">Description</label><textarea class="input" style="min-height:52px" oninput="updateNested('projects',${i},'description',this.value);saveState();renderPreview()">${escHtml(p.description)}</textarea></div>
             <div class="form-group" style="margin-bottom:0"><label class="label">Technologies (comma-separated)</label><input class="input" value="${escHtml(p.technologies.join(", "))}" placeholder="React, Node.js, PostgreSQL" oninput="updateNested('projects',${i},'technologies',this.value.split(',').map(t=>t.trim()).filter(Boolean));saveState();renderPreview()" /></div>
@@ -944,7 +963,7 @@ import "../styles/global.css"
         const tems = ["classic","modern","professional","creative"]
         const tnames = ["Classic","Modern","Professional","Creative"]
         return `<div style="margin-bottom:1.25rem"><h3 class="section-title">Style Settings</h3><p class="section-desc">Customize the look of your resume.</p></div>
-          <div class="form-group"><label class="label">Color Theme</label><div style="display:flex;gap:0.5rem;flex-wrap:wrap">${Object.entries(THEMES).map(([k,v]) => `<button onclick="config.theme='${k}';updateConfig();renderSettings()" style="width:36px;height:36px;border-radius:999px;background:${v};border:${config.theme===k?'2.5px solid var(--gray-900)':'2.5px solid transparent'};cursor:pointer;transition:transform 0.15s;box-shadow:${config.theme===k?'0 0 0 3px white, 0 0 0 5px '+v:'none'}" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"></button>`).join("")}</div></div>
+          <div class="form-group"><label class="label">Color Theme</label><div style="display:flex;gap:0.5rem;flex-wrap:wrap">${Object.entries(THEMES).map(([k,v]) => `<button onclick="config.theme='${k}';updateConfig();renderSettings()" class="theme-swatch" style="background:${v};border:${config.theme===k?'2.5px solid var(--gray-900)':'2.5px solid transparent'};box-shadow:${config.theme===k?'0 0 0 3px white, 0 0 0 5px '+v:'none'}" aria-label="${k} theme"></button>`).join("")}</div></div>
           <div class="form-group"><label class="label">Template</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:0.375rem">${tems.map((t,i) => `<button onclick="config.template='${t}';updateConfig();renderSettings()" style="padding:0.625rem;border-radius:8px;border:${config.template===t?'2px solid var(--primary)':'1px solid var(--gray-200)'};background:${config.template===t?'var(--primary-light)':'white'};cursor:pointer;text-align:center;font-size:0.75rem;font-weight:500;color:${config.template===t?'var(--primary)':'var(--gray-700)'};transition:all 0.15s">${tnames[i]}</button>`).join("")}</div></div>
           <div class="form-group"><label class="label">Font Size</label><select class="input" onchange="config.fontSize=this.value;updateConfig()"><option value="small" ${c.fontSize==='small'?'selected':''}>Small</option><option value="medium" ${c.fontSize==='medium'?'selected':''}>Medium</option><option value="large" ${c.fontSize==='large'?'selected':''}>Large</option></select></div>
           <div class="form-group" style="margin-bottom:0"><label class="label">Visible Sections</label>${[["showSummary","Summary"],["showExperience","Experience"],["showEducation","Education"],["showSkills","Skills"],["showProjects","Projects"],["showCertifications","Certifications"],["showLanguages","Languages"]].map(([k,v]) => `<label style="display:flex;align-items:center;gap:0.5rem;padding:0.3125rem 0;font-size:0.8125rem;color:var(--gray-600);cursor:pointer"><input type="checkbox" ${c[k]?'checked':''} onchange="config.${k}=this.checked;updateConfig()" style="accent-color:var(--primary);width:16px;height:16px" /> ${v}</label>`).join("")}</div>`
@@ -1148,10 +1167,10 @@ import "../styles/global.css"
 
       function rewriteBullets() {
         const idx = parseInt(document.getElementById("ai-exp-select").value)
-        if (isNaN(idx) || !data.experience[idx]) return alert("Please select an experience entry first.")
+        if (isNaN(idx) || !data.experience[idx]) return Toast("Please select an experience entry first.", "warning")
         const exp = data.experience[idx]
         const bullets = exp.description
-        if (!bullets.length) return alert("This entry has no bullet points. Add some first!")
+        if (!bullets.length) return Toast("This entry has no bullet points. Add some first!", "warning")
         const loadingEl = document.getElementById("ai-loading"); const resultEl = document.getElementById("ai-result")
         loadingEl.style.display = "block"; resultEl.style.display = "none"
         setTimeout(function() {
@@ -1188,7 +1207,7 @@ import "../styles/global.css"
 
       function suggestSkills() {
         var title = data.personalInfo.title.toLowerCase()
-        if (!title) { alert("Please enter a job title first (in Personal section)."); return }
+        if (!title) { Toast("Please enter a job title first (in Personal section).", "warning"); return }
         switchTab("skills")
         var existing = new Set(data.skillCategories.flatMap(function(c) { return c.skills.map(function(s) { return s.name.toLowerCase() }) }))
         var skillMap = {
@@ -1220,7 +1239,7 @@ import "../styles/global.css"
           }
         })
         if (added) { saveState(); renderEditor(); renderPreview(); updateScore() }
-        alert(added ? "Added " + added + " suggested skills! Edit or remove them as needed." : "Your skills section already has good coverage. Add more manually if needed.")
+        Toast(added ? "Added " + added + " suggested skills! Edit or remove them as needed." : "Your skills section already has good coverage. Add more manually if needed.", added ? "success" : "info")
       }
 
       function toggleMoreMenu() {
