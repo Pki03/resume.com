@@ -84,7 +84,14 @@ import Layout from "../layouts/Layout.astro"
       <div class="card card-elevated">
         <div class="card-body">
           <div class="form-group">
-            <label class="label">Paste Your Resume Content</label>
+            <label class="label">Resume Content</label>
+            <div id="upload-zone" onclick="document.getElementById('file-input').click()" style="border:2px dashed var(--gray-300);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;cursor:pointer;transition:all 0.2s;margin-bottom:0.75rem;background:var(--gray-25)" onmouseover="this.style.borderColor='var(--primary)';this.style.background='var(--primary-light)'" onmouseout="this.style.borderColor='var(--gray-300)';this.style.background='var(--gray-25)'" ondragover="event.preventDefault();this.style.borderColor='var(--primary)';this.style.background='var(--primary-light)'" ondrop="event.preventDefault();handleFile(event.dataTransfer.files[0]);this.style.borderColor='var(--gray-300)'">
+              <input id="file-input" type="file" accept=".txt,.pdf,.docx" style="display:none" onchange="handleFile(this.files[0])" />
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.5rem;display:block"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <div style="font-size:0.875rem;font-weight:600;color:var(--gray-700);margin-bottom:0.25rem">Upload your resume file</div>
+              <div style="font-size:0.75rem;color:var(--gray-400)">Supports .txt, .pdf, .docx — or paste manually below</div>
+              <div id="upload-status" style="display:none;margin-top:0.5rem;font-size:0.8125rem;font-weight:500;color:var(--success)"></div>
+            </div>
             <textarea id="resume-text" class="input" rows="10" placeholder="Paste your resume text here. Include your summary, experience, education, skills, and certifications."></textarea>
           </div>
           <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:1.25rem;flex-wrap:wrap">
@@ -274,7 +281,7 @@ import Layout from "../layouts/Layout.astro"
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     const ACTION_VERBS = ["led","managed","developed","created","designed","implemented","built","launched","delivered","drove","established","generated","improved","increased","reduced","achieved","mentored","trained","coordinated","negotiated","optimized","spearheaded","transformed","architected","engineered","authored","championed","accelerated","expanded","streamlined"]
     const STANDARD_SECTIONS = ["experience","education","skills","summary","certifications","projects","languages","interests","publications","references"]
     const TECH_KEYWORDS = new Set(["python","java","javascript","typescript","react","node.js","aws","docker","kubernetes","sql","mongodb","redis","kafka","graphql","rest","api","git","linux","agile","scrum","ci/cd","jenkins","terraform","ansible","machine learning","deep learning","nlp","tensorflow","pytorch","cloud","microservices","devops","angular","vue","css","html","express","django","flask","spring","ruby","swift","kotlin","go","rust","c++","c#","azure","gcp","firebase","postgresql","mysql","dynamodb","elasticsearch","tableau","power bi","excel","sap","salesforce","blockchain","ai","llm","generative ai","data pipeline","etl","data warehouse","snowflake","databricks","spark","hadoop","terraform","puppet","chef","nginx","apache","wordpress","seo","a/b testing","jira","confluence","figma","sketch","photoshop","illustrator","canva","hadoop","kafka","rabbitmq","grpc","oauth","jwt","saml","ldap","sso","restful","soap","microservice","serverless","lambda","ec2","s3","rds","cloudfront","route53","vpc","iam"])
@@ -293,6 +300,85 @@ import Layout from "../layouts/Layout.astro"
       if (/(manager|director|head|lead|senior|junior|intern)/i.test(kw)) return "List job title chronologically in Experience section."
       if (/(certified|certification|certificate|license)/i.test(kw)) return "Add to Certifications section at the bottom."
       return "Incorporate naturally in Professional Summary and Experience section."
+    }
+
+    function handleFile(file) {
+      if (!file) return
+      const status = document.getElementById("upload-status")
+      const zone = document.getElementById("upload-zone")
+      const ext = file.name.split(".").pop().toLowerCase()
+      status.style.display = "block"
+      status.style.color = "var(--gray-500)"
+      status.textContent = "Reading " + file.name + "..."
+
+      if (ext === "txt") {
+        const reader = new FileReader()
+        reader.onload = function(e) {
+          document.getElementById("resume-text").value = e.target.result
+          zone.style.borderColor = "var(--success)"
+          status.style.color = "var(--success)"
+          status.textContent = "✓ " + file.name + " loaded (" + (e.target.result.length) + " chars)"
+        }
+        reader.readAsText(file)
+      } else if (ext === "pdf") {
+        const script = document.createElement("script")
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"
+        script.onload = function() {
+          pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"
+          const reader = new FileReader()
+          reader.onload = async function(e) {
+            try {
+              const pdf = await pdfjsLib.getDocument({ data: e.target.result }).promise
+              let text = ""
+              for (let i = 1; i <= Math.min(pdf.numPages, 10); i++) {
+                const page = await pdf.getPage(i)
+                const content = await page.getTextContent()
+                text += content.items.map(function(item) { return item.str }).join(" ") + "\n"
+              }
+              document.getElementById("resume-text").value = text.trim()
+              zone.style.borderColor = "var(--success)"
+              status.style.color = "var(--success)"
+              status.textContent = "✓ " + file.name + " loaded (" + text.length + " chars)"
+            } catch(err) {
+              status.style.color = "var(--error)"
+              status.textContent = "✕ Could not read PDF: " + err.message
+            }
+          }
+          reader.readAsArrayBuffer(file)
+        }
+        script.onerror = function() {
+          status.style.color = "var(--error)"
+          status.textContent = "✕ Failed to load PDF parser. Check your internet connection."
+        }
+        document.head.appendChild(script)
+      } else if (ext === "docx") {
+        const script = document.createElement("script")
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"
+        script.onload = function() {
+          const reader = new FileReader()
+          reader.onload = async function(e) {
+            try {
+              const result = await mammoth.extractRawText({ arrayBuffer: e.target.result })
+              document.getElementById("resume-text").value = result.value.trim()
+              zone.style.borderColor = "var(--success)"
+              status.style.color = "var(--success)"
+              status.textContent = "✓ " + file.name + " loaded (" + result.value.length + " chars)"
+            } catch(err) {
+              status.style.color = "var(--error)"
+              status.textContent = "✕ Could not read DOCX: " + err.message
+            }
+          }
+          reader.readAsArrayBuffer(file)
+        }
+        script.onerror = function() {
+          status.style.color = "var(--error)"
+          status.textContent = "✕ Failed to load DOCX parser. Check your internet connection."
+        }
+        document.head.appendChild(script)
+      } else {
+        status.style.color = "var(--error)"
+        status.textContent = "✕ Unsupported file format. Please use .txt, .pdf, or .docx."
+      }
     }
 
     function loadFromBuilder() {
