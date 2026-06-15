@@ -62,7 +62,13 @@ const relatedGuides = blogPosts.filter(p =>
 
             <hr class="sidebar-divider" />
 
-            <a href="/" class="btn btn-primary btn-block">Build Your {title} Resume</a>
+            <button id="build-example-btn" class="btn btn-primary btn-block" data-title={title} data-skills={JSON.stringify(skills)}>Build Your {title} Resume</button>
+            <script>
+              document.getElementById('build-example-btn')?.addEventListener('click', function() {
+                try { localStorage.setItem('exampleData', JSON.stringify({title: this.dataset.title, skills: JSON.parse(this.dataset.skills || '[]')})); } catch(e) {}
+                window.location.href = '/';
+              });
+            </script>
           </div>
         </div>
       </div>
