@@ -270,24 +270,131 @@ import HowItWorks from "../components/HowItWorks.astro"
   </section>
 
   <script is:inline>
-    const ACTION_VERBS = ["led","managed","developed","created","designed","implemented","built","launched","delivered","drove","established","generated","improved","increased","reduced","achieved","mentored","trained","coordinated","negotiated","optimized","spearheaded","transformed","architected","engineered","authored","championed","accelerated","expanded","streamlined"]
-    const STANDARD_SECTIONS = ["experience","education","skills","summary","certifications","projects","languages","interests","publications","references"]
-    const TECH_KEYWORDS = new Set(["python","java","javascript","typescript","react","node.js","aws","docker","kubernetes","sql","mongodb","redis","kafka","graphql","rest","api","git","linux","agile","scrum","ci/cd","jenkins","terraform","ansible","machine learning","deep learning","nlp","tensorflow","pytorch","cloud","microservices","devops","angular","vue","css","html","express","django","flask","spring","ruby","swift","kotlin","go","rust","c++","c#","azure","gcp","firebase","postgresql","mysql","dynamodb","elasticsearch","tableau","power bi","excel","sap","salesforce","blockchain","ai","llm","generative ai","data pipeline","etl","data warehouse","snowflake","databricks","spark","hadoop","terraform","puppet","chef","nginx","apache","wordpress","seo","a/b testing","jira","confluence","figma","sketch","photoshop","illustrator","canva","hadoop","kafka","rabbitmq","grpc","oauth","jwt","saml","ldap","sso","restful","soap","microservice","serverless","lambda","ec2","s3","rds","cloudfront","route53","vpc","iam"])
+    const ACTION_VERBS_BASIC = ["led","managed","developed","created","designed","implemented","built","launched","delivered","drove","established","generated","improved","increased","reduced","achieved","mentored","trained","coordinated","negotiated","optimized","spearheaded","transformed","architected","engineered","authored","championed","accelerated","expanded","streamlined","orchestrated","pioneered","revolutionized","executed","directed","formulated","supervised","facilitated","instituted","catalyzed","automated","integrated","consolidated","reengineered","overhauled","restructured","centralized","standardized","modernized","upgraded","migrated","deployed","configured","customized","conducted","managed","administered","organized","prepared","produced","published","wrote","composed","coded","programmed","developed","released","shipped","introduced","initiated","founded","established","built","constructed","assembled","fabricated","won","secured","acquired","obtained","attained","surpassed","exceeded","outpaced","outperformed"]
+    const ACTION_VERBS_ADVANCED = ["spearheaded","transformed","architected","engineered","authored","championed","accelerated","expanded","streamlined","orchestrated","pioneered","revolutionized","optimized","reengineered","consolidated","integrated","automated","facilitated","instituted","catalyzed","executed","formulated","directed","supervised","cultivated","fostered","influenced","negotiated","persuaded","evangelized","mobilized","operationalized","industrialized","commercialized","monetized","capitalized","leveraged","synergized","galvanized","propelled","supercharged","turbocharged","democratized","institutionalized","mainstreamed","normalized","pilot","prototyped","reimagined","reinvented","disrupted","innovated","patented","copyrighted","licensed","franchised","scaled","globalized","localized","personalized","trained","mentored","coached","sponsored","advised","consulted","partnered","collaborated","co-founded","bootstrapped"]
+    const ALL_ACTION_VERBS = new Set([...ACTION_VERBS_BASIC, ...ACTION_VERBS_ADVANCED])
+
+    const FLUFF_PHRASES = ["responsible for","duties included","duties include","responsible of","job duties","job responsibilities","tasked with","worked on","in charge of","handled","dealt with","involved in","participated in","was part of","worked as a","worked as an","acted as","role included","responsibilities included","responsibilities include","duties and responsibilities","primary responsibilities","key responsibilities","main duties"]
+
+    const QUANTIFIED_PATTERNS = [
+      /\d+%/,
+      /\$\s*[\d,]+(\.\d+)?/,
+      /\d+\s*(x|times|fold|percent|%|users|customers|clients|employees|team members|people|students|patients|projects|tasks|reports|documents|pages|articles|posts|videos|episodes|podcasts|events|webinars|workshops|sessions|hours|days|weeks|months|years|countries|cities|offices|locations|stores|branches|accounts|deals|sales|revenue|profit|loss|savings|cost)\b/i,
+      /increased|decreased|reduced|improved|grew|boosted|raised|lost|saved|generated|delivered|achieved|drove|drove\s+down|cut|slashed|lowered|raised|doubled|tripled|quadrupled/i,
+      /\d+\.?\d*\s*(million|billion|thousand|hundred|k|m|b|mm)\b/i,
+      /\d{2,}\s*[%$]/,
+      /(over|under|more\s+than|less\s+than)\s+\d+/i,
+      /\d{1,3}(,\d{3})+/,
+      /\d+\s*to\s*\d+/,
+    ]
+
+    const STAR_INDICATORS = [
+      /by\s+(implementing|creating|developing|launching|designing|building|leading|managing|leveraging|utilizing|using)/i,
+      /result(ing|ed)?\s+in/i,
+      /which\s+(led|resulted|contributed|helped|enabled|allowed)\s+(me|us|the\s+team|the\s+company)/i,
+      /enabling\s+(us|the\s+team|the\s+company)\s+to/i,
+      /through\s+(the\s+use|implementation|development|creation|leadership|application)/i,
+      /as\s+(evidenced|demonstrated|shown|measured)\s+by/i,
+      /leading\s+to\s+(a|an)/i,
+      /resulted?\s+in\s+(a|an|\d+)/i,
+      /contributing\s+to\s+(a|an|\d+)/i,
+      /that\s+(resulted|led|helped|enabled|allowed)\s+/i,
+    ]
+
+    const SECTION_ALIASES = [
+      { key: "summary", weight: 3, patterns: [/summary/i, /professional\s+summary/i, /profile/i, /about\s+me/i, /objective/i, /career\s+objective/i, /highlights/i, /qualifications\s+summary/i, /professional\s+profile/i, /personal\s+statement/i] },
+      { key: "experience", weight: 4, patterns: [/experience/i, /work\s+experience/i, /employment/i, /work\s+history/i, /professional\s+experience/i, /relevant\s+experience/i, /career\s+history/i, /professional\s+background/i, /internship/i, /internships/i] },
+      { key: "education", weight: 3, patterns: [/education/i, /academic/i, /academic\s+background/i, /educational/i, /qualifications/i, /training/i, /education\s+and\s+training/i] },
+      { key: "skills", weight: 3, patterns: [/skills/i, /technologies/i, /competencies/i, /technical\s+skills/i, /core\s+competencies/i, /expertise/i, /proficiencies/i, /technical/i, /tools\s+(and\s+technologies|used)/i, /skill\s+set/i] },
+      { key: "certifications", weight: 2, patterns: [/certifications/i, /certificates/i, /licenses/i, /licenses\s+(and|&)\s+certifications/i, /professional\s+certifications/i, /credentials/i, /certifications\s+and\s+licenses/i] },
+      { key: "projects", weight: 2, patterns: [/projects/i, /project\s+experience/i, /personal\s+projects/i, /key\s+projects/i, /side\s+projects/i, /selected\s+projects/i, /notable\s+projects/i] },
+      { key: "languages", weight: 1, patterns: [/languages/i, /language\s+proficiency/i, /linguistics/i, /spoken\s+languages/i] },
+      { key: "publications", weight: 1, patterns: [/publications/i, /papers/i, /research/i, /thesis/i, /patents/i, /research\s+experience/i] },
+      { key: "awards", weight: 1, patterns: [/awards/i, /honors/i, /achievements/i, /recognition/i, /accomplishments/i, /honors\s+and\s+awards/i] },
+      { key: "volunteering", weight: 1, patterns: [/volunteer/i, /volunteering/i, /community/i, /non.profit/i, /volunteer\s+experience/i, /community\s+involvement/i] },
+      { key: "leadership", weight: 1, patterns: [/leadership/i, /leadership\s+experience/i, /leadership\s+roles/i, /extracurricular/i] },
+      { key: "references", weight: 0, patterns: [/references/i, /referees/i] }
+    ]
+    const OPTIONAL_SECTIONS = new Set(["certifications","projects","languages","publications","awards","volunteering","leadership"])
+    const RECOMMENDED_SECTION_ORDER = ["summary","experience","education","skills","certifications","projects","leadership","publications","languages","awards","volunteering"]
+
+    const SYNONYM_MAP = {
+      "react": ["react.js","reactjs","react js","react native","next.js","nextjs"],
+      "vue": ["vue.js","vuejs","vue js","nuxt","nuxt.js","nuxtjs"],
+      "angular": ["angular.js","angularjs","angular 2","angular 4","angular 5","angular 6","angular 7","angular 8","angular 9","angular 10","angular 11","angular 12","angular 13","angular 14","angular 15","angular 16","angular 17"],
+      "node.js": ["node","nodejs","node js","express.js","express","expressjs","express js"],
+      "python": ["python3","python 3","python2","python 2","anaconda","jupyter"],
+      "javascript": ["js","ecmascript","es6","es2015","es2016","es2017","es2018","es2019","es2020","es2021","es2022","es2023","vanilla js"],
+      "typescript": ["ts","type script","typescript"],
+      "aws": ["amazon web services","ec2","s3","lambda","cloudfront","route53","vpc","iam","amazon"],
+      "azure": ["microsoft azure","azure devops","azure functions","azure cloud"],
+      "gcp": ["google cloud","google cloud platform","g suite"],
+      "docker": ["container","containerization","dockerfile","docker compose","docker-compose"],
+      "kubernetes": ["k8s","kube","kubernetes cluster","eks","aks","gke"],
+      "machine learning": ["ml","deep learning","neural network","neural networks","supervised learning","unsupervised learning","reinforcement learning","nlp","natural language processing","computer vision","cv","tensorflow","pytorch","keras","scikit-learn","sklearn","xgboost","lightgbm","catboost","hugging face","transformers","llm","large language model","generative ai","gen ai","genai","ai/ml","artificial intelligence"],
+      "sql": ["mysql","postgresql","postgres","sql server","microsoft sql","tsql","pl/sql","oracle sql","relational database","rdbms","sqlite","mariadb"],
+      "nosql": ["mongodb","cassandra","dynamodb","redis","couchbase","couchdb","firestore"],
+      "cloud": ["aws","azure","gcp","cloud computing","cloud infrastructure","cloud architecture","cloud native","saas","paas","iaas"],
+      "agile": ["scrum","kanban","sprint","sprint planning","daily standup","retrospective","agile methodology","agile development","safe","scaled agile"],
+      "ci/cd": ["jenkins","github actions","gitlab ci","circleci","travis ci","build pipeline","deployment pipeline","continuous integration","continuous deployment","continuous delivery","bitbucket pipelines","code pipeline"],
+      "devops": ["site reliability","sre","infrastructure as code","iac","terraform","ansible","puppet","chef","saltstack","helm","istio","linkerd","envoy"],
+      "testing": ["unit test","integration test","e2e","end to end","jest","mocha","cypress","playwright","selenium","puppeteer","junit","pytest","unittest","tdd","test driven","bdd","behavior driven"],
+      "data": ["data engineering","data pipeline","etl","data warehouse","data lake","data modeling","data architecture","data governance","data quality","data integration","big data","data science","data analysis","data analytics"],
+      "java": ["j2ee","j2se","javafx","spring","spring boot","hibernate","jpa","jdbc","maven","gradle","kotlin","jvm"],
+      ".net": ["c#","csharp","dotnet","asp.net","asp.net core","blazor","xamarin","unity","vb.net"],
+      "mobile": ["ios","android","swift","kotlin","react native","flutter","dart","xamarin","ionic","cordova","mobile development","iphone","ipad"],
+      "frontend": ["html","css","sass","scss","less","webpack","vite","rollup","parcel","babel","eslint","prettier"],
+      "design": ["figma","sketch","adobe xd","photoshop","illustrator","invision","zeplin","ui/ux","user interface","user experience","prototype","wireframe","design system","responsive design","mobile first"],
+      "project management": ["jira","confluence","asana","trello","monday.com","basecamp","notion","smartsheet","ms project","prince2","pmp","pmbok"],
+      "soft_skill_leadership": ["leadership","lead","leading","led","managed","management","mentor","coach","supervise","directed","head of","manager","director"],
+      "soft_skill_comm": ["communication","written communication","verbal communication","presentation","public speaking","interpersonal","negotiation","persuasion"],
+      "soft_skill_team": ["teamwork","collaboration","team player","cross functional","cross-functional","multidisciplinary","stakeholder"],
+      "soft_skill_analyze": ["analytical","problem solving","critical thinking","strategic thinking","decision making","data driven","quantitative","qualitative","root cause"],
+    }
+
     const SOFT_SKILLS = new Set(["leadership","communication","teamwork","problem solving","critical thinking","time management","adaptability","creativity","collaboration","mentoring","negotiation","presentation","written communication","verbal communication","decision making","analytical","strategic thinking","attention to detail","organization","project management","stakeholder management","conflict resolution","emotional intelligence","growth mindset","self-motivated","result-oriented","detail-oriented","customer focused","client facing","cross functional","team player","fast paced","deadline driven","interpersonal","public speaking","change management","vendor management","budget management","p&l","kpi","okr","sla","sop","rca","root cause","continuous improvement","lean","six sigma","process improvement","risk management","compliance","audit","governance"])
 
-    function categorizeKeyword(kw) {
-      if (TECH_KEYWORDS.has(kw)) return "Technical"
+    function getKeywordCategory(kw) {
+      for (const [synonymGroup, variations] of Object.entries(SYNONYM_MAP)) {
+        if (synonymGroup === kw || variations.includes(kw)) {
+          if (synonymGroup.startsWith("soft_skill_")) return "Soft Skill"
+          if (synonymGroup === "testing" || synonymGroup === "design" || synonymGroup === "project management") return "General"
+          return "Technical"
+        }
+      }
+      if (/manager|director|head|lead|senior|junior|intern|vp|s?vp|executive|chief|principal|staff/i.test(kw)) return "Role/Title"
+      if (/(certified|certification|certificate|license|diploma|degree|bachelor|master|phd)/i.test(kw)) return "Credential"
       if (SOFT_SKILLS.has(kw)) return "Soft Skill"
       return "General"
     }
 
     function suggestWhereToAdd(kw) {
-      const cat = categorizeKeyword(kw)
-      if (cat === "Technical") return "Add to Skills section. Mention in Experience bullets with context on how you used it."
-      if (cat === "Soft Skill") return "Demonstrate in Professional Summary. Provide examples in Experience section."
-      if (/(manager|director|head|lead|senior|junior|intern)/i.test(kw)) return "List job title chronologically in Experience section."
-      if (/(certified|certification|certificate|license)/i.test(kw)) return "Add to Certifications section at the bottom."
+      const cat = getKeywordCategory(kw)
+      if (cat === "Technical") return "Add to Skills section. Mention in Experience bullets with context."
+      if (cat === "Soft Skill") return "Demonstrate in Professional Summary. Show examples in Experience."
+      if (cat === "Role/Title") return "List this job title in your Experience section."
+      if (cat === "Credential") return "Add to Certifications or Education section."
       return "Incorporate naturally in Professional Summary and Experience section."
+    }
+
+    function getStem(str) {
+      return str.replace(/[^a-z0-9]/g, "").replace(/(?:ing|tion|ed|s|ly|ment|ive|able|al|ize|ise)$/, "").substring(0, 25)
+    }
+
+    function findSynonymMatches(resumeLower, keyword) {
+      const kw = keyword.toLowerCase()
+      if (resumeLower.includes(kw)) return true
+      for (const [group, variations] of Object.entries(SYNONYM_MAP)) {
+        if (kw === group || variations.includes(kw)) {
+          for (const v of variations) {
+            if (resumeLower.includes(v)) return true
+          }
+          if (group !== kw && resumeLower.includes(group)) return true
+        }
+      }
+      const stem = getStem(kw)
+      if (stem.length > 3 && resumeLower.includes(stem)) return true
+      return false
     }
 
     function handleFile(file) {
@@ -413,86 +520,280 @@ import HowItWorks from "../components/HowItWorks.astro"
     function computeATSScore(text, jobDesc) {
       const lines = text.split("\n").filter(Boolean)
       const lower = text.toLowerCase()
+      const allWords = text.split(/[\s,;.()]+/).filter(w => w.length > 2)
+      const lowerWords = allWords.map(w => w.toLowerCase())
 
-      let score = 0, scores = { keywords: 0, format: 15, contactInfo: 0, sections: 0, actionVerbs: 0 }
-      let keywordsFound = [], keywordsMissing = [], fixes = []
+      let score = 0
+      const maxScores = { keywords: 30, format: 15, contactInfo: 15, sections: 25, actionVerbs: 15 }
+      let breakdown = { keywords: 0, format: 15, contactInfo: 0, sections: 0, actionVerbs: 0 }
+      let keywordsFound = [], keywordsMissing = [], fixes = [], extras = {}
 
+      function addFix(issue, current, suggested, section) {
+        fixes.push({ issue, current, suggested, section })
+      }
+
+      // =====================================================
+      // 1. CONTACT INFO (max 15 points)
+      // =====================================================
       const hasEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/.test(text)
-      const hasPhone = /[\+]?[\d\(\)\-\s]{7,}/.test(text)
-      const hasLinkedIn = /linkedin\.com/i.test(text)
+      const hasPhone = /[\+]?[\d\(\)\-\s]{10,}/.test(text)
+      const hasLinkedIn = /linkedin\.com\/in\//i.test(text)
+      const hasLinkedInGeneric = /linkedin\.com/i.test(text)
+      const hasLocation = /[A-Z][a-zA-Z]+(?:\s[A-Z][a-zA-Z]+)*,\s*[A-Z]{2}/.test(text)
+      const hasGithub = /github\.com\/(?!search|explore|topics)/i.test(text)
+      const hasPortfolio = /(portfolio|personal\s+website|my\s+website|my\s+site)/i.test(text)
+      const hasTitleLine = /^[A-Z][a-zA-Z]+(?:\s[A-Z][a-zA-Z]+)*\s*(\||–|—|-)\s*/m.test(text)
+
       let contactScore = 0
-      if (hasEmail) contactScore += 4
-      if (hasPhone) contactScore += 3
-      if (hasLinkedIn) contactScore += 3
-      scores.contactInfo = contactScore
-      score += contactScore
-      if (hasEmail) keywordsFound.push("email")
-      if (hasPhone) keywordsFound.push("phone")
-      if (hasLinkedIn) keywordsFound.push("LinkedIn")
-      if (!hasLinkedIn) keywordsMissing.push("LinkedIn URL")
-      if (!hasEmail) { fixes.push({ issue: "Missing email address", current: "No email found", suggested: "Add a professional email address", section: "Contact" }) }
+      if (hasEmail) { contactScore += 3; keywordsFound.push("email") }
+      if (hasPhone) { contactScore += 2; keywordsFound.push("phone") }
+      if (hasLinkedIn) { contactScore += 3; keywordsFound.push("LinkedIn") }
+      else if (hasLinkedInGeneric) { contactScore += 2 }
+      if (hasLocation) { contactScore += 2; keywordsFound.push("location") }
+      if (hasGithub || hasPortfolio) { contactScore += 3; keywordsFound.push(hasGithub ? "GitHub" : "Portfolio") }
+      if (hasTitleLine) { contactScore += 2; keywordsFound.push("professional title") }
+      breakdown.contactInfo = Math.min(15, contactScore)
+      score += breakdown.contactInfo
 
-      let sectionScore = 0
-      const hasSummary = /summary|profile|about\s*me/i.test(lower)
-      const hasExperience = /experience|employment|work\s*history/i.test(lower)
-      const hasEducation = /education|academic/i.test(lower)
-      const hasSkills = /skills|technologies|competencies/i.test(lower)
-      if (hasSummary) { sectionScore += 5; keywordsFound.push("Summary section") }
-      if (hasExperience) { sectionScore += 6; keywordsFound.push("Experience section") }
-      if (hasEducation) { sectionScore += 5; keywordsFound.push("Education section") }
-      if (hasSkills) { sectionScore += 4; keywordsFound.push("Skills section") }
-      scores.sections = sectionScore
-      score += sectionScore
-      if (!hasSummary) fixes.push({ issue: "Missing professional summary", current: "No summary section detected", suggested: "Add a 2-3 sentence professional summary at the top", section: "Summary" })
-      if (!hasExperience) fixes.push({ issue: "Missing work experience", current: "No experience section found", suggested: "Add a dedicated Experience section with your work history", section: "Experience" })
-      if (!hasEducation) fixes.push({ issue: "Missing education section", current: "No education section found", suggested: "Add your educational background", section: "Education" })
+      if (!hasEmail) addFix("Missing email address", "No email found", "Add a professional email address at the top of your resume", "Contact")
+      if (!hasPhone) addFix("Missing phone number", "No phone number found", "Add a phone number where recruiters can reach you", "Contact")
+      if (!hasLinkedIn) addFix("Missing LinkedIn URL", "LinkedIn profile not found", "Add your full LinkedIn URL (linkedin.com/in/yourname)", "Contact")
+      if (!hasLocation) addFix("Missing location", "No city, state found", "Add your location (City, State) — many ATS filters screen by location", "Contact")
+      if (!hasGithub && !hasPortfolio) addFix("Missing portfolio or GitHub", "No portfolio link found", "Add a link to your GitHub, portfolio, or personal website", "Contact")
 
-      let verbCount = 0, totalBullets = 0
-      lines.forEach(line => {
-        const trimmed = line.replace(/^[•\-\*]\s*/, "").trim()
-        if (trimmed.length > 10) {
-          totalBullets++
-          const firstWord = trimmed.toLowerCase().split(/\s+/)[0]
-          if (ACTION_VERBS.includes(firstWord)) verbCount++
+      // =====================================================
+      // 2. SECTIONS & STRUCTURE (max 25 points)
+      // =====================================================
+      let detected = {}
+      SECTION_ALIASES.forEach(({ key, weight, patterns }) => {
+        for (const pat of patterns) {
+          const match = lower.match(pat)
+          if (match) {
+            const lineIdx = lines.findIndex(l => pat.test(l.toLowerCase()))
+            detected[key] = { present: true, weight, lineIndex: lineIdx >= 0 ? lineIdx : 999 }
+            break
+          }
         }
       })
+
+      const presentOrder = RECOMMENDED_SECTION_ORDER
+        .filter(s => detected[s])
+        .sort((a, b) => detected[a].lineIndex - detected[b].lineIndex)
+
+      let sectionScore = 0
+      let hasSummary = detected.summary
+      let hasExperience = detected.experience
+      let hasEducation = detected.education
+      let hasSkills = detected.skills
+
+      if (hasSummary) sectionScore += 4
+      if (hasExperience) sectionScore += 5
+      if (hasEducation) sectionScore += 4
+      if (hasSkills) sectionScore += 4
+      if (detected.certifications) sectionScore += 3
+      if (detected.projects) sectionScore += 2
+      if (detected.languages) sectionScore += 1
+      if (detected.awards) sectionScore += 1
+      if (detected.volunteering) sectionScore += 1
+
+      if (presentOrder.length >= 2) {
+        let correctOrder = 0
+        const ideal = RECOMMENDED_SECTION_ORDER
+        for (let i = 0; i < presentOrder.length; i++) {
+          const idealIdx = ideal.indexOf(presentOrder[i])
+          const prevIdealIdx = i === 0 ? -1 : ideal.indexOf(presentOrder[i - 1])
+          if (idealIdx > prevIdealIdx) correctOrder++
+        }
+        sectionScore += Math.min(3, Math.round((correctOrder / presentOrder.length) * 3))
+      }
+
+      if (!hasSummary) addFix("Missing professional summary", "No summary or profile section detected", "Add a 2-3 sentence professional summary at the top — it's the first thing recruiters read", "Summary")
+      if (!hasExperience) addFix("Missing work experience", "No experience section found", "Add a dedicated Experience section with your work history and bullet points", "Experience")
+      if (!hasEducation) addFix("Missing education section", "No education section found", "Add your educational background including degree, school, and graduation year", "Education")
+      if (!hasSkills) addFix("Missing skills section", "No skills section detected", "Add a Skills section listing your technical and professional competencies", "Skills")
+
+      breakdown.sections = Math.min(25, sectionScore)
+      score += breakdown.sections
+      extras.sections = { detected: Object.keys(detected), presentOrder }
+
+      // =====================================================
+      // 3. ACTION VERBS & CONTENT QUALITY (max 15 points)
+      // =====================================================
+      const bulletLines = lines.filter(l => /^[•\-\*–]\s*/.test(l.trim()))
+      const sentenceLines = lines.filter(l => {
+        const t = l.replace(/^[•\-\*–]\s*/, "").trim()
+        return t.length > 15 && !/^[A-Z\s]{3,}$/.test(t)
+      })
+
+      let verbCount = 0, advancedVerbCount = 0, uniqueVerbs = new Set()
+      let quantifiedCount = 0, starCount = 0, fluffCount = 0
+      let totalBullets = 0, shortBulletCount = 0, longBulletCount = 0
+      let totalWords = 0
+
+      sentenceLines.forEach(line => {
+        const trimmed = line.replace(/^[•\-\*–]\s*/, "").trim()
+        if (trimmed.length <= 15) return
+        totalBullets++
+        totalWords += trimmed.split(/\s+/).length
+
+        if (trimmed.length < 30) shortBulletCount++
+        if (trimmed.length > 200) longBulletCount++
+
+        const firstWord = trimmed.toLowerCase().split(/\s+/)[0]
+
+        if (ALL_ACTION_VERBS.has(firstWord)) {
+          verbCount++
+          uniqueVerbs.add(firstWord)
+          if (ACTION_VERBS_ADVANCED.includes(firstWord)) advancedVerbCount++
+        }
+
+        for (const pat of QUANTIFIED_PATTERNS) {
+          if (pat.test(trimmed)) { quantifiedCount++; break }
+        }
+
+        for (const pat of STAR_INDICATORS) {
+          if (pat.test(trimmed)) { starCount++; break }
+        }
+
+        for (const phrase of FLUFF_PHRASES) {
+          if (trimmed.toLowerCase().includes(phrase)) { fluffCount++; break }
+        }
+      })
+
       let verbScore = 0
       if (totalBullets > 0) {
-        const ratio = verbCount / totalBullets
-        verbScore = Math.min(15, Math.round(ratio * 15))
-      }
-      scores.actionVerbs = verbScore
-      score += verbScore
-      if (totalBullets > 0 && verbScore < 8) fixes.push({ issue: "Weak action verbs", current: `Only ${verbCount}/${totalBullets} bullets start with strong action verbs`, suggested: "Start bullets with: Led, Developed, Created, Implemented, Achieved", section: "Experience" })
-
-      if (jobDesc) {
-        const jdWords = jobDesc.toLowerCase().split(/[\s,;.()]+/).filter(w => w.length > 3)
-        const uniqueJd = [...new Set(jdWords)]
-        const stopWords = new Set(["this","that","with","from","have","been","will","their","they","what","when","where","which","about","into","than","then","also","more","some","such","only","other","over","very","just","should","these","those","looking","candidate","experience","skills","ability","strong","including","within"])
-        const importantKeywords = uniqueJd.filter(w => !stopWords.has(w) && isNaN(Number(w)) && w.length > 3)
-
-        let matched = 0
-        importantKeywords.forEach(kw => {
-          if (lower.includes(kw)) { matched++; keywordsFound.push(kw) }
-          else { keywordsMissing.push(kw) }
-        })
-        const kwScore = importantKeywords.length > 0 ? Math.min(30, Math.round((matched / importantKeywords.length) * 30)) : 15
-        scores.keywords = kwScore
-        score += kwScore
-        if (keywordsMissing.length > 3) fixes.push({ issue: "Missing key keywords", current: `Missing ${keywordsMissing.length} keywords from job description`, suggested: "Add: " + keywordsMissing.slice(0,5).join(", "), section: "Multiple" })
+        const verbRatio = verbCount / totalBullets
+        const advRatio = advancedVerbCount / Math.max(1, verbCount)
+        const varietyBonus = Math.min(3, uniqueVerbs.size / 3)
+        verbScore = Math.round(verbRatio * 8 + advRatio * 3 + varietyBonus)
+        verbScore = Math.min(15, verbScore)
       } else {
-        scores.keywords = 15
-        score += 15
+        verbScore = 2
+      }
+      breakdown.actionVerbs = verbScore
+      score += breakdown.actionVerbs
+
+      extras.contentQuality = { quantifiedCount, starCount, fluffCount, shortBulletCount, longBulletCount, uniqueVerbs: uniqueVerbs.size }
+
+      if (totalBullets > 0 && verbCount / totalBullets < 0.4) {
+        addFix("Too few action verbs", `Only ${verbCount}/${totalBullets} bullets start with strong verbs`, "Start bullets with powerful action verbs: Led, Developed, Created, Implemented, Achieved", "Experience")
+      }
+      if (advancedVerbCount === 0 && verbCount > 0) {
+        addFix("Action verbs lack variety", "Using only basic action verbs", "Mix in stronger verbs: Spearheaded, Orchestrated, Engineered, Accelerated, Transformed", "Experience")
+      }
+      if (totalBullets > 0 && quantifiedCount / totalBullets < 0.2) {
+        addFix("Few quantified achievements", `${quantifiedCount}/${totalBullets} bullets include numbers`, "Add metrics: percentages, dollar amounts, time saved, team sizes, revenue impact", "Experience")
+      }
+      if (fluffCount > 0) {
+        addFix("Weak phrases detected", `Found ${fluffCount} instances of fluff like "responsible for" or "duties included"`, "Replace passive phrases with strong action verbs and specific achievements", "Experience")
+      }
+      if (shortBulletCount > totalBullets * 0.3 && totalBullets > 0) {
+        addFix("Bullet points too short", `${shortBulletCount} bullets are under 30 characters`, "Expand each bullet to include context, action, and measurable result (STAR format)", "Experience")
+      }
+      if (longBulletCount > 0) {
+        addFix("Some bullets too long", `${longBulletCount} bullets exceed 200 characters`, "Keep bullets concise — aim for 1-2 lines each. Save details for the interview", "Experience")
       }
 
-      const hasTables = /<table|border|colspan|rowspan/i.test(text)
+      // =====================================================
+      // 4. KEYWORD MATCH (max 30 points)
+      // =====================================================
+      if (jobDesc) {
+        const jdWords = jobDesc.toLowerCase().split(/[\s,;.()]+/).filter(w => w.length > 2)
+        const uniqueJd = [...new Set(jdWords)]
+        const stopWords = new Set(["this","that","with","from","have","been","will","their","they","what","when","where","which","about","into","than","then","also","more","some","such","only","other","over","very","just","should","these","those","looking","candidate","experience","skills","ability","strong","including","within","while","them","could","would","shall","might","must","need","needs","may","can","has","had","after","before","upon","its","our","your","his","her","not","are","was","were","been","being","have","has","had","does","did","doing","get","gets","got","getting","make","makes","made","making","take","takes","took","taking","work","works","worked","working","use","uses","used","using","know","knowledge","new","first","last","best","great","good","well","high","low","top","bottom"])
+        const importantKeywords = uniqueJd.filter(w => !stopWords.has(w) && isNaN(Number(w)) && w.length > 2 && !/^\d/.test(w))
+
+        let exactMatchScore = 0, synonymMatchScore = 0, phraseMatchScore = 0
+        let jdMatchedExact = 0, jdMatchedSynonym = 0
+
+        importantKeywords.forEach(kw => {
+          const exactMatch = lower.includes(kw)
+          const phraseMatch = kw.includes(" ") && lower.includes(kw)
+          const synonymMatch = findSynonymMatches(lower, kw)
+
+          if (exactMatch || phraseMatch) {
+            jdMatchedExact++
+            keywordsFound.push(kw)
+            exactMatchScore += 1
+          } else if (synonymMatch) {
+            jdMatchedSynonym++
+            keywordsFound.push(`${kw} (via synonym)`)
+            synonymMatchScore += 0.6
+          } else {
+            keywordsMissing.push(kw)
+          }
+        })
+
+        const keywordCoverage = importantKeywords.length > 0 ? ((jdMatchedExact + jdMatchedSynonym * 0.5) / importantKeywords.length) : 0.5
+        const frequencyScore = (() => {
+          let freqOk = 0
+          importantKeywords.slice(0, 15).forEach(kw => {
+            const count = (lower.match(new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || []).length
+            if (count >= 1 && count <= 5) freqOk++
+          })
+          return importantKeywords.length > 0 ? freqOk / Math.min(15, importantKeywords.length) : 0.5
+        })()
+
+        let kwScore = Math.round(keywordCoverage * 20 + frequencyScore * 10)
+        kwScore = Math.min(30, Math.max(0, kwScore))
+        breakdown.keywords = kwScore
+        score += breakdown.keywords
+
+        if (keywordsMissing.length > 2) {
+          const missingStr = keywordsMissing.slice(0, 5).join(", ") + (keywordsMissing.length > 5 ? ` (+${keywordsMissing.length - 5} more)` : "")
+          addFix("Missing key job description keywords", `Missing ${keywordsMissing.length} keywords`, "Add these to your summary, skills, and experience: " + missingStr, "Keywords")
+        }
+      } else {
+        breakdown.keywords = 12
+        score += breakdown.keywords
+      }
+
+      // =====================================================
+      // 5. FORMAT & PARSABILITY (max 15, starts at 15)
+      // =====================================================
+      let formatScore = 15
+      const hasTables = /<table|border|colspan|rowspan/i.test(text) || /^\s*\|.*\|\s*$/.test(text) && /\|.*\|/.test(text)
       const hasColumns = /<col|\bcolumn\b/i.test(text)
-      if (hasTables || hasColumns) { score -= 5; fixes.push({ issue: "Tables or columns detected", current: "Resume may contain tables or column layouts", suggested: "Remove tables and columns — ATS cannot parse them correctly", section: "Format" }) }
-
       const hasHeaderFooter = /header|footer/i.test(lower) && (/(page|document)\s+\d/.test(lower) || /\d+\s*\/\s*\d+/.test(lower))
-      if (hasHeaderFooter) { score -= 3; fixes.push({ issue: "Header/footer detected", current: "Content may be in document headers or footers", suggested: "Move all content to the main body — ATS often misses header/footer content", section: "Format" }) }
+      const bulletStyles = [...new Set(lines.filter(l => /^[•\-\*–]\s*/.test(l.trim())).map(l => l.trim()[0]))]
+      const inconsistentBullets = bulletStyles.length > 1
 
-      const finalScore = Math.max(0, Math.min(100, score))
+      if (hasTables || hasColumns) {
+        formatScore -= 5
+        addFix("Tables or columns detected", "Resume may contain tables or column layouts", "Remove tables and columns — ATS cannot parse them correctly. Use a single-column layout", "Format")
+      }
+      if (hasHeaderFooter) {
+        formatScore -= 3
+        addFix("Content in header/footer", "Important content may be in document headers or footers", "Move all content to the main body — ATS often misses header/footer content", "Format")
+      }
+      if (inconsistentBullets) {
+        formatScore -= 2
+        addFix("Inconsistent bullet characters", `Mixing ${bulletStyles.join(", ")} as bullet characters`, "Use a single bullet character throughout (• or - consistently)", "Format")
+      }
+
+      const wordCount = allWords.length
+      const estimatedPages = wordCount / 300
+
+      if (wordCount < 150) {
+        formatScore -= 3
+        addFix("Resume too short", `Approximately ${wordCount} words (~${Math.max(1, Math.round(estimatedPages))} page)`, "Aim for 350-600 words for a strong, complete resume", "Format")
+      }
+      if (wordCount > 900) {
+        formatScore -= 2
+        addFix("Resume too long", `Approximately ${wordCount} words (~${Math.round(estimatedPages)} pages)`, "Keep your resume to 1-2 pages. Focus on the most recent and relevant experience", "Format")
+      }
+
+      const avgBulletWords = totalBullets > 0 ? Math.round(totalWords / totalBullets) : 0
+      if (avgBulletWords >= 8 && avgBulletWords <= 25) formatScore += 1
+      extras.format = { wordCount, estimatedPages, avgBulletWords, bulletStyles, inconsistentBullets }
+
+      breakdown.format = Math.max(0, Math.min(15, formatScore))
+      score += breakdown.format
+
+      // =====================================================
+      // FINAL CALCULATION
+      // =====================================================
+      const finalScore = Math.max(0, Math.min(100, Math.round(score)))
       const label = finalScore >= 80 ? "Excellent" : finalScore >= 60 ? "Good" : finalScore >= 40 ? "Needs Work" : "Poor"
 
       let summary = ""
@@ -500,7 +801,16 @@ import HowItWorks from "../components/HowItWorks.astro"
       else if (finalScore >= 60) summary = "Your resume is on the right track. Address the suggestions below to improve your score."
       else summary = "Your resume needs significant ATS optimization. Follow the suggestions below to increase your chances."
 
-      return { overallScore: finalScore, label, summary, breakdown: scores, keywordsFound: [...new Set(keywordsFound)], keywordsMissing: [...new Set(keywordsMissing)], fixes: fixes.slice(0, 6) }
+      return {
+        overallScore: finalScore,
+        label,
+        summary,
+        breakdown,
+        keywordsFound: [...new Set(keywordsFound)].slice(0, 30),
+        keywordsMissing: [...new Set(keywordsMissing)].slice(0, 20),
+        fixes: fixes.slice(0, 8),
+        extras
+      }
     }
 
     function displayResults(result) {
@@ -518,16 +828,18 @@ import HowItWorks from "../components/HowItWorks.astro"
       document.getElementById("result-label").textContent = result.label
       document.getElementById("result-summary").textContent = result.summary
 
-      const setBreakdown = (id, barId, value) => {
+      const maxValues = { keywords: 30, format: 15, contactInfo: 15, sections: 25, actionVerbs: 15 }
+      const setBreakdown = (id, barId, value, max) => {
         document.getElementById(id).textContent = value
         const bar = document.getElementById(barId)
-        requestAnimationFrame(() => { bar.style.width = value + "%" })
+        const pct = Math.min(100, Math.round((value / max) * 100))
+        requestAnimationFrame(() => { bar.style.width = pct + "%" })
       }
-      setBreakdown("breakdown-keywords", "bar-keywords", result.breakdown.keywords)
-      setBreakdown("breakdown-format", "bar-format", result.breakdown.format)
-      setBreakdown("breakdown-contact", "bar-contact", result.breakdown.contactInfo)
-      setBreakdown("breakdown-sections", "bar-sections", result.breakdown.sections)
-      setBreakdown("breakdown-verbs", "bar-verbs", result.breakdown.actionVerbs)
+      setBreakdown("breakdown-keywords", "bar-keywords", result.breakdown.keywords, 30)
+      setBreakdown("breakdown-format", "bar-format", result.breakdown.format, 15)
+      setBreakdown("breakdown-contact", "bar-contact", result.breakdown.contactInfo, 15)
+      setBreakdown("breakdown-sections", "bar-sections", result.breakdown.sections, 25)
+      setBreakdown("breakdown-verbs", "bar-verbs", result.breakdown.actionVerbs, 15)
 
       const kwSection = document.getElementById("keywords-section")
       if (result.keywordsMissing.length > 0) {
@@ -541,7 +853,7 @@ import HowItWorks from "../components/HowItWorks.astro"
         const gapList = document.getElementById("gap-list")
         const categorized = result.keywordsMissing.map(kw => ({
           keyword: kw,
-          category: categorizeKeyword(kw),
+          category: getKeywordCategory(kw),
           suggestion: suggestWhereToAdd(kw)
         }))
         const grouped = {}

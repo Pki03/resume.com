@@ -1234,60 +1234,125 @@ import HowItWorks from "../components/HowItWorks.astro"
         }
       }
 
-      const ACTION_VERBS = ["led","managed","developed","created","designed","implemented","built","launched","delivered","drove","established","generated","improved","increased","reduced","achieved","mentored","trained","coordinated","negotiated","optimized","spearheaded","transformed","architected","engineered","authored","championed","accelerated","expanded","streamlined"]
+      const ACTION_VERBS = ["led","managed","developed","created","designed","implemented","built","launched","delivered","drove","established","generated","improved","increased","reduced","achieved","mentored","trained","coordinated","negotiated","optimized","spearheaded","transformed","architected","engineered","authored","championed","accelerated","expanded","streamlined","orchestrated","pioneered","revolutionized","executed","directed","formulated","supervised","facilitated","instituted","catalyzed","automated","integrated","consolidated","reengineered","overhauled","restructured","centralized","modernized","upgraded","migrated","deployed","configured","customized","conducted","administered","organized","prepared","produced","published","wrote","composed","coded","programmed","released","shipped","introduced","initiated","founded","won","secured","acquired","attained","surpassed","exceeded","cultivated","fostered","influenced","persuaded","evangelized","mobilized","scaled","globalized","localized","coached","sponsored","advised","consulted","partnered","collaborated","pilot","prototyped","reimagined","reinvented","patented","licensed"]
+
+      const FLUFF_PHRASES = ["responsible for","duties included","duties include","responsible of","job duties","job responsibilities","tasked with","worked on","in charge of","handled","dealt with","involved in","participated in","was part of","worked as a","acted as","role included","responsibilities included","responsibilities include","primary responsibilities"]
+
+      const QUANTIFIED_PATTERNS = [/\d+%/,/\$\s*[\d,]+(\.\d+)?/,/\d+\s*(x|times|fold|users|customers|clients|employees|people|projects|tasks|accounts|sales|revenue|savings|cost)\b/i,/increased|decreased|reduced|improved|grew|boosted|raised|lost|saved|generated|delivered|achieved|drove|doubled|tripled|quadrupled|cut|slashed|lowered/i,/\d+\.?\d*\s*(million|billion|thousand|k|m|b)\b/i,/\d{2,}\s*[%$]/,/(over|under|more\s+than|less\s+than)\s+\d+/i,/\d{1,3}(,\d{3})+/]
+
+      const STAR_INDICATORS = [/by\s+(implementing|creating|developing|launching|designing|building|leading|leveraging)/i,/result(ing|ed)?\s+in/i,/which\s+(led|resulted|contributed|helped|enabled|allowed)/i,/enabling\s+(us|the\s+team|the\s+company)\s+to/i,/through\s+(the\s+use|implementation|development|creation|leadership)/i,/as\s+(evidenced|demonstrated|shown|measured)\s+by/i,/leading\s+to\s+(a|an)/i,/resulted?\s+in\s+(a|an|\d+)/i]
 
       function computeScore() {
-        const d = data; let score = 0; const maxScore = 100
+        const d = data; let score = 0
+
         const hasName = d.personalInfo.fullName.trim().length > 0
         const hasEmail = d.personalInfo.email.trim().length > 0
         const hasPhone = d.personalInfo.phone.trim().length > 0
         const hasTitle = d.personalInfo.title.trim().length > 0
+        const hasLinkedIn = d.personalInfo.linkedin.trim().length > 0
+        const hasLocation = d.personalInfo.location.trim().length > 0
+        const hasWebsite = d.personalInfo.website.trim().length > 0
         const contactComplete = hasName && hasEmail && hasPhone
-        if (contactComplete) score += 10
-        else if (hasName && (hasEmail || hasPhone)) score += 5
+        let contactPts = 0
+        if (contactComplete) contactPts += 4
+        else if (hasName && (hasEmail || hasPhone)) contactPts += 2
+        if (hasTitle) contactPts += 2
+        if (hasLinkedIn) contactPts += 2
+        if (hasLocation) contactPts += 1
+        if (hasWebsite) contactPts += 1
+        score += contactPts
 
         const hasSummary = d.summary.trim().length > 0
         const summaryWords = d.summary.trim().split(/\s+/).filter(Boolean).length
-        if (hasSummary && summaryWords >= 30 && summaryWords <= 100) score += 10
-        else if (hasSummary) score += 5
+        if (hasSummary && summaryWords >= 30 && summaryWords <= 100) score += 6
+        else if (hasSummary && summaryWords > 0) score += 3
+        if (hasSummary && /\d+/.test(d.summary)) score += 2
+        if (hasSummary && /\b(led|managed|developed|created|achieved|driven|passionate|experienced|expert|specialized)\b/i.test(d.summary)) score += 2
 
         const expCount = d.experience.length
-        if (expCount >= 2) score += 15
-        else if (expCount === 1) score += 8
+        if (expCount >= 3) score += 8
+        else if (expCount >= 2) score += 5
+        else if (expCount === 1) score += 3
 
-        let actionVerbCount = 0; let totalBullets = 0; let quantifiedBullets = 0
+        let expDepthPts = 0
+        d.experience.forEach(e => {
+          const bulletCount = e.description.length
+          if (bulletCount >= 4) expDepthPts += 2
+          else if (bulletCount >= 2) expDepthPts += 1
+          const hasDate = e.startDate || e.endDate
+          if (hasDate) expDepthPts += 0.5
+          if (e.company && e.company.trim().length > 0) expDepthPts += 0.5
+        })
+        score += Math.min(7, Math.round(expDepthPts))
+
+        let actionVerbCount = 0; let advancedVerbCount = 0; let uniqueVerbs = new Set()
+        let totalBullets = 0; let quantifiedBullets = 0
+        let fluffCount = 0; let starCount = 0
+        let shortBulletCount = 0
+
         d.experience.forEach(e => {
           e.description.forEach(b => {
             totalBullets++
-            const firstWord = b.trim().toLowerCase().split(/\s+/)[0] || ""
-            if (ACTION_VERBS.includes(firstWord)) actionVerbCount++
-            if (/\d+/.test(b)) quantifiedBullets++
+            const trimmed = b.trim()
+            const firstWord = trimmed.toLowerCase().split(/\s+/)[0] || ""
+            if (ACTION_VERBS.includes(firstWord)) {
+              actionVerbCount++
+              uniqueVerbs.add(firstWord)
+            }
+            for (const pat of QUANTIFIED_PATTERNS) {
+              if (pat.test(trimmed)) { quantifiedBullets++; break }
+            }
+            for (const pat of STAR_INDICATORS) {
+              if (pat.test(trimmed)) { starCount++; break }
+            }
+            for (const phrase of FLUFF_PHRASES) {
+              if (trimmed.toLowerCase().includes(phrase)) { fluffCount++; break }
+            }
+            if (trimmed.length < 30) shortBulletCount++
           })
         })
+
         if (totalBullets > 0) {
           const actionRatio = actionVerbCount / totalBullets
-          if (actionRatio >= 0.7) score += 10
-          else if (actionRatio >= 0.4) score += 5
+          if (actionRatio >= 0.7) score += 5
+          else if (actionRatio >= 0.4) score += 3
+          const varietyBonus = Math.min(3, uniqueVerbs.size / 3)
+          score += Math.min(3, Math.round(varietyBonus))
           const quantRatio = quantifiedBullets / totalBullets
-          if (quantRatio >= 0.4) score += 10
-          else if (quantRatio >= 0.2) score += 5
+          if (quantRatio >= 0.4) score += 5
+          else if (quantRatio >= 0.2) score += 3
+          else if (quantRatio > 0) score += 1
+          if (starCount / totalBullets >= 0.2) score += 3
+          if (fluffCount > 0) score -= Math.min(5, fluffCount)
+          if (shortBulletCount > totalBullets * 0.3) score -= 2
         }
 
-        const hasEducation = d.education.length > 0
-        if (hasEducation) score += 10
+        if (d.education.length > 0) {
+          score += 4
+          if (d.education[0].degree && d.education[0].school) score += 3
+          if (d.education.some(e => e.gpa && parseFloat(e.gpa) > 0)) score += 1
+        }
 
         const hasSkills = d.skillCategories.length > 0 && d.skillCategories.some(c => c.skills.length > 0)
-        if (hasSkills) score += 10
+        if (hasSkills) {
+          score += 5
+          const totalSkills = d.skillCategories.reduce((sum, c) => sum + c.skills.length, 0)
+          if (totalSkills >= 8) score += 2
+          else if (totalSkills >= 4) score += 1
+        }
 
-        if (d.projects.length > 0) score += 5
-        if (d.certifications.length > 0) score += 5
-        if (d.languages.length > 0) score += 5
+        if (d.projects.length > 0) {
+          score += 2
+          if (d.projects.some(p => p.description && p.description.length > 30)) score += 2
+        }
+        if (d.certifications.length > 0) score += 3
+        if (d.languages.length > 0) score += 2
 
         const hasResponsibleFor = (d.summary + JSON.stringify(d.experience)).toLowerCase().includes("responsible for")
-        if (hasResponsibleFor) score = Math.max(0, score - 10)
+        if (hasResponsibleFor) score = Math.max(0, score - 5)
 
-        const scorePct = Math.min(100, Math.round(score))
-        return { score: scorePct, label: scorePct >= 80 ? "Excellent" : scorePct >= 60 ? "Good" : scorePct >= 40 ? "Needs Work" : "Incomplete", actionVerbRatio: totalBullets > 0 ? actionVerbCount/totalBullets : 0, quantRatio: totalBullets > 0 ? quantifiedBullets/totalBullets : 0, totalBullets, hasResponsibleFor }
+        const scorePct = Math.min(100, Math.max(0, Math.round(score)))
+        return { score: scorePct, label: scorePct >= 80 ? "Excellent" : scorePct >= 60 ? "Good" : scorePct >= 40 ? "Needs Work" : "Incomplete", actionVerbRatio: totalBullets > 0 ? actionVerbCount/totalBullets : 0, quantRatio: totalBullets > 0 ? quantifiedBullets/totalBullets : 0, starRatio: totalBullets > 0 ? starCount/totalBullets : 0, totalBullets, hasResponsibleFor, fluffCount, hasLinkedIn, hasWebsite, contactPts, summaryWords }
       }
 
       function updateScore() {
@@ -1347,13 +1412,18 @@ import HowItWorks from "../components/HowItWorks.astro"
         if (result.score >= 80) tips.push("✅ Your resume looks strong! Consider tailoring it to each job application.")
         if (result.score >= 60 && result.score < 80) tips.push("👍 Good foundation! Add more quantified achievements to boost your score.")
         if (result.totalBullets === 0 && d.experience.length > 0) tips.push("💡 Add bullet point descriptions to your experience entries.")
-        if (result.actionVerbRatio < 0.4 && result.totalBullets > 0) tips.push("🎯 Start bullet points with strong action verbs (Led, Developed, Created, Implemented).")
-        if (result.quantRatio < 0.2 && result.totalBullets > 0) tips.push("📊 Add numbers to your bullet points — hiring managers love metrics!")
-        if (result.hasResponsibleFor) tips.push("⚠️ Avoid 'Responsible for' — use action verbs instead.")
-        if (!d.personalInfo.linkedin) tips.push("🔗 Add your LinkedIn profile URL for a more complete contact section.")
+        if (result.actionVerbRatio < 0.4 && result.totalBullets > 0) tips.push("🎯 Start bullets with strong action verbs (Led, Developed, Created, Implemented, Achieved).")
+        if (result.quantRatio < 0.2 && result.totalBullets > 0) tips.push("📊 Add metrics — hiring managers love percentages, dollar amounts, and scale.")
+        if (result.starRatio < 0.2 && result.totalBullets > 0) tips.push("🎬 Use STAR format: describe the Situation, Task, Action, and measurable Result.")
+        if (result.hasResponsibleFor) tips.push("⚠️ Replace 'Responsible for' with action verbs that show leadership and impact.")
+        if (result.fluffCount > 0) tips.push("✂️ Remove weak phrases like 'duties included' and 'tasked with' — use strong verbs instead.")
+        if (d.experience.length >= 1 && result.totalBullets > 0 && result.totalBullets / d.experience.length < 3) tips.push("📝 Aim for 3-5 bullet points per experience entry for adequate depth.")
+        if (!result.hasLinkedIn) tips.push("🔗 Add your LinkedIn profile URL — most recruiters check it.")
         if (!d.personalInfo.website && !d.personalInfo.linkedin) tips.push("🌐 Add a link to your portfolio, GitHub, or personal website.")
+        if (result.summaryWords > 0 && result.summaryWords < 20) tips.push("📋 Expand your professional summary to 2-3 sentences (30-80 words ideal).")
+        if (result.contactPts < 5) tips.push("📞 Complete your contact info: name, email, phone, title, LinkedIn, and location.")
         if (tips.length === 0) tips.push("💪 Great job! Your resume is well on its way. Keep refining!")
-        tipsEl.innerHTML = tips.slice(0, 3).map(t => `<p style="margin-bottom:0.375rem;padding:0.375rem 0.5rem;background:var(--gray-50);border-radius:6px">${t}</p>`).join("")
+        tipsEl.innerHTML = tips.slice(0, 4).map(t => `<p style="margin-bottom:0.375rem;padding:0.375rem 0.5rem;background:var(--gray-50);border-radius:6px">${t}</p>`).join("")
       }
 
       function populateAIModal() {
