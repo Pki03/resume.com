@@ -12,7 +12,7 @@ export function getStaticPaths() {
 
 const { slug, title, industry, level, summary, skills, sampleResume, tips } = Astro.props
 const pageTitle = `${title} Resume Example — 2025 Guide & Template`
-const pageDesc = `Free ${title.toLowerCase()} resume example for ${level.toLowerCase()} professionals. See a real resume sample, key skills, and ATS optimization tips to get hired.`
+const pageDesc = (summary.length > 155 ? summary.slice(0, 152) + "..." : summary) + " See a full resume sample, key skills, and ATS tips."
 const canonical = `https://getapplykit.com/resume-examples/${slug}`
 const moreExamples = resumeExamples.filter(r => r.slug !== slug).slice(0, 6)
 const keywords = title.toLowerCase().split(" ").filter(w => w.length > 3)

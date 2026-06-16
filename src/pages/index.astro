@@ -15,7 +15,7 @@ import HowItWorks from "../components/HowItWorks.astro"
     <meta property="og:title" content="Free Resume Builder - Create Professional Resumes Online" />
     <meta property="og:description" content="Build professional, ATS-friendly resumes online for free. Choose from multiple templates, customize colors, and export as PDF. No sign-up required." />
     <meta property="og:url" content="https://getapplykit.com" />
-    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image" content="https://getapplykit.com/og-image.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="pinterest-richpin" content="website" />
@@ -585,6 +585,15 @@ import HowItWorks from "../components/HowItWorks.astro"
             <div class="mobile-score-badge" id="mobile-score-badge" style="display:none;align-items:center;gap:0.375rem;background:var(--success);color:white;padding:0.1875rem 0.5rem;border-radius:999px;font-size:0.75rem;font-weight:600">0</div>
           </div>
         </div>
+        <div class="card" style="padding:0.75rem">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.375rem">
+            <span style="font-size:0.6875rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em">Completion</span>
+            <span id="completion-pct" style="font-size:0.75rem;font-weight:700;color:var(--primary)">0%</span>
+          </div>
+          <div style="background:var(--gray-100);border-radius:4px;height:5px;overflow:hidden">
+            <div id="completion-bar" style="background:linear-gradient(90deg,var(--primary),var(--primary-500));border-radius:4px;height:100%;width:0%;transition:width 0.5s ease-out"></div>
+          </div>
+        </div>
         <button class="btn btn-outline btn-sm" onclick="loadSampleData()" style="width:100%;justify-content:center;font-size:0.75rem;padding:0.5rem" title="Load a pre-filled sample resume">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           Load Sample Resume
@@ -973,6 +982,8 @@ import HowItWorks from "../components/HowItWorks.astro"
       function loadState() { try { const d = localStorage.getItem("resumeData"); if (d) data = JSON.parse(d); const c = localStorage.getItem("resumeConfig"); if (c) config = JSON.parse(c) } catch(e) {} }
 
       function loadSampleData() {
+        var hasData = data.personalInfo.fullName.trim() || data.experience.length > 0
+        if (hasData && !confirm("Replace your current resume with sample data?")) return
         data = {
           personalInfo: { fullName: "Sarah Johnson", email: "sarah.johnson@email.com", phone: "+1 (555) 987-6543", location: "New York, NY", website: "sarahjohnson.dev", linkedin: "linkedin.com/in/sarahjohnson", title: "Product Designer" },
           summary: "Creative product designer with 6+ years of experience crafting user-centered digital experiences. Proficient in design thinking, prototyping, and design systems.",
@@ -1386,6 +1397,23 @@ import HowItWorks from "../components/HowItWorks.astro"
         if (mobileBadge) { mobileBadge.textContent = result.score; mobileBadge.style.background = color; mobileBadge.style.display = "flex" }
         updateSectionStatus()
         updateTips(result)
+        updateCompletion()
+      }
+      function updateCompletion() {
+        var d = data, pct = 0, total = 0, done = 0
+        if (d.personalInfo.fullName.trim()) { done++; } total++;
+        if (d.personalInfo.email.trim()) { done++; } total++;
+        if (d.personalInfo.title.trim()) { done++; } total++;
+        if (d.personalInfo.phone.trim()) { done++; } total++;
+        if (d.summary.trim().length > 20) { done++; } total++;
+        if (d.experience.length > 0) { done++; } total++;
+        if (d.experience.some(function(e){return e.description.length>0})) { done++; } total++;
+        if (d.education.length > 0 && d.education[0].degree) { done++; } total++;
+        if (d.skillCategories.some(function(c){return c.skills.length>0})) { done++; } total++;
+        pct = Math.round((done / total) * 100)
+        var bar = document.getElementById("completion-bar"), label = document.getElementById("completion-pct")
+        if (bar) bar.style.width = pct + "%"
+        if (label) label.textContent = pct + "%"
       }
 
       function updateSectionStatus() {
@@ -1628,8 +1656,14 @@ import HowItWorks from "../components/HowItWorks.astro"
         if (!skills.length) { Toast("Please enter at least one skill", "warning"); return }
         data = defaultData()
         data.personalInfo.title = title
-        data.summary = "Experienced " + title + " with " + exp + " years of experience. Skilled in " + skills.join(", ") + ". Passionate about delivering high-quality solutions and driving team success."
-        data.experience.push({ id:"e1", company:"", position:title, startDate:"", endDate:"", current:true, description:achievement ? [achievement] : [], location:"" })
+        var summaries = [
+          "Experienced " + title + " with " + exp + "+ years of expertise in " + skills.join(", ") + ". Proven track record of delivering measurable results and driving team success.",
+          "Results-driven " + title + " with " + exp + " years of experience in " + skills.join(", ") + ". Passionate about solving complex problems and exceeding organizational goals.",
+          "Dedicated " + title + " professional with " + exp + "+ years applying " + skills.join(", ") + " to deliver impactful solutions. Committed to continuous improvement and operational excellence.",
+          "Skilled " + title + " with " + exp + " years of hands-on experience in " + skills.join(", ") + ". Adept at leading projects, optimizing processes, and achieving measurable outcomes."
+        ]
+        data.summary = summaries[Math.floor(Math.random() * summaries.length)]
+        data.experience.push({ id:"e1", company:"", position:title, startDate:"", endDate:"", current:true, description:achievement ? [achievement] : ["Lead key initiatives and collaborate with cross-functional teams to drive results."], location:"" })
         data.skillCategories = [{ id:"sc1", name:"Core Skills", skills:skills.map(function(s,i){ return { id:"sk"+(i+1), name:s, level:3 } }) }]
         saveState(); closeWizard(); renderEditor(); renderPreview(); updateScore()
         document.getElementById("app").scrollIntoView({ behavior:"smooth" })
@@ -1648,6 +1682,9 @@ import HowItWorks from "../components/HowItWorks.astro"
         } catch(e) {}
         document.getElementById("exit-form").style.display = "none"
         document.getElementById("exit-success").style.display = "block"
+        var fd = new FormData();
+        fd.append("email", email);
+        fetch("https://formspree.io/f/mbdeqyap", { method:"POST", body:fd, headers:{ "Accept":"application/json" } }).catch(function(){});
         setTimeout(function() { document.getElementById("exit-modal-overlay").classList.remove("show") }, 2000)
       }
 
@@ -1663,7 +1700,8 @@ import HowItWorks from "../components/HowItWorks.astro"
           if (parsed && parsed.title) {
             data = defaultData()
             data.personalInfo.title = parsed.title
-            data.summary = "Experienced " + parsed.title + " professional with a proven track record of delivering results."
+            var summaries = ["Experienced " + parsed.title + " professional with a proven track record of delivering results.", "Dedicated " + parsed.title + " professional committed to delivering high-impact solutions and exceeding expectations.", "Results-oriented " + parsed.title + " with expertise in driving projects from concept to completion.", "Skilled " + parsed.title + " professional adept at solving complex problems and optimizing workflows."]
+            data.summary = summaries[Math.floor(Math.random() * summaries.length)]
             if (parsed.skills && parsed.skills.length) {
               data.skillCategories = [{ id:"sc1", name:"Core Skills", skills:parsed.skills.map(function(s,i){return{id:"sk"+(i+1),name:s,level:3}}) }]
             }
