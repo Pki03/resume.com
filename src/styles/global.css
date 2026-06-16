@@ -273,6 +273,11 @@ select.input:hover { border-color: var(--gray-300); }
 .feature-card h3 { font-size: 1.0625rem; font-weight: 700; color: var(--gray-900); margin: 0 0 0.5rem; letter-spacing: -0.01em; }
 .feature-card p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; margin: 0; }
 .feature-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.feature-card-left { display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem; }
+.feature-card-left .card-icon { flex-shrink: 0; }
+.feature-card-left h3 { font-size: 1rem; font-weight: 700; color: var(--gray-900); margin: 0 0 0.25rem; }
+.feature-card-left p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; margin: 0; }
+.feature-card-left:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 
 .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
