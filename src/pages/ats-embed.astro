@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const pageTitle = "Free ATS Score Checker Widget — Embed on Your Site"
+const pageDesc = "Embed our free ATS resume score checker on your career site or blog. Help your audience check their resume's ATS compatibility in one click."
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ATS Score Checker Widget",
+  "url": "https://getapplykit.com/ats-embed",
+  "description": pageDesc,
+  "applicationCategory": "Career",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+})
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+  <section class="hero-split hero-split-gradient" style="padding-bottom:2rem">
+    <div class="hero-split-content">
+      <span class="eyebrow">Free Widget</span>
+      <h1>Free <span class="gradient-text">ATS Score</span> Widget</h1>
+      <p>Embed a free ATS resume score checker on your career site, blog, or portfolio. One line of code — no sign-up, no ads, no data collection.</p>
+      <div class="hero-split-actions">
+        <a href="#code" class="btn btn-primary btn-lg">Get Embed Code</a>
+        <a href="/ats-score" class="btn btn-outline btn-lg">Full ATS Checker →</a>
+      </div>
+      <div class="hero-split-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 100% Free</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No Tracking</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> One Line of Code</span>
+      </div>
+    </div>
+    <div class="hero-split-visual">
+      <div class="hero-mockup">
+        <div class="hero-mockup-header">
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+        </div>
+        <div class="hero-mockup-body" style="text-align:center">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.625rem 1rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border-radius:999px;font-size:0.875rem;font-weight:600;box-shadow:0 4px 12px rgba(37,99,235,0.3)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Check ATS Score
+          </div>
+          <div style="font-size:0.6875rem;color:var(--gray-400);margin-top:0.375rem">Free ATS compatibility check</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm" id="code">
+    <div class="container-content" style="max-width:700px">
+      <div class="card card-elevated">
+        <div class="card-body">
+          <h2 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:0.5rem">Embed Code</h2>
+          <p style="font-size:0.875rem;color:var(--gray-500);margin-bottom:1rem">Add this one line to your site where you want the widget to appear:</p>
+          <div style="background:var(--gray-900);color:#e5e7eb;border-radius:10px;padding:1.25rem;font-family:'SF Mono','Fira Code','Cascadia Code',monospace;font-size:0.8125rem;overflow-x:auto;white-space:nowrap;margin-bottom:1.5rem">&lt;script src="https://getapplykit.com/embed-ats.js"&gt;&lt;/script&gt;</div>
+
+          <div style="background:var(--gray-50);border-radius:10px;padding:1rem;margin-bottom:1rem">
+            <h3 style="font-size:0.875rem;font-weight:600;color:var(--gray-700);margin-bottom:0.375rem">Live Preview</h3>
+            <div style="display:flex;flex-direction:column;align-items:flex-start">
+              <script is:inline src="/embed-ats.js"></script>
+            </div>
+          </div>
+
+          <h3 style="font-size:0.9375rem;font-weight:600;color:var(--gray-900);margin:1.5rem 0 0.75rem">Why Embed the ATS Widget?</h3>
+          <ul style="display:flex;flex-direction:column;gap:0.5rem;padding:0;margin:0;list-style:none">
+            <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Help your audience check if their resume passes ATS screening</li>
+            <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Add value to your career-related content without building your own tool</li>
+            <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Completely free — no sign-up, no ads, no data collection</li>
+            <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Works on any website — WordPress, Wix, Squarespace, Ghost, custom HTML</li>
+            <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Lightweight (~1KB) — won't slow down your page</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1.5rem;padding:1.5rem;text-align:center">
+        <p style="font-size:0.9375rem;color:var(--gray-600);margin-bottom:1rem">Try the full ATS checker with detailed 5-dimension analysis, keyword gap detection, and actionable improvement suggestions.</p>
+        <a href="/ats-score" class="btn btn-primary" style="justify-content:center">Open Full ATS Checker →</a>
+      </div>
+
+      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center">
+        <a href="/" class="btn btn-outline btn-sm">Resume Builder</a>
+        <a href="/resume-examples" class="btn btn-outline btn-sm">Resume Examples</a>
+        <a href="/cover-letter" class="btn btn-outline btn-sm">Cover Letter Generator</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">{schema}</script>
+</Layout>

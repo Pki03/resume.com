@@ -1419,4 +1419,284 @@ export const generatedExamples: ResumeExample[] = [
     sl: ["Languages: C++, Python, PHP (Hack), JavaScript/TypeScript", "Frontend: React, React Native, GraphQL", "Systems: HBase, Cassandra, Memcached, Kafka", "Product: A/B Testing, Feature Flagging, Performance Optimization"],
     t: ["Highlight product engineering and user-facing impact", "Quantify scale with user and request metrics", "Showcase A/B testing and experimentation experience", "Emphasize real-time systems and performance optimization", "Mention React/GraphQL expertise (Meta core technologies)"]
   }),
+  r({
+    slug: "data-analyst", title: "Data Analyst", industry: "General", level: "Mid",
+    summary: "A data-driven analyst skilled in SQL, Python, Tableau, and turning raw data into actionable business insights.",
+    skills: ["SQL", "Python", "Tableau", "Excel", "Data Visualization", "Statistical Analysis", "R", "Power BI", "Data Cleaning", "A/B Testing"],
+    n: "Sarah Mitchell", e: "sarah.m@email.com", ct: "Seattle", st: "WA", li: "linkedin.com/in/sarahmitchell", gh: "github.com/sarahm",
+    stxt: "Data analyst with 4+ years of experience transforming complex datasets into strategic business recommendations. Proficient in SQL, Python, and BI tools with a track record of driving revenue growth through data-driven decisions.",
+    j: [
+      { r: "Senior Data Analyst", co: "RetailMetrics", p: "Jan 2022 - Present", b: ["Analyzed customer behavior data for 2M+ users, identifying patterns that increased retention by 25%", "Built Tableau dashboards tracking 50+ KPIs used by executive leadership for weekly decision-making", "Designed A/B testing framework that improved marketing conversion rates by 18%"] },
+      { r: "Data Analyst", co: "FinanceHub", p: "Jun 2020 - Dec 2021", b: ["Cleaned and analyzed 10M+ transaction records using Python (pandas) and SQL", "Created automated reporting pipelines reducing manual reporting time by 15 hours per week", "Presented monthly analytics insights to stakeholders across 5 departments"] }
+    ],
+    ed: { d: "B.S. Statistics", s: "University of Washington", p: "2016 - 2020" },
+    sl: ["Languages: SQL, Python (pandas, NumPy), R", "Visualization: Tableau, Power BI, Matplotlib, Seaborn", "Tools: Excel, Google Sheets, Airtable, Snowflake", "Skills: Statistical Analysis, A/B Testing, Data Wrangling"],
+    t: ["Quantify impact with business metrics (revenue, retention, conversion)", "Showcase both technical (SQL, Python) and communication (presentations) skills", "Include specific BI tools and dashboard examples", "Highlight domain knowledge if focused on a specific industry"]
+  }),
+  r({
+    slug: "cybersecurity-analyst", title: "Cybersecurity Analyst", industry: "Tech", level: "Mid",
+    summary: "A vigilant cybersecurity analyst specializing in threat detection, incident response, and security infrastructure.",
+    skills: ["Network Security", "SIEM", "Python", "Incident Response", "Penetration Testing", "Firewalls", "Cloud Security", "Compliance", "Risk Assessment", "Forensics"],
+    n: "James Rodriguez", e: "james.r@email.com", ct: "Washington", st: "DC", li: "linkedin.com/in/jamesrodriguez",
+    stxt: "Cybersecurity analyst with 5+ years of experience in threat detection, incident response, and security operations. CISSP certified with expertise in SIEM platforms, cloud security, and regulatory compliance.",
+    j: [
+      { r: "Senior Security Analyst", co: "CyberGuard", p: "Mar 2021 - Present", b: ["Led incident response for 200+ security events annually, reducing mean time to respond by 60%", "Implemented SIEM solution that improved threat detection accuracy by 85%", "Conducted 30+ penetration tests across web applications and cloud infrastructure"] },
+      { r: "Security Analyst", co: "DataSecure", p: "Jun 2019 - Feb 2021", b: ["Monitored and analyzed security alerts from 5000+ endpoints using Splunk and QRadar", "Developed security awareness training program completed by 200+ employees", "Performed vulnerability assessments and coordinated remediation with engineering teams"] }
+    ],
+    ed: { d: "B.S. Cybersecurity", s: "George Mason University", p: "2015 - 2019", x: "CISSP, CompTIA Security+" },
+    sl: ["Security: SIEM, IDS/IPS, Firewalls, Endpoint Protection", "Tools: Splunk, QRadar, Wireshark, Metasploit, Burp Suite", "Cloud: AWS Security, Azure Security, GCP Security", "Compliance: NIST, ISO 27001, SOC 2, GDPR"],
+    t: ["List relevant certifications (CISSP, CEH, CompTIA Security+)", "Quantify incident response metrics (MTTR, detection rates)", "Highlight specific security tools and platforms used", "Include both technical and compliance expertise"]
+  }),
+  r({
+    slug: "machine-learning-engineer", title: "Machine Learning Engineer", industry: "Tech", level: "Mid",
+    summary: "An ML engineer building production-grade models for recommendation systems, NLP, and computer vision.",
+    skills: ["Python", "TensorFlow", "PyTorch", "MLOps", "NLP", "Computer Vision", "AWS SageMaker", "Docker", "Kubernetes", "SQL"],
+    n: "Priya Sharma", e: "priya.s@email.com", ct: "San Francisco", st: "CA", li: "linkedin.com/in/priyasharma", gh: "github.com/priyasharma",
+    stxt: "Machine learning engineer with 4+ years deploying production models serving millions of users. Expertise in deep learning, NLP, and MLOps. Passionate about building scalable AI systems that drive business impact.",
+    j: [
+      { r: "ML Engineer", co: "AITech", p: "Jan 2022 - Present", b: ["Built recommendation system using collaborative filtering serving 5M+ users with 35% engagement lift", "Designed MLOps pipeline reducing model deployment time from weeks to 2 hours", "Implemented NLP-based sentiment analysis processing 1M+ customer reviews daily"] },
+      { r: "Data Scientist", co: "DataDriven", p: "Jun 2020 - Dec 2021", b: ["Developed time-series forecasting models that improved inventory accuracy by 40%", "Built feature engineering pipeline processing 500+ features for ML models", "Created automated model retraining system ensuring <1% performance drift"] }
+    ],
+    ed: { d: "M.S. Computer Science (AI)", s: "UC Berkeley", p: "2018 - 2020", x: "B.Tech Computer Science, IIT Delhi" },
+    sl: ["Frameworks: TensorFlow, PyTorch, Scikit-learn, XGBoost", "MLOps: MLflow, Kubeflow, Docker, Kubernetes, SageMaker", "Domains: NLP, Computer Vision, Recommendation Systems, Forecasting", "Languages: Python, C++, SQL, Scala"],
+    t: ["Quantify model impact with business metrics (lift, accuracy, latency)", "Highlight MLOps and production deployment experience", "Include both traditional ML and deep learning expertise", "Mention specific frameworks and cloud platforms used"]
+  }),
+  r({
+    slug: "cloud-engineer", title: "Cloud Engineer", industry: "Tech", level: "Mid",
+    summary: "A certified cloud engineer designing and managing scalable infrastructure on AWS, Azure, and GCP.",
+    skills: ["AWS", "Azure", "GCP", "Terraform", "Docker", "Kubernetes", "CI/CD", "Linux", "Networking", "Python"],
+    n: "Michael Park", e: "michael.p@email.com", ct: "Portland", st: "OR", li: "linkedin.com/in/michaelpark", gh: "github.com/michaelpark",
+    stxt: "Cloud engineer with 5+ years designing and managing multi-cloud infrastructure. AWS Solutions Architect certified with expertise in infrastructure as code, containerization, and CI/CD pipelines.",
+    j: [
+      { r: "Senior Cloud Engineer", co: "CloudScale", p: "Mar 2021 - Present", b: ["Designed AWS architecture handling 10K+ transactions/second with 99.99% uptime using ECS and RDS", "Migrated 200+ workloads from on-premises to AWS using Terraform, reducing costs by 40%", "Implemented Kubernetes clusters managing 150+ microservices across dev/staging/production"] },
+      { r: "Cloud Engineer", co: "InfraFirst", p: "Jun 2019 - Feb 2021", b: ["Built CI/CD pipelines in Jenkins and GitLab CI reducing deployment failures by 75%", "Managed 50+ cloud resources using Terraform and CloudFormation", "Implemented monitoring and alerting with CloudWatch, PagerDuty, and Datadog"] }
+    ],
+    ed: { d: "B.S. Computer Engineering", s: "Oregon State University", p: "2015 - 2019", x: "AWS Solutions Architect, Azure Administrator" },
+    sl: ["Cloud: AWS (ECS, RDS, Lambda, S3), Azure, GCP", "IaC: Terraform, CloudFormation, Pulumi", "Containers: Docker, Kubernetes, ECS, EKS, AKS", "CI/CD: Jenkins, GitLab CI, GitHub Actions, ArgoCD"],
+    t: ["List all cloud certifications (AWS, Azure, GCP)", "Quantify infrastructure metrics (uptime, cost savings, migration scale)", "Highlight infrastructure as code and automation expertise", "Include monitoring and incident response experience"]
+  }),
+  r({
+    slug: "web-developer", title: "Web Developer", industry: "Tech", level: "Mid",
+    summary: "A versatile web developer building responsive, performant websites and web applications.",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Responsive Design", "Git", "WordPress", "REST APIs", "SQL"],
+    n: "David Kim", e: "david.k@email.com", ct: "Los Angeles", st: "CA", li: "linkedin.com/in/davidkim", gh: "github.com/davidkim",
+    stxt: "Web developer with 4+ years of experience building responsive, user-friendly websites and applications. Proficient in modern JavaScript frameworks with a strong eye for design and user experience.",
+    j: [
+      { r: "Web Developer", co: "DigitalAgency", p: "Jan 2021 - Present", b: ["Built 25+ responsive client websites using React, Next.js, and WordPress", "Improved site performance scores from 55 to 95+ on Lighthouse for all client projects", "Developed custom WordPress plugins and themes used across 50+ client sites"] },
+      { r: "Junior Web Developer", co: "WebStudio", p: "Jun 2019 - Dec 2020", b: ["Created responsive landing pages increasing client conversion rates by an average of 30%", "Maintained and updated 15+ client websites with regular content and feature updates", "Built email templates and integrated Mailchimp APIs for client marketing campaigns"] }
+    ],
+    ed: { d: "B.A. Web Design", s: "UCLA", p: "2015 - 2019" },
+    sl: ["Frontend: HTML, CSS, JavaScript, React, Next.js, Tailwind", "Backend: Node.js, Express, PHP", "CMS: WordPress, Shopify, Webflow", "Tools: Git, Webpack, Figma, Lighthouse"],
+    t: ["Showcase portfolio with links to live projects", "Quantify performance metrics (Lighthouse scores, load times)", "Highlight both design and development skills", "Include client/agency experience and project variety"]
+  }),
+  r({
+    slug: "content-writer", title: "Content Writer", industry: "General", level: "Mid",
+    summary: "A creative content writer producing engaging blog posts, articles, web copy, and marketing materials.",
+    skills: ["SEO Writing", "Copywriting", "Blog Writing", "Content Strategy", "Editing", "WordPress", "Research", "Social Media", "AP Style", "Grammarly"],
+    n: "Jessica Adams", e: "jessica.a@email.com", ct: "Denver", st: "CO", li: "linkedin.com/in/jessicaadams", ws: "jessicaadams.com",
+    stxt: "Content writer with 5+ years of experience crafting SEO-optimized content for B2B and B2C brands. Published 500+ articles across tech, finance, and lifestyle verticals with measurable traffic Growth.",
+    j: [
+      { r: "Senior Content Writer", co: "ContentCo", p: "Mar 2021 - Present", b: ["Produced 100+ SEO-optimized articles driving 200K+ monthly organic traffic", "Developed content strategy for 3 client accounts resulting in 45% traffic increase within 6 months", "Managed editorial calendar for 15+ writers ensuring consistent weekly publishing"] },
+      { r: "Content Writer", co: "MediaGroup", p: "Jun 2019 - Feb 2021", b: ["Wrote and edited 200+ blog posts and articles across technology and business verticals", "Conducted keyword research using SEMrush and Ahrefs to identify high-opportunity topics", "Collaborated with design team to create visual content that increased engagement by 35%"] }
+    ],
+    ed: { d: "B.A. English Literature", s: "University of Colorado", p: "2015 - 2019" },
+    sl: ["Writing: SEO Writing, Copywriting, Blog Posts, Whitepapers, Case Studies, Email Copy", "Tools: WordPress, SEMrush, Ahrefs, Google Analytics, Grammarly, Hemingway", "Styles: AP Style, Chicago Manual, Brand Voice Guidelines", "Domains: Tech, Finance, Healthcare, Lifestyle, B2B, B2C"],
+    t: ["Include published portfolio links and bylines", "Quantify content output (articles, words, publications)", "Showcase SEO results (traffic, rankings, keywords)", "Highlight versatility across industries and content types"]
+  }),
+  r({
+    slug: "social-media-manager", title: "Social Media Manager", industry: "General", level: "Mid",
+    summary: "A strategic social media manager driving brand awareness, engagement, and growth across platforms.",
+    skills: ["Content Strategy", "Instagram", "TikTok", "LinkedIn", "Twitter/X", "Meta Ads", "Analytics", "Canva", "Community Management", "Influencer Marketing"],
+    n: "Taylor Brooks", e: "taylor.b@email.com", ct: "Miami", st: "FL", li: "linkedin.com/in/taylorbrooks",
+    stxt: "Social media manager with 4+ years of experience growing brand presence across Instagram, TikTok, and LinkedIn. Proven track record of increasing engagement rates and converting followers into customers.",
+    j: [
+      { r: "Social Media Manager", co: "BrandBoost", p: "Jan 2022 - Present", b: ["Grew Instagram following from 5K to 85K in 12 months through organic content strategy", "Managed $50K monthly ad budget across Meta and TikTok with 3.5x ROAS", "Created viral TikTok campaign reaching 2M+ views and generating 10K+ leads"] },
+      { r: "Social Media Coordinator", co: "StartupBrand", p: "Jun 2020 - Dec 2021", b: ["Developed and executed monthly content calendar across 4 social platforms", "Increased LinkedIn engagement rate by 150% through thought leadership content", "Built and managed community of 15K+ engaged followers responding to all comments/DMs"] }
+    ],
+    ed: { d: "B.S. Marketing", s: "University of Miami", p: "2016 - 2020" },
+    sl: ["Platforms: Instagram, TikTok, LinkedIn, Twitter/X, Facebook, Pinterest", "Tools: Meta Business Suite, Hootsuite, Buffer, Canva, Later, CapCut", "Ads: Meta Ads Manager, TikTok Ads, LinkedIn Ads", "Skills: Content Strategy, Analytics, Community Management, Influencer Relations"],
+    t: ["Quantify growth metrics (followers, engagement rate, reach)", "Showcase ad management ROI and budget scale", "Highlight platform-specific expertise and content formats", "Include community management and crisis response experience"]
+  }),
+  r({
+    slug: "administrative-assistant", title: "Administrative Assistant", industry: "General", level: "Entry",
+    summary: "An organized and efficient administrative assistant supporting executives and teams with calendar, travel, and office management.",
+    skills: ["Calendar Management", "Travel Coordination", "Microsoft Office", "Google Workspace", "Expense Reporting", "Event Planning", "Data Entry", "Communication", "CRM", "Scheduling"],
+    n: "Amanda Lewis", e: "amanda.l@email.com", ct: "Atlanta", st: "GA", li: "linkedin.com/in/amandalewis",
+    stxt: "Detail-oriented administrative assistant with 3+ years supporting C-suite executives. Expert in calendar management, travel coordination, and office operations. Known for improving team efficiency by 30%+.",
+    j: [
+      { r: "Executive Assistant", co: "CorpHQ", p: "Mar 2021 - Present", b: ["Managed complex calendars for 3 C-suite executives across multiple time zones", "Coordinated international travel for 50+ business trips annually, saving 20% through optimized booking", "Planned and executed 25+ company events with 100-500 attendees each"] },
+      { r: "Administrative Assistant", co: "MidSizeCorp", p: "Jun 2019 - Feb 2021", b: ["Processed 200+ expense reports monthly with 99% accuracy rate", "Screened and directed 100+ daily phone calls and emails to appropriate departments", "Maintained office supplies inventory reducing annual costs by 15% through vendor negotiations"] }
+    ],
+    ed: { d: "A.A. Business Administration", s: "Georgia State University", p: "2016 - 2018" },
+    sl: ["Software: Microsoft Office Suite, Google Workspace, Slack, Zoom, Teams", "Tools: Concur, Expensify, Salesforce, Calendly", "Skills: Calendar Management, Travel Booking, Event Planning, Vendor Management", "Languages: English (Native), Spanish (Conversational)"],
+    t: ["Highlight efficiency improvements and time savings", "Showcase software proficiency and tech-savviness", "Quantify scope (number of executives supported, events planned)", "Emphasize discretion, professionalism, and communication skills"]
+  }),
+  r({
+    slug: "customer-service-representative", title: "Customer Service Representative", industry: "General", level: "Entry",
+    summary: "A customer-focused representative dedicated to resolving issues and delivering exceptional support experiences.",
+    skills: ["Customer Support", "CRM", "Conflict Resolution", "Active Listening", "Zendesk", "Salesforce", "Email Support", "Phone Support", "Live Chat", "Product Knowledge"],
+    n: "Ryan Martinez", e: "ryan.m@email.com", ct: "Phoenix", st: "AZ", li: "linkedin.com/in/ryanmartinez",
+    stxt: "Customer service representative with 3+ years of experience in high-volume support environments. Consistently achieved 95%+ customer satisfaction scores while handling 60+ daily inquiries.",
+    j: [
+      { r: "Senior Support Specialist", co: "SaaSCompany", p: "Jan 2022 - Present", b: ["Resolved 1,500+ customer tickets annually with 97% satisfaction rating and 4-hour avg response time", "Reduced repeat contacts by 30% by creating knowledge base articles used by 10K+ customers", "Trained 12 new hires on support tools, processes, and product knowledge"] },
+      { r: "Customer Service Rep", co: "RetailPlus", p: "Jun 2020 - Dec 2021", b: ["Handled 60+ daily inbound calls resolving billing, account, and technical issues", "Achieved top performer status for 6 consecutive months with 95%+ CSAT scores", "Upsold products and services generating $50K+ in additional revenue"] }
+    ],
+    ed: { d: "High School Diploma", s: "Phoenix Central High", p: "Graduated 2016" },
+    sl: ["Platforms: Zendesk, Salesforce Service Cloud, Freshdesk, Intercom", "Channels: Phone, Email, Live Chat, Social Media", "Skills: Conflict Resolution, De-escalation, Active Listening, Product Training", "Tools: CRM, Knowledge Base Management, SurveyMonkey"],
+    t: ["Quantify volume (tickets, calls, resolution time)", "Highlight CSAT scores and quality metrics", "Showcase product knowledge and training experience", "Include multilingual abilities if applicable"]
+  }),
+  r({
+    slug: "operations-manager", title: "Operations Manager", industry: "General", level: "Mid",
+    summary: "An operations leader driving efficiency, cost reduction, and process optimization across teams.",
+    skills: ["Process Improvement", "Project Management", "Data Analysis", "KPI Tracking", "Vendor Management", "Budgeting", "Lean Six Sigma", "Team Leadership", "SOP Development", "Supply Chain"],
+    n: "Kevin O'Brien", e: "kevin.o@email.com", ct: "Dallas", st: "TX", li: "linkedin.com/in/kevinobrien",
+    stxt: "Operations manager with 6+ years of experience optimizing business processes and leading cross-functional teams. Lean Six Sigma Green Belt with a track record of reducing costs by 25%+ while improving quality.",
+    j: [
+      { r: "Operations Manager", co: "LogisticsPro", p: "Jan 2021 - Present", b: ["Led process improvement initiatives that reduced operational costs by $500K annually", "Managed team of 25+ employees across 3 shifts, improving productivity by 20%", "Implemented SOPs and KPIs that reduced error rates by 45% within first year"] },
+      { r: "Operations Supervisor", co: "DistribuCo", p: "Jun 2018 - Dec 2020", b: ["Supervised daily operations for warehouse handling $10M+ monthly inventory", "Reduced overtime costs by 30% through optimized scheduling and workflow redesign", "Negotiated vendor contracts resulting in 15% cost savings on supplies and services"] }
+    ],
+    ed: { d: "B.S. Business Administration", s: "University of Texas", p: "2014 - 2018", x: "Lean Six Sigma Green Belt" },
+    sl: ["Process: Lean Six Sigma, Process Mapping, SOP Development, Continuous Improvement", "Tools: Excel, Tableau, Salesforce, SAP, Asana, Monday.com", "Management: P&L, KPI Tracking, Budgeting, Vendor Management, Team Leadership", "Domains: Logistics, Warehousing, Manufacturing, E-commerce"],
+    t: ["Quantify cost savings and efficiency improvements with dollar amounts", "Highlight team size and management scope", "Showcase Lean/Six Sigma certifications", "Include industry-specific operational metrics"]
+  }),
+  r({
+    slug: "supply-chain-manager", title: "Supply Chain Manager", industry: "General", level: "Mid",
+    summary: "A strategic supply chain professional optimizing procurement, logistics, and inventory management.",
+    skills: ["Supply Chain", "Logistics", "Inventory Management", "Procurement", "ERP", "SAP", "Forecasting", "Vendor Management", "Lean", "Six Sigma"],
+    n: "Rachel Nguyen", e: "rachel.n@email.com", ct: "Houston", st: "TX", li: "linkedin.com/in/rachelnguyen",
+    stxt: "Supply chain manager with 7+ years of experience optimizing global supply chains. Expertise in procurement, logistics, and inventory optimization with a focus on cost reduction and efficiency gains.",
+    j: [
+      { r: "Supply Chain Manager", co: "GlobalLogistics", p: "Mar 2020 - Present", b: ["Optimized global supply chain network reducing lead times by 35% and logistics costs by $2M/year", "Implemented SAP S/4HANA for inventory management across 12 warehouses, improving accuracy to 98%", "Negotiated contracts with 50+ suppliers achieving 12% average cost reduction"] },
+      { r: "Supply Chain Analyst", co: "ManuCorp", p: "Jun 2017 - Feb 2020", b: ["Developed demand forecasting models reducing stockouts by 60% while lowering inventory costs by 18%", "Analyzed supplier performance data and recommended strategic sourcing changes", "Coordinated cross-functional logistics for product launches across 3 regions"] }
+    ],
+    ed: { d: "B.S. Supply Chain Management", s: "Texas A&M University", p: "2013 - 2017", x: "CSCP Certification, Lean Six Sigma Black Belt" },
+    sl: ["Systems: SAP S/4HANA, Oracle SCM, JDA, Kinaxis", "Domains: Procurement, Logistics, Inventory, Demand Planning, Warehousing", "Methodologies: Lean, Six Sigma, Just-in-Time, VMI, CPFR", "Skills: Contract Negotiation, Supplier Management, Risk Assessment, Data Analytics"],
+    t: ["Quantify cost savings and efficiency metrics with specific dollar amounts", "Highlight ERP system expertise (SAP, Oracle)", "Include certifications (CSCP, CPSM, Lean Six Sigma)", "Showcase global supply chain experience and scale"]
+  }),
+  r({
+    slug: "human-resources-specialist", title: "HR Specialist", industry: "General", level: "Mid",
+    summary: "An HR professional managing recruitment, employee relations, benefits, and compliance.",
+    skills: ["Recruitment", "Employee Relations", "HRIS", "Benefits Administration", "Compliance", "Onboarding", "Performance Management", "Payroll", "Labor Laws", "ATS"],
+    n: "Danielle Foster", e: "danielle.f@email.com", ct: "Charlotte", st: "NC", li: "linkedin.com/in/daniellefoster",
+    stxt: "HR specialist with 4+ years of experience in full-cycle recruitment, employee relations, and HR operations. PHR certified with a focus on building positive workplace cultures and ensuring regulatory compliance.",
+    j: [
+      { r: "HR Generalist", co: "GrowthCorp", p: "Jan 2021 - Present", b: ["Managed full-cycle recruitment for 50+ positions annually across engineering, sales, and marketing", "Reduced time-to-hire by 40% through streamlined sourcing and interview processes", "Implemented new HRIS (BambooHR) improving data accuracy and reporting capabilities"] },
+      { r: "HR Coordinator", co: "EnterpriseInc", p: "Jun 2019 - Dec 2020", b: ["Coordinated onboarding for 200+ new hires ensuring 100% compliance completion", "Managed benefits administration for 500+ employees including open enrollment", "Processed bi-weekly payroll for 300+ employees with 99.9% accuracy"] }
+    ],
+    ed: { d: "B.S. Human Resources Management", s: "UNC Charlotte", p: "2015 - 2019", x: "PHR Certification" },
+    sl: ["Systems: BambooHR, Workday, ADP, UKG, Lever, Greenhouse", "Domains: Recruitment, Benefits, Payroll, Compliance, Employee Relations, Onboarding", "Skills: ATS Management, HRIS Implementation, Policy Development, Training", "Knowledge: FLSA, FMLA, ADA, EEO, HIPAA, State Labor Laws"],
+    t: ["Quantify recruitment metrics (time-to-hire, positions filled)", "Highlight HRIS implementation and system expertise", "Include HR certifications (PHR, SPHR, SHRM-CP)", "Showcase knowledge of employment laws and compliance"]
+  }),
+  r({
+    slug: "digital-marketing-manager", title: "Digital Marketing Manager", industry: "General", level: "Mid",
+    summary: "A data-driven digital marketing manager specializing in SEO, SEM, social, and email marketing.",
+    skills: ["SEO", "SEM", "Google Ads", "Social Media Marketing", "Email Marketing", "Analytics", "Content Strategy", "Conversion Optimization", "Marketing Automation", "A/B Testing"],
+    n: "Brandon Lee", e: "brandon.l@email.com", ct: "New York", st: "NY", li: "linkedin.com/in/brandonlee",
+    stxt: "Digital marketing manager with 5+ years of experience driving growth through integrated marketing campaigns. Managed $1M+ annual ad budgets with consistent 4x+ ROAS across channels.",
+    j: [
+      { r: "Digital Marketing Manager", co: "MarketPro", p: "Mar 2021 - Present", b: ["Managed $1.2M annual digital ad budget across Google, Meta, and LinkedIn achieving 4.5x ROAS", "Grew organic search traffic by 200% through SEO strategy targeting 500+ high-value keywords", "Led email marketing program for 100K+ subscribers generating $500K+ in attributed revenue"] },
+      { r: "Marketing Specialist", co: "BrandCo", p: "Jun 2019 - Feb 2021", b: ["Executed 100+ A/B tests on landing pages and email campaigns improving conversion by 35%", "Built and managed social media presence growing following by 300% across platforms", "Created monthly performance reports with actionable insights for executive leadership"] }
+    ],
+    ed: { d: "B.S. Marketing", s: "NYU Stern", p: "2015 - 2019" },
+    sl: ["Channels: Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, Programmatic", "Tools: Google Analytics, SEMrush, Ahrefs, HubSpot, Mailchimp, Marketo", "SEO: Technical SEO, Content Strategy, Link Building, Keyword Research", "CRM/Email: Salesforce, HubSpot, ActiveCampaign, Klaviyo, Iterable"],
+    t: ["Quantify budget scale and ROAS with specific numbers", "Showcase multi-channel expertise and integrated campaign experience", "Highlight both organic (SEO) and paid (SEM) skills", "Include marketing automation and CRM platform experience"]
+  }),
+  r({
+    slug: "registered-nurse", title: "Registered Nurse", industry: "Healthcare", level: "Mid",
+    summary: "A compassionate registered nurse providing high-quality patient care in acute care and hospital settings.",
+    skills: ["Patient Care", "IV Therapy", "EMR", "Wound Care", "Medication Administration", "Critical Care", "BLS", "ACLS", "Patient Assessment", "Care Coordination"],
+    n: "Jennifer Williams", e: "jennifer.w@email.com", ct: "Boston", st: "MA", li: "linkedin.com/in/jenniferwilliams",
+    stxt: "Registered nurse with 5+ years of experience in med-surg and critical care units. BSN-prepared with ACLS and PALS certifications. Recognized for exceptional patient care and clinical leadership.",
+    j: [
+      { r: "Registered Nurse, Med-Surg", co: "Boston General Hospital", p: "Jan 2021 - Present", b: ["Managed care for 5-6 patients per shift in a 30-bed med-surg unit with 98% patient satisfaction", "Administered medications and treatments for 20+ patients daily with zero medication errors", "Precepted 8 new graduate nurses through 12-week orientation programs"] },
+      { r: "Staff Nurse", co: "Community Medical Center", p: "Jun 2019 - Dec 2020", b: ["Provided comprehensive nursing care for 4-5 patients per shift in telemetry unit", "Monitored cardiac rhythms and responded to 50+ emergency situations", "Collaborated with interdisciplinary team to develop and update patient care plans"] }
+    ],
+    ed: { d: "B.S. Nursing (BSN)", s: "Boston College", p: "2015 - 2019", x: "RN License, ACLS, BLS, PALS" },
+    sl: ["Clinical: Med-Surg, Telemetry, Critical Care, Emergency, PACU", "Skills: IV Therapy, Wound Care, Telemetry Monitoring, Patient Education, Care Planning", "Systems: Epic, Cerner, Meditech", "Certifications: BLS, ACLS, PALS, NIHSS"],
+    t: ["Include RN license and all certifications", "Quantify patient load and care metrics", "Highlight specialized unit experience (ICU, ER, Med-Surg)", "Showcase leadership (precepting, charge nurse) and continuing education"]
+  }),
+  r({
+    slug: "dentist", title: "Dentist", industry: "Healthcare", level: "Mid",
+    summary: "A skilled general dentist providing comprehensive dental care with a focus on patient comfort and preventive care.",
+    skills: ["Restorative Dentistry", "Oral Surgery", "Root Canals", "Crowns & Bridges", "Periodontics", "Digital X-Rays", "Patient Education", "Practice Management", "Sedation Dentistry", "Invisalign"],
+    n: "Dr. Robert Chen", e: "robert.chen@email.com", ct: "San Diego", st: "CA", li: "linkedin.com/in/robertchen",
+    stxt: "General dentist with 6+ years of experience providing comprehensive dental care. DDS with expertise in restorative, cosmetic, and surgical procedures. Committed to patient comfort and evidence-based practice.",
+    j: [
+      { r: "Associate Dentist", co: "BrightSmile Dental", p: "Jul 2020 - Present", b: ["Performed 1,500+ restorative procedures annually including crowns, bridges, and fillings with 98% success rate", "Completed 200+ root canals and 100+ oral surgery procedures with minimal complications", "Increased patient retention by 25% through improved communication and follow-up protocols"] },
+      { r: "General Dentist", co: "Community Dental Clinic", p: "Aug 2018 - Jun 2020", b: ["Provided comprehensive dental care to 1,000+ patients annually in underserved community", "Performed extractions, fillings, cleanings, and emergency dental treatments", "Led community outreach program providing dental education to 500+ students annually"] }
+    ],
+    ed: { d: "D.D.S.", s: "USC School of Dentistry", p: "2014 - 2018", x: "B.S. Biology, UC Irvine" },
+    sl: ["Procedures: Restorative, Endodontics, Oral Surgery, Periodontics, Cosmetic", "Technology: Digital X-Rays, CBCT, Intraoral Scanning, CAD/CAM", "Materials: Composite, Ceramic, Zirconia, Implant Systems", "Practice: Patient Management, Treatment Planning, Insurance Coding"],
+    t: ["Include DDS/DMD degree and state dental license", "Quantify procedures performed and success rates", "Highlight continuing education and specialized training", "Showcase patient satisfaction and retention metrics"]
+  }),
+  r({
+    slug: "pharmacist", title: "Pharmacist", industry: "Healthcare", level: "Mid",
+    summary: "A detail-oriented pharmacist ensuring safe medication therapy and optimal patient outcomes.",
+    skills: ["Clinical Pharmacy", "Medication Therapy Management", "Immunizations", "Pharmacy Automation", "Drug Utilization Review", "Patient Counseling", "Inventory Management", "Regulatory Compliance", "IV Admixture", "Formulary Management"],
+    n: "Lisa Thompson", e: "lisa.t@email.com", ct: "Philadelphia", st: "PA", li: "linkedin.com/in/lisathompson",
+    stxt: "Pharmacist with 4+ years of experience in retail and clinical settings. PharmD with immunization certification. Dedicated to improving patient outcomes through medication therapy management and patient education.",
+    j: [
+      { r: "Clinical Pharmacist", co: "CityCare Hospital", p: "Jan 2021 - Present", b: ["Reviewed 100+ medication orders daily ensuring safe and appropriate therapy for hospitalized patients", "Implemented medication reconciliation program reducing adverse drug events by 35%", "Provided drug information consultations to 50+ physicians and nurses weekly"] },
+      { r: "Staff Pharmacist", co: "PharmaCare Pharmacy", p: "Aug 2019 - Dec 2020", b: ["Verified and dispensed 300+ prescriptions daily with 99.9% accuracy", "Administered 1,000+ immunizations annually including flu, shingles, and COVID-19 vaccines", "Trained 5 pharmacy interns and 3 new pharmacists on clinical protocols and workflow"] }
+    ],
+    ed: { d: "Pharm.D.", s: "University of the Sciences", p: "2015 - 2019", x: "B.S. Chemistry, B.S. Biology" },
+    sl: ["Clinical: Drug Utilization Review, MTM, Pharmacokinetics, Therapeutic Drug Monitoring", "Systems: Epic Willow, Pyxis, Omnicell, QS/1, PioneerRx", "Certifications: Immunization, MTM, ACLS, BLS", "Skills: Patient Counseling, Formulary Management, Inventory, Regulatory Compliance"],
+    t: ["Include PharmD degree and state pharmacy license", "Quantify prescription volume and accuracy metrics", "Highlight clinical interventions and patient outcomes", "Showcase immunization administration and patient education"]
+  }),
+  r({
+    slug: "physical-therapist", title: "Physical Therapist", industry: "Healthcare", level: "Mid",
+    summary: "A licensed physical therapist helping patients recover mobility, reduce pain, and improve quality of life.",
+    skills: ["Orthopedic Rehab", "Manual Therapy", "Therapeutic Exercise", "Neurological Rehab", "Sports Medicine", "Post-Surgical Rehab", "Dry Needling", "Patient Education", "EMR", "Functional Assessment"],
+    n: "Andrew Park", e: "andrew.p@email.com", ct: "Minneapolis", st: "MN", li: "linkedin.com/in/andrewpark",
+    stxt: "Physical therapist with 4+ years of experience in outpatient orthopedics and sports medicine. DPT with manual therapy certification. Passionate about helping patients achieve functional goals and return to activity.",
+    j: [
+      { r: "Physical Therapist", co: "MovementFirst PT", p: "Mar 2021 - Present", b: ["Managed caseload of 12-15 patients daily with 92% achieving functional goals within expected timeframe", "Developed personalized treatment plans for 500+ patients with orthopedic and sports conditions", "Reduced patient dropout rate by 30% through improved education and engagement strategies"] },
+      { r: "Staff Physical Therapist", co: "RehabCenter", p: "Jun 2019 - Feb 2021", b: ["Evaluated and treated 200+ new patients annually with diverse orthopedic and neurological conditions", "Implemented evidence-based protocols improving average patient outcomes by 25%", "Supervised 6 physical therapy assistants and 8 student interns"] }
+    ],
+    ed: { d: "Doctor of Physical Therapy (DPT)", s: "University of Minnesota", p: "2016 - 2019", x: "B.S. Kinesiology, University of Michigan" },
+    sl: ["Specialties: Orthopedics, Sports Medicine, Neurological Rehab, Post-Surgical, Geriatrics", "Techniques: Manual Therapy, Therapeutic Exercise, Dry Needling, Cupping, Kinesio Taping", "Tools: EMR (WebPT, Epic), Gait Analysis, Isokinetic Testing", "Certifications: OCS, CSCS, Dry Needling, Graston, FMS"],
+    t: ["Include DPT degree and state PT license", "Quantify patient caseload and outcome metrics", "Highlight specialized certifications (OCS, CSCS, NCS)", "Showcase manual therapy and treatment technique expertise"]
+  }),
+  r({
+    slug: "electrician", title: "Electrician", industry: "Trades", level: "Mid",
+    summary: "A licensed electrician specializing in residential, commercial, and industrial electrical systems.",
+    skills: ["Electrical Installation", "Troubleshooting", "Residential Wiring", "Commercial Electrical", "Industrial Controls", "Blueprints", "NEC Code", "Safety Compliance", "Motor Controls", "PLC"],
+    n: "Thomas Wright", e: "thomas.w@email.com", ct: "Denver", st: "CO", li: "linkedin.com/in/thomaswright",
+    stxt: "Licensed journeyman electrician with 8+ years of experience in residential, commercial, and industrial settings. OSHA certified with a strong safety record and expertise in electrical system design and installation.",
+    j: [
+      { r: "Journeyman Electrician", co: "BrightWatt Electric", p: "Jan 2019 - Present", b: ["Installed and maintained electrical systems for 100+ residential and 50+ commercial projects", "Troubleshot and resolved 500+ electrical issues with 95% first-time fix rate", "Led 3-person crew on $500K+ commercial electrical installations completed ahead of schedule"] },
+      { r: "Apprentice Electrician", co: "PowerLine Services", p: "Jun 2015 - Dec 2018", b: ["Assisted in installation of electrical systems for new construction and renovation projects", "Performed preventive maintenance on electrical equipment reducing downtime by 40%", "Completed 8,000+ hours of on-the-job training under master electrician supervision"] }
+    ],
+    ed: { d: "Journeyman Electrician License", s: "Colorado DORA", p: "2018", x: "OSHA 30, CPR/First Aid" },
+    sl: ["Residential: Service Upgrades, Panel Installation, Wiring, Lighting, Security Systems", "Commercial: 3-Phase Power, Switchgear, Fire Alarm Systems, Emergency Generators", "Industrial: Motor Controls, PLC Wiring, Variable Frequency Drives, Control Panels", "Codes: NEC, IEC, Local Building Codes"],
+    t: ["Include license type (Apprentice, Journeyman, Master) and state", "Quantify project scale and value", "Highlight safety record and certifications", "Showcase troubleshooting efficiency and first-time fix rates"]
+  }),
+  r({
+    slug: "construction-manager", title: "Construction Manager", industry: "Trades", level: "Senior",
+    summary: "An experienced construction manager overseeing residential and commercial projects from planning to completion.",
+    skills: ["Project Management", "Budget Management", "Blueprint Reading", "Contract Negotiation", "Safety Compliance", "Subcontractor Management", "Scheduling", "Quality Control", "OSHA", "Procore"],
+    n: "Steven Garcia", e: "steven.g@email.com", ct: "Houston", st: "TX", li: "linkedin.com/in/stevengarcia",
+    stxt: "Construction manager with 10+ years of experience delivering residential and commercial projects up to $20M. Proven track record of completing projects on time and under budget while maintaining safety standards.",
+    j: [
+      { r: "Senior Construction Manager", co: "BuildRight Corp", p: "Mar 2019 - Present", b: ["Managed 15+ commercial construction projects worth $2M-$20M each, delivered 95% on schedule", "Reduced project costs by 12% through strategic vendor negotiations and value engineering", "Maintained zero lost-time incidents across 500K+ work hours through strict safety protocols"] },
+      { r: "Project Manager", co: "HomeBuilders Inc", p: "Jun 2014 - Feb 2019", b: ["Supervised construction of 200+ residential homes from foundation to final inspection", "Managed budgets of $5M-$10M annually, consistently delivering under budget by 5-8%", "Coordinated 20+ subcontractors per project ensuring quality and timeline compliance"] }
+    ],
+    ed: { d: "B.S. Construction Management", s: "University of Houston", p: "2010 - 2014", x: "OSHA 30, PMP Certification" },
+    sl: ["Software: Procore, Bluebeam, Primavera P6, MS Project, AutoCAD", "Domains: Commercial, Residential, Industrial, Mixed-Use, Renovation", "Management: Budgeting, Scheduling, Subcontractors, Procurement, Risk Management", "Compliance: OSHA, Building Codes, LEED, ADA, Permitting"],
+    t: ["Quantify project values and budget sizes", "Highlight safety record with work hours and incident rates", "Include project management certifications (PMP, CCM)", "Showcase software proficiency and technology adoption"]
+  }),
+  r({
+    slug: "ui-designer", title: "UI Designer", industry: "Tech", level: "Mid",
+    summary: "A creative UI designer crafting intuitive, beautiful interfaces that delight users and drive engagement.",
+    skills: ["Figma", "UI Design", "Design Systems", "Prototyping", "Typography", "Color Theory", "Responsive Design", "User Research", "HTML/CSS", "Interaction Design"],
+    n: "Sophia Kim", e: "sophia.k@email.com", ct: "Austin", st: "TX", li: "linkedin.com/in/sophiakim", gh: "github.com/sophiakim", ws: "sophiakim.design",
+    stxt: "UI designer with 4+ years of experience designing SaaS products used by 500K+ users. Expert in design systems, interaction design, and creating pixel-perfect interfaces. Passionate about accessible and inclusive design.",
+    j: [
+      { r: "UI Designer", co: "SaaSPlatform", p: "Jan 2022 - Present", b: ["Designed and maintained comprehensive design system used across 5 product teams and 50+ engineers", "Redesigned core product interface improving user task completion rate by 40%", "Created interactive prototypes for 20+ features validated through 100+ user testing sessions"] },
+      { r: "Junior UI Designer", co: "DesignStudio", p: "Jun 2020 - Dec 2021", b: ["Designed 30+ mobile and web interfaces for client projects across fintech, healthcare, and e-commerce", "Developed component library reducing design-to-development handoff time by 50%", "Conducted competitive analysis and user research to inform product design decisions"] }
+    ],
+    ed: { d: "B.F.A. Graphic Design", s: "University of Texas", p: "2016 - 2020" },
+    sl: ["Design: Figma, Sketch, Adobe XD, Framer, Principle, After Effects", "UI: Design Systems, Component Libraries, Prototyping, Interaction Design", "Visual: Typography, Color Theory, Layout, Iconography, Brand Identity", "Code: HTML, CSS, React Basics, Storybook"],
+    t: ["Include portfolio link with case studies", "Showcase design system and component library experience", "Quantify design impact (task completion, user satisfaction)", "Highlight collaboration with engineering and product teams"]
+  }),
 ]

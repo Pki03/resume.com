@@ -723,4 +723,370 @@ linkedin.com/in/janedoe<br/>
 <p>Create a professional resume ready to email using our <a href="/">free resume builder</a>. Generate a matching <a href="/cover-letter">cover letter</a> to include with your application. Browse <a href="/resume-examples">resume examples</a> to see professionally formatted resumes.</p>
     `.trim()
   },
+  {
+    slug: "best-free-resume-builder",
+    title: "Best Free Resume Builder (2025): Top Tools Compared",
+    description: "Compare the best free resume builders for 2025. Find which tool offers the most features, templates, and ATS optimization without costing you a cent.",
+    date: "2025-06-01",
+    readTime: "10 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/resume-examples", "/ats-score", "/cover-letter"],
+    content: `
+<h2>What Makes a Great Free Resume Builder?</h2>
+<p>Not all free resume builders are created equal. Many claim to be free but lock essential features — like PDF export or template access — behind a paywall. A truly great free resume builder gives you complete control without requiring a credit card or subscription.</p>
+
+<p>At <a href="/">ResumeBuilder</a>, we're biased, but we built our tool to address the exact frustrations we found in every other free resume builder on the market.</p>
+
+<h2>Our Top Free Resume Builder Picks</h2>
+
+<h3>1. ResumeBuilder (getapplykit.com) — Best Overall Free Option</h3>
+<p><strong>What's free:</strong> Everything. All 8 templates, 7 color themes per template, PDF export, ATS score checker, AI writing assistance, and cover letter generator.</p>
+<p><strong>Best for:</strong> Job seekers who want a complete, professional resume without paying for premium features. Our real-time ATS scoring helps you optimize your resume as you build it — something most paid tools don't even offer.</p>
+
+<h3>2. Novoresume — Best Design Quality</h3>
+<p><strong>What's free:</strong> Basic resume builder with limited templates. Cannot export as PDF without upgrading to Premium ($24/month).</p>
+<p><strong>Best for:</strong> Users who prioritize design and are willing to pay for the full experience. The free tier is very limited.</p>
+
+<h3>3. FlowCV — Best Interface</h3>
+<p><strong>What's free:</strong> Core builder with watermark on PDF exports. Premium ($12/month) removes watermark and unlocks ATS analysis.</p>
+<p><strong>Best for:</strong> Users who want a clean, modern interface and don't mind a watermark on their free PDF.</p>
+
+<h3>4. Zety — Best Template Selection</h3>
+<p><strong>What's free:</strong> Build your resume online, but cannot download or export without paying $23/month.</p>
+<p><strong>Best for:</strong> Users who want to preview templates before deciding to subscribe. Not suitable as a truly free option.</p>
+
+<h2>What to Look for in a Free Resume Builder</h2>
+<p><strong>ATS compatibility:</strong> The most important feature. Your resume needs to pass Applicant Tracking Systems. Look for tools that offer real-time ATS scoring or keyword analysis.</p>
+<p><strong>PDF export:</strong> If you can't download your resume, the tool isn't truly free. Verify that PDF export is included before you invest time.</p>
+<p><strong>Template quality:</strong> A good builder offers multiple templates with customization options. Avoid tools with outdated or generic designs.</p>
+<p><strong>No sign-up required:</strong> The best free tools let you start building immediately without creating an account. Your data stays in your browser.</p>
+<p><strong>Additional tools:</strong> Bonus features like cover letter generators, ATS checkers, and bullet point improvers add significant value.</p>
+
+<h2>Why We Built ResumeBuilder</h2>
+<p>After testing 20+ resume builders, we found that every single one either charged for essential features, included watermarks on free exports, or lacked ATS optimization. We built <a href="/">ResumeBuilder</a> to be the truly free option — no paywalls, no watermarks, no sign-up required. Our advanced ATS scoring engine with keyword stemming, synonym matching, and STAR format detection actually helps you get more interviews.</p>
+
+<p>Create your <a href="/">free resume</a> in minutes. Check your <a href="/ats-score">ATS score</a> to ensure it passes automated screening. Browse <a href="/resume-examples">professional resume examples</a> for inspiration.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-tips-2025",
+    title: "12 Resume Tips for 2025 That Actually Get You Hired",
+    description: "Updated resume tips for 2025. From ATS optimization to AI-proof formatting, learn what works in today's job market.",
+    date: "2025-05-28",
+    readTime: "10 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/ats-score", "/resume-examples", "/cover-letter"],
+    content: `
+<h2>1. Optimize for ATS First, Humans Second</h2>
+<p>Over 75% of resumes are rejected by Applicant Tracking Systems before a human sees them. Your resume must be parseable by ATS software. Use standard section headings (Experience, Education, Skills), avoid tables and columns, and use clean, consistent formatting. Check your resume's <a href="/ats-score">ATS score</a> before submitting.</p>
+
+<h2>2. Lead Every Bullet with a Strong Action Verb</h2>
+<p>Start each bullet point with a powerful action verb: Led, Developed, Created, Implemented, Achieved, Spearheaded. Avoid weak openings like "Responsible for" or "Duties included." Our <a href="/bullet-point-improver">bullet point improver</a> can help you rewrite weak bullets.</p>
+
+<h2>3. Quantify Everything</h2>
+<p>Numbers catch attention. Instead of "Improved sales," write "Increased sales by 35% within 6 months." Instead of "Managed a team," write "Led a team of 12 engineers." Use percentages, dollar amounts, and timeframes whenever possible.</p>
+
+<h2>4. Use the STAR Method</h2>
+<p>Every bullet should follow the STAR format: Situation, Task, Action, Result. Describe the context, your specific role, what you did, and the measurable outcome. This is what top recruiters look for.</p>
+
+<h2>5. Tailor for Each Application</h2>
+<p>Generic resumes get generic results. Study the job description and mirror its language. If they emphasize "project management," make sure that phrase appears in your resume. Missing keywords is the #1 reason resumes get filtered out. Use our <a href="/ats-score">keyword gap analysis</a> to identify what's missing.</p>
+
+<h2>6. Keep It to One Page (Usually)</h2>
+<p>For most professionals with under 10 years of experience, a one-page resume is ideal. Recruiters spend an average of 7-10 seconds scanning a resume. Make every line count. If you have extensive experience, two pages is acceptable — but never more.</p>
+
+<h2>7. Remove "Responsible For" From Your Vocabulary</h2>
+<p>These three words are the most common red flag in resumes. They signal passive, vague descriptions. Replace every instance with a strong action verb and specific achievement.</p>
+
+<h2>8. Include a Professional Summary</h2>
+<p>A 2-3 sentence summary at the top of your resume helps recruiters quickly understand who you are and what you're looking for. Include your years of experience, key skills, and career objective. Skip generic phrases like "hardworking individual seeking a challenging position."</p>
+
+<h2>9. List Skills Strategically</h2>
+<p>Group your skills by category (Technical, Soft Skills, Languages, Tools). Include a mix of hard skills (Python, SQL, React) and soft skills (Leadership, Communication, Problem Solving). Prioritize skills mentioned in the job description.</p>
+
+<h2>10. Format for Scannability</h2>
+<p>Use bullet points (not paragraphs), consistent font sizes (10-12pt body, 14-16pt headings), and clean white space. Avoid graphics, icons, photos, and colored backgrounds that confuse ATS parsers.</p>
+
+<h2>11. Include LinkedIn and Portfolio Links</h2>
+<p>Your contact section should include your LinkedIn profile URL (not just LinkedIn username), and a link to your portfolio, GitHub, or personal website if relevant. Many recruiters check these before deciding to interview.</p>
+
+<h2>12. Proofread Like Your Job Depends On It</h2>
+<p>A single typo can eliminate you from consideration. Read your resume backward (to check spelling), read it aloud (to check flow), and send it to a friend for review. Use our <a href="/">resume builder</a> to create a clean, professional resume in minutes.</p>
+
+<p>Check your resume's <a href="/ats-score">ATS compatibility</a> for free. Browse <a href="/resume-examples">resume examples</a> for your industry.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-write-resume-for-first-job",
+    title: "How to Write a Resume for Your First Job (No Experience? No Problem)",
+    description: "Land your first job with a resume that highlights your potential. Tips for students, fresh graduates, and career changers with limited work experience.",
+    date: "2025-05-20",
+    readTime: "8 min read",
+    category: "Entry Level",
+    relatedTools: ["/", "/resume-examples/fresher", "/resume-examples/software-engineer-intern", "/resume-examples/administrative-assistant"],
+    content: `
+<h2>Yes, You Can Write a Great Resume Without Work Experience</h2>
+<p>Everyone starts somewhere. Your first job resume should focus on your potential, skills, and achievements rather than professional experience. Here's exactly how to structure it.</p>
+
+<h2>What to Include When You Have No Experience</h2>
+<p><strong>Contact information:</strong> Name, phone number, email, LinkedIn profile, and location. Keep it professional — use an email address that includes your name.</p>
+<p><strong>Professional summary:</strong> A 2-sentence summary describing who you are, what you're looking for, and what you bring. Example: "Motivated computer science graduate with internship experience in full-stack development. Seeking an entry-level software engineering role where I can apply my skills in React, Python, and cloud computing."</p>
+<p><strong>Education:</strong> Place this section at the top since it's your strongest qualification. Include your school, degree, GPA (if 3.5+), relevant coursework, academic achievements, and extracurricular activities.</p>
+<p><strong>Projects:</strong> This is your secret weapon. Describe academic, personal, or open-source projects as if they were work experience. Include the technologies used, your role, and the outcome.</p>
+<p><strong>Skills:</strong> List technical skills (programming languages, tools, software) and soft skills (communication, teamwork, problem-solving). Be honest about your proficiency level.</p>
+<p><strong>Internships (if any):</strong> Even brief internship experience counts. Treat it like a job entry with bullet points describing your contributions.</p>
+<p><strong>Volunteer work & leadership:</strong> Club memberships, student organizations, sports teams, and volunteer work demonstrate soft skills and initiative.</p>
+<p><strong>Certifications & courses:</strong> Include relevant online courses (Coursera, Udemy, freeCodeCamp) and certifications that show continuous learning.</p>
+
+<h2>What to Leave Out</h2>
+<p>High school details (unless you're still in high school), unrelated part-time jobs (unless they demonstrate transferable skills), hobbies that don't add value, and objective statements like "seeking a challenging position" (use a professional summary instead).</p>
+
+<h2>Sample Resume Structure for First Job</h2>
+<pre style="background:var(--gray-50);padding:1rem;border-radius:8px;font-size:0.8125rem;line-height:1.6;white-space:pre-wrap">
+JANE DOE
+jane.doe@email.com | (555) 123-4567 | San Francisco, CA
+linkedin.com/in/janedoe | github.com/janedoe
+
+PROFESSIONAL SUMMARY
+Computer science student graduating June 2025 with internship experience in full-stack development. Proficient in JavaScript, React, and Python. Seeking an entry-level software engineering role.
+
+EDUCATION
+B.S. Computer Science | University of California | Expected 2025
+GPA: 3.7 | Dean's List 2023, 2024
+Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development
+
+PROJECTS
+Personal Finance Tracker | React, Node.js, PostgreSQL
+- Built full-stack web app tracking expenses and generating spending insights
+- Implemented user authentication and data visualization with Chart.js
+- Deployed on AWS with 99% uptime
+
+SKILLS
+Languages: JavaScript, Python, Java, SQL
+Frameworks: React, Node.js, Express
+Tools: Git, AWS, Docker, Figma
+Soft Skills: Team Collaboration, Problem Solving, Communication
+
+INTERNSHIP
+Software Engineering Intern | TechStartup | Summer 2024
+- Developed 3 REST APIs serving 10K+ requests daily
+- Wrote unit tests achieving 85% code coverage
+- Participated in daily standups and sprint planning
+
+LEADERSHIP
+Vice President | Computer Science Club | 2023-2024
+- Organized 12 workshops attended by 200+ students
+- Led team of 5 to plan hackathon with 100+ participants
+</pre>
+
+<h2>ATS Tips for Entry-Level Resumes</h2>
+<p>Even entry-level resumes need to pass ATS screening. Use standard section headers, include keywords from the job description, and avoid fancy formatting. Check your resume's <a href="/ats-score">ATS score</a> before sending it out. Browse <a href="/resume-examples/fresher">entry-level resume examples</a> for more inspiration.</p>
+    `.trim()
+  },
+  {
+    slug: "linkedin-profile-vs-resume",
+    title: "LinkedIn Profile vs Resume: Key Differences & How to Use Both",
+    description: "Understand the difference between your LinkedIn profile and resume. Learn when to use each, what to include, and how to make them work together.",
+    date: "2025-05-15",
+    readTime: "7 min read",
+    category: "Career Advice",
+    relatedTools: ["/", "/resume-examples", "/cover-letter"],
+    content: `
+<h2>Your Resume vs LinkedIn: Different Tools, Different Purposes</h2>
+<p>Many job seekers make the mistake of copying their resume directly to LinkedIn, or treating their LinkedIn profile as their online resume. While both document your professional experience, they serve different purposes and should be optimized differently.</p>
+
+<h2>Key Differences at a Glance</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0">
+<div style="background:var(--gray-50);padding:1rem;border-radius:8px"><strong style="display:block;margin-bottom:0.5rem">Your Resume</strong>
+<ul style="margin:0;padding-left:1.25rem;font-size:0.8125rem;line-height:1.6"><li>Tailored to each specific job</li><li>1-2 pages maximum</li><li>ATS-optimized formatting</li><li>Submitted as PDF</li><li>Sent directly to employers</li><li>Static document, can't be updated once sent</li></ul></div>
+<div style="background:var(--gray-50);padding:1rem;border-radius:8px"><strong style="display:block;margin-bottom:0.5rem">LinkedIn Profile</strong>
+<ul style="margin:0;padding-left:1.25rem;font-size:0.8125rem;line-height:1.6"><li>General overview of your career</li><li>No length limit</li><li>No ATS concerns (it's a web platform)</li><li>Searchable internally on LinkedIn</li><li>Discoverable by recruiters</li><li>Living document, constantly updated</li></ul></div>
+</div>
+
+<h2>What Goes on Your Resume But Not LinkedIn</h2>
+<p><strong>Full address:</strong> Your resume should include your city and state for location-based filtering. LinkedIn only needs your general location.</p>
+<p><strong>Specific bullet points:</strong> Your resume includes 3-5 bullet points per role, tailored to the specific job. LinkedIn allows a brief paragraph describing your role.</p>
+<p><strong>Quantified achievements:</strong> While LinkedIn can include metrics, your resume should highlight the most impressive, relevant numbers for each application.</p>
+<p><strong>Tailored keywords:</strong> Your resume should mirror the exact language from each job description. LinkedIn uses a broader set of industry keywords for recruiter search.</p>
+
+<h2>What Goes on LinkedIn But Not Your Resume</h2>
+<p><strong>Profile photo:</strong> Modern resumes in the US typically don't include photos (to avoid bias). LinkedIn requires one — profiles with photos get 21x more views.</p>
+<p><strong>Recommendations:</strong> LinkedIn allows colleagues to write testimonials. These don't belong on your resume but are powerful social proof on LinkedIn.</p>
+<p><strong>Skills endorsements:</strong> LinkedIn's skills section with endorsements from connections adds credibility. Keep this section updated.</p>
+<p><strong>Content & engagement:</strong> Articles you've written, posts you've shared, and comments on industry topics demonstrate thought leadership on LinkedIn. None of this goes on your resume.</p>
+<p><strong>Volunteer experience:</strong> LinkedIn has a dedicated volunteer section. Only include this on your resume if it's directly relevant to the job.</p>
+
+<h2>How to Make Them Work Together</h2>
+<p><strong>Consistent branding:</strong> Use the same professional headshot across platforms. Keep your job titles, dates, and company names identical. Inconsistent information raises red flags.</p>
+<p><strong>Expand on LinkedIn:</strong> Your resume is a highlight reel. Your LinkedIn profile is the director's cut. Go into more detail about projects, methodologies, and results.</p>
+<p><strong>Keywords strategy:</strong> Your resume uses precise, job-specific keywords. Your LinkedIn profile should use broader industry keywords that recruiters search for.</p>
+<p><strong>Link them:</strong> Include your LinkedIn URL in your resume's contact section. Include a link to your portfolio or personal website on LinkedIn.</p>
+<p><strong>Keep both updated:</strong> Update your LinkedIn profile immediately after any career change. Update your resume before each job application, tailoring it to the specific role.</p>
+
+<h2>LinkedIn Profile Checklist</h2>
+<ul><li>Professional profile photo (headshot, well-lit, neutral background)</li><li>Custom headline (not just your job title — add keywords)</li><li>About section with 2-3 paragraphs telling your story</li><li>Detailed experience with descriptions (not just titles)</li><li>Skills section with top 10-15 relevant skills</li><li>Recommendations from managers, peers, or clients</li><li>Featured section with portfolio, articles, or projects</li><li>Custom LinkedIn URL (linkedin.com/in/yourname)</li><li>Open to Work settings configured for target roles</li></ul>
+
+<h2>When to Send Each</h2>
+<p><strong>Send your resume when:</strong> Applying online, emailing a hiring manager, attending a career fair, submitting through a company portal, or asked for your "resume."</p>
+<p><strong>Send/update LinkedIn when:</strong> Networking, being discovered by recruiters, researching a company before interview, connecting with colleagues, or searching for jobs in "Open to Work" mode.</p>
+
+<p>Create an ATS-optimized <a href="/">resume</a> that complements your LinkedIn profile. Browse <a href="/resume-examples">resume examples</a> for formatting inspiration. Check your <a href="/ats-score">ATS score</a> before each application.</p>
+    `.trim()
+  },
+  {
+    slug: "what-to-put-on-a-resume",
+    title: "What to Put on a Resume: Complete Guide With Examples",
+    description: "Every section of a resume explained. Learn exactly what to include in your contact info, summary, experience, education, skills, and optional sections.",
+    date: "2025-05-10",
+    readTime: "12 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/resume-examples", "/ats-score", "/cover-letter", "/resume-summary-generator"],
+    content: `
+<h2>The 6 Essential Resume Sections</h2>
+<p>Every resume needs these six sections. Miss any one, and you risk being filtered out by both ATS software and human recruiters.</p>
+
+<h2>1. Contact Information</h2>
+<p><strong>Required:</strong> Full name, phone number, professional email address, location (City, State).</p>
+<p><strong>Recommended:</strong> LinkedIn profile URL, portfolio or GitHub link (if relevant).</p>
+<p><strong>Skip:</strong> Full street address, personal website that isn't relevant, social media profiles (unless professional), photo, date of birth, marital status.</p>
+
+<h2>2. Professional Summary</h2>
+<p>A 2-4 sentence overview at the top of your resume. Include: your title/role, years of experience, key skills, and what you're looking for. Avoid cliches like "hardworking" or "team player" without evidence.</p>
+<p><strong>Example:</strong> "Senior software engineer with 6+ years of experience building scalable web applications. Expert in React, Node.js, and AWS. Passionate about clean code and mentoring junior developers."</p>
+<p>Use our <a href="/resume-summary-generator">resume summary generator</a> to create a tailored summary in seconds.</p>
+
+<h2>3. Work Experience</h2>
+<p>List your positions in reverse chronological order. For each role include: company name, job title, dates employed, location, and 3-5 bullet points describing achievements (not responsibilities).</p>
+<p><strong>Bad:</strong> "Responsible for managing social media accounts."</p>
+<p><strong>Good:</strong> "Grew Instagram following from 5K to 50K in 8 months through data-driven content strategy, generating 2,000+ leads."</p>
+<p>Each bullet should follow STAR format (Situation, Task, Action, Result). Use our <a href="/bullet-point-improver">bullet point improver</a> to strengthen weak descriptions.</p>
+
+<h2>4. Education</h2>
+<p>Include your degree, institution, graduation year, and GPA (if 3.5+). Recent graduates should place this section above experience. Experienced professionals should place it below.</p>
+<p><strong>Optional but recommended:</strong> Relevant coursework, academic honors, thesis title, study abroad programs.</p>
+
+<h2>5. Skills</h2>
+<p>Group skills by category: Technical Skills, Soft Skills, Languages, Tools & Technologies. List 8-15 relevant skills. Prioritize skills mentioned in the job description.</p>
+<p><strong>Example categories:</strong> Languages (Python, SQL, JavaScript), Frameworks (React, Node.js, Django), Tools (AWS, Docker, Git), Soft Skills (Leadership, Communication, Problem Solving).</p>
+
+<h2>6. Additional Sections</h2>
+<p>These optional sections can strengthen your resume if relevant:</p>
+<ul>
+<li><strong>Certifications:</strong> Include credential name, issuing body, and date. Examples: AWS Solutions Architect, PMP, Google Analytics, CompTIA Security+.</li>
+<li><strong>Projects:</strong> Personal, academic, or open-source projects. Include technologies used and outcomes. Ideal for entry-level candidates.</li>
+<li><strong>Languages:</strong> List languages and proficiency level (Native, Fluent, Advanced, Intermediate, Basic).</li>
+<li><strong>Publications:</strong> Research papers, articles, books. Include title, publication name, and date.</li>
+<li><strong>Volunteer Experience:</strong> Relevant volunteer work showing leadership and community involvement.</li>
+<li><strong>Awards & Honors:</strong> Professional recognitions, academic honors, competitions won.</li>
+</ul>
+
+<h2>What NOT to Put on a Resume</h2>
+<p><strong>References:</strong> "References available upon request" is outdated and wastes space. Employers will ask if they need them.</p>
+<p><strong>Objective statements:</strong> "Seeking a challenging position where I can grow" adds no value. Use a professional summary instead.</p>
+<p><strong>Irrelevant jobs:</strong> Your high school summer job at a fast food restaurant doesn't need to be on your career resume (unless you're a student or recent grad).</p>
+<p><strong>Personal information:</strong> Age, marital status, religion, race, sexual orientation, political affiliation — these don't belong on a resume and may invite discrimination.</p>
+<p><strong>Hobbies:</strong> Unless a hobby directly demonstrates relevant skills (e.g., "Built a 3D printer from scratch" for an engineering role), leave it off.</p>
+<p><strong>Negative information:</strong> Reasons for leaving jobs, gaps in employment unless explained, salary requirements or history.</p>
+
+<h2>Resume Length Guidelines</h2>
+<p><strong>Entry-level (0-3 years):</strong> 1 page. Focus on education, projects, and internships.</p>
+<p><strong>Mid-career (4-10 years):</strong> 1 page if possible, 2 pages maximum. Be selective about what you include.</p>
+<p><strong>Senior (10+ years):</strong> 2 pages acceptable. Focus on the last 10-15 years of experience.</p>
+<p><strong>Executive:</strong> 2 pages maximum. Include board memberships, speaking engagements, and high-level accomplishments.</p>
+
+<p>Create a professional, ATS-optimized <a href="/">resume</a> with our free builder. Browse <a href="/resume-examples">resume examples</a> for your industry. Check your <a href="/ats-score">ATS score</a> before applying.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-writing-for-college-students",
+    title: "Resume Writing for College Students: Internships, Part-Time Jobs & More",
+    description: "College student resume guide with examples. How to turn coursework, projects, and campus involvement into a resume that lands internships and jobs.",
+    date: "2025-05-05",
+    readTime: "9 min read",
+    category: "Entry Level",
+    relatedTools: ["/", "/resume-examples/fresher", "/resume-examples/software-engineer-intern", "/resume-summary-generator", "/bullet-point-improver"],
+    content: `
+<h2>Your College Resume Is Different — and That's OK</h2>
+<p>As a college student, you don't need years of work experience to write a compelling resume. Employers hiring for internships and entry-level roles care about your potential, your skills, and how you've spent your time in college.</p>
+
+<h2>The College Resume Structure</h2>
+<p><strong>For college students, education goes first.</strong> Your degree, GPA, relevant coursework, and academic achievements are your strongest assets. List them prominently at the top of your resume, after your contact info and summary.</p>
+
+<h2>What Recruiters Look For in Student Resumes</h2>
+<p><strong>GPA:</strong> Include it if it's 3.0 or higher. A 3.5+ is considered strong for most competitive internships.</p>
+<p><strong>Relevant coursework:</strong> List 6-8 classes that are directly relevant to the role you're applying for. This shows you have foundational knowledge even without professional experience.</p>
+<p><strong>Projects:</strong> This is your most valuable section. Describe 2-3 projects in detail, including technologies used, your specific role, and the outcome. Link to GitHub repos or live demos.</p>
+<p><strong>Internships:</strong> Even short internship experiences demonstrate workplace readiness. Include them even if they were part-time or summer-only.</p>
+<p><strong>Campus involvement:</strong> Student clubs, sports teams, student government, and volunteer work all demonstrate leadership, teamwork, and time management.</p>
+<p><strong>Part-time jobs:</strong> Retail, food service, and campus jobs show responsibility and work ethic. Frame them in terms of transferable skills: customer service, cash handling, inventory management, team collaboration.</p>
+
+<h2>Sample College Resume</h2>
+<pre style="background:var(--gray-50);padding:1rem;border-radius:8px;font-size:0.8125rem;line-height:1.6;white-space:pre-wrap">
+ALEX JOHNSON
+alex.johnson@email.com | (555) 987-6543 | Boston, MA
+linkedin.com/in/alexjohnson | github.com/alexjohnson
+
+EDUCATION
+Northeastern University | Boston, MA
+Bachelor of Science in Computer Science | Expected May 2026
+GPA: 3.6 | Dean's List: Fall 2023, Spring 2024, Fall 2024
+Relevant Coursework: Data Structures, Algorithms, Database Design, Web Development, Operating Systems
+
+SKILLS
+Languages: Java, Python, JavaScript, SQL
+Frameworks: React, Node.js, Flask
+Tools: Git, Docker, AWS, Linux, Figma
+Soft Skills: Public Speaking, Team Leadership, Problem Solving
+
+PROJECTS
+StudyBuddy — Course Collaboration Platform | React, Node.js, MongoDB
+- Built web app for 500+ students to form study groups and share resources
+- Implemented real-time chat using WebSockets with 100ms latency
+- Deployed on AWS EC2 with CI/CD pipeline via GitHub Actions
+
+Hackathon Winner — Smart Campus Map | Python, React, Google Maps API
+- Won "Best Use of Google APIs" at HackNU 2024 (200+ participants)
+- Built interactive campus map showing real-time building occupancy
+- Presented working prototype to panel of 5 judges
+
+EXPERIENCE
+Teaching Assistant — Computer Science Department | Sep 2024 - Present
+- Lead weekly lab sessions for 40+ students in Introduction to Programming
+- Grade assignments and provide one-on-one mentorship during office hours
+- Developed supplementary practice materials used by 200+ students
+
+Software Engineering Intern | TechStartup Inc. | Jun 2024 - Aug 2024
+- Developed 3 REST APIs in Node.js processing 10K+ daily requests
+- Wrote automated tests achieving 90% coverage
+- Participated in sprint planning and daily stand-ups in agile team of 8
+
+LEADERSHIP
+Vice President | Computer Science Club | 2023 - Present
+- Organized 15 workshops and speaker events with 300+ total attendees
+- Manage club budget of $5,000 and coordinate with 8 executive board members
+- Led outreach to 3 corporate sponsors securing $10,000 in funding
+</pre>
+
+<h2>Common Mistakes College Students Make</h2>
+<p><strong>Listing irrelevant high school achievements:</strong> Once you're in college, your high school experience is less relevant unless it's exceptional.</p>
+<p><strong>Using an unprofessional email:</strong> "cooldude123@email.com" won't get you an interview. Use firstname.lastname@email.com.</p>
+<p><strong>Not proofreading:</strong> A typo on a student resume suggests carelessness. Have a career center advisor review your resume before sending it.</p>
+<p><strong>Forgetting to quantify:</strong> Even in academic projects, use numbers. "Built an app used by 100+ students" is more impressive than "Built an app."</p>
+<p><strong>Using a fancy template:</strong> Stick with clean, simple, ATS-optimized templates. Fancy designs with columns and graphics may be rejected by automated systems.</p>
+
+<h2>How to Get Experience Before Graduation</h2>
+<ul>
+<li>Apply for summer internships starting in September (summer before you want to intern)</li>
+<li>Join student organizations and take on leadership roles</li>
+<li>Contribute to open-source projects on GitHub</li>
+<li>Build personal projects and document them on a portfolio site</li>
+<li>Attend career fairs and networking events on campus</li>
+<li>Use your university's career center for resume reviews and mock interviews</li>
+<li>Apply for part-time jobs in your field of study</li>
+<li>Participate in hackathons and coding competitions</li>
+</ul>
+
+<p>Create your <a href="/">college resume</a> with our free builder — ATS-optimized, no sign-up required. Browse <a href="/resume-examples/fresher">entry-level resume examples</a> for more inspiration. Check your <a href="/ats-score">ATS score</a> before applying.</p>
+    `.trim()
+  },
 ]

@@ -1,0 +1,126 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { comparisons } from "../../data/comparisons"
+
+export function getStaticPaths() {
+  return comparisons.map(c => ({
+    params: { slug: c.slug },
+    props: c
+  }))
+}
+
+const { slug, competitor, competitorUrl, headline, description, summary, prosCons, features, cta } = Astro.props
+const pageTitle = `${competitor} Alternative — Free Resume Builder | ResumeBuilder`
+const canonical = `https://getapplykit.com/compare/${slug}`
+const prosConsHtml = [prosCons.ours.map(i => `<li class="pro"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>${i}</span></li>`).join(""), prosCons.theirs.map(i => `<li class="con"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>${i}</span></li>`).join("")]
+const featuresHtml = features.map((f, i) => `<div class="feature-row ${i === 0 ? 'feature-row-header' : ''}"><div class="feature-name">${f.name}</div><div class="feature-cell feature-us"><span class="fg-check">✓</span> ${f.us}</div><div class="feature-cell feature-them"><span class="fg-cross">✕</span> ${f.them}</div></div>`).join("")
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": headline,
+  "description": description,
+  "url": canonical,
+  "about": { "@type": "Thing", "name": `${competitor} vs ResumeBuilder comparison` }
+})
+---
+
+<Layout title={pageTitle} description={description}>
+  <section class="hero-split hero-split-gradient" style="padding-bottom:2rem">
+    <div class="hero-split-content">
+      <span class="eyebrow">Comparison</span>
+      <h1>{headline}</h1>
+      <p>{description}</p>
+      <div class="hero-split-actions">
+        <a href="/" class="btn btn-primary btn-lg pulse-glow">Try Our Free Builder →</a>
+        <a href={competitorUrl} target="_blank" rel="nofollow noopener" class="btn btn-outline btn-lg">Visit {competitor}</a>
+      </div>
+      <div class="hero-split-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 100% Free</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No Sign-Up</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ATS-Optimized</span>
+      </div>
+    </div>
+    <div class="hero-split-visual">
+      <div class="hero-mockup">
+        <div class="hero-mockup-header">
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+        </div>
+        <div class="hero-mockup-body" style="text-align:center">
+          <div style="font-size:2rem;font-weight:800;color:var(--success);margin-bottom:0.25rem">VS</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.5rem;background:var(--gray-50);border-radius:8px">
+              <span style="font-size:0.875rem;font-weight:600;color:var(--gray-900)">ResumeBuilder</span>
+              <span style="font-size:0.6875rem;padding:0.1875rem 0.5rem;background:var(--success-light);color:var(--success);border-radius:999px;font-weight:600">Free</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.5rem;background:var(--gray-50);border-radius:8px">
+              <span style="font-size:0.875rem;font-weight:600;color:var(--gray-900)">{competitor}</span>
+              <span style="font-size:0.6875rem;padding:0.1875rem 0.5rem;background:var(--gray-100);color:var(--gray-500);border-radius:999px;font-weight:600">Paid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm">
+    <div class="container-content">
+      <div class="card card-elevated">
+        <div class="card-body">
+          <h2 style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin-bottom:1rem">Why Choose Us Over {competitor}?</h2>
+          <p style="font-size:0.9375rem;color:var(--gray-600);line-height:1.7;margin-bottom:1.25rem">{summary}</p>
+          <div class="pros-cons-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:0.5rem">
+            <div>
+              <h3 style="font-size:0.9375rem;font-weight:700;color:var(--success);margin-bottom:0.75rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline;vertical-align:middle;margin-right:0.25rem"><polyline points="20 6 9 17 4 12"/></svg> Why We're Better</h3>
+              <ul style="display:flex;flex-direction:column;gap:0.5rem;padding:0;margin:0;list-style:none">{prosConsHtml[0]}</ul>
+            </div>
+            <div>
+              <h3 style="font-size:0.9375rem;font-weight:700;color:var(--gray-500);margin-bottom:0.75rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline;vertical-align:middle;margin-right:0.25rem"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> What They Do Well</h3>
+              <ul style="display:flex;flex-direction:column;gap:0.5rem;padding:0;margin:0;list-style:none">{prosConsHtml[1]}</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-elevated" style="margin-top:1.5rem">
+        <div class="card-body">
+          <h2 style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin-bottom:1rem">Feature Comparison</h2>
+          <div class="feature-table">{featuresHtml}</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1.5rem;background:var(--primary-light);border:2px solid var(--primary);border-radius:16px;padding:2rem;text-align:center">
+        <h2 style="font-size:1.25rem;font-weight:700;color:var(--primary);margin-bottom:0.75rem">Ready to Build Your Resume?</h2>
+        <p style="font-size:0.9375rem;color:var(--gray-600);margin-bottom:1.25rem;max-width:500px;margin-left:auto;margin-right:auto">{cta}</p>
+        <a href="/" class="btn btn-primary btn-lg pulse-glow" style="justify-content:center">Start Building Free →</a>
+      </div>
+
+      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center">
+        <a href="/" class="btn btn-outline btn-sm">Resume Builder</a>
+        <a href="/ats-score" class="btn btn-outline btn-sm">ATS Score Checker</a>
+        <a href="/cover-letter" class="btn btn-outline btn-sm">Cover Letter Generator</a>
+        <a href="/resume-examples" class="btn btn-outline btn-sm">Resume Examples</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">{schema}</script>
+</Layout>
+
+<style>
+  .pros-cons-grid ul li { display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600);line-height:1.5 }
+  .pros-cons-grid ul li svg { flex-shrink:0;margin-top:0.125rem }
+  .feature-row { display:grid;grid-template-columns:1fr 1.5fr 1.5fr;gap:0.75rem;padding:0.75rem 0.5rem;border-bottom:1px solid var(--gray-100);font-size:0.875rem;align-items:center }
+  .feature-row-header { font-weight:600;color:var(--gray-900);border-bottom:2px solid var(--gray-200) }
+  .feature-name { font-weight:500;color:var(--gray-700) }
+  .feature-cell { color:var(--gray-600) }
+  .fg-check { color:var(--success);font-weight:700;margin-right:0.25rem }
+  .fg-cross { color:var(--gray-400);margin-right:0.25rem }
+  @media (max-width:700px) {
+    .feature-row { grid-template-columns:1fr;padding:0.5rem 0;gap:0.25rem }
+    .feature-row-header { display:none }
+    .feature-name { font-weight:600;color:var(--gray-900);font-size:0.8125rem }
+    .pros-cons-grid { grid-template-columns:1fr }
+  }
+</style>
