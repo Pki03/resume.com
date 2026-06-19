@@ -471,8 +471,34 @@ import Layout from "../layouts/Layout.astro"
     <div class="container-content">
       <div class="section-header reveal">
         <h2>How to Choose the Right Template</h2>
-        <p>Your resume template sets the tone for your entire job application.</p>
+        <p>Your resume template sets the tone for your entire job application. Choosing the right design can significantly impact how recruiters perceive your candidacy.</p>
       </div>
+
+      <article class="content-article" style="margin-bottom:2rem">
+        <h3>Why Your Resume Template Matters</h3>
+        <p>Your resume template is more than just visual design — it's the first impression you make on a recruiter. A well-designed template makes your experience easy to scan, highlights your most important qualifications, and signals your professionalism. Conversely, a poorly designed template can hide your achievements behind confusing layouts, frustrate ATS parsers, and make you appear less qualified than you are.</p>
+        <p>All of our templates are designed with two goals in mind: they must impress human recruiters with clean, professional layouts, and they must be fully parsable by Applicant Tracking Systems. Every template uses standard section headings, single-column layouts where possible, and clean typography that scans well both visually and programmatically.</p>
+
+        <h3>How to Pick the Right Template for Your Industry</h3>
+        <p><strong>Classic:</strong> Traditional clean layout with a centered header. Best for finance, law, accounting, government, and education roles. Conservative industries expect conservative design — stick with the Classic template for these fields. ATS-safe.</p>
+        <p><strong>Modern:</strong> Colorful header bar with clean content area beneath. Perfect for tech, startups, and engineering roles. The splash of color shows personality while maintaining ATS compatibility. Best for software engineers, product managers, and designers applying to tech companies. ATS-safe.</p>
+        <p><strong>Professional:</strong> Elegant design with subtle accent lines separating sections. Ideal for consulting, corporate roles, banking, and management positions. This template strikes a balance between visual polish and conservative design. ATS-safe.</p>
+        <p><strong>Creative:</strong> Bold gradient header with modern typography. Great for design, marketing, advertising, and media roles. Use this when you want to showcase your creative sensibility. Note that creative designs may not parse perfectly in some ATS systems — pair with our ATS Score Checker for verification.</p>
+        <p><strong>Minimal:</strong> Clean, sparse design with plenty of white space and a circular profile photo area. Modern and sophisticated. Works well for designers, consultants, and any role where clean aesthetics matter. ATS-safe.</p>
+        <p><strong>Executive:</strong> Premium design with bold accent elements and subtle sidebar styling. Designed for senior leadership roles including C-suite, VPs, Directors, and senior managers. The premium feel signals executive presence. ATS-safe.</p>
+        <p><strong>Two-Column:</strong> Sidebar layout with skills and contact on left, experience on right. Great for showcasing diverse skill sets. Ideal for candidates with extensive technical skills they want to highlight prominently. ATS-safe.</p>
+        <p><strong>Tech:</strong> Dark mode design with accent colors and modern typography. Stand out for tech and engineering roles with this unique dark aesthetic. Best for senior technical roles, engineering management, and developer advocate positions.</p>
+
+        <h3>7 Color Themes Per Template</h3>
+        <p>Every template comes with 7 professionally designed color themes, letting you customize the look while maintaining a cohesive design. Choose from: Blue (default professional), Green (growth and finance), Purple (creative and leadership), Orange (energy and innovation), Teal (modern and tech), Rose (warm and approachable), and Slate (neutral and conservative). The color theme applies to headers, accent lines, and section dividers, giving each template a completely different feel without changing the layout.</p>
+
+        <h3>ATS Compatibility Guide</h3>
+        <p>Templates marked as ATS-safe have been tested for parsability. We verify that all section headings are recognized correctly, contact information is extracted properly, and bullet points are parsed in order. Classic, Modern, Professional, Minimal, Executive, and Two-Column templates are all verified ATS-safe. Creative and Tech templates use some visual elements that may not parse perfectly in every system — we recommend using our <a href="/ats-score">ATS Score Checker</a> to verify if you choose these options.</p>
+        <p>For best ATS results regardless of template: use standard section headings (Experience, Education, Skills), avoid graphics and images, don't use headers/footers for important content, submit as PDF, and include relevant keywords from the job description throughout your resume.</p>
+
+        <p>Browse our <a href="/resume-examples">resume examples by industry</a> to see how each template looks with real content, or go straight to our <a href="/">free resume builder</a> to start building your ATS-optimized resume.</p>
+      </article>
+
       <div class="features-grid">
         <div class="card feature-card-left reveal reveal-delay-1">
           <div class="card-icon" style="background:var(--primary-light)">
@@ -645,6 +671,46 @@ import Layout from "../layouts/Layout.astro"
     "operatingSystem": "All",
     "browserRequirements": "JavaScript",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which resume template is best for ATS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clean, single-column templates with standard section headings are best for ATS compatibility. Our Classic and Professional templates are the most ATS-friendly because they avoid complex layouts, columns, and graphics that can confuse parsing software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many resume templates do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 8 professional resume templates: Classic, Modern, Professional, Creative, Minimal, Executive, Two-Column, and Tech. Each template can be customized with 7 different color themes, giving you 56 unique design combinations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are these resume templates really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all templates are completely free with no restrictions. You can use any template, customize colors, export as PDF, and create unlimited resumes. No watermark, no sign-up, no credit card required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize the colors of my resume template?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, each template comes with 7 pre-designed color themes: Blue (professional), Green (modern), Purple (creative), Red (bold), Teal (fresh), Navy (executive), and Slate (minimal). You can switch between themes instantly to find the perfect look."
+        }
+      }
+    ]
   }
   </script>
 </Layout>

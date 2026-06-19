@@ -1,0 +1,344 @@
+{
+  "communities": {
+    "0": [
+      "blog_index",
+      "blog_slug",
+      "blog_slug_getstaticpaths",
+      "cover_letter_slug",
+      "cover_letter_slug_getstaticpaths",
+      "cover_letter_slug_moreexamples",
+      "cover_letter_slug_relatedguides",
+      "data_blogposts",
+      "data_blogposts_blogpost",
+      "data_blogposts_blogposts",
+      "data_coverletterexamples",
+      "data_coverletterexamples_coverletterexample",
+      "data_coverletterexamples_coverletterexamples",
+      "data_coverletterexamples_r",
+      "data_resumeexamples_resumeexamples",
+      "resume_examples_index",
+      "resume_examples_slug",
+      "resume_examples_slug_getstaticpaths",
+      "resume_examples_slug_keywords",
+      "resume_examples_slug_moreexamples",
+      "resume_examples_slug_relatedguides",
+      "users_prateekkhurmi_resume_com_src_data_blogposts",
+      "users_prateekkhurmi_resume_com_src_data_coverletterexamples",
+      "users_prateekkhurmi_resume_com_src_data_resumeexamples"
+    ],
+    "1": [
+      "components_howitworks",
+      "components_seo",
+      "layouts_layout",
+      "pages_404",
+      "pages_500",
+      "pages_about",
+      "pages_ats_embed",
+      "pages_ats_embed_schema",
+      "pages_bullet_point_improver",
+      "pages_contact",
+      "pages_cover_letter",
+      "pages_cover_letter_body",
+      "pages_cover_letter_copycoverletter",
+      "pages_cover_letter_exportcoverpdf",
+      "pages_cover_letter_updatepreview",
+      "pages_faq",
+      "pages_index",
+      "pages_index_section",
+      "pages_privacy",
+      "pages_resume_summary_generator",
+      "pages_templates",
+      "pages_terms",
+      "users_prateekkhurmi_resume_com_src_styles_global_css"
+    ],
+    "2": [
+      "scripts_core",
+      "scripts_core_bm25",
+      "scripts_core_bm25_fit",
+      "scripts_core_bm25_init",
+      "scripts_core_bm25_score",
+      "scripts_core_bm25_tokenize",
+      "scripts_core_detect_domain",
+      "scripts_core_load_csv",
+      "scripts_core_rationale_110",
+      "scripts_core_rationale_115",
+      "scripts_core_rationale_134",
+      "scripts_core_rationale_160",
+      "scripts_core_rationale_166",
+      "scripts_core_rationale_191",
+      "scripts_core_rationale_213",
+      "scripts_core_rationale_235",
+      "scripts_core_rationale_97",
+      "scripts_core_search",
+      "scripts_core_search_csv",
+      "scripts_core_search_stack"
+    ],
+    "3": [
+      "lib_resumedata",
+      "lib_resumedata_formatdate",
+      "lib_resumedata_getdefaultresumeconfig",
+      "lib_resumedata_getdefaultresumedata",
+      "lib_resumedata_templates",
+      "lib_resumedata_themecolors",
+      "lib_types",
+      "lib_types_certification",
+      "lib_types_education",
+      "lib_types_experience",
+      "lib_types_language",
+      "lib_types_personalinfo",
+      "lib_types_project",
+      "lib_types_resumeconfig",
+      "lib_types_resumedata",
+      "lib_types_resumetemplate",
+      "lib_types_skill",
+      "lib_types_skillcategory",
+      "lib_types_themecolor"
+    ],
+    "4": [
+      "scripts_design_system",
+      "scripts_design_system_detect_page_type",
+      "scripts_design_system_format_ascii_box",
+      "scripts_design_system_format_markdown",
+      "scripts_design_system_format_master_md",
+      "scripts_design_system_format_page_override_md",
+      "scripts_design_system_generate_design_system",
+      "scripts_design_system_generate_intelligent_overrides",
+      "scripts_design_system_persist_design_system",
+      "scripts_design_system_rationale_1021",
+      "scripts_design_system_rationale_243",
+      "scripts_design_system_rationale_368",
+      "scripts_design_system_rationale_464",
+      "scripts_design_system_rationale_492",
+      "scripts_design_system_rationale_543",
+      "scripts_design_system_rationale_806",
+      "scripts_design_system_rationale_915"
+    ],
+    "5": [
+      "scripts_design_system_designsystemgenerator",
+      "scripts_design_system_designsystemgenerator_apply_reasoning",
+      "scripts_design_system_designsystemgenerator_extract_results",
+      "scripts_design_system_designsystemgenerator_find_reasoning_rule",
+      "scripts_design_system_designsystemgenerator_generate",
+      "scripts_design_system_designsystemgenerator_init",
+      "scripts_design_system_designsystemgenerator_load_reasoning",
+      "scripts_design_system_designsystemgenerator_multi_domain_search",
+      "scripts_design_system_designsystemgenerator_select_best_match",
+      "scripts_design_system_rationale_123",
+      "scripts_design_system_rationale_160",
+      "scripts_design_system_rationale_164",
+      "scripts_design_system_rationale_38",
+      "scripts_design_system_rationale_44",
+      "scripts_design_system_rationale_52",
+      "scripts_design_system_rationale_65",
+      "scripts_design_system_rationale_89"
+    ],
+    "6": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_astro",
+      "package_dependencies_astrojs_sitemap",
+      "package_description",
+      "package_devdependencies",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_vite",
+      "package_name",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_deploy",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_type",
+      "package_version"
+    ],
+    "7": [
+      "pages_ats_score",
+      "pages_ats_score_bulletlines",
+      "pages_ats_score_bulletstyles",
+      "pages_ats_score_detected",
+      "pages_ats_score_displayresults",
+      "pages_ats_score_finalscore",
+      "pages_ats_score_hascolumns",
+      "pages_ats_score_if",
+      "pages_ats_score_presentorder",
+      "pages_ats_score_sentencelines",
+      "pages_ats_score_uniqueverbs"
+    ],
+    "8": [
+      "compare_slug",
+      "compare_slug_featureshtml",
+      "compare_slug_getstaticpaths",
+      "compare_slug_prosconshtml",
+      "compare_slug_schema",
+      "data_comparisons",
+      "data_comparisons_comparison",
+      "data_comparisons_comparisons",
+      "users_prateekkhurmi_resume_com_src_data_comparisons"
+    ],
+    "9": [
+      "data_generatedexamples",
+      "data_generatedexamples_generatedexamples",
+      "data_generatedexamples_r",
+      "data_generatedexamples_slughash",
+      "data_resumeexamples",
+      "data_resumeexamples_manualentries",
+      "data_types",
+      "data_types_resumeexample"
+    ],
+    "10": [
+      "concept_design_system_persistence",
+      "data_ui_reasoning_csv",
+      "design_system_master_md",
+      "scripts_search_py",
+      "skill_ui_ux_pro_max"
+    ],
+    "11": [
+      "scripts_search",
+      "scripts_search_format_output",
+      "scripts_search_rationale_31"
+    ],
+    "12": [
+      "public_favicon_svg",
+      "public_robots_txt"
+    ],
+    "13": [
+      "astro_config"
+    ],
+    "14": [
+      "public_embed_ats"
+    ],
+    "15": [
+      "public_og_image_svg"
+    ]
+  },
+  "cohesion": {
+    "0": 0.12318840579710146,
+    "1": 0.09881422924901186,
+    "2": 0.14736842105263157,
+    "3": 0.12280701754385964,
+    "4": 0.16911764705882354,
+    "5": 0.16176470588235295,
+    "6": 0.125,
+    "7": 0.18181818181818182,
+    "8": 0.25,
+    "9": 0.42857142857142855,
+    "10": 0.4,
+    "11": 0.6666666666666666,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0
+  },
+  "gods": [
+    {
+      "id": "scripts_design_system_designsystemgenerator",
+      "label": "DesignSystemGenerator",
+      "degree": 11
+    },
+    {
+      "id": "scripts_core_search_csv",
+      "label": "_search_csv()",
+      "degree": 8
+    },
+    {
+      "id": "scripts_core_bm25",
+      "label": "BM25",
+      "degree": 7
+    },
+    {
+      "id": "scripts_core_search",
+      "label": "search()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_design_system_generate_design_system",
+      "label": "generate_design_system()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_design_system_persist_design_system",
+      "label": "persist_design_system()",
+      "degree": 5
+    },
+    {
+      "id": "scripts_design_system_generate_intelligent_overrides",
+      "label": "_generate_intelligent_overrides()",
+      "degree": 5
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "data_blogposts_blogposts",
+      "label": "blogPosts",
+      "degree": 5
+    },
+    {
+      "id": "scripts_design_system_format_page_override_md",
+      "label": "format_page_override_md()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Search Script",
+      "target": "Master Design System",
+      "source_files": [
+        "skills/ui-ux-pro-max/scripts/search.py",
+        "design-system/MASTER.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "Robots Exclusion Protocol",
+      "target": "Favicon Asset",
+      "source_files": [
+        "public/robots.txt",
+        "public/favicon.svg"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image); semantically similar concepts with no structural link"
+    },
+    {
+      "source": "UI/UX Pro Max Skill",
+      "target": "Search Script",
+      "source_files": [
+        ".opencode/skills/ui-ux-pro-max/SKILL.md",
+        "skills/ui-ux-pro-max/scripts/search.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "crosses file types (doc \u2194 code); connects across different repos/directories"
+    },
+    {
+      "source": "Search Script",
+      "target": "UI Reasoning Rules",
+      "source_files": [
+        "skills/ui-ux-pro-max/scripts/search.py",
+        "ui-reasoning.csv"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "_generate_intelligent_overrides()",
+      "target": "search()",
+      "source_files": [
+        ".opencode/skills/ui-ux-pro-max/scripts/design_system.py",
+        ".opencode/skills/ui-ux-pro-max/scripts/core.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 4365,
+    "output": 1379
+  }
+}

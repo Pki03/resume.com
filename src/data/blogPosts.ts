@@ -1089,4 +1089,438 @@ Vice President | Computer Science Club | 2023 - Present
 <p>Create your <a href="/">college resume</a> with our free builder — ATS-optimized, no sign-up required. Browse <a href="/resume-examples/fresher">entry-level resume examples</a> for more inspiration. Check your <a href="/ats-score">ATS score</a> before applying.</p>
     `.trim()
   },
+  {
+    slug: "resume-objective-vs-summary",
+    title: "Resume Objective vs Summary: When to Use Each (With Examples)",
+    description: "Not sure whether to use a resume objective or summary? Learn the key differences, when to choose each, and see real examples for every career stage.",
+    date: "2026-01-15",
+    readTime: "8 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/resume-summary-generator", "/resume-examples"],
+    content: `
+<h2>Resume Objective vs Summary: What's the Difference?</h2>
+<p>The resume objective and professional summary are two different tools for the top of your resume — and choosing the wrong one can hurt your chances. A resume summary highlights your existing experience and achievements, while a resume objective states your career goals and what you hope to accomplish. Understanding when to use each is critical because the top of your resume is prime real estate that recruiters scan in seconds.</p>
+
+<h2>What Is a Resume Summary?</h2>
+<p>A professional summary is a 2-4 sentence overview that highlights your years of experience, key skills, notable achievements, and what you bring to the role. It's designed for candidates with relevant work experience who want to quickly demonstrate their value. Think of it as your elevator pitch — concise, impactful, and tailored to the specific role.</p>
+<p><strong>Example:</strong> "Senior product manager with 8+ years of experience in SaaS and a proven track record of driving 40% revenue growth through data-informed product strategy. Skilled in cross-functional leadership, A/B testing, and go-to-market execution. Passionate about building products that solve real user problems."</p>
+
+<h2>What Is a Resume Objective?</h2>
+<p>A resume objective is a 2-3 sentence statement about your career goals and what you're looking for in your next role. It's best for entry-level candidates, career changers, or applicants who have limited direct experience in the field. The focus is on your aspirations and what you hope to contribute.</p>
+<p><strong>Example:</strong> "Recent computer science graduate seeking an entry-level software engineering position where I can apply my strong foundation in Python, Java, and web development to build scalable applications. Eager to contribute to a collaborative engineering team while continuing to grow as a developer."</p>
+
+<h2>When to Use a Resume Summary</h2>
+<p>Use a professional summary when you have 2+ years of relevant experience in the industry you're applying to. It's the preferred choice for most experienced professionals because it immediately shows the recruiter what you've accomplished and why you're qualified. Use our <a href="/resume-summary-generator">resume summary generator</a> to craft a compelling summary in seconds.</p>
+
+<h2>When to Use a Resume Objective</h2>
+<p>Use a resume objective when you're just starting your career, changing industries, or have significant employment gaps. It allows you to explain your motivation and connect your past experience to your future goals. Entry-level candidates, recent graduates, and career changers benefit most from a well-written objective.</p>
+
+<h2>What Recruiters Prefer</h2>
+<p>According to hiring surveys, 83% of recruiters prefer a professional summary over an objective — but only when the candidate has relevant experience. For entry-level candidates, an objective is better than leaving the top of your resume empty. The key is matching your choice to your career situation.</p>
+
+<p>Build a complete resume with our <a href="/">free resume builder</a>. Use the <a href="/resume-summary-generator">summary generator</a> for professional summaries or write your own objective. Browse <a href="/resume-examples">resume examples</a> for your industry.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-list-freelance-work-on-resume",
+    title: "How to List Freelance Work on a Resume (Examples & Tips)",
+    description: "Learn how to properly list freelance and self-employment work on your resume. Includes formatting tips, example entries, and how to make freelance experience stand out.",
+    date: "2026-02-01",
+    readTime: "8 min read",
+    category: "Career Advice",
+    relatedTools: ["/", "/bullet-point-improver", "/ats-score"],
+    content: `
+<h2>Why Freelance Work Belongs on Your Resume</h2>
+<p>Freelance and self-employment experience is real work experience — full stop. Whether you freelanced full-time, took on side projects while employed, or are transitioning from traditional employment to consulting, your freelance work demonstrates initiative, versatility, and real-world skills. The key is presenting it in a way that recruiters and ATS systems recognize as legitimate professional experience.</p>
+
+<h2>How to Format Freelance Work on Your Resume</h2>
+<p>Treat freelance work like any other job entry. List your freelance business name or "Freelance [Your Profession]" as your company, your role as your title, and the date range. Under each entry, include bullet points describing projects, clients, and measurable outcomes. Be specific about what you delivered and for whom.</p>
+<p><strong>Example format:</strong><br/>
+<strong>Freelance Web Developer</strong> | Self-Employed | Jan 2023 – Present<br/>
+• Developed custom WordPress websites for 15+ small business clients, increasing average client traffic by 60%<br/>
+• Built e-commerce solutions using Shopify and WooCommerce, processing $500K+ in monthly transactions</p>
+
+<h2>Should You Use "Self-Employed" or a Business Name?</h2>
+<p>If you operated under a registered business name, use that. Otherwise, "Freelance [Role]" or "Self-Employed" works perfectly. The ATS needs to see a company name, job title, and dates — just like any other position. Don't try to hide freelance work by omitting it or calling it something unclear.</p>
+
+<h2>How to Write Freelance Bullet Points</h2>
+<p>Use the same rules as regular experience: start with strong action verbs, quantify results, and focus on achievements. Mention specific clients (especially well-known ones), project sizes, and measurable impact. If you managed budgets, deadlines, or teams during projects, include those details. Use our <a href="/bullet-point-improver">bullet point improver</a> to strengthen your freelance descriptions.</p>
+<p><strong>Strong freelance bullet examples:</strong><br/>
+• "Delivered 30+ branding packages for startups, generating $120K in annual revenue"<br/>
+• "Managed concurrent projects for 5+ clients while maintaining 98% on-time delivery rate"<br/>
+• "Reduced client advertising costs by 35% through data-driven campaign optimization strategies"</p>
+
+<h2>How to List Freelance Work While Employed Full-Time</h2>
+<p>If you freelanced while holding a full-time job, include it as a separate entry below your primary employment. Make sure the timeframes don't overlap confusingly. You can label it "Freelance [Role] (Side Projects)" to clarify. Focus on the most impressive projects and avoid listing so many that it looks like your full-time job suffered.</p>
+
+<h2>Common Freelance Resume Mistakes</h2>
+<p>Don't use generic descriptions like "Provided freelance services." Be specific about your services, clients, and outcomes. Don't downplay freelance work — it's valuable experience that shows entrepreneurship and self-management. And don't forget to check your resume's <a href="/ats-score">ATS score</a> to ensure your freelance entries parse correctly.</p>
+
+<p>Create a professional resume that showcases your freelance experience with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> for your field.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-list-projects-on-resume",
+    title: "How to List Projects on a Resume (With Examples for 2026)",
+    description: "Learn how to showcase personal, academic, and professional projects on your resume. Includes formatting tips, real examples, and where to place your project section.",
+    date: "2026-02-15",
+    readTime: "8 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/bullet-point-improver", "/resume-examples"],
+    content: `
+<h2>Why Projects Matter on Your Resume</h2>
+<p>Projects — whether personal, academic, open-source, or professional — demonstrate practical skills, initiative, and the ability to deliver results. For early-career professionals, career changers, and anyone in technical fields, a well-written project section can be more impactful than formal work experience. Projects show what you can actually do, not just what you've been paid to do.</p>
+
+<h2>Where to Place Your Project Section</h2>
+<p>If projects are your strongest asset (common for recent graduates, bootcamp grads, and career changers), place your project section above your work experience. If you have substantial professional experience, place projects below your work history but above education. On a one-page resume, include 2-4 projects maximum — choose the most impressive and relevant ones.</p>
+
+<h2>How to Format Individual Projects</h2>
+<p>For each project include: project name, a short description (1-2 lines), technologies or tools used, and 2-3 bullet points describing your specific contributions and outcomes. Include a link to the live project or GitHub repository if applicable. Focus on what you built, challenges you solved, and measurable results.</p>
+<p><strong>Example format:</strong><br/>
+<strong>Task Management Application</strong> | React, Node.js, MongoDB, AWS<br/>
+• Built a full-stack task management app with real-time collaboration features serving 500+ users<br/>
+• Implemented JWT authentication, WebSocket notifications, and drag-and-drop Kanban board<br/>
+• Reduced page load time by 40% through React code splitting and lazy loading optimization</p>
+
+<h2>Types of Projects to Include</h2>
+<p><strong>Personal projects:</strong> Apps, websites, tools you built on your own time. Shows passion and initiative.<br/>
+<strong>Academic projects:</strong> Capstone projects, thesis work, or significant coursework. Shows formal training application.<br/>
+<strong>Open-source contributions:</strong> Pull requests, maintained libraries, community contributions. Shows collaboration skills.<br/>
+<strong>Volunteer projects:</strong> Websites for nonprofits, community tools, pro-bono work. Shows values and practical application.</p>
+
+<h2>How to Quantify Project Impact</h2>
+<p>Even personal projects can be quantified. Include GitHub stars, user counts, performance improvements, or any measurable metric. "Built a Chrome extension with 2,000+ active users" is more compelling than "Built a Chrome extension." Use strong action verbs and our <a href="/bullet-point-improver">bullet point improver</a> to refine your project descriptions.</p>
+
+<p>Build your resume with projects showcased effectively using our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> for your industry.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-buzzwords-to-avoid",
+    title: "Resume Buzzwords to Avoid in 2026 (What to Say Instead)",
+    description: "Stop using these overused resume buzzwords that hiring managers hate. Learn what to say instead with concrete alternatives that actually impress recruiters.",
+    date: "2026-03-01",
+    readTime: "8 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/bullet-point-improver", "/ats-score"],
+    content: `
+<h2>Why Resume Buzzwords Hurt Your Job Search</h2>
+<p>Overused resume buzzwords like "hardworking," "team player," "results-driven," and "go-getter" have been so beaten into the ground that they've lost all meaning. Recruiters see these words dozens of times per day, and they actively work against you by making your resume sound generic and unspecific. The problem isn't that these words are bad — it's that they're vague claims without evidence.</p>
+
+<h2>The Worst Resume Buzzwords to Avoid</h2>
+<p><strong>Hardworking / Dedicated:</strong> Everyone claims to be hardworking. Instead, prove it with specifics: "Consistently exceeded quarterly targets by 25% over 4 consecutive quarters."<br/>
+<strong>Team player:</strong> This tells the recruiter nothing. Instead: "Collaborated with a cross-functional team of 12 to launch a product serving 50K+ users."<br/>
+<strong>Results-driven:</strong> A classic empty phrase. Instead, state the actual results: "Drove a 30% increase in customer retention through targeted engagement campaigns."<br/>
+<strong>Go-getter / Self-starter:</strong> Show initiative with actions: "Independently developed a client onboarding system that reduced setup time by 50%."<br/>
+<strong>Detail-oriented:</strong> If you have to say it, you're not proving it. Instead: "Maintained 99.8% accuracy rate on financial reconciliations for $2M+ in monthly transactions."<br/>
+<strong>Passionate:</strong> Overused to the point of meaningless. Instead: "Led weekly knowledge-sharing sessions on machine learning best practices."<br/>
+<strong>Strategic thinker:</strong> Should be demonstrated, not stated. Instead: "Developed a 3-year product roadmap that increased market share from 12% to 22%."</p>
+
+<h2>The "Responsible For" Trap</h2>
+<p>"Responsible for" is the single most common resume killer. Every instance should be replaced with a strong action verb and specific achievement. For example, instead of "Responsible for managing social media accounts," write "Grew Instagram following from 5K to 25K in 6 months through data-driven content strategy." Use our <a href="/bullet-point-improver">bullet point improver</a> to automatically catch and replace these weak phrases.</p>
+
+<h2>What to Use Instead of Buzzwords</h2>
+<p>The rule is simple: show, don't tell. Instead of labeling yourself with adjectives, provide evidence. Replace every buzzword with a specific achievement that demonstrates that quality. If you're "detail-oriented," show the error rate you maintained. If you're a "team player," talk about the cross-functional project you led. Quantify everything. Check your resume's <a href="/ats-score">ATS score</a> to verify your replacements are effective.</p>
+
+<p>Create a resume free of buzzwords using our <a href="/">free resume builder</a>. Generate powerful bullet points with our <a href="/bullet-point-improver">bullet point improver</a>. Browse <a href="/resume-examples">resume examples</a> that avoid these common pitfalls.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-list-multiple-jobs-same-company",
+    title: "How to List Multiple Jobs at the Same Company on a Resume",
+    description: "Learn the best way to show career growth within the same company. Includes formatting examples, promotion tracking, and tips for demonstrating progression.",
+    date: "2026-03-15",
+    readTime: "7 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/bullet-point-improver", "/resume-examples"],
+    content: `
+<h2>Why Multiple Jobs at One Company Is a Strength</h2>
+<p>Holding multiple roles at the same company is a powerful signal to employers. It shows career progression, increased responsibility, and that your previous employer valued your contributions enough to promote you. The key is formatting this experience correctly so recruiters immediately see your growth trajectory rather than thinking you stayed in the same role.</p>
+
+<h2>Option 1: Combined Entry with Sub-Listings (Best for Most)</h2>
+<p>List the company once with your most recent title, then create sub-entries for each role underneath. This shows progression at a glance and prevents repetition of the same company name and dates. List roles in reverse chronological order (most recent first).</p>
+<p><strong>Example format:</strong><br/>
+<strong>Company Name</strong> | City, State<br/>
+<strong>Senior Marketing Manager</strong> | 2022 – Present<br/>
+• Led a team of 8 marketers across digital, content, and brand functions<br/>
+• Increased organic traffic by 150% through comprehensive SEO strategy overhaul<br/>
+<br/>
+<strong>Marketing Manager</strong> | 2020 – 2022<br/>
+• Managed $2M annual marketing budget across paid and organic channels<br/>
+• Launched 3 product campaigns generating $5M in attributed revenue<br/>
+<br/>
+<strong>Associate Marketing Manager</strong> | 2018 – 2020<br/>
+• Coordinated cross-channel campaigns reaching 500K+ target audience members<br/>
+• Developed reporting dashboards that improved campaign ROI tracking by 40%</p>
+
+<h2>Option 2: Separate Entries (Best for Major Role Changes)</h2>
+<p>If your roles were significantly different (e.g., moved from engineering to product management), list each role as a separate entry with the company name and a brief note. This works well when the skills used in each role are distinct and you want to highlight each separately.</p>
+
+<h2>What to Include for Each Role</h2>
+<p>For each position, include 2-4 bullet points focused on achievements specific to that role. Avoid repeating accomplishments across roles. If something spans multiple roles, include it in the most senior position. Focus on increasing scope, impact, and responsibility as you move up. Use our <a href="/bullet-point-improver">bullet point improver</a> to strengthen each role's descriptions.</p>
+
+<h2>Common Mistakes</h2>
+<p>Don't list the company name and dates only once — this hides your progression. Don't include more than 4-5 roles at the same company (combine earlier small roles). And don't forget to show increasing responsibility — if your bullets look the same across roles, recruiters won't see growth. Check your resume's <a href="/ats-score">ATS score</a> to make sure your formatting parses correctly.</p>
+
+<p>Build your promotion-tracked resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> for career progression inspiration.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-for-remote-jobs",
+    title: "Resume for Remote Jobs: How to Stand Out (2026 Guide)",
+    description: "Learn how to optimize your resume for remote job applications. Includes key skills employers look for, formatting tips, and examples that highlight remote readiness.",
+    date: "2026-04-01",
+    readTime: "8 min read",
+    category: "Career Advice",
+    relatedTools: ["/", "/cover-letter", "/ats-score"],
+    content: `
+<h2>What Remote Employers Look for in a Resume</h2>
+<p>Remote jobs require a specific set of skills that go beyond the technical qualifications for the role. Employers hiring for remote positions need to know you can work independently, communicate asynchronously, manage your time effectively, and collaborate across time zones. Your resume needs to explicitly demonstrate these capabilities alongside your core qualifications.</p>
+
+<h2>Key Remote Work Skills to Highlight</h2>
+<p><strong>Async communication:</strong> Experience with tools like Slack, Zoom, Notion, and project management platforms. Mention specific tools and how you used them to coordinate with distributed teams.<br/>
+<strong>Self-management:</strong> Examples of independent project ownership, meeting deadlines without direct supervision, and managing your own schedule. Quantify your reliability with metrics like on-time delivery rate.<br/>
+<strong>Cross-timezone collaboration:</strong> Experience working with teams across different time zones. Mention specific coordination patterns — async updates, documented decisions, overlap-hour meetings.<br/>
+<strong>Written communication:</strong> Remote work relies heavily on writing. Highlight experience with documentation, technical writing, meeting notes, and async status updates.<br/>
+<strong>Tech proficiency:</strong> Comfort with remote work tools — video conferencing, project management software, VPNs, cloud collaboration platforms.</p>
+
+<h2>How to Format Your Remote Resume</h2>
+<p>Mention "remote" or "distributed" in your professional summary if you have remote experience. For each role, note whether it was remote, hybrid, or in-office. Include specific remote collaboration achievements: "Coordinated with engineering teams across 4 time zones to deliver quarterly releases on schedule." If your current role is remote, list your location as "Remote" rather than a specific city.</p>
+
+<h2>Remote-Specific Achievements to Include</h2>
+<p>• "Built async documentation processes that reduced team meetings by 30% while improving project clarity"<br/>
+• "Managed a distributed team of 15 across 6 time zones, maintaining 95%+ project completion rate"<br/>
+• "Created comprehensive onboarding guides that reduced new hire ramp-up time by 40%"<br/>
+• "Led daily standups and weekly retrospectives via video conferencing for a fully remote team"</p>
+
+<h2>Addressing Remote Work Concerns</h2>
+<p>If you don't have remote work experience, emphasize transferable skills: self-direction, outcome-based work, strong written communication, and comfort with digital tools. Take online courses in remote collaboration platforms and mention them. Include any volunteer or side project experience that was done remotely. Pair your resume with a <a href="/cover-letter">remote-focused cover letter</a> that explains your interest in and readiness for remote work.</p>
+
+<p>Build a remote-ready resume with our <a href="/">free resume builder</a>. Check your <a href="/ats-score">ATS score</a> before applying to remote positions. Browse <a href="/resume-examples">resume examples</a> for remote-friendly formats.</p>
+    `.trim()
+  },
+  {
+    slug: "executive-resume-tips",
+    title: "Executive Resume Tips: How to Write a Resume for Senior Leadership",
+    description: "Executive resumes are different. Learn how to write a C-suite or senior leadership resume that showcases strategic impact, board-level experience, and visionary leadership.",
+    date: "2026-04-15",
+    readTime: "10 min read",
+    category: "Career Advice",
+    relatedTools: ["/", "/bullet-point-improver", "/resume-examples"],
+    content: `
+<h2>How Executive Resumes Differ from Standard Resumes</h2>
+<p>Executive and C-suite resumes are fundamentally different from standard professional resumes. At the senior leadership level, recruiters and boards don't care about day-to-day tasks — they want to see strategic vision, business impact, team building, and bottom-line results. Your resume must shift from tactical achievements to strategic outcomes, from managing to leading, from executing to envisioning.</p>
+
+<h2>The Executive Resume Structure</h2>
+<p><strong>Executive summary:</strong> A powerful 3-5 sentence positioning statement that defines who you are as a leader. Include years of experience, industries, areas of expertise, and your leadership style. This is the most important section — it sets the narrative for everything below.<br/>
+<strong>Core competencies:</strong> A 2-column grid of 8-12 leadership capabilities (Strategic Planning, P&L Management, M&A, Organizational Design, etc.). This helps recruiters quickly match your profile to their requirements.<br/>
+<strong>Professional experience:</strong> Focus on leadership outcomes — revenue growth, team size, budgets managed, strategic initiatives led. Use the "Accomplishment + Context + Impact" formula.<br/>
+<strong>Board seats and advisory roles:</strong> Include board memberships, advisory positions, and industry leadership roles.<br/>
+<strong>Education and certifications:</strong> MBA, executive education, board certifications. List with years.</p>
+
+<h2>What to Include in Each Bullet Point</h2>
+<p>Every bullet point at the executive level should answer: What was the business challenge? What strategic decision did you make? What was the measurable impact? Use metrics that matter to the business: revenue, EBITDA, market share, team size, cost reduction, acquisition integration, organizational scaling.</p>
+<p><strong>Example executive bullet points:</strong><br/>
+• "Led a $200M business unit through digital transformation, increasing operating margin from 12% to 22% over 3 years while reducing headcount by 15% through strategic restructuring"<br/>
+• "Architected and executed 3 acquisitions totaling $450M, achieving 2x ROI within 18 months through successful integration and cross-sell strategies"<br/>
+• "Built and scaled engineering organization from 20 to 200+ across 4 countries, reducing time-to-market by 40% while maintaining 95% employee retention"</p>
+
+<h2>Executive Resume Length</h2>
+<p>Two pages is standard for executive resumes. Three pages is acceptable for very senior leaders (CEO, CFO, Board-level) with 20+ years of experience. Never exceed three pages. If you have extensive experience, the last 10-15 years matter most — summarize earlier roles briefly. Quality and relevance matter far more than quantity. Use our <a href="/bullet-point-improver">bullet point improver</a> to refine your executive achievements.</p>
+
+<h2>Common Executive Resume Mistakes</h2>
+<p>Don't list responsibilities (every executive has them). Don't use jargon without context. Don't include outdated technology skills. Don't omit board experience. And most importantly, don't write a resume that looks like a mid-level manager's — the tone, scope, and metrics must reflect strategic leadership. Use our <a href="/">resume builder</a> to create a professional, ATS-optimized executive resume.</p>
+
+<p>Build your executive resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">C-suite and executive resume examples</a> for proven formats.</p>
+    `.trim()
+  },
+  {
+    slug: "soft-skills-for-resumes",
+    title: "Soft Skills for Resumes: Top 30 Examples & How to List Them",
+    description: "Discover the most in-demand soft skills employers look for in 2026. Learn how to showcase soft skills on your resume with real examples that prove you have them.",
+    date: "2026-05-01",
+    readTime: "9 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/bullet-point-improver", "/ats-score"],
+    content: `
+<h2>Why Soft Skills Matter More Than Ever in 2026</h2>
+<p>As AI automates more technical tasks, soft skills have become the primary differentiator for job seekers. Communication, leadership, adaptability, and emotional intelligence are the skills that machines can't replicate — and employers know it. Studies show that 92% of HR professionals consider soft skills equally or more important than hard skills when making hiring decisions.</p>
+
+<h2>The Top 30 Soft Skills for Resumes</h2>
+<p><strong>Communication & Collaboration:</strong> Verbal Communication, Written Communication, Active Listening, Presentation Skills, Cross-Functional Collaboration, Negotiation, Conflict Resolution, Stakeholder Management<br/>
+<strong>Leadership & Management:</strong> Team Leadership, Mentoring, Decision Making, Delegation, Strategic Thinking, Change Management, Project Management<br/>
+<strong>Problem Solving & Innovation:</strong> Critical Thinking, Analytical Skills, Creativity, Adaptability, Resourcefulness, Troubleshooting, Continuous Improvement<br/>
+<strong>Work Ethic & Professionalism:</strong> Time Management, Organization, Reliability, Accountability, Emotional Intelligence, Growth Mindset, Resilience, Attention to Detail</p>
+
+<h2>How to Showcase Soft Skills Without Sounding Generic</h2>
+<p>The biggest mistake candidates make is simply listing soft skills without context. "Excellent communication skills" tells an employer nothing. Instead, demonstrate each skill through your achievements. For every soft skill you claim, there should be a corresponding bullet point that proves it.</p>
+<p><strong>Instead of:</strong> "Strong leadership skills"<br/>
+<strong>Write:</strong> "Mentored 5 junior developers through structured 1-on-1 coaching, with 3 promoted within 18 months"<br/>
+<strong>Instead of:</strong> "Excellent communication skills"<br/>
+<strong>Write:</strong> "Presented quarterly business reviews to C-suite leadership, influencing $2M in strategic budget allocation"<br/>
+<strong>Instead of:</strong> "Problem solver"<br/>
+<strong>Write:</strong> "Diagnosed a critical production bug affecting 50K+ users and implemented a fix within 2 hours, preventing an estimated $100K in revenue loss"</p>
+
+<h2>Where to Include Soft Skills on Your Resume</h2>
+<p><strong>Professional summary:</strong> Mention 2-3 key soft skills with context. Example: "Strategic product leader with a track record of cross-functional collaboration and data-driven decision making."<br/>
+<strong>Skills section:</strong> Group soft skills separately from technical skills. List 6-8 relevant soft skills.<br/>
+<strong>Experience bullets:</strong> This is where soft skills are truly proven. Every bullet should implicitly demonstrate at least one soft skill.<br/>
+<strong>Cover letter:</strong> Use your cover letter to tell a story that illustrates your soft skills in action. Use our <a href="/cover-letter">cover letter generator</a> to pair your resume with a compelling narrative.</p>
+
+<p>Build a resume that proves your soft skills using our <a href="/">free resume builder</a>. Improve your bullet points with our <a href="/bullet-point-improver">bullet point improver</a>. Check your <a href="/ats-score">ATS score</a> to ensure your resume passes screening.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-for-stay-at-home-parents",
+    title: "Resume for Stay-at-Home Parents Returning to Work (2026 Guide)",
+    description: "Learn how to write a resume after a career break for parenting. Includes formatting strategies, skills from stay-at-home parenting, and sample resume templates.",
+    date: "2026-05-15",
+    readTime: "9 min read",
+    category: "Career Advice",
+    relatedTools: ["/", "/cover-letter", "/resume-examples"],
+    content: `
+<h2>Overcoming the Career Gap Challenge</h2>
+<p>Returning to work after a career break as a stay-at-home parent can feel daunting, but the skills you've developed during your time away are more valuable than you think. The key is reframing your experience, addressing the gap transparently, and highlighting how your transferable skills make you a stronger candidate. Employers increasingly value the organizational, financial, and interpersonal skills that parenting develops.</p>
+
+<h2>Choose the Right Resume Format</h2>
+<p>A combination resume format (blending skills and chronological experience) works best for returning parents. This format highlights your capabilities at the top while still showing your work history. If your gap is 3+ years, lead with a strong skills summary rather than your chronological experience. If you've been out of the workforce for 5+ years, consider a functional or skills-based format.</p>
+
+<h2>Transferable Skills from Stay-at-Home Parenting</h2>
+<p><strong>Project management:</strong> Planning and executing complex schedules, managing multiple priorities, coordinating logistics.<br/>
+<strong>Budget management:</strong> Household budgeting, expense tracking, negotiating services, maximizing resources.<br/>
+<strong>Negotiation:</strong> Resolving conflicts, advocating for needs, building consensus among different stakeholders.<br/>
+<strong>Crisis management:</strong> Handling emergencies calmly, making quick decisions under pressure, problem-solving in real-time.<br/>
+<strong>Time management:</strong> Juggling competing priorities, meeting deadlines, maintaining schedules with precision.<br/>
+<strong>Communication:</strong> Clear written and verbal communication, active listening, explaining complex concepts simply.</p>
+<p>Frame these in professional language: "Managed household operations including scheduling, budgeting, and vendor coordination for a family of 4" is a legitimate project management achievement.</p>
+
+<h2>How to Address the Employment Gap</h2>
+<p>You can list your career break as "Career Break — Full-Time Parenting (2022 – 2025)" with a brief note below. This is honest and prevents recruiters from wondering about the gap. Focus the remainder of your resume on your previous experience, any volunteer work, freelance projects, or professional development during your break. Use your <a href="/cover-letter">cover letter</a> to tell your return-to-work story positively. Emphasize your eagerness to re-enter the workforce and your refreshed perspective.</p>
+
+<h2>Professional Development During Your Break</h2>
+<p>Include any courses, certifications, volunteer roles, or freelance work during your parenting break. Online courses in your field, volunteer board positions, PTA leadership, or freelance projects all demonstrate that you've stayed engaged and current. List these under a "Professional Development" or "Volunteer Experience" section. Even one course per year shows commitment to staying current.</p>
+
+<h2>Sample Resume Framework for Returning Parents</h2>
+<p><strong>Professional Summary:</strong> "Marketing professional with 8+ years of experience returning after a career break. Proven track record in campaign management, team leadership, and data-driven strategy. Recent certifications in digital marketing analytics and Google Ads."<br/>
+<strong>Core Competencies:</strong> Campaign Strategy, Budget Management, Cross-Functional Leadership, Analytics & Reporting<br/>
+<strong>Career Break:</strong> Full-Time Parent (2022 – 2025) — Managed family operations, volunteered as PTA treasurer handling $50K annual budget<br/>
+<strong>Professional Experience:</strong> Previous roles with strong bullet points<br/>
+<strong>Recent Development:</strong> Google Analytics Certification (2025), Digital Marketing Certificate — Coursera (2024)</p>
+
+<p>Create your return-to-work resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> for your target industry.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-list-promotions-on-resume",
+    title: "How to List Promotions on a Resume (Same Company)",
+    description: "Show career growth with proper promotion formatting on your resume. Examples for both same-company progression and how to highlight advancement to recruiters.",
+    date: "2026-05-22",
+    readTime: "7 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/bullet-point-improver", "/resume-examples"],
+    content: `
+<h2>Why Promotions Matter to Recruiters</h2>
+<p>A promotion is one of the strongest signals you can send to a potential employer. It proves that your previous employer recognized your value, trusted you with increased responsibility, and invested in your growth. Properly formatting promotions on your resume ensures this signal isn't lost. Research shows candidates with clear promotion trajectories receive 40% more interview callbacks than those with flat career histories.</p>
+
+<h2>The Best Format for Showing Promotions</h2>
+<p>The combined entry format is the most effective way to show promotions. List the company once, then show each role in reverse chronological order underneath. This format makes your progression immediately visible and saves valuable space by avoiding repeated company information.</p>
+<p><strong>Example:</strong><br/>
+<strong>TechCorp Inc.</strong> | San Francisco, CA<br/>
+<br/>
+<strong>Senior Software Engineer</strong> (2023 – Present)<br/>
+• Architected microservices platform serving 5M+ users across 3 continents<br/>
+• Led technical roadmap for 4 engineering teams comprising 25 engineers<br/>
+<br/>
+<strong>Software Engineer II</strong> (2021 – 2023)<br/>
+• Developed core payment processing system handling $100M+ in monthly transactions<br/>
+• Mentored 3 junior engineers through structured onboarding program<br/>
+<br/>
+<strong>Software Engineer I</strong> (2019 – 2021)<br/>
+• Built RESTful APIs serving 50K+ requests per minute with 99.9% uptime<br/>
+• Reduced average bug resolution time by 35% through automated testing implementation</p>
+
+<h2>How to Write Bullet Points That Show Growth</h2>
+<p>Each role's bullet points should naturally reflect increasing scope and responsibility. Your junior role might focus on execution and learning. Your senior roles should focus on leadership, strategy, and impact. Don't repeat similar achievements — show clear progression in scale and complexity. Use our <a href="/bullet-point-improver">bullet point improver</a> to ensure each role reflects the appropriate level.</p>
+<p><strong>Junior role focus:</strong> Technical execution, learning, individual contributions, completing assigned tasks<br/>
+<strong>Mid-level focus:</strong> Independence, project ownership, mentoring, process improvements<br/>
+<strong>Senior focus:</strong> Strategy, team leadership, cross-functional influence, organizational impact</p>
+
+<h2>What If You Were Promoted Without a Title Change?</h2>
+<p>If your responsibilities grew significantly but your title didn't change, you can still show progression. Add a sub-line like "(Expanded Role)" or note the scope increase in your bullet points. Alternatively, you can list the same title twice with separate date ranges and emphasize how the role expanded. Honesty is critical — don't invent titles that don't exist. Check your resume's <a href="/ats-score">ATS score</a> to verify your promotion formatting parses correctly.</p>
+
+<p>Build a promotion-highlighting resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> showing career progression.</p>
+    `.trim()
+  },
+  {
+    slug: "should-you-include-photo-on-resume",
+    title: "Should You Include a Photo on Your Resume? (2026 Guide)",
+    description: "The definitive answer on whether to put a photo on your resume. Learn regional differences, industry norms, what recruiters actually think, and when a photo helps or hurts.",
+    date: "2026-06-01",
+    readTime: "7 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/cover-letter", "/resume-examples"],
+    content: `
+<h2>The Short Answer: It Depends Where You're Applying</h2>
+<p>Whether you should include a photo on your resume depends almost entirely on where you're applying. In the United States, Canada, the United Kingdom, and Australia, including a photo is strongly discouraged and can actually hurt your chances. In many parts of Europe, Asia, and Latin America, a professional headshot is expected. Understanding these regional differences is critical for international job applications.</p>
+
+<h2>United States: Do Not Include a Photo</h2>
+<p>In the US, including a photo on your resume is considered unprofessional and opens employers to discrimination claims. US hiring managers are trained to ignore or reject resumes with photos. Most ATS systems can't process images anyway, so your photo wastes valuable space. Instead, use your LinkedIn profile (which should have a professional headshot) as the place for your photo.</p>
+
+<h2>Europe: Mixed Expectations</h2>
+<p><strong>Germany, France, Belgium, Netherlands:</strong> A professional headshot is common and often expected. Include a small, high-quality photo at the top of your resume.<br/>
+<strong>UK, Scandinavia:</strong> Similar to the US — photos are not standard and may be viewed negatively.<br/>
+<strong>Spain, Italy, Portugal:</strong> Photos are common but not always required. Check company culture before deciding.</p>
+
+<h2>Asia: Generally Expected</h2>
+<p>In most Asian countries, including a professional photo on your resume is standard practice. <strong>Japan, South Korea, China, India, Singapore:</strong> A professional headshot is expected and a resume without one may look incomplete. Use a formal, professional photo with a neutral background. Avoid casual selfies or heavily edited photos.</p>
+
+<h2>When Including a Photo Can Hurt You</h2>
+<p>Even in photo-friendly regions, a bad photo can sink your application. Avoid: selfies, casual photos, photos with other people cropped out, heavily filtered images, party or vacation photos, and outdated photos. Use a professional headshot with a neutral background, professional attire, and natural lighting. If you're unsure, a simple photo studio session costs very little and pays for itself.</p>
+
+<h2>Alternatives to a Resume Photo</h2>
+<p>Instead of a photo on your resume, invest in a strong LinkedIn profile with a professional headshot. Include your LinkedIn URL in your contact section. Employers who want to see what you look like will check LinkedIn. Use your <a href="/cover-letter">cover letter</a> to make a personal connection instead. Focus your resume space on what truly matters: your achievements, skills, and qualifications.</p>
+
+<p>Build a photo-appropriate resume for your region with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> by industry and region.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-for-internships",
+    title: "Resume for Internships: Complete Guide for College Students (2026)",
+    description: "Learn how to write a resume for internship applications with no work experience. Includes section-by-section guide, real examples, and tips for standing out.",
+    date: "2026-06-15",
+    readTime: "9 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/cover-letter", "/resume-examples"],
+    content: `
+<h2>How Internship Resumes Differ from Job Resumes</h2>
+<p>Internship resumes are unique because employers don't expect you to have extensive professional experience. What they're looking for is potential: your academic performance, relevant coursework, extracurricular involvement, leadership roles, and demonstrated interest in their industry. The best internship resumes show that you've been proactive about developing skills even without formal work experience.</p>
+
+<h2>What to Include in Your Internship Resume</h2>
+<p><strong>Education (Lead with this):</strong> Unlike professional resumes, your education section should come first. Include your university, degree, expected graduation date, GPA (if 3.0+), relevant coursework, academic honors, and study abroad programs. This is your primary qualification as a student.<br/>
+<strong>Relevant coursework:</strong> List 6-8 courses that are directly relevant to the internship. This shows you have foundational knowledge even without work experience.<br/>
+<strong>Projects:</strong> Academic projects, capstone work, hackathon projects, or personal projects. Describe what you built, technologies used, and outcomes. This is often the most important section for technical internships.<br/>
+<strong>Extracurricular activities:</strong> Student organizations, club leadership, sports teams, volunteering. These demonstrate soft skills like leadership, teamwork, and time management.<br/>
+<strong>Work experience:</strong> Part-time jobs, summer jobs, tutoring, campus jobs. Even non-industry work shows responsibility and work ethic.</p>
+
+<h2>How to Write Strong Internship Bullet Points</h2>
+<p>Even without professional experience, you can write compelling bullet points. Focus on your specific contributions, skills used, and outcomes achieved — whether in a class project, club activity, or summer job.</p>
+<p><strong>Instead of:</strong> "Worked on a team project for class"<br/>
+<strong>Write:</strong> "Led a team of 4 students to develop a mobile fitness app using React Native, achieving top-3 finish in department showcase"<br/>
+<strong>Instead of:</strong> "Member of computer science club"<br/>
+<strong>Write:</strong> "Organized weekly coding workshops attended by 30+ students, covering Python, web development, and algorithms"<br/>
+<strong>Instead of:</strong> "Worked as a server at restaurant"<br/>
+<strong>Write:</strong> "Managed 8-table section during peak hours, processing 100+ orders nightly with 99% accuracy rate"</p>
+
+<h2>Internship Resume Template</h2>
+<p><strong>Education:</strong> University Name — BS in Computer Science, Expected May 2028. GPA: 3.7. Dean's List (Fall 2025, Spring 2026). Relevant: Data Structures, Algorithms, Web Development, Database Systems.<br/>
+<strong>Projects:</strong> Personal Portfolio Website — Built with React and Next.js, deployed on Vercel with 2K+ monthly visitors.<br/>
+<strong>Leadership:</strong> VP of Coding Club — Organized hackathon with 100+ participants, secured $5K in sponsorships.<br/>
+<strong>Experience:</strong> Teaching Assistant — CS Department, graded assignments, held office hours for 60+ students.<br/>
+<strong>Skills:</strong> Python, Java, JavaScript, React, HTML/CSS, Git, SQL, Figma.</p>
+
+<h2>How to Stand Out from Other Internship Applicants</h2>
+<p>Companies receive hundreds of internship applications. To stand out: tailor your resume for each application by matching keywords from the job description. Include a link to your portfolio, GitHub, or personal website. Mention specific companies or technologies you're interested in. Apply early — many internships hire on a rolling basis. Write a compelling <a href="/cover-letter">internship cover letter</a> that shows your enthusiasm and research about the company. Keep your resume to one page.</p>
+
+<p>Create your internship resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples/fresher">internship and entry-level resume examples</a> for proven formats. Check your <a href="/ats-score">ATS score</a> before applying.</p>
+    `.trim()
+  }
 ]
