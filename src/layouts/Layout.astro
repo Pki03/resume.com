@@ -5,9 +5,12 @@ import Seo from "../components/Seo.astro"
 interface Props {
   title?: string
   description?: string
+  ogType?: string
+  articlePublishedTime?: string
+  articleSection?: string
 }
 
-const { title, description } = Astro.props
+const { title, description, ogType, articlePublishedTime, articleSection } = Astro.props
 const year = new Date().getFullYear()
 ---
 
@@ -16,7 +19,7 @@ const year = new Date().getFullYear()
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <Seo title={title} description={description} />
+    <Seo title={title} description={description} ogType={ogType} articlePublishedTime={articlePublishedTime} articleSection={articleSection} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -137,8 +140,8 @@ const year = new Date().getFullYear()
           <a href="/cover-letter" class="nav-link">Cover Letter</a>
           <a href="/resume-examples" class="nav-link">Examples</a>
           <div style="width:1px;height:20px;background:var(--gray-200);margin:0 0.25rem"></div>
-          <a href="/templates" class="nav-link" style="font-size:0.8125rem;color:var(--gray-400)">Templates</a>
-          <a href="/blog" class="nav-link" style="font-size:0.8125rem;color:var(--gray-400)">Blog</a>
+          <a href="/templates" class="nav-link">Templates</a>
+          <a href="/blog" class="nav-link">Blog</a>
           <button id="theme-btn-desktop" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
           </button>

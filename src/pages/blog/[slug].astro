@@ -12,14 +12,17 @@ export function getStaticPaths() {
 
 const { slug, title, description, date, readTime, category, content, relatedTools } = Astro.props
 const canonical = `https://getapplykit.com/blog/${slug}`
-const morePosts = blogPosts.filter(p => p.slug !== slug).slice(0, 3)
+const morePosts = blogPosts
+  .filter(p => p.slug !== slug)
+  .sort((a, b) => (a.category === category ? -1 : b.category === category ? 1 : 0))
+  .slice(0, 3)
 const keywords = title.toLowerCase().split(" ").filter(w => w.length > 3)
 const relatedExamples = resumeExamples.filter(r =>
   keywords.some(k => r.title.toLowerCase().includes(k) || (r.industry && r.industry.toLowerCase().includes(k)))
 ).slice(0, 4)
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} ogType="article" articlePublishedTime={date} articleSection={category}>
   <article class="reveal">
     <div class="container-narrow" style="padding-top:3rem;padding-bottom:2rem">
       <nav class="breadcrumbs">
