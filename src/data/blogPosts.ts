@@ -1522,5 +1522,246 @@ Vice President | Computer Science Club | 2023 - Present
 
 <p>Create your internship resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples/fresher">internship and entry-level resume examples</a> for proven formats. Check your <a href="/ats-score">ATS score</a> before applying.</p>
     `.trim()
+  },
+  {
+    slug: "resume-for-freshers",
+    title: "Resume for Freshers: 2026 Complete Guide With Examples",
+    description: "Learn how to write a resume for freshers with no work experience. Step-by-step guide with format tips, examples, and a free resume builder for entry-level jobs.",
+    date: "2026-03-01",
+    readTime: "10 min read",
+    category: "Entry Level",
+    relatedTools: ["/", "/ats-score", "/resume-examples", "/templates"],
+    content: `
+A resume for freshers is the most important document you will create when starting your career. In India, the competition for entry-level jobs is intense — over 1.5 million engineers graduate every year, and standing out requires a well-crafted resume.
+
+<h2>What Is a Fresher Resume?</h2>
+<p>A fresher resume is a document used by candidates with little to no formal work experience. Instead of professional experience, it highlights education, projects, internships, skills, certifications, and extracurricular activities. The goal is to demonstrate potential and readiness for the workplace.</p>
+
+<h2>Key Sections Every Fresher Resume Needs</h2>
+<p><strong>Contact Information:</strong> Name, phone number, email, LinkedIn profile, and location (city). Include GitHub or portfolio link if applicable. Make sure your email is professional.</p>
+<p><strong>Career Objective:</strong> A 2-3 line summary of your goals and what you bring. Example: "Motivated Computer Science graduate seeking an entry-level software development role where I can apply my skills in Python, JavaScript, and React to build impactful products."</p>
+<p><strong>Education:</strong> List your degree, institution, graduation year, and percentage or GPA. Include relevant coursework if it aligns with the job. For Indian freshers, mention your board marks for 10th and 12th only if they are exceptional.</p>
+<p><strong>Projects:</strong> Academic projects, personal projects, or hackathon work. For each project, describe what you built, the technologies used, and the outcome. This is the most important section for demonstrating technical ability.</p>
+<p><strong>Internships:</strong> Even if brief, include any internship experience. Describe your responsibilities, skills learned, and contributions. Use bullet points with action verbs.</p>
+<p><strong>Skills:</strong> Technical skills (programming languages, frameworks, tools) and soft skills (communication, teamwork, leadership). Be honest and only list skills you can defend in an interview.</p>
+<p><strong>Certifications:</strong> Online courses from Coursera, Udemy, NPTEL, or professional certifications. These show initiative and ongoing learning.</p>
+
+<h2>Fresher Resume Format Tips</h2>
+<p>Use a clean, single-column layout. Stick to standard fonts like Arial, Calibri, or Times New Roman. Keep it to one page. Save and submit as PDF unless the employer requests another format. Avoid using photos, graphics, or tables, as these can confuse ATS software.</p>
+
+<h2>Common Mistakes Freshers Make</h2>
+<p>Listing too many irrelevant skills, using generic objectives, including fake or exaggerated claims, submitting without proofreading, using fancy templates with graphics, and forgetting to tailor the resume for each application. Run your resume through an <a href="/ats-score">ATS score checker</a> to catch formatting issues before applying.</p>
+
+<h2>Sample Fresher Resume Template</h2>
+<p><strong>Rahul Sharma</strong> — rahul.sharma@email.com — 9876543210 — linkedin.com/in/rahulsharma<br/>
+<strong>Objective:</strong> Motivated B.Tech graduate seeking an entry-level software developer role.<br/>
+<strong>Education:</strong> B.Tech in Computer Science, NIT Delhi, 2026 — 8.5 CGPA<br/>
+<strong>Projects:</strong> E-Commerce Website — Built with React, Node.js, MongoDB. 500+ daily users.<br/>
+<strong>Internship:</strong> Web Developer Intern — TechStart Solutions, summer 2025<br/>
+<strong>Skills:</strong> Python, Java, JavaScript, React, HTML/CSS, SQL, Git<br/>
+<strong>Certifications:</strong> Full Stack Web Development — Coursera, AWS Cloud Practitioner</p>
+
+<p>Create your fresher resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples/fresher">fresher resume examples</a> for inspiration. Check your <a href="/ats-score">ATS score</a> before submitting applications.</p>
+    `.trim()
+  },
+  {
+    slug: "software-engineer-resume-2026",
+    title: "Software Engineer Resume: 2026 Guide & Examples",
+    description: "Build a software engineer resume that gets you interviews at top tech companies. Expert guide with examples, ATS keywords, templates, and formatting tips.",
+    date: "2026-02-20",
+    readTime: "11 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/ats-score", "/resume-examples/software-engineer", "/templates"],
+    content: `
+A software engineer resume needs to demonstrate technical competence, problem-solving ability, and impact. In 2026, top tech companies receive thousands of applications per role, and your resume must pass both ATS filters and technical hiring manager reviews.
+
+<h2>Key Sections for Software Engineer Resumes</h2>
+<p><strong>Contact & Links:</strong> Name, phone, email, location, LinkedIn, GitHub link, and personal website or portfolio. Make sure your GitHub profile is clean with well-documented repositories. Recruiters will check it.</p>
+<p><strong>Technical Summary:</strong> A 2-3 line professional summary that highlights your years of experience, key technologies, and type of role you are seeking. Example: "Senior Full-Stack Engineer with 6+ years building scalable web applications using React, TypeScript, Node.js, and AWS."</p>
+<p><strong>Technical Skills:</strong> Group by category: Languages (Python, TypeScript, Java, Go), Frameworks (React, Next.js, Django, Spring Boot), Tools (Docker, Kubernetes, Git), Cloud (AWS, GCP, Azure), Databases (PostgreSQL, MongoDB, Redis). In 2026, the most sought-after keywords include AI/ML integration, TypeScript, React, AWS, Docker, Kubernetes, and system design.</p>
+<p><strong>Work Experience:</strong> For each role, include company name, location, dates, and 3-5 bullet points. Every bullet point should follow the formula: Action + Technology + Impact Metric.</p>
+
+<h2>Writing Impactful Bullet Points</h2>
+<p>Quantified achievements separate strong resumes from average ones. Instead of "Improved API performance," write "Redesigned REST API using Node.js and Redis caching, reducing average response time by 65% and serving 50K+ daily requests."</p>
+<p><strong>More examples of strong bullets:</strong><br/>
+"Migrated 50+ microservices from monolith to Docker/Kubernetes architecture, reducing deployment time by 80%"<br/>
+"Built real-time dashboard with React and WebSockets, processing 1M+ events per day for internal monitoring"<br/>
+"Led system design and implementation of payment processing pipeline handling $10M+ monthly transaction volume"<br/>
+"Reduced cloud costs by 35% by optimizing AWS Lambda functions and implementing auto-scaling policies"</p>
+
+<h2>ATS Keywords for Software Engineers in 2026</h2>
+<p>ATS systems scan for specific keywords from the job description. The most in-demand keywords for 2026 include: Python, TypeScript, JavaScript, React, Next.js, Node.js, AWS, Docker, Kubernetes, REST APIs, GraphQL, SQL, NoSQL, CI/CD, Git, Agile, Microservices, System Design, Machine Learning, Terraform, and Linux.</p>
+
+<h2>Software Engineer Resume Formatting Tips</h2>
+<p>Use a clean, single-column, reverse-chronological format. Standard fonts only. Save as PDF. Keep margins at 0.5-1 inch. For mid-level engineers (5-10 years), two pages is acceptable. For senior roles (10+ years), two pages is expected. Always include links to your GitHub and portfolio.</p>
+
+<p>Build your software engineer resume with our <a href="/">free resume builder</a>. View our <a href="/resume-examples/software-engineer">software engineer resume example</a>. Check your <a href="/ats-score">ATS score</a> before applying.</p>
+    `.trim()
+  },
+  {
+    slug: "simple-resume-template",
+    title: "Simple Resume Template: Clean, ATS-Friendly & Professional",
+    description: "The ultimate guide to simple resume templates. Why clean design beats fancy layouts for ATS, plus free templates and examples that get results.",
+    date: "2026-02-10",
+    readTime: "8 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/templates", "/resume-examples"],
+    content: `
+Simple resume templates consistently outperform fancy, multi-column layouts. The reason is straightforward: Applicant Tracking Systems struggle to parse complex designs, and recruiters prefer information they can scan quickly.
+
+<h2>Why Simple Resumes Win</h2>
+<p>Studies show that simple, clean resumes have a 30-40% higher pass rate through ATS systems compared to graphically-designed templates. ATS software reads text in a specific order, usually left-to-right, top-to-bottom. Multi-column layouts, text boxes, tables, and graphics can cause the ATS to jumble your content or skip sections entirely.</p>
+
+<h2>Elements of a Simple Resume</h2>
+<p><strong>Single column layout:</strong> One column ensures the ATS reads your content in the correct order. No sidebars, no tables, no columns.</p>
+<p><strong>Standard fonts:</strong> Arial, Calibri, Helvetica, Georgia, or Times New Roman at 10-12pt. Avoid decorative or script fonts that ATS systems may not recognize.</p>
+<p><strong>No graphics or tables:</strong> Charts, progress bars, icons, and photos look nice to humans but confuse ATS software. Even if your resume passes ATS, the text inside graphics is completely invisible to the system.</p>
+<p><strong>Ample white space:</strong> Margins of 0.5-1 inch, clear section headings, and consistent spacing. White space makes your resume easier to scan in the 7-second glance recruiters give it.</p>
+<p><strong>Clear hierarchy:</strong> Section headers (Experience, Education, Skills), job titles, company names, and dates should each have consistent formatting. Bold for headers and company names, regular for descriptions.</p>
+
+<h2>When Simple Beats Creative</h2>
+<p>Simple resumes are best for: corporate jobs, tech roles, finance, consulting, healthcare, government positions, and any role where you will be applying through a company portal or LinkedIn. Creative resumes (with design elements) should generally be avoided for ATS-submitted applications. The only exception is design roles where the resume itself is a portfolio piece, and even then, always keep a simple ATS version.</p>
+
+<h2>Simple Resume Templates That Work</h2>
+<p>The best templates have a clean header with your name and contact info, clear section dividers (horizontal lines or spacing), bullet-pointed experience entries, and a skills section that uses simple comma-separated lists. Browse our <a href="/templates">free resume templates</a> for professionally designed simple layouts.</p>
+
+<p>Create your simple resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> in our clean, ATS-friendly format.</p>
+    `.trim()
+  },
+  {
+    slug: "one-page-resume",
+    title: "One Page Resume: When to Use It & How to Make It Fit",
+    description: "Should your resume be one page? Complete guide to one-page resumes with tips, examples, and when two pages is acceptable. Free templates included.",
+    date: "2026-01-28",
+    readTime: "9 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/templates", "/resume-examples"],
+    content: `
+The one-page resume rule is one of the most debated topics in career advice. The truth is more nuanced than a simple yes or no. Understanding when to keep it to one page and when two pages is appropriate can make the difference between a strong application and a rejected one.
+
+<h2>When Your Resume Should Be One Page</h2>
+<p>Your resume should be one page if: you are a fresher or entry-level candidate with less than 5 years of experience, you are a career changer with limited relevant experience, or you are applying to competitive early-career programs like management traineeships or graduate schemes. A one-page resume forces you to be selective and present only your strongest qualifications.</p>
+
+<h2>When Two Pages Is Acceptable</h2>
+<p>Two pages is fine — and often expected — when: you have 10+ years of relevant experience, you are in academia or research (a CV is typically longer), you work in tech with many significant projects and contributions, or you are applying to senior/executive roles where depth of experience matters more than conciseness. Many recruiters actually prefer two pages for senior candidates because a single page cannot adequately cover decades of leadership experience.</p>
+
+<h2>How to Cut Your Resume to One Page</h2>
+<p><strong>Remove weak bullet points:</strong> If a bullet point doesn't show a measurable impact, cut it. Keep only your strongest 3-5 bullets per role.</p>
+<p><strong>Tighten your language:</strong> Replace "Responsible for managing a team of developers" with "Led team of 5 developers." Remove articles (a, an, the) where possible. Use strong action verbs.</p>
+<p><strong>Combine sections:</strong> Merge your skills section into a single compact line rather than bullet points. Combine certifications and education into one section.</p>
+<p><strong>Reduce margins slightly:</strong> 0.5-inch margins are acceptable. Drop font size to 10-11pt. Reduce spacing between sections.</p>
+<p><strong>Cut older or irrelevant roles:</strong> Anything more than 10-15 years old can be summarized as "Previous roles in [industry]" without details. Consider removing early-career jobs that are not relevant.</p>
+
+<h2>When NOT to Cut</h2>
+<p>Do not cut important achievements to fit one page. Do not reduce font below 10pt (it becomes hard to read). Do not remove your education section to save space. Do not remove keywords that help you pass ATS screening. A strong two-page resume always beats a cramped, hard-to-read one-page resume.</p>
+
+<p>Build a perfectly-sized resume with our <a href="/">free resume builder</a>. Browse our <a href="/templates">one-page resume templates</a> for proven single-page layouts.</p>
+    `.trim()
+  },
+  {
+    slug: "resume-vs-cv",
+    title: "Resume vs CV: Key Differences & When to Use Each",
+    description: "Resume vs CV — what's the difference? Learn when to use a resume vs a curriculum vitae, with format guides, examples, and country-specific advice for US, UK, India, and Europe.",
+    date: "2026-01-15",
+    readTime: "8 min read",
+    category: "Career Advice",
+    relatedTools: ["/", "/resume-examples"],
+    content: `
+Many job seekers use the terms resume and CV interchangeably, but they are distinctly different documents with different purposes. Using the wrong one can cost you an opportunity.
+
+<h2>What Is a Resume?</h2>
+<p>A resume is a concise, tailored summary of your professional experience, skills, and education. It is typically 1-2 pages long and customized for each job application. The resume focuses on your most relevant qualifications for a specific role. It is used for most corporate, tech, and professional jobs worldwide.</p>
+
+<h2>What Is a CV (Curriculum Vitae)?</h2>
+<p>A CV is a comprehensive document that lists your entire professional history, including education, publications, research, presentations, awards, grants, teaching experience, and professional affiliations. There is no page limit — CVs can be 3-10+ pages. The CV does not change much between applications; it is a complete record of your career.</p>
+
+<h2>Resume vs CV: Key Differences</h2>
+<p><strong>Length:</strong> Resume — 1-2 pages. CV — no limit, typically 3+ pages.<br/>
+<strong>Purpose:</strong> Resume — tailored for each job. CV — complete career record.<br/>
+<strong>Content:</strong> Resume — relevant skills and experience. CV — everything including publications.<br/>
+<strong>Customization:</strong> Resume — customized per application. CV — mostly static.<br/>
+<strong>Used for:</strong> Resume — corporate, tech, business, most jobs. CV — academia, research, medicine, fellowships.</p>
+
+<h2>Country-Specific Guidance</h2>
+<p><strong>United States:</strong> Resumes are standard for most jobs. CVs are used only for academic, research, and medical positions. Always submit a resume unless the posting specifically requests a CV.</p>
+<p><strong>United Kingdom:</strong> The terms are sometimes used interchangeably, but for most jobs a 2-page CV (what Americans call a resume) is standard. Academic roles require a longer CV with publications.</p>
+<p><strong>India:</strong> Most companies use the term "resume" or "CV" interchangeably and expect a 1-2 page document. For freshers, include education details prominently. For experienced professionals, focus on work experience. Academic roles require a full CV.</p>
+<p><strong>Europe:</strong> Most European countries use a CV format (often with a photo, unlike in the US/UK). The Europass CV is a common standardized format. Check country-specific expectations before applying.</p>
+
+<h2>Which One Should You Use?</h2>
+<p>For 90% of job seekers, a resume is the right choice. Use a CV only if you are applying for academic faculty positions, research roles, medical residencies, fellowships, or some government positions. When in doubt, check the job posting for guidance. If it asks for a "resume," send a resume. If it asks for a "CV," send a CV. If it says "resume/CV," a resume is usually the safer choice.</p>
+
+<p>Create your resume with our <a href="/">free resume builder</a>. Browse <a href="/resume-examples">resume examples</a> for proven formats.</p>
+    `.trim()
+  },
+  {
+    slug: "professional-resume-guide",
+    title: "Professional Resume: Format, Content & Design Tips for 2026",
+    description: "Write a professional resume that lands interviews. Expert guide on format, content structure, design principles, and keywords for corporate and executive roles.",
+    date: "2026-01-05",
+    readTime: "10 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/ats-score", "/templates", "/resume-examples"],
+    content: `
+A professional resume signals competence, attention to detail, and fit for corporate environments. In 2026, professionalism in a resume means more than just formal language — it encompasses format, content, design choices, and keyword strategy.
+
+<h2>What Makes a Resume Professional</h2>
+<p>A professional resume follows established conventions that hiring managers expect. It uses a clean, single-column format with standard fonts. It avoids creative elements like photos, colored headers, icons, or progress bars. The content focuses on quantifiable achievements rather than responsibilities. Every word is chosen deliberately to convey competence and results.</p>
+
+<h2>Professional Resume Format Rules</h2>
+<p><strong>Reverse-chronological format:</strong> This is the gold standard for professional resumes. List your most recent role first. Recruiters and ATS systems are trained to scan resumes this way.</p>
+<p><strong>Correct section order:</strong> Contact Information, Professional Summary, Experience, Education, Skills. For entry-level candidates, Education can come before Experience. For executives, consider adding a "Leadership" or "Board Experience" section.</p>
+<p><strong>Consistent formatting:</strong> Use the same font throughout. Bold for job titles and company names. Regular weight for descriptions. Consistent date formatting. Uniform bullet point style. These small details signal professionalism.</p>
+
+<h2>Content That Shows Professionalism</h2>
+<p>Professional resumes use action verbs: Led, Developed, Implemented, Optimized, Managed, Designed, Negotiated, Spearheaded. Every bullet point should quantify impact wherever possible. Avoid jargon, buzzwords, and clichés like "results-driven" or "team player" — show these qualities through your achievements instead.</p>
+<p><strong>Weak:</strong> "Responsible for managing a team of developers"<br/>
+<strong>Professional:</strong> "Led a team of 8 engineers to deliver 3 major product releases ahead of schedule, increasing revenue by 25%"</p>
+<p><strong>Weak:</strong> "Helped with social media marketing"<br/>
+<strong>Professional:</strong> "Developed and executed social media strategy that grew engagement by 150% and generated 10K+ qualified leads in 6 months"</p>
+
+<h2>ATS Considerations for Corporate Roles</h2>
+<p>Corporate employers rely heavily on ATS software to filter candidates. Use keywords from the job description naturally throughout your resume. Include common corporate keywords like: strategic planning, cross-functional collaboration, P&L management, stakeholder communication, process improvement, KPI tracking, and risk management.</p>
+
+<h2>Executive-Level Professional Resumes</h2>
+<p>For executive roles, focus on leadership impact, organizational change, revenue growth, team building, and strategic vision. Include board positions, speaking engagements, and published thought leadership. Executive resumes often run to 2 pages and include a strong professional summary that positions you as a leader in your field.</p>
+
+<p>Build your professional resume with our <a href="/">free resume builder</a>. Check your <a href="/ats-score">ATS compatibility score</a>. Browse <a href="/resume-examples">professional resume examples</a> for proven formats.</p>
+    `.trim()
+  },
+  {
+    slug: "how-to-make-a-resume",
+    title: "How to Make a Resume: Quick & Easy Step-by-Step Guide",
+    description: "Learn how to make a resume from scratch in minutes. Step-by-step guide with a free resume builder, examples, and templates. No sign-up required.",
+    date: "2026-03-15",
+    readTime: "9 min read",
+    category: "Resume Tips",
+    relatedTools: ["/", "/ats-score", "/templates", "/resume-examples"],
+    content: `
+Making a resume from scratch can feel overwhelming, but it doesn't have to be. With the right approach and tools, you can create a professional, ATS-friendly resume in under 10 minutes. Use our <a href="/">free resume builder</a> to make a resume in 5 minutes — no sign-up required.
+
+<h2>Step 1: Choose a Template</h2>
+<p>Start with a proven resume template rather than a blank page. A good template handles formatting, spacing, and layout so you can focus on content. Choose a clean, single-column design with standard fonts. Avoid templates with graphics, tables, or columns that confuse ATS systems. Browse our <a href="/templates">free resume templates</a> for professionally designed options that work with every ATS.</p>
+
+<h2>Step 2: Add Your Contact Information</h2>
+<p>At the top of your resume, include: your full name, phone number, professional email address, LinkedIn profile URL, and location (city and state). Optionally add links to your portfolio, personal website, or GitHub. Make sure your email is professional — no nicknames or numbers from college.</p>
+
+<h2>Step 3: Write a Professional Summary</h2>
+<p>A professional summary is 2-3 sentences that position you for the role. Include your title, years of experience, top skills, and what you bring. Example: "Results-driven marketing professional with 5+ years of experience in digital strategy, SEO, and content marketing. Proven track record of driving 200%+ traffic growth through data-driven campaigns."</p>
+
+<h2>Step 4: List Your Work Experience</h2>
+<p>For each role, include: company name, job title, dates of employment, and 3-5 bullet points describing your key achievements. Use action verbs and quantify results whenever possible. List roles in reverse-chronological order (most recent first).</p>
+
+<h2>Step 5: Add Education and Skills</h2>
+<p>Education: degree, institution, graduation year. Include GPA only if it is 3.5+. Recent graduates should list relevant coursework. Skills: group by category (technical, soft, language) and use keywords from the job description. Be honest — only list skills you can discuss in an interview.</p>
+
+<h2>Step 6: Format and Export as PDF</h2>
+<p>Before you save, double-check: consistent font and size throughout, proper spacing, no typos or grammatical errors, contact info is correct, and everything fits within the expected page count (1 page for entry-level, 1-2 for experienced). Always export your resume as PDF unless the employer specifically requests Word format. PDF preserves your formatting across all devices.</p>
+
+<h2>Common Mistakes to Avoid</h2>
+<p>Using a generic resume for every application, cramming too much text, using passive language, including irrelevant work experience, forgetting to proofread, using unprofessional email addresses, and submitting without checking the format renders correctly. Use our <a href="/ats-score">ATS score checker</a> to catch formatting issues before you apply.</p>
+
+<p>Ready to make your resume? Use our <a href="/">free resume builder</a> — it takes 5 minutes and requires no sign-up. Browse <a href="/resume-examples">resume examples</a> for inspiration, or check out our <a href="/templates">resume templates</a> for pre-formatted designs.</p>
+    `.trim()
   }
 ]
