@@ -83,8 +83,8 @@
 
 ## 9. r/resumes — "any free resume builders? (free, no registration)" — HIGH ACTIVITY
 
-**Thread:** https://www.reddit.com/r/resumes/comments/1j6pf2q/any_free_resume_builders_free_no_registration/
-**Posted:** June 2026
+**Thread:** https://www.reddit.com/r/resumes/comments/1dc64x4/any_free_resume_builders_free_no_registration_etc/
+**Posted:** Likely 2024-2025 (still active)
 **Draft:**
 
 > getapplykit.com — fits exactly what you're looking for. Free (no registration, no credit card, no watermark), ATS-friendly output. 8 templates with color themes, PDF export. Also has a built-in free ATS score checker at getapplykit.com/ats-score, bullet point improver, and cover letter generator. Your data stays in your browser (localStorage), nothing saved on their servers. I've been using it for a few months now.
