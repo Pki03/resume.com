@@ -1,0 +1,469 @@
+---
+import Layout from "../layouts/Layout.astro"
+import HowItWorks from "../components/HowItWorks.astro"
+---
+
+<Layout title="Free Resume Objective Generator - Write a Strong Career Objective" description="Generate professional resume objectives for entry-level and career change positions. Free objective statement generator with examples - no sign-up required.">
+  <section class="hero-split hero-split-gradient" style="padding-bottom:2rem">
+    <div class="hero-split-content">
+      <span class="eyebrow">Free Tool</span>
+      <h1>Resume <span class="gradient-text" style="white-space:nowrap">Objective Generator</span></h1>
+      <p>Generate professional resume objectives tailored to your situation. Choose entry-level or career change and get 3 ready-to-use options in seconds.</p>
+      <div class="hero-split-actions">
+        <a href="#generator" class="btn btn-primary btn-lg">Generate Your Objective</a>
+        <a href="/" class="btn btn-outline btn-lg">Build My Resume</a>
+      </div>
+      <div class="hero-split-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 3 Options Per Search</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Entry Level &amp; Career Change</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free, No Sign-Up</span>
+      </div>
+    </div>
+    <div class="hero-split-visual">
+      <div class="hero-mockup">
+        <div class="hero-mockup-header">
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+        </div>
+        <div class="hero-mockup-body">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">Career Objective</div>
+              <div style="font-size:0.6875rem;color:var(--gray-500)">Entry Level — Software Engineer</div>
+            </div>
+          </div>
+          <div style="font-size:0.75rem;color:var(--gray-600);line-height:1.6;padding:0.75rem;background:var(--gray-50);border-radius:8px;margin-bottom:0.75rem">
+            Recent Computer Science graduate seeking an entry-level Software Engineer position where I can apply my strong foundation in JavaScript, Python to technology. Eager to contribute to a collaborative team while continuing to grow as a professional.
+          </div>
+          <div style="display:flex;gap:0.375rem;flex-wrap:wrap">
+            <span class="badge badge-primary">Entry Level</span>
+            <span class="badge badge-green">Career Change</span>
+            <span class="badge badge-gray">3 Options</span>
+          </div>
+        </div>
+        <div class="hero-float" style="top:-14px;right:-14px">
+          <span class="hero-float-ats perfect">3</span>
+          <span>Objective Options</span>
+        </div>
+        <div class="hero-float" style="bottom:-14px;left:-14px">
+          <span class="hero-float-icon purple">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span>Smart Templates</span>
+        </div>
+        <div class="hero-float" style="bottom:15%;right:-14px">
+          <span class="hero-float-icon cyan">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/></svg>
+          </span>
+          <span>Copy &amp; Paste</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm" id="generator">
+    <div class="container-content">
+      <div class="bento-grid">
+        <div class="bento-main">
+          <div class="card card-elevated">
+            <div class="card-body">
+              <div class="form-group">
+                <label class="label" for="og-title">Job Title</label>
+                <input id="og-title" class="input" type="text" placeholder="e.g. Software Engineer, Marketing Coordinator" value="Software Engineer" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="label" for="og-years">Years of Experience</label>
+                  <select id="og-years" class="input">
+                    <option value="1">1 year</option>
+                    <option value="2">2 years</option>
+                    <option value="3">3 years</option>
+                    <option value="5">5 years</option>
+                    <option value="7">7 years</option>
+                    <option value="10" selected>10+ years</option>
+                    <option value="15">15+ years</option>
+                    <option value="20">20+ years</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="label" for="og-industry">Target Industry</label>
+                  <input id="og-industry" class="input" type="text" placeholder="e.g. technology, healthcare, finance" value="technology" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="label" for="og-skill1">Key Skill 1</label>
+                  <input id="og-skill1" class="input" type="text" placeholder="e.g. JavaScript" value="JavaScript" />
+                </div>
+                <div class="form-group">
+                  <label class="label" for="og-skill2">Key Skill 2</label>
+                  <input id="og-skill2" class="input" type="text" placeholder="e.g. Python" value="Python" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="label">Career Level</label>
+                <div style="display:flex;gap:0.75rem">
+                  <label style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;border:2px solid var(--gray-200);border-radius:var(--radius);cursor:pointer;transition:all 0.15s;background:var(--gray-25);font-size:0.875rem;font-weight:500;color:var(--gray-700)" id="level-entry-label">
+                    <input type="radio" name="career-level" value="entry" checked onchange="toggleLevel()" style="accent-color:var(--primary)" /> Entry Level
+                  </label>
+                  <label style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;border:2px solid var(--gray-200);border-radius:var(--radius);cursor:pointer;transition:all 0.15s;background:var(--gray-25);font-size:0.875rem;font-weight:500;color:var(--gray-700)" id="level-change-label">
+                    <input type="radio" name="career-level" value="change" onchange="toggleLevel()" style="accent-color:var(--primary)" /> Career Change
+                  </label>
+                </div>
+              </div>
+              <button id="og-generate-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.75rem" onclick="generateObjectives()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                Generate Objective
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bento-side">
+          <div class="card">
+            <div class="card-body">
+              <div style="font-size:0.8125rem;font-weight:600;color:var(--gray-900);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Tips
+              </div>
+              <ul style="display:flex;flex-direction:column;gap:0.5rem;padding:0;margin:0;list-style:none">
+                <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.8125rem;color:var(--gray-500);line-height:1.5"><span style="color:var(--primary);flex-shrink:0;font-weight:700">•</span> Use the exact job title from the posting you're applying to</li>
+                <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.8125rem;color:var(--gray-500);line-height:1.5"><span style="color:var(--primary);flex-shrink:0;font-weight:700">•</span> Pick 2 skills that are most relevant to the target role</li>
+                <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.8125rem;color:var(--gray-500);line-height:1.5"><span style="color:var(--primary);flex-shrink:0;font-weight:700">•</span> Choose "Entry Level" if you have less than 2 years in the role</li>
+                <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.8125rem;color:var(--gray-500);line-height:1.5"><span style="color:var(--primary);flex-shrink:0;font-weight:700">•</span> Choose "Career Change" if you're switching industries or roles</li>
+                <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.8125rem;color:var(--gray-500);line-height:1.5"><span style="color:var(--primary);flex-shrink:0;font-weight:700">•</span> Use an objective only if you have limited experience in the field</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="og-results" style="display:none;margin-top:1.5rem">
+        <div class="section-header" style="margin-bottom:1.5rem">
+          <h2 style="font-size:1.5rem;margin-bottom:0.25rem">Your Objectives</h2>
+          <p style="font-size:0.875rem">Choose the one that fits best and copy it into your resume.</p>
+        </div>
+        <div id="og-objectives" style="display:flex;flex-direction:column;gap:1rem"></div>
+      </div>
+    </div>
+  </section>
+
+  <HowItWorks
+    title="How It Works"
+    description="Get a polished resume objective in seconds — enter your details, pick your level, and choose from 3 tailored options."
+    steps={[
+      {
+        number: 1,
+        icon: '<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+        title: "Enter Your Details",
+        description: "Fill in your target job title, years of experience, key skills, and industry. Select whether you're entry level or making a career change.",
+      },
+      {
+        number: 2,
+        icon: '<svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>',
+        title: "Get 3 Options",
+        description: "We generate 3 unique objective statements using templates designed for entry-level candidates and career changers.",
+      },
+      {
+        number: 3,
+        icon: '<svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>',
+        title: "Copy & Use",
+        description: "Copy your favorite objective with one click and paste it directly into your resume. No formatting needed.",
+      },
+    ]}
+  />
+
+  <section class="section">
+    <div class="container-content">
+      <article class="content-article">
+        <h2>How to Write a Strong Resume Objective</h2>
+        <p>A resume objective is a short statement at the top of your resume that outlines your career goals and what you aim to accomplish in a new role. Unlike a professional summary, which highlights your existing experience and achievements, an objective focuses on your aspirations and what you hope to bring to an employer. It is most effective for entry-level candidates, career changers, and professionals targeting a specific role or industry.</p>
+
+        <p>Our free resume objective generator creates tailored options based on your situation. Whether you are a recent graduate entering the workforce for the first time or an experienced professional pivoting to a new industry, you will get three distinct objective statements that you can customize further for each application.</p>
+
+        <h3>Resume Objective vs. Resume Summary: What Is the Difference?</h3>
+        <p>The key difference between a resume objective and a resume summary lies in focus and audience. A <strong>resume summary</strong> highlights your existing experience, skills, and achievements. It is ideal for candidates with 3+ years of relevant experience in the same field. A <strong>resume objective</strong> states your career goals and what you hope to contribute. It works best for entry-level candidates, career changers, military veterans transitioning to civilian roles, returning professionals, and applicants targeting a very specific position.</p>
+
+        <p>Generally, if you have relevant experience in the field, use a summary. If you are just starting out or making a pivot, use an objective. Using the wrong one can hurt your application — a summary when you lack experience highlights gaps, while an objective when you are experienced can make you seem unfocused. Our <a href="/resume-summary-generator">Resume Summary Generator</a> is the better choice if you have relevant experience to highlight.</p>
+
+        <h3>When to Use a Resume Objective</h3>
+        <p><strong>Entry-Level Candidates:</strong> If you are a recent graduate or have less than two years of professional experience, an objective helps you frame your education, internships, and transferable skills around a specific goal. It tells employers what you are aiming for and why you are applying to their company specifically.</p>
+        <p><strong>Career Changers:</strong> If you have years of experience in one field but are moving into something new, an objective bridges the gap. It acknowledges your background while explaining your motivation for the transition and highlighting transferable skills that apply to the new role.</p>
+        <p><strong>Targeted Applications:</strong> If you are applying to a highly specific role or a mission-driven organization, an objective lets you articulate why you want that exact position and how you align with the company's purpose. This can set you apart from candidates using generic summaries.</p>
+
+        <h3>What Makes a Great Resume Objective?</h3>
+        <p>A strong resume objective is specific, concise, and employer-focused. It should include the job title you are targeting, 1-2 key skills that make you a strong candidate, what you aim to contribute or achieve, and why you are interested in the role or industry. Avoid generic statements like "Seeking a challenging position where I can use my skills." Instead, say "Recent graduate seeking an entry-level Software Engineer role where I can apply my React and Python skills to build scalable web applications." The more specific you are, the more credible you sound.</p>
+
+        <p>Keep your objective to 2-3 sentences. Anything longer loses impact. Focus on what you can do for the employer, not just what you want from the job. Use active language and avoid clichés like "hard worker," "people person," or "team player." Show your motivation through specificity and genuine interest in the role.</p>
+
+        <h3>Resume Objective Examples by Scenario</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0">
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Recent Graduate — Marketing</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Recent Marketing graduate seeking an entry-level Marketing Coordinator position where I can apply my SEO and content strategy skills to drive brand growth. Eager to contribute to a collaborative marketing team.</div>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Career Change — Teacher to Tech</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Dedicated professional with 7 years of experience transitioning into Technical Writing. Proven track record in curriculum design and written communication, now seeking to apply transferable skills in technology.</div>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Internship — Computer Science</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Computer Science student seeking a Software Engineering internship to apply my foundation in Java and cloud computing. Passionate about building reliable systems and contributing to team goals.</div>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--primary);margin-bottom:0.5rem">Career Change — Sales to HR</div>
+            <div style="font-size:0.8125rem;color:var(--gray-600);line-height:1.6">Results-oriented professional with 5 years of experience transitioning into Human Resources. Strong background in client relations and conflict resolution, now seeking to build a career in talent management.</div>
+          </div>
+        </div>
+
+        <h3>Common Resume Objective Mistakes</h3>
+        <p><strong>Being too generic:</strong> "Seeking a challenging position" describes every candidate. Be specific about the role, skills, and industry you are targeting. Generic objectives waste valuable resume real estate.</p>
+        <p><strong>Focusing only on what you want:</strong> An objective that says "I want to gain experience" or "I am looking for growth opportunities" tells the employer what they can do for you. Flip it: tell them what you can do for them.</p>
+        <p><strong>Making it too long:</strong> A resume objective should be 2-3 sentences. If it runs longer, cut it down. Recruiters spend seconds scanning your resume — make every word count.</p>
+        <p><strong>Using an objective when a summary is better:</strong> If you have 3+ years of relevant experience in the same field, use a professional summary instead. An objective in that context makes you seem underqualified. Use our <a href="/resume-summary-generator">Resume Summary Generator</a> instead.</p>
+
+        <p>Pair your resume objective with a complete <a href="/">resume from our builder</a> and check your <a href="/ats-score">ATS compatibility score</a> before applying. Browse our <a href="/resume-examples">resume examples by industry</a> for more inspiration.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-sm section-tools">
+    <div class="container-content">
+      <div class="section-header reveal">
+        <h2>More Free Career Tools</h2>
+        <p>Everything you need to build a complete, optimized job application.</p>
+      </div>
+      <div class="tools-grid">
+        <a href="/" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span>Resume Builder</span>
+        </a>
+        <a href="/ats-score" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </span>
+          <span>ATS Score</span>
+        </a>
+        <a href="/cover-letter" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span>Cover Letter</span>
+        </a>
+        <a href="/resume-summary-generator" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span>Summary Generator</span>
+        </a>
+        <a href="/templates" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          </span>
+          <span>Templates</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="capture reveal">
+    <div class="capture-inner">
+      <h3>Weekly Resume Tips, Straight to Your Inbox</h3>
+      <p>Join 12,000+ job seekers getting expert ATS advice, keyword strategies, and career insights.</p>
+      <form class="capture-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="capture-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <style>
+    .copy-obj-btn { display:inline-flex;align-items:center;gap:0.375rem;background:none;border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:0.375rem 0.75rem;font-size:0.75rem;font-weight:500;color:var(--gray-600);cursor:pointer;transition:all 0.15s;white-space:nowrap;flex-shrink:0 }
+    .copy-obj-btn:hover { border-color:var(--primary);color:var(--primary) }
+  </style>
+  <script>
+    function toggleLevel() {
+      var entry = document.getElementById("level-entry-label")
+      var change = document.getElementById("level-change-label")
+      if (document.querySelector('input[name="career-level"]:checked').value === "entry") {
+        entry.style.borderColor = "var(--primary)"
+        entry.style.background = "var(--primary-light)"
+        change.style.borderColor = "var(--gray-200)"
+        change.style.background = "var(--gray-25)"
+      } else {
+        change.style.borderColor = "var(--primary)"
+        change.style.background = "var(--primary-light)"
+        entry.style.borderColor = "var(--gray-200)"
+        entry.style.background = "var(--gray-25)"
+      }
+    }
+
+    var ENTRY_TEMPLATES = [
+      function(title, s1, s2, industry) {
+        return "Recent " + s1 + " graduate seeking an entry-level " + title + " position where I can apply my strong foundation in " + s1 + ", " + s2 + " to " + industry + ". Eager to contribute to a collaborative team while continuing to grow as a professional."
+      },
+      function(title, s1, s2, industry) {
+        return "Motivated " + s1 + " graduate with hands-on experience in " + s2 + " seeking a " + title + " role in " + industry + ". Passionate about leveraging academic training to deliver impactful results in a fast-paced environment."
+      },
+      function(title, s1, s2, industry) {
+        return "Aspiring " + title + " with a strong academic background in " + s1 + " and " + s2 + " seeking an entry-level opportunity in " + industry + ". Dedicated to contributing to organizational success through hard work, adaptability, and a commitment to continuous learning."
+      }
+    ]
+
+    var CHANGE_TEMPLATES = [
+      function(title, years, s1, s2, industry) {
+        return "Dedicated professional with " + years + " years of experience transitioning into " + title + ". Proven track record in " + s1 + " and " + s2 + ", now seeking to apply transferable skills in " + industry + ". Passionate about " + industry + " and committed to delivering results."
+      },
+      function(title, years, s1, s2, industry) {
+        return "Accomplished professional bringing " + years + "+ years of experience in " + s1 + " and " + s2 + " to a new career as a " + title + " in " + industry + ". Known for delivering measurable outcomes and excited to bring a fresh perspective to a dynamic team."
+      },
+      function(title, years, s1, s2, industry) {
+        return "Results-driven professional with " + years + "+ years of expertise in " + s1 + " transitioning into " + title + ". Strong background in " + s2 + " with a proven ability to solve complex problems. Seeking to leverage transferable skills to drive success in " + industry + "."
+      }
+    ]
+
+    function generateObjectives() {
+      var title = document.getElementById("og-title").value.trim()
+      var years = document.getElementById("og-years").value
+      var industry = document.getElementById("og-industry").value.trim()
+      var s1 = document.getElementById("og-skill1").value.trim()
+      var s2 = document.getElementById("og-skill2").value.trim()
+      var level = document.querySelector('input[name="career-level"]:checked').value
+
+      if (!title || !industry || !s1 || !s2) {
+        Toast("Please fill in all fields before generating.", "warning")
+        return
+      }
+
+      var btn = document.getElementById("og-generate-btn")
+      btn.disabled = true; btn.textContent = "Generating..."
+
+      var templates = level === "entry" ? ENTRY_TEMPLATES : CHANGE_TEMPLATES
+      var levelLabel = level === "entry" ? "Entry Level" : "Career Change"
+
+      var resultsEl = document.getElementById("og-results")
+      var objectivesEl = document.getElementById("og-objectives")
+      objectivesEl.innerHTML = ""
+
+      for (var i = 0; i < 3; i++) {
+        var template = templates[i]
+        var objective = level === "entry" ? template(title, s1, s2, industry) : template(title, years, s1, s2, industry)
+
+        var card = document.createElement("div")
+        card.className = "card"
+        card.style.cssText = "padding:1.25rem;transition:all 0.2s;border-color:var(--gray-200)"
+        card.innerHTML =
+          '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.75rem">' +
+            '<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap">' +
+              '<span class="badge badge-primary">' + levelLabel + '</span>' +
+              '<span style="font-size:0.6875rem;color:var(--gray-400)">Option ' + (i + 1) + '</span>' +
+            '</div>' +
+            '<button onclick="copyObjective(this)" class="copy-obj-btn">' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>' +
+              'Copy' +
+            '</button>' +
+          '</div>' +
+          '<p style="font-size:0.875rem;color:var(--gray-700);line-height:1.7;margin:0">' + escHtml(objective) + '</p>'
+
+        objectivesEl.appendChild(card)
+      }
+
+      resultsEl.style.display = "block"
+      btn.disabled = false; btn.textContent = "Generate Objective"
+    }
+
+    function escHtml(s) {
+      return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")
+    }
+
+    function copyObjective(btn) {
+      var card = btn.closest(".card")
+      var text = card.querySelector("p").textContent
+      navigator.clipboard.writeText(text).then(function() {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!'
+        setTimeout(function() {
+          btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy'
+        }, 1500)
+      }).catch(function() {
+        Toast("Could not copy. Select the text manually.", "warning")
+      })
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Resume Objective Generator",
+    "url": "https://getapplykit.com/resume-objective-generator",
+    "description": "Generate professional resume objectives for entry-level and career change positions. Free objective statement generator with examples.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a resume objective?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A resume objective is a 2-3 sentence statement at the top of your resume that outlines your career goals and what you aim to contribute to an employer. It is best suited for entry-level candidates, career changers, and professionals targeting a specific role or industry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a resume objective and a summary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A resume summary highlights your existing experience and achievements, making it ideal for candidates with 3+ years of relevant experience. A resume objective states your career goals and aspirations, making it better suited for entry-level candidates, career changers, or those with limited experience in the field."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I use a resume objective?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a resume objective when you are a recent graduate entering the workforce, changing careers to a new industry, returning from a career break, or applying to a highly specific role where you want to express your targeted interest. If you have 3+ years of experience in the same field, a professional summary is usually more effective."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should a resume objective be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A resume objective should be 2-3 sentences or 30-50 words. Keep it concise and focused on the specific role you are applying for. Include the job title, 1-2 relevant skills, and what you aim to contribute to the employer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I generate a resume objective for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our resume objective generator is completely free. You can generate objectives for both entry-level and career-change scenarios. No account or sign-up required, with unlimited uses. Every generation produces 3 unique options."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getapplykit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Objective Generator", "item": "https://getapplykit.com/resume-objective-generator" }
+    ]
+  }
+  </script>
+</Layout>

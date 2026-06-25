@@ -1,0 +1,614 @@
+---
+import Layout from "../layouts/Layout.astro"
+import HowItWorks from "../components/HowItWorks.astro"
+---
+
+<Layout title="Free Resume Keyword Extractor - Find Missing ATS Keywords | ResumeBuilder" description="Extract keywords from any job description and see which ones your resume is missing. Free ATS keyword analysis tool - no sign-up required.">
+  <section class="hero-split hero-split-gradient" style="padding-bottom:2rem">
+    <div class="hero-split-content">
+      <span class="eyebrow">Free Keyword Extractor</span>
+      <h1>Find Missing <span class="gradient-text">ATS Keywords</span> Instantly</h1>
+      <p>Extract every important keyword from any job description and see exactly which ones your resume is missing. Get a match score and category breakdown — all in seconds.</p>
+      <div class="hero-split-actions">
+        <a href="#tool" class="btn btn-primary btn-lg">Extract Keywords</a>
+        <a href="/" class="btn btn-outline btn-lg">Build My Resume</a>
+      </div>
+      <div class="hero-split-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Found vs. Missing</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Category Grouping</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free, No Sign-Up</span>
+      </div>
+    </div>
+    <div class="hero-split-visual">
+      <div class="hero-mockup">
+        <div class="hero-mockup-header">
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+        </div>
+        <div class="hero-mockup-body">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--success-light);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <span style="font-size:1.25rem;font-weight:800;color:var(--success)">78%</span>
+            </div>
+            <div>
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">Keyword Match Rate</div>
+              <div style="font-size:0.6875rem;color:var(--gray-500)">7 of 9 key terms found</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.375rem;flex-wrap:wrap;margin-bottom:0.75rem">
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:var(--success-light);color:var(--success);border-radius:4px;font-weight:500">✓ React</span>
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:var(--success-light);color:var(--success);border-radius:4px;font-weight:500">✓ Node.js</span>
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:var(--success-light);color:var(--success);border-radius:4px;font-weight:500">✓ AWS</span>
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:#fef2f2;color:var(--error);border-radius:4px;font-weight:500">✕ TypeScript</span>
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:#fef2f2;color:var(--error);border-radius:4px;font-weight:500">✕ Docker</span>
+          </div>
+          <div style="display:flex;gap:0.5rem">
+            <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem;text-align:center;flex:1">
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">5</div>
+              <div style="font-size:0.625rem;color:var(--gray-500)">Found</div>
+            </div>
+            <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem;text-align:center;flex:1">
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">2</div>
+              <div style="font-size:0.625rem;color:var(--gray-500)">Missing</div>
+            </div>
+            <div style="background:var(--gray-50);border-radius:6px;padding:0.5rem;text-align:center;flex:1">
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">3</div>
+              <div style="font-size:0.625rem;color:var(--gray-500)">Categories</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-float" style="top:-14px;right:-14px">
+          <span class="hero-float-ats perfect">78%</span>
+          <span>Match Rate</span>
+        </div>
+        <div class="hero-float" style="bottom:-14px;left:-14px">
+          <span class="hero-float-icon purple">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span>Smart Analysis</span>
+        </div>
+        <div class="hero-float" style="bottom:25%;right:-14px">
+          <span class="hero-float-icon cyan">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/></svg>
+          </span>
+          <span>Gap Detected</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm" id="tool">
+    <div class="container-content">
+      <div class="card card-elevated">
+        <div class="card-body">
+          <div class="form-group">
+            <label class="label">Job Description</label>
+            <textarea id="job-description" class="input" rows="6" placeholder="Paste the full job description here. Include required skills, qualifications, responsibilities, and preferred qualifications."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="label">Your Resume</label>
+            <textarea id="resume-text" class="input" rows="8" placeholder="Paste your resume text here. Include your skills, experience, education, and certifications."></textarea>
+          </div>
+          <button id="extract-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.75rem" onclick="extractKeywords()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Extract Keywords
+          </button>
+        </div>
+      </div>
+
+      <div id="results" style="display:none;margin-top:1.5rem">
+        <div class="card card-elevated">
+          <div class="card-body">
+            <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
+              <div style="width:100px;height:100px;position:relative;flex-shrink:0">
+                <svg width="100" height="100" viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="15.5" fill="none" stroke="var(--gray-200)" stroke-width="3"/>
+                  <circle id="result-arc" cx="18" cy="18" r="15.5" fill="none" stroke="var(--success)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0 100" style="transform:rotate(-90deg);transform-origin:18px 18px;transition:stroke-dasharray 0.8s ease"/>
+                </svg>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+                  <span id="result-score" style="font-size:1.75rem;font-weight:800;color:var(--gray-900)">0%</span>
+                </div>
+              </div>
+              <div>
+                <div id="result-label" style="font-size:1.25rem;font-weight:700;color:var(--gray-900);margin-bottom:0.25rem">Analyzing...</div>
+                <p id="result-summary" style="font-size:0.875rem;color:var(--gray-500)">Paste a job description and resume, then click Extract Keywords.</p>
+                <div style="display:flex;gap:1rem;margin-top:0.5rem;font-size:0.8125rem">
+                  <span><strong id="total-found" style="color:var(--success)">0</strong> found</span>
+                  <span><strong id="total-missing" style="color:var(--error)">0</strong> missing</span>
+                  <span><strong id="total-keywords">0</strong> total keywords</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:1.5rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;flex-wrap:wrap;gap:0.5rem">
+                <h3 style="font-size:0.9375rem;font-weight:700;color:var(--gray-900)">Keyword Breakdown by Category</h3>
+                <div style="display:flex;gap:0.75rem;font-size:0.75rem">
+                  <span style="display:flex;align-items:center;gap:0.25rem"><span style="width:10px;height:10px;border-radius:2px;background:var(--success-light);border:1px solid var(--success)"></span> Found</span>
+                  <span style="display:flex;align-items:center;gap:0.25rem"><span style="width:10px;height:10px;border-radius:2px;background:#fef2f2;border:1px solid var(--error)"></span> Missing</span>
+                </div>
+              </div>
+              <div id="category-breakdown"></div>
+            </div>
+
+            <div id="all-keywords-section" style="display:none">
+              <h3 style="font-size:0.9375rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem">All Extracted Keywords</h3>
+              <div style="display:flex;flex-wrap:wrap;gap:0.375rem" id="all-keywords-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-elevated" style="margin-top:1.5rem">
+          <div class="card-body">
+            <h2 style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem">Tips for Improving Your Keyword Match</h2>
+            <ul style="display:flex;flex-direction:column;gap:0.5rem;padding:0;margin:0;list-style:none">
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Incorporate missing keywords naturally into your Professional Summary</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Add relevant skills to your Skills section — both hard and soft skills</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Mention tools, technologies, and methodologies in your Experience bullet points</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Mirror the exact phrasing used in the job description (e.g., "project management" vs "leading projects")</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Include certifications, industry terms, and acronyms the employer lists</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Don't keyword-stuff — use terms contextually so it reads naturally</li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;color:var(--gray-600)"><span style="color:var(--primary);flex-shrink:0">•</span> Run your resume through the extractor again after adding new keywords</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <HowItWorks
+    title="How It Works"
+    description="Extract and compare job description keywords with your resume in three simple steps — your data stays in your browser."
+    steps={[
+      {
+        number: 1,
+        icon: '<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>',
+        title: "Paste Job Description",
+        description: "Copy and paste any job description. Our tool automatically extracts all significant keywords, skills, and requirements.",
+      },
+      {
+        number: 2,
+        icon: '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+        title: "Paste Your Resume",
+        description: "Paste your resume text. We compare every extracted keyword against your resume to find matches and gaps.",
+      },
+      {
+        number: 3,
+        icon: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+        title: "Review & Optimize",
+        description: "See which keywords are found (green), which are missing (red), grouped by category with a match percentage score.",
+      },
+    ]}
+  />
+
+  <section class="section section-sm section-tools reveal">
+    <div class="container-content">
+      <div class="section-header">
+        <h2>More Free Career Tools</h2>
+        <p>Everything you need to build a complete, optimized job application.</p>
+      </div>
+      <div class="tools-grid">
+        <a href="/" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span>Resume Builder</span>
+        </a>
+        <a href="/ats-score" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </span>
+          <span>ATS Score</span>
+        </a>
+        <a href="/cover-letter" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span>Cover Letter</span>
+        </a>
+        <a href="/resume-examples" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <span>Examples</span>
+        </a>
+        <a href="/resume-summary-generator" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span>Summary Generator</span>
+        </a>
+        <a href="/bullet-point-improver" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          </span>
+          <span>Bullet Point Improver</span>
+        </a>
+      </div>
+      <div style="margin-top:2rem;text-align:center;font-size:0.8125rem;color:var(--gray-400);border-top:1px solid var(--gray-100);padding-top:1.5rem">
+        Land your next role faster — <a href="https://www.linkedin.com/premium/" target="_blank" rel="sponsored noopener" style="color:var(--primary)">try LinkedIn Premium free for 30 days.</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-content">
+      <article class="content-article">
+        <h2>Why Resume Keyword Extraction Matters for ATS Optimization</h2>
+        <p>When you apply for a job online, your resume is typically scanned by an Applicant Tracking System (ATS) before a human recruiter ever lays eyes on it. These systems are programmed to rank candidates based on how well their resumes match the keywords found in the job description. If your resume lacks the right keywords, it may never make it past the digital gatekeeper — regardless of how qualified you are. That's where a resume keyword extractor becomes an essential tool in your job search arsenal.</p>
+
+        <p>Our free keyword extractor analyzes the job description you provide, pulls out every significant term — technical skills, soft skills, tools, certifications, and industry-specific jargon — then cross-references them against your resume. The result is a clear, color-coded breakdown of exactly which keywords are present and which are missing, along with a match percentage score that tells you at a glance how aligned your resume is with the role.</p>
+
+        <h3>How ATS Keyword Matching Works</h3>
+        <p>Applicant Tracking Systems use keyword matching algorithms to score and rank resumes. When a recruiter posts a job, the ATS builds a profile of the ideal candidate based on the job description. It then scans every incoming resume, assigning a relevance score based on keyword density, frequency, and placement. Resumes that score above a certain threshold are forwarded to the recruiter; those below it are filtered out. According to industry studies, 75% of qualified candidates are rejected by ATS systems simply because their resumes lack the right keywords or use the wrong phrasing.</p>
+
+        <p>The key insight is that ATS keyword matching is largely literal. If the job description says "project management" but your resume says "led cross-functional initiatives," the ATS may not recognize the match. This is why it's critical to mirror the language of the job description directly. Our keyword extractor helps you identify these gaps so you can adjust your resume's language accordingly.</p>
+
+        <h3>Types of Keywords ATS Systems Look For</h3>
+        <p><strong>Hard Skills & Technical Keywords:</strong> These are the non-negotiable technical competencies for the role — programming languages (Python, Java, JavaScript), software tools (Salesforce, Adobe Creative Suite, AutoCAD), methodologies (Agile, Scrum, Six Sigma), and domain-specific expertise (digital marketing, supply chain management, financial modeling). These are the easiest keywords to identify and add because they're explicitly listed in the job requirements section.</p>
+
+        <p><strong>Soft Skills & Interpersonal Keywords:</strong> ATS systems also scan for soft skills like leadership, communication, teamwork, problem-solving, and strategic thinking. Unlike hard skills, these should be demonstrated through context in your experience bullet points rather than simply listed. For example, instead of writing "Good communication skills," show it: "Presented quarterly results to executive leadership, securing a 15% budget increase."</p>
+
+        <p><strong>Industry & Role-Specific Keywords:</strong> Every industry has its own vocabulary. Healthcare roles look for terms like HIPAA, EHR, and patient outcomes. Finance roles scan for SOX compliance, financial reporting, and risk assessment. IT roles prioritize cloud platforms, DevOps practices, and cybersecurity frameworks. Our keyword extractor pulls these automatically, including compound phrases that are often the most important signals for ATS algorithms.</p>
+
+        <p><strong>Certifications & Credentials:</strong> PMP, AWS Certified Solutions Architect, CPA, CFA, CISSP — certifications are powerful keyword signals because they're verifiable and directly map to job requirements. If the job description lists a certification you hold but it's not prominent in your resume, the ATS may miss it. Our tool flags these so you can make sure your credentials are front and center.</p>
+
+        <h3>How to Use Keyword Data to Improve Your Resume</h3>
+        <p>Once you've extracted the keyword gap analysis, prioritize the missing keywords by category. Start with hard skills and technical requirements — these are typically the most heavily weighted by ATS systems. Add them to your Skills section if applicable, but also contextually incorporate them into your experience bullet points. For example, if "AWS Lambda" is missing and you have relevant experience, update a bullet point to read: "Built serverless data pipelines using AWS Lambda and S3, reducing processing time by 40%." This approach signals to the ATS that you have practical experience, not just familiarity.</p>
+
+        <p>Next, address soft skills and leadership keywords by reviewing your experience section for opportunities to demonstrate these traits with specific examples. Finally, check for any industry jargon or company-specific terms that appear in the job description — including these can signal cultural fit and domain expertise. After making changes, run your resume through the keyword extractor again to verify improvement.</p>
+
+        <p>Pair your keyword-optimized resume with a <a href="/cover-letter">targeted cover letter</a> and check your <a href="/ats-score">overall ATS score</a> for a comprehensive application review. For industry-specific guidance, browse our <a href="/resume-examples">resume examples</a> to see how top candidates structure their keyword strategy in your field.</p>
+
+        <h3>Common Keyword Optimization Mistakes</h3>
+        <p>Many job seekers make the mistake of keyword stuffing — cramming as many keywords as possible into their resume without context. ATS systems are sophisticated enough to detect this, and human recruiters will immediately spot a resume that reads like a keyword dump. Instead, aim for natural integration where every keyword appears in a meaningful context. Another common mistake is using outdated or slightly different terminology. For instance, if the job description says "React.js" but your resume says "React," update it to match exactly. Finally, don't neglect the professional summary — this is prime real estate for keyword placement because it's one of the first sections the ATS parses and one of the only sections every recruiter reads.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="capture reveal">
+    <div class="capture-inner">
+      <h3>Weekly Resume Tips, Straight to Your Inbox</h3>
+      <p>Join 12,000+ job seekers getting expert ATS keyword strategies, resume optimization advice, and career insights.</p>
+      <form class="capture-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="capture-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <script is:inline>
+    var STOP_WORDS = new Set([
+      "this","that","with","from","have","been","will","their","they","what","when","where","which",
+      "about","into","than","then","also","more","some","such","only","other","over","very","just",
+      "should","these","those","looking","candidate","experience","skills","ability","strong",
+      "including","within","while","them","could","would","shall","might","must","need","needs",
+      "may","can","has","had","after","before","upon","its","our","your","his","her","not","are",
+      "was","were","been","being","have","has","had","does","did","doing","get","gets","got",
+      "getting","make","makes","made","making","take","takes","took","taking","work","works",
+      "worked","working","use","uses","used","using","know","knowledge","new","first","last",
+      "best","great","good","well","high","low","top","bottom","each","both","here","there",
+      "where","what","when","how","who","whom","why","which","very","just","also","too","much",
+      "many","most","few","all","any","every","no","nor","none","same","own","such","through",
+      "during","before","after","above","below","between","under","again","further","once",
+      "here","there","where","because","since","until","while","if","whether","though","although",
+      "back","still","yet","already","ever","never","always","often","sometimes","usually",
+      "really","quite","rather","enough","almost","nearly","even","little","bit","lot","lots",
+      "plenty","much","more","most","less","least","several","various","different","similar",
+      "same","like","unlike","such","rather","quite","fairly","pretty","highly","deeply",
+      "strongly","fully","partly","mostly","largely","mainly","primarily","especially",
+      "particularly","specifically","namely","including","related","regarding","concerning",
+      "following","above","below","per","via","versus","plus","minus","except","besides",
+      "worth","toward","towards","onto","into","upon","within","without","across","along",
+      "around","behind","beyond","despite","inside","outside","throughout","through","through",
+      "throughout","until","past","during","since","until","amid","among","amongst","between",
+      "against","except","exceptional","additional","appropriate","available","certain",
+      "current","different","early","entire","essential","existing","extensive","familiar",
+      "further","general","growing","individual","initial","internal","international","large",
+      "leading","limited","local","minimum","minor","multiple","necessary","negative","normal",
+      "original","particular","past","pending","positive","potential","primary","prior",
+      "professional","proper","recent","relevant","required","respective","senior","separate",
+      "specific","standard","sufficient","suitable","technical","total","typical","various",
+      "willing","please","provide","including","related","etc","note","see","e","g","i","e"
+    ])
+
+    var CATEGORY_KEYWORDS = {
+      "Programming Languages": ["python","java","javascript","typescript","c++","c#","golang","rust","kotlin","swift","ruby","php","scala","perl","r","matlab","sql","bash","shell","html","css","sass","less"],
+      "Frameworks & Libraries": ["react","angular","vue","next.js","express","django","flask","spring","spring boot","rails","laravel","asp.net","node.js","tensorflow","pytorch","pandas","numpy","jquery","bootstrap","tailwind","redux","junit","jest","mocha","cypress","playwright"],
+      "Cloud & Infrastructure": ["aws","azure","gcp","docker","kubernetes","terraform","ansible","jenkins","ci/cd","gitlab","github actions","circleci","cloudfront","s3","lambda","ec2","rds","dynamodb","cloudformation","helm","istio","nginx","apache"],
+      "Databases & Storage": ["mysql","postgresql","mongodb","redis","elasticsearch","cassandra","mariadb","sqlite","oracle","sql server","dynamodb","firebase","supabase","snowflake","bigquery","redshift"],
+      "Tools & Platforms": ["jira","confluence","git","github","gitlab","bitbucket","vscode","intellij","eclipse","slack","notion","asana","trello","monday.com","salesforce","hubspot","tableau","power bi","looker","datadog","new relic","splunk","grafana","prometheus"],
+      "Methodologies & Practices": ["agile","scrum","kanban","safe","lean","six sigma","waterfall","tdd","bdd","ci/cd","devops","sre","itil","pmp","prince2","design thinking","microservices","rest","graphql","soap","api"],
+      "Soft Skills": ["leadership","communication","teamwork","collaboration","problem solving","critical thinking","time management","adaptability","creativity","mentoring","negotiation","presentation","decision making","analytical","strategic thinking","attention to detail","organization","project management","stakeholder management","conflict resolution","emotional intelligence","growth mindset","self-motivated","result-oriented","detail-oriented"],
+      "Certifications": ["pmp","aws certified","cissp","ceh","cpa","cfa","frm","scrum master","csma","csm","psm","itil","comptia","ccna","ccnp","mcsd","mcse","ocp","lpic","rhcsa","cka","cks","azure certified","gcp certified"],
+      "Industries & Domains": ["healthcare","finance","banking","insurance","real estate","e-commerce","retail","manufacturing","logistics","supply chain","education","government","nonprofit","saas","fintech","healthtech","edtech","proptech","legal","consulting"],
+      "Other Technical": ["machine learning","deep learning","nlp","computer vision","data pipeline","etl","api","rest","graphql","websocket","oauth","jwt","ldap","sso","microservices","serverless","event driven","caching","cdns","load balancing","monitoring","logging","alerting","security","authentication","authorization"]
+    }
+
+    function extractKeywords() {
+      var jd = document.getElementById("job-description").value.trim()
+      var resume = document.getElementById("resume-text").value.trim()
+      if (!jd) {
+        Toast("Please paste a job description first.", "warning")
+        return
+      }
+      if (!resume) {
+        Toast("Please paste your resume text.", "warning")
+        return
+      }
+
+      var btn = document.getElementById("extract-btn")
+      btn.disabled = true
+      btn.textContent = "Extracting..."
+
+      var result = analyzeKeywords(jd, resume)
+      displayResults(result)
+
+      btn.disabled = false
+      btn.textContent = "Extract Keywords"
+    }
+
+    function analyzeKeywords(jdText, resumeText) {
+      var jdLower = jdText.toLowerCase()
+      var resumeLower = resumeText.toLowerCase()
+
+      var rawWords = jdLower.split(/[\s,;.()\/\[\]{}"'":!?@#$%^&*+=|<>~`]+/).filter(function(w) {
+        return w.length > 3 && !STOP_WORDS.has(w) && isNaN(Number(w)) && !/^\d+$/.test(w) && !/^[0-9a-f]{8,}$/i.test(w) && w.length < 50
+      })
+
+      var bigrams = []
+      var rawWordsTemp = jdLower.split(/[\s,;.()\/\[\]{}"'":!?@#$%^&*+=|<>~`]+/).filter(function(w) { return w.length > 1 })
+      for (var i = 0; i < rawWordsTemp.length - 1; i++) {
+        var bg = rawWordsTemp[i] + " " + rawWordsTemp[i + 1]
+        if (bg.length > 5 && bg.length < 60) bigrams.push(bg)
+      }
+
+      var trigrams = []
+      for (var i = 0; i < rawWordsTemp.length - 2; i++) {
+        var tg = rawWordsTemp[i] + " " + rawWordsTemp[i + 1] + " " + rawWordsTemp[i + 2]
+        if (tg.length > 8 && tg.length < 80) trigrams.push(tg)
+      }
+
+      var phrases = bigrams.concat(trigrams)
+      var phraseCounts = {}
+      phrases.forEach(function(p) {
+        var count = (jdLower.match(new RegExp(p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || []).length
+        if (count >= 2) phraseCounts[p] = count
+      })
+
+      var keywordSet = {}
+      var rawCounts = {}
+      rawWords.forEach(function(w) {
+        var count = (jdLower.match(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || []).length
+        if (count >= 1) {
+          keywordSet[w] = true
+          rawCounts[w] = count
+        }
+      })
+
+      Object.keys(phraseCounts).forEach(function(p) {
+        keywordSet[p] = true
+      })
+
+      var allKeywords = Object.keys(keywordSet).sort(function(a, b) { return rawCounts[b] - rawCounts[a] })
+
+      var found = []
+      var missing = []
+
+      allKeywords.forEach(function(kw) {
+        var isFound = resumeLower.includes(kw)
+        if (!isFound && kw.includes(" ")) {
+          var parts = kw.split(" ")
+          isFound = parts.every(function(p) { return resumeLower.includes(p) })
+        }
+        if (!isFound) {
+          var kwStripped = kw.replace(/[^a-z0-9]/g, "")
+          if (kwStripped.length > 3 && resumeLower.includes(kwStripped)) isFound = true
+        }
+        if (isFound) {
+          found.push(kw)
+        } else {
+          missing.push(kw)
+        }
+      })
+
+      var total = allKeywords.length
+      var matchPct = total > 0 ? Math.round((found.length / total) * 100) : 0
+
+      var categorized = {}
+      allKeywords.forEach(function(kw) {
+        var cat = getCategory(kw)
+        if (!categorized[cat]) categorized[cat] = { found: [], missing: [] }
+        if (found.indexOf(kw) !== -1) {
+          categorized[cat].found.push(kw)
+        } else {
+          categorized[cat].missing.push(kw)
+        }
+      })
+
+      var catEntries = Object.keys(categorized).sort(function(a, b) {
+        var aTotal = categorized[a].found.length + categorized[a].missing.length
+        var bTotal = categorized[b].found.length + categorized[b].missing.length
+        return bTotal - aTotal
+      }).map(function(cat) {
+        return {
+          name: cat,
+          found: categorized[cat].found,
+          missing: categorized[cat].missing,
+          total: categorized[cat].found.length + categorized[cat].missing.length,
+          pct: categorized[cat].found.length + categorized[cat].missing.length > 0
+            ? Math.round((categorized[cat].found.length / (categorized[cat].found.length + categorized[cat].missing.length)) * 100)
+            : 0
+        }
+      })
+
+      var summary = ""
+      if (matchPct >= 80) summary = "Strong keyword match! Your resume covers most of the terms in this job description."
+      else if (matchPct >= 60) summary = "Good keyword match. A few missing keywords that can be addressed with targeted updates."
+      else if (matchPct >= 40) summary = "Moderate keyword match. Several important keywords are missing from your resume."
+      else summary = "Low keyword match. Your resume needs significant keyword optimization for this role."
+
+      var label = matchPct >= 80 ? "Excellent Match" : matchPct >= 60 ? "Good Match" : matchPct >= 40 ? "Needs Improvement" : "Poor Match"
+
+      return { matchPct: matchPct, label: label, summary: summary, found: found, missing: missing, total: total, categories: catEntries }
+    }
+
+    function getCategory(kw) {
+      for (var cat in CATEGORY_KEYWORDS) {
+        var keywords = CATEGORY_KEYWORDS[cat]
+        for (var i = 0; i < keywords.length; i++) {
+          if (kw.indexOf(keywords[i]) !== -1 || keywords[i].indexOf(kw) !== -1) return cat
+        }
+      }
+      if (/(?:ing|tion|ment|ive|able|al|ize|ise)$/.test(kw) && kw.length > 5) return "Soft Skills"
+      if (/manager|director|head|lead|senior|junior|intern|vp|executive|chief|principal|staff|analyst|specialist|coordinator|associate|consultant|engineer|developer|architect|administrator|supervisor|representative|officer|assistant/i.test(kw)) return "Roles & Titles"
+      if (/(?:certified|certification|certificate|license|diploma|degree|bachelor|master|phd|doctorate)/i.test(kw)) return "Credentials"
+      return "General"
+    }
+
+    function displayResults(result) {
+      document.getElementById("results").style.display = "block"
+
+      var matchPct = result.matchPct
+      document.getElementById("result-score").textContent = matchPct + "%"
+
+      var arc = document.getElementById("result-arc")
+      var circumference = 2 * Math.PI * 15.5
+      var dashArray = (matchPct / 100) * circumference
+      setTimeout(function() { arc.style.strokeDasharray = dashArray + " " + circumference }, 100)
+
+      var color = matchPct >= 80 ? "var(--success)" : matchPct >= 60 ? "var(--warning)" : "var(--error)"
+      arc.style.stroke = color
+      document.getElementById("result-score").style.color = color
+      document.getElementById("result-label").textContent = result.label
+      document.getElementById("result-summary").textContent = result.summary
+
+      document.getElementById("total-found").textContent = result.found.length
+      document.getElementById("total-missing").textContent = result.missing.length
+      document.getElementById("total-keywords").textContent = result.total
+
+      var catEl = document.getElementById("category-breakdown")
+      if (result.categories.length) {
+        catEl.innerHTML = result.categories.map(function(cat) {
+          var barColor = cat.pct >= 80 ? "var(--success)" : cat.pct >= 60 ? "var(--warning)" : "var(--error)"
+          var foundTags = cat.found.slice(0, 8).map(function(kw) {
+            return '<span style="display:inline-flex;align-items:center;gap:0.25rem;padding:0.2rem 0.5rem;border-radius:999px;font-size:0.6875rem;font-weight:500;background:var(--success-light);color:var(--success);border:1px solid rgba(16,185,129,0.2)">' + kw + '</span>'
+          }).join("")
+          var missingTags = cat.missing.slice(0, 8).map(function(kw) {
+            return '<span style="display:inline-flex;align-items:center;gap:0.25rem;padding:0.2rem 0.5rem;border-radius:999px;font-size:0.6875rem;font-weight:500;background:#fef2f2;color:var(--error);border:1px solid rgba(239,68,68,0.2)">' + kw + '</span>'
+          }).join("")
+          var tooManyFound = cat.found.length > 8 ? '<span style="font-size:0.6875rem;color:var(--gray-400)"> +' + (cat.found.length - 8) + ' more</span>' : ""
+          var tooManyMissing = cat.missing.length > 8 ? '<span style="font-size:0.6875rem;color:var(--gray-400)"> +' + (cat.missing.length - 8) + ' more</span>' : ""
+          return '<div style="margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--gray-100)">' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.375rem">' +
+              '<div style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">' + cat.name + '</div>' +
+              '<div style="font-size:0.75rem;color:var(--gray-400)">' + cat.found.length + '/' + cat.total + ' (' + cat.pct + '%)</div>' +
+            '</div>' +
+            '<div style="height:6px;background:var(--gray-100);border-radius:3px;margin-bottom:0.5rem;overflow:hidden">' +
+              '<div style="height:100%;width:' + cat.pct + '%;background:' + barColor + ';border-radius:3px;transition:width 0.6s ease"></div>' +
+            '</div>' +
+            (foundTags ? '<div style="display:flex;flex-wrap:wrap;gap:0.25rem;margin-bottom:0.25rem">' + foundTags + tooManyFound + '</div>' : "") +
+            (missingTags ? '<div style="display:flex;flex-wrap:wrap;gap:0.25rem">' + missingTags + tooManyMissing + '</div>' : "") +
+          '</div>'
+        }).join("")
+      } else {
+        catEl.innerHTML = '<div style="text-align:center;padding:1rem;color:var(--gray-400);font-size:0.875rem">No keywords extracted. Make sure the job description has enough detail.</div>'
+      }
+
+      var allSection = document.getElementById("all-keywords-section")
+      if (result.total > 0) {
+        allSection.style.display = "block"
+        document.getElementById("all-keywords-list").innerHTML = result.found.map(function(kw) {
+          return '<span style="display:inline-flex;align-items:center;gap:0.25rem;padding:0.25rem 0.625rem;border-radius:999px;font-size:0.75rem;font-weight:500;background:var(--success-light);color:var(--success);border:1px solid rgba(16,185,129,0.2)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>' + kw + '</span>'
+        }).concat(result.missing.slice(0, 20).map(function(kw) {
+          return '<span style="display:inline-flex;align-items:center;gap:0.25rem;padding:0.25rem 0.625rem;border-radius:999px;font-size:0.75rem;font-weight:500;background:#fef2f2;color:var(--error);border:1px solid rgba(239,68,68,0.2)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' + kw + '</span>'
+        })).join("")
+      } else {
+        allSection.style.display = "none"
+      }
+
+      document.getElementById("results").scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Resume Keyword Extractor",
+    "url": "https://getapplykit.com/keyword-extractor",
+    "description": "Extract keywords from any job description and see which ones your resume is missing. Free ATS keyword analysis tool - no sign-up required.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a resume keyword extractor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A resume keyword extractor is a tool that analyzes a job description and extracts all significant keywords, skills, and requirements. It then compares these against your resume to show which keywords are present and which are missing, helping you optimize your resume for ATS screening."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the keyword extractor work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our keyword extractor scans the job description for all meaningful terms longer than 3 characters, filters out common stop words, identifies multi-word phrases, and categorizes keywords by type (technical skills, soft skills, tools, certifications). It then cross-references each keyword against your resume text and displays a color-coded breakdown with a match percentage score."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is keyword matching important for ATS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Applicant Tracking Systems use keyword matching algorithms to rank and filter resumes. Resumes that contain more keywords from the job description score higher and are more likely to be seen by recruiters. Studies show that 75% of qualified candidates are rejected by ATS because their resumes lack the right keywords or use different terminology."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of keywords does the tool extract?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The tool extracts hard skills (programming languages, tools, methodologies), soft skills (leadership, communication), certifications (PMP, AWS), role-specific terms, and industry jargon. Keywords are automatically categorized and displayed with match status so you can see at a glance which areas need attention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the resume keyword extractor really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our Resume Keyword Extractor is completely free with no usage limits. No account, sign-up, or credit card required. All processing happens in your browser — your data is never sent to our servers."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getapplykit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Keyword Extractor", "item": "https://getapplykit.com/keyword-extractor" }
+    ]
+  }
+  </script>
+</Layout>
+
+<style>
+  @media (max-width: 768px) {
+    #category-breakdown [style*="display:flex"] {
+      flex-wrap: wrap;
+    }
+  }
+</style>

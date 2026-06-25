@@ -1,0 +1,429 @@
+---
+import Layout from "../layouts/Layout.astro"
+import HowItWorks from "../components/HowItWorks.astro"
+---
+
+<Layout title="Free Resume Scanner: See How ATS Systems Read Your Resume" description="See exactly how Applicant Tracking Systems parse your resume. Free ATS preview tool that extracts contact info, skills, and sections - no sign-up required.">
+  <section class="hero-split hero-split-gradient" style="padding-bottom:2rem">
+    <div class="hero-split-content">
+      <span class="eyebrow">Free ATS Preview</span>
+      <h1>See How ATS Systems <span class="gradient-text">Read Your Resume</span></h1>
+      <p>Paste your resume and see exactly what an Applicant Tracking System sees. Extract contact info, skills, section headers, and detect formatting issues — all in seconds.</p>
+      <div class="hero-split-actions">
+        <a href="#scanner" class="btn btn-primary btn-lg">Scan Your Resume</a>
+        <a href="/" class="btn btn-outline btn-lg">Build My Resume</a>
+      </div>
+      <div class="hero-split-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Raw ATS Text Preview</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Contact &amp; Skill Extraction</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100% Free, No Sign-Up</span>
+      </div>
+    </div>
+    <div class="hero-split-visual">
+      <div class="hero-mockup">
+        <div class="hero-mockup-header">
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+          <span class="hero-mockup-dot"></span>
+        </div>
+        <div class="hero-mockup-body">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.8125rem;font-weight:700;color:var(--gray-900)">ATS Preview</div>
+              <div style="font-size:0.6875rem;color:var(--gray-500)">Parsed resume data</div>
+            </div>
+          </div>
+          <div style="font-size:0.6875rem;font-family:monospace;background:var(--gray-50);border-radius:8px;padding:0.75rem;margin-bottom:0.75rem;line-height:1.6;color:var(--gray-600);white-space:pre-wrap">JANE DOE
+jane.doe@email.com | (555) 123-4567
+San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Results-driven Software Engineer with 5+ years...
+
+SKILLS
+React, Node.js, Python, AWS, PostgreSQL, Docker
+
+EXPERIENCE
+Senior Software Engineer — TechCorp (2020-Present)</div>
+          <div style="display:flex;gap:0.375rem;flex-wrap:wrap">
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:var(--success-light);color:var(--success);border-radius:4px;font-weight:500">✓ 6 skills found</span>
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:var(--warning-light);color:var(--warning);border-radius:4px;font-weight:500">! 2 sections detected</span>
+            <span style="font-size:0.625rem;padding:0.1875rem 0.5rem;background:var(--primary-light);color:var(--primary);border-radius:4px;font-weight:500">Contact info extracted</span>
+          </div>
+        </div>
+        <div class="hero-float" style="top:-14px;right:-14px">
+          <span class="hero-float-ats perfect">ATS</span>
+          <span>Rescan</span>
+        </div>
+        <div class="hero-float" style="bottom:-14px;left:-14px">
+          <span class="hero-float-icon purple">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span>Parse Resume</span>
+        </div>
+        <div class="hero-float" style="bottom:25%;right:-14px">
+          <span class="hero-float-icon cyan">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/></svg>
+          </span>
+          <span>Extract Data</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm" id="scanner">
+    <div class="container-content">
+      <div class="card card-elevated">
+        <div class="card-body">
+          <div class="form-group">
+            <label class="label">Paste Your Resume Text</label>
+            <textarea id="resume-input" class="input" rows="10" placeholder="Paste your full resume text here. Include your contact info, summary, experience, education, and skills sections."></textarea>
+          </div>
+          <button id="scan-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.75rem" onclick="scanResume()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Scan Resume
+          </button>
+        </div>
+      </div>
+
+      <div id="results" style="display:none;margin-top:1.5rem">
+        <div class="card card-elevated">
+          <div class="card-body">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+              <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div>
+                <div style="font-size:1.125rem;font-weight:700;color:var(--gray-900);margin-bottom:0.125rem">ATS Scan Results</div>
+                <div style="font-size:0.8125rem;color:var(--gray-500)">Here is how an Applicant Tracking System parses your resume.</div>
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
+              <div class="card" style="padding:1rem;background:var(--gray-25)">
+                <div style="font-size:0.75rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem">Extracted Info</div>
+                <div id="extracted-info" style="display:flex;flex-direction:column;gap:0.5rem">
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem"><span style="font-weight:600;color:var(--gray-700);min-width:60px">Name:</span><span id="ext-name" style="color:var(--gray-600)">—</span></div>
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem"><span style="font-weight:600;color:var(--gray-700);min-width:60px">Email:</span><span id="ext-email" style="color:var(--gray-600)">—</span></div>
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem"><span style="font-weight:600;color:var(--gray-700);min-width:60px">Phone:</span><span id="ext-phone" style="color:var(--gray-600)">—</span></div>
+                </div>
+              </div>
+              <div class="card" style="padding:1rem;background:var(--gray-25)">
+                <div style="font-size:0.75rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem">Summary</div>
+                <div id="ext-summary" style="display:flex;flex-direction:column;gap:0.5rem">
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem"><span style="font-weight:600;color:var(--gray-700);min-width:80px">Skills:</span><span id="ext-skills" style="color:var(--gray-600)">—</span></div>
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem"><span style="font-weight:600;color:var(--gray-700);min-width:80px">Sections:</span><span id="ext-sections" style="color:var(--gray-600)">—</span></div>
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem"><span style="font-weight:600;color:var(--gray-700);min-width:80px">Word Count:</span><span id="ext-wordcount" style="color:var(--gray-600)">—</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:1.5rem">
+              <h3 style="font-size:0.9375rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem">Raw ATS Text Rendering</h3>
+              <div style="font-family:monospace;font-size:0.75rem;line-height:1.7;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:8px;padding:1rem;white-space:pre-wrap;color:var(--gray-700);max-height:400px;overflow-y:auto" id="raw-rendering"></div>
+              <p style="font-size:0.75rem;color:var(--gray-400);margin-top:0.5rem">This is how an ATS parses your resume. Content from tables, columns, headers, and footers may appear garbled or missing.</p>
+            </div>
+
+            <div id="issues-section" style="display:none;margin-bottom:1rem">
+              <h3 style="font-size:0.9375rem;font-weight:700;color:var(--gray-900);margin-bottom:0.75rem">Issues Detected</h3>
+              <div id="issues-list" style="display:flex;flex-direction:column;gap:0.5rem"></div>
+            </div>
+
+            <div style="margin-top:1rem;padding:0.75rem;background:var(--gray-50);border-radius:8px;font-size:0.8125rem;color:var(--gray-500)">
+              <strong style="color:var(--gray-700)">Pro Tip:</strong> Use our <a href="/ats-score" style="color:var(--primary)">ATS Score Checker</a> for a detailed compatibility analysis, or generate a <a href="/resume-summary-generator" style="color:var(--primary)">keyword-optimized summary</a> to improve your parsing results.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <HowItWorks
+    title="How It Works"
+    description="See exactly how ATS systems parse your resume in three simple steps — your data stays in your browser."
+    steps={[
+      {
+        number: 1,
+        icon: '<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>',
+        title: "Paste Your Resume",
+        description: "Copy and paste your full resume text into the scanner. Your data stays in your browser — nothing is uploaded to any server.",
+      },
+      {
+        number: 2,
+        icon: '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+        title: "Get ATS Preview",
+        description: "We parse your resume the way an ATS does — extracting contact info, skills, section headers, and showing the raw text rendering that hiring software sees.",
+      },
+      {
+        number: 3,
+        icon: '<svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+        title: "Fix Issues",
+        description: "Review detected issues like missing contact info or section headers. Use our resume builder to create an ATS-optimized version.",
+      },
+    ]}
+  />
+
+  <section class="section section-sm section-tools reveal">
+    <div class="container-content">
+      <div class="section-header">
+        <h2>More Free Career Tools</h2>
+        <p>Everything you need to build a complete, optimized job application.</p>
+      </div>
+      <div class="tools-grid">
+        <a href="/" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span>Resume Builder</span>
+        </a>
+        <a href="/ats-score" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </span>
+          <span>ATS Score</span>
+        </a>
+        <a href="/cover-letter" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span>Cover Letter</span>
+        </a>
+        <a href="/resume-summary-generator" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span>Summary Generator</span>
+        </a>
+        <a href="/bullet-point-improver" class="card tool-card card-hover">
+          <span class="card-icon" style="background:var(--primary-light)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          </span>
+          <span>Bullet Point Improver</span>
+        </a>
+      </div>
+      <div style="margin-top:2rem;text-align:center;font-size:0.8125rem;color:var(--gray-400);border-top:1px solid var(--gray-100);padding-top:1.5rem">
+        Land your next role faster — <a href="https://www.linkedin.com/premium/" target="_blank" rel="sponsored noopener" style="color:var(--primary)">try LinkedIn Premium free for 30 days.</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-content">
+      <article class="content-article">
+        <h2>What Is an ATS Resume Scanner and Why You Need It</h2>
+        <p>An ATS (Applicant Tracking System) resume scanner simulates how hiring software parses and interprets your resume. When you submit a job application online, it rarely goes directly to a recruiter. Instead, an ATS scans your resume, extracts key information, and stores it in a structured database. If the system cannot correctly parse your name, contact details, work history, or skills, your application may be silently filtered out before any human lays eyes on it.</p>
+
+        <p>Our free ATS resume preview tool gives you a behind-the-scenes look at this process. By pasting your resume text and scanning it, you can see exactly what an ATS extracts — and what it misses. This transparency helps you identify parsing problems before they cost you an opportunity.</p>
+
+        <h3>How ATS Parsing Works</h3>
+        <p>ATS parsing software looks for patterns in your resume to categorize information. It scans for email formats, phone number patterns, location strings, and LinkedIn URLs in the contact section. It identifies section headings by matching common labels like "Experience," "Education," and "Skills." It extracts skills by comparing words against a database of known technical and professional competencies. The parsed data is then presented to recruiters as a clean, structured profile — but only if the parser processes your resume correctly.</p>
+
+        <p>Common parsing failures include content placed in headers or footers (ATS often skips these), information inside tables or multiple columns (the parser reads left-to-right, top-to-bottom and jumbles the order), graphics and icons (most ATS systems ignore them entirely), and non-standard section headings (if the parser doesn't recognize a heading, that content may be lumped into the wrong category).</p>
+
+        <h3>What Our Resume Scanner Reveals</h3>
+        <p>Our scanner extracts and displays four critical pieces of information from your resume. <strong>Contact Information:</strong> Name, email address, phone number, and location. If any of these are missing or incorrectly parsed, recruiters cannot reach you. <strong>Skills Detected:</strong> A list of skills the ATS identifies in your resume. Comparing this against the job description reveals keyword gaps. <strong>Section Headers Found:</strong> Which resume sections the ATS recognizes. Standard headers like Experience, Education, and Skills get full credit; creative headers may go undetected. <strong>Raw Text Rendering:</strong> A pure-text version of your resume showing how the ATS sees it after stripping formatting. This reveals exactly what information gets lost or scrambled.</p>
+
+        <p>Alongside the extraction results, the scanner flags common issues: missing contact information, no clear section headers, low word count, lack of quantified bullet points, or potential table-based formatting. Each issue includes a suggestion for how to fix it.</p>
+
+        <h3>How to Prepare an ATS-Friendly Resume</h3>
+        <p>Start by running your current resume through our scanner. Review the raw text rendering — if the order of your information looks wrong, you likely have a formatting issue. Check that all five elements of your contact information are extracted. Look for your key skills in the skills list; if they are missing, they may not be in a format the ATS recognizes. Make sure every standard section (Summary, Experience, Education, Skills) is detected. Address any flagged issues one by one. Use standard section headings, avoid tables and columns, put all important content in the main document body, and use a clean single-column layout. Pair your ATS-optimized resume with our <a href="/ats-score">ATS Score Checker</a> for a detailed compatibility analysis across five dimensions.</p>
+
+        <p>A resume optimized for ATS parsing not only passes the machine screening — it also presents cleaner, more organized information to recruiters when they open your full profile. Check your <a href="/ats-score">ATS compatibility score</a> and explore our <a href="/resume-examples">industry-specific resume examples</a> for templates that are designed to parse cleanly.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="capture reveal">
+    <div class="capture-inner">
+      <h3>Weekly Resume Tips, Straight to Your Inbox</h3>
+      <p>Join 12,000+ job seekers getting expert ATS advice, keyword strategies, and career insights.</p>
+      <form class="capture-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="capture-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <script is:inline>
+    function scanResume() {
+      var text = document.getElementById("resume-input").value.trim()
+      if (!text) { Toast("Please paste your resume text first.", "warning"); return }
+
+      var btn = document.getElementById("scan-btn")
+      btn.disabled = true; btn.textContent = "Scanning..."
+      document.getElementById("results").style.display = "block"
+
+      var lower = text.toLowerCase()
+
+      // Extract name (assume first non-empty line)
+      var lines = text.split("\n").filter(function(l) { return l.trim() })
+      var name = lines.length > 0 ? lines[0].replace(/[|–—].*$/, "").trim() : "—"
+      if (name.length > 60) name = "—"
+
+      // Extract email
+      var emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/)
+      var email = emailMatch ? emailMatch[0] : "—"
+
+      // Extract phone
+      var phoneMatch = text.match(/[\+]?[\d\(\)\-\s]{10,}/)
+      var phone = phoneMatch ? phoneMatch[0].trim() : "—"
+
+      // Extract location
+      var locationMatch = text.match(/[A-Z][a-zA-Z]+(?:\s[A-Z][a-zA-Z]+)*,\s*[A-Z]{2}/)
+      var location = locationMatch ? locationMatch[0] : null
+
+      document.getElementById("ext-name").textContent = name
+      document.getElementById("ext-email").textContent = email
+      document.getElementById("ext-phone").textContent = phone
+
+      // Detect skills
+      var skillDB = ["react","node.js","python","javascript","typescript","java","c#","c++","go","rust","swift","kotlin","sql","postgresql","mysql","mongodb","aws","azure","gcp","docker","kubernetes","terraform","jenkins","git","linux","html","css","sass","scss","figma","photoshop","illustrator","excel","powerpoint","word","tableau","power bi","looker","snowflake","airflow","spark","hadoop","tensorflow","pytorch","keras","pandas","numpy","scikit-learn","flask","django","spring","rails","express","asp.net","vue","angular","svelte","next.js","nuxt","graphql","rest","api","microservices","agile","scrum","kanban","jira","confluence","saas","paas","iaas","ci/cd","devops","machine learning","deep learning","nlp","computer vision","llm","generative ai","data science","data engineering","data analysis","data pipeline","etl","dbt","lookml","bash","powershell","nginx","apache","redis","rabbitmq","kafka","pub/sub","restful","soap","oauth","jwt","ldap","saml","tls","ssl","aws ec2","aws s3","aws lambda","aws rds","cloudfront","route53","serverless","terraform","ansible","puppet","chef","prometheus","grafana","datadog","new relic","sentry","jest","mocha","cypress","playwright","selenium","junit","pytest","unittest","tdd","bdd","restassured","postman","swagger","openapi","grpc","websocket","rest api","graphql api","microservice","soa","event driven","cqrs","event sourcing","domain driven","ddd","clean architecture","hexagonal","onion","solid","oop","functional","reactive","rxjs","redux","mobx","zustand","recoil","pinia","vuex","ngrx","bloc","provider","riverpod","injection","hilt","dagger","koin","spring boot","hibernate","jpa","mybatis","flyway","liquibase"]
+      var foundSkills = []
+      skillDB.forEach(function(skill) {
+        var escaped = skill.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        if (new RegExp("\\b" + escaped + "\\b", "i").test(lower)) {
+          foundSkills.push(skill)
+        }
+      })
+
+      // Detect section headers
+      var sectionPatterns = [
+        { key: "Summary", patterns: [/summary/i, /professional summary/i, /profile/i, /objective/i] },
+        { key: "Experience", patterns: [/experience/i, /work experience/i, /employment/i, /work history/i, /professional experience/i] },
+        { key: "Education", patterns: [/education/i, /academic/i, /educational background/i, /academic background/i] },
+        { key: "Skills", patterns: [/skills/i, /technical skills/i, /core competencies/i, /technologies/i, /expertise/i] },
+        { key: "Certifications", patterns: [/certifications/i, /certificates/i, /licenses/i, /professional certifications/i] },
+        { key: "Projects", patterns: [/projects/i, /project experience/i, /personal projects/i, /key projects/i] },
+        { key: "Languages", patterns: [/languages/i, /language proficiency/i] },
+        { key: "Publications", patterns: [/publications/i, /papers/i, /research/i] },
+        { key: "Awards", patterns: [/awards/i, /honors/i, /achievements/i] },
+        { key: "Volunteering", patterns: [/volunteer/i, /volunteering/i, /community/i] }
+      ]
+      var foundSections = []
+      sectionPatterns.forEach(function(s) {
+        for (var i = 0; i < s.patterns.length; i++) {
+          if (s.patterns[i].test(lower)) {
+            foundSections.push(s.key)
+            break
+          }
+        }
+      })
+
+      // Word count
+      var words = text.split(/[\s]+/).filter(function(w) { return w.length > 0 })
+      var wordCount = words.length
+
+      document.getElementById("ext-skills").textContent = foundSkills.length ? foundSkills.slice(0, 15).join(", ") : "None detected"
+      var sectionsText = foundSections.length ? foundSections.join(", ") : "None detected"
+      document.getElementById("ext-sections").textContent = sectionsText
+      document.getElementById("ext-wordcount").textContent = wordCount + " words"
+
+      // Raw ATS rendering
+      document.getElementById("raw-rendering").textContent = text
+
+      // Detect issues
+      var issues = []
+      if (email === "—") issues.push({ issue: "No email address found", fix: "Add your professional email at the top of your resume so recruiters can contact you." })
+      if (phone === "—") issues.push({ issue: "No phone number found", fix: "Include your phone number — many recruiters prefer to call qualified candidates directly." })
+      if (!location) issues.push({ issue: "No location detected", fix: "Add your city and state (e.g., San Francisco, CA). Many ATS systems filter by location." })
+      if (foundSections.indexOf("Experience") === -1) issues.push({ issue: "No Experience section detected", fix: "Use a standard heading like 'Experience' or 'Work Experience' so the ATS recognizes it." })
+      if (foundSections.indexOf("Education") === -1) issues.push({ issue: "No Education section detected", fix: "Add an 'Education' section with your degree, school, and graduation year." })
+      if (foundSections.indexOf("Skills") === -1) issues.push({ issue: "No Skills section detected", fix: "Create a 'Skills' section listing your relevant technical and professional competencies." })
+      if (wordCount < 200) issues.push({ issue: "Resume is too short (" + wordCount + " words)", fix: "Aim for 350-600 words to give recruiters enough detail about your qualifications." })
+      if (wordCount > 900) issues.push({ issue: "Resume may be too long (" + wordCount + " words)", fix: "Keep your resume concise — ideally 1-2 pages covering your most relevant experience." })
+      if (foundSkills.length < 3) issues.push({ issue: "Very few skills detected (" + foundSkills.length + ")", fix: "List more relevant skills in a dedicated Skills section. Include both technical and soft skills." })
+
+      var issuesEl = document.getElementById("issues-section")
+      var issuesList = document.getElementById("issues-list")
+      if (issues.length) {
+        issuesEl.style.display = "block"
+        issuesList.innerHTML = issues.map(function(iss) {
+          return '<div style="background:#fffbeb;border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:0.875rem 1rem;display:flex;align-items:flex-start;gap:0.75rem">' +
+            '<span style="color:var(--warning);flex-shrink:0;margin-top:0.125rem">' +
+              '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>' +
+            '</span>' +
+            '<div><div style="font-weight:600;font-size:0.875rem;color:#92400e;margin-bottom:0.125rem">' + iss.issue + '</div><div style="font-size:0.8125rem;color:#b45309">' + iss.fix + '</div></div></div>'
+        }).join("")
+      } else {
+        issuesEl.style.display = "none"
+      }
+
+      btn.disabled = false; btn.textContent = "Scan Resume"
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free ATS Resume Scanner",
+    "url": "https://getapplykit.com/resume-scanner",
+    "description": "See exactly how Applicant Tracking Systems parse your resume. Free ATS preview tool that extracts contact info, skills, and sections.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an ATS resume scanner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An ATS resume scanner simulates how Applicant Tracking Systems parse your resume. It extracts contact information, skills, and section headers, then shows you a raw text rendering so you can see exactly what the system reads and what it might miss."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does ATS scanning work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ATS scanning works by pattern-matching your resume text against known formats for emails, phone numbers, and location strings. It identifies section headings by matching common labels, extracts skills by comparing words against a database of known competencies, then presents the parsed data as a structured profile for recruiters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What information does the ATS scanner extract?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ATS scanner extracts your name, email address, phone number, location, detected skills, section headers, and provides a raw text rendering of your resume. It also flags common issues like missing contact info, lack of section headers, or short word count."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does ATS parsing fail on some resumes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ATS parsing commonly fails when resumes use tables, columns, headers and footers, graphics, icons, non-standard section headings, or unusual fonts. The parser reads content left-to-right, top-to-bottom and can jumble or miss information that is not in a simple linear layout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the ATS resume scanner really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our ATS resume scanner is completely free with no limits on usage. No account, sign-up, or credit card required. Your data stays in your browser and is never uploaded to our servers."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getapplykit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Resume Scanner", "item": "https://getapplykit.com/resume-scanner" }
+    ]
+  }
+  </script>
+</Layout>

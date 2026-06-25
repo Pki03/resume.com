@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro"
 import HowItWorks from "../components/HowItWorks.astro"
 ---
 
-<Layout title="Free Resume Builder - Create Professional Resumes Online" description="Build professional, ATS-friendly resumes online for free. Choose from multiple templates, customize colors, and export as PDF. No sign-up required.">
+<Layout title="Free AI Resume Builder: Create ATS-Optimized Resumes Online" description="Build professional, ATS-friendly resumes online for free. Choose from multiple templates, customize colors, and export as PDF. No sign-up required.">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,6 +19,70 @@ import HowItWorks from "../components/HowItWorks.astro"
         "price": "0",
         "priceCurrency": "USD"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this resume builder really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our resume builder is completely free with no hidden fees, watermarks, or limits. You get access to all 8 professionally designed templates and 7 color themes at no cost. No credit card or sign-up is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No account or sign-up is required. The resume builder works entirely in your browser and stores your data in localStorage on your device, not on our servers. You can close the page and come back later — your progress is saved automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the templates ATS-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all templates are designed to pass Applicant Tracking Systems with clean, single-column layouts and proper semantic structure. No tables, columns, or complex formatting that could confuse ATS parsers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export my resume as a PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can export your resume as a clean, print-ready PDF with one click. Your formatting is preserved perfectly. You can also print directly from the browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What resume templates are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The builder includes four template styles — Classic, Modern, Professional, and Creative — each with 7 customizable color themes. You can switch between templates and colors at any time with a live preview."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the AI bullet point improver work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AI assistant analyzes your work experience bullet points and suggests stronger phrasing with action verbs and quantified achievements. It helps you replace weak phrases like 'responsible for' with impactful descriptions that stand out to recruiters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your data never leaves your browser. All resume information is stored in localStorage on your device, not on our servers. No data is transmitted, stored, or shared. Your privacy is fully protected."
+          }
+        }
+      ]
     }
     </script>
     <style is:global>
