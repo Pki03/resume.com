@@ -81,6 +81,30 @@ import HowItWorks from "../components/HowItWorks.astro"
             "@type": "Answer",
             "text": "Your data never leaves your browser. All resume information is stored in localStorage on your device, not on our servers. No data is transmitted, stored, or shared. Your privacy is fully protected."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the keyword extractor work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our free keyword extractor analyzes any job description and identifies the most important keywords, skills, and requirements. Paste a job description and instantly see the key terms employers are looking for so you can tailor your resume accordingly. Available at getapplykit.com/keyword-extractor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the resume scanner work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The resume scanner compares your resume against a target job description and identifies missing keywords, skills gaps, and areas for improvement. It provides a detailed match analysis to help you optimize your resume for specific roles. Available at getapplykit.com/resume-scanner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate a resume objective?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our resume objective generator creates tailored career objectives based on your experience level and target role. Choose from entry-level, experienced, or career change objectives and customize the generated text to fit your needs. Available at getapplykit.com/resume-objective-generator."
+          }
         }
       ]
     }
@@ -806,9 +830,49 @@ import HowItWorks from "../components/HowItWorks.astro"
             </span>
             <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Templates</span>
           </a>
+          <a href="/bullet-point-improver" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Bullet Points</span>
+          </a>
+          <a href="/resume-summary-generator" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Summary</span>
+          </a>
+          <a href="/resume-scanner" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Scanner</span>
+          </a>
+          <a href="/keyword-extractor" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 00 0 1.4l1.6 1.6a1 1 0 00 1.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Keywords</span>
+          </a>
+          <a href="/resume-objective-generator" class="card card-hover" style="padding:1rem;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center;transition:all 0.2s">
+            <span style="width:36px;height:36px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </span>
+            <span style="font-size:0.8125rem;font-weight:600;color:var(--gray-700)">Objective</span>
+          </a>
         </div>
         <div style="text-align:center;margin-top:1.25rem">
           <a href="/blog" style="font-size:0.8125rem;color:var(--primary);text-decoration:none;font-weight:500">Read our resume writing guides →</a>
+        </div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--gray-200)">
+          <p style="font-size:0.75rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;text-align:center;margin-bottom:0.75rem">Latest Articles</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.375rem;justify-content:center">
+            <a href="/blog/salary-negotiation-tips" style="font-size:0.75rem;color:var(--gray-600);text-decoration:none;padding:0.25rem 0.625rem;background:var(--gray-100);border-radius:999px;transition:all 0.15s">Salary Negotiation Tips</a>
+            <a href="/blog/resume-employment-gaps-guide" style="font-size:0.75rem;color:var(--gray-600);text-decoration:none;padding:0.25rem 0.625rem;background:var(--gray-100);border-radius:999px;transition:all 0.15s">Employment Gaps Guide</a>
+            <a href="/blog/best-resume-fonts" style="font-size:0.75rem;color:var(--gray-600);text-decoration:none;padding:0.25rem 0.625rem;background:var(--gray-100);border-radius:999px;transition:all 0.15s">Best Resume Fonts</a>
+            <a href="/blog/resume-for-teens" style="font-size:0.75rem;color:var(--gray-600);text-decoration:none;padding:0.25rem 0.625rem;background:var(--gray-100);border-radius:999px;transition:all 0.15s">Resume for Teens</a>
+            <a href="/blog/common-resume-mistakes" style="font-size:0.75rem;color:var(--gray-600);text-decoration:none;padding:0.25rem 0.625rem;background:var(--gray-100);border-radius:999px;transition:all 0.15s">Common Resume Mistakes</a>
+          </div>
         </div>
       </div>
     </div>
